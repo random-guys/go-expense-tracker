@@ -202,7 +202,6 @@ export default {
       } else if (this.amount === 0) {
         alert("Please input figures");
       } else {
-        console.log(this.amount);
         this.$router.push("/result");
       }
     },

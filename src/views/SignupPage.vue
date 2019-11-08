@@ -120,7 +120,6 @@ export default {
         this.userDetails.map(details => {
           details.first_name = this.first_name;
         });
-        console.log(this.userDetails);
         localStorage.setItem("user_details", JSON.stringify(this.userDetails));
       }
       else{
@@ -152,14 +151,12 @@ export default {
         this.userDetails.map(details => {
           details.last_name = this.last_name;
         });
-        console.log(this.userDetails);
         localStorage.setItem("user_details", JSON.stringify(this.userDetails));
       }
       else{
         alert("Please enter last name")
         return
       }
-      console.log(this.userDetails);
       if (this.slide2 === false) {
         const tl = new TimelineMax();
 
@@ -192,9 +189,6 @@ export default {
         alert("Incorrect email");
         return;
       } else {
-        console.log(this.first_name);
-        console.log(this.last_name);
-        console.log(this.email);
         this.$router.push("/tracker-page");
       }
     },
@@ -236,7 +230,6 @@ export default {
         this.userDetails.map(details => {
           details.first_name = this.first_name;
         });
-        console.log(this.userDetails);
         localStorage.setItem("user_details", JSON.stringify(this.userDetails));
       }
       else{
@@ -264,7 +257,6 @@ export default {
           this.userDetails.map(details => {
             details.last_name = this.last_name;
           });
-          console.log(this.userDetails);
           localStorage.setItem("user_details", JSON.stringify(this.userDetails));
         }
         else{
