@@ -11,7 +11,7 @@
       You love to have access to your money, whenever and wherever, we think you’d be a perfect match for our solution, join the waitlist!
     </div>
     <div class="amount" v-for="(detail, index) in userDetails" :key="index">
-      <div>₦{{ detail.amount }}</div>
+      <div>₦{{ detail.amount.toLocaleString() }}</div>
     </div>
     <img src="../assets/images/montly.svg" alt="Morph Icon Right" class="Icon--montly" />
     <div class="btn">JOIN THE WAITLIST</div>
