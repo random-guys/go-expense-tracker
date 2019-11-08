@@ -1,0 +1,17 @@
+User-agent: Googlebot
+Disallow:
+
+User-Agent: Bingbot
+Disallow:
+
+User-Agent: DuckDuckBot
+Disallow:
+
+User-Agent: Baiduspider
+Disallow:
+
+User-Agent: facebot
+Disallow:
+
+User-agent: *
+Disallow: /
