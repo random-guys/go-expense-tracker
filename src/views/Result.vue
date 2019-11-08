@@ -5,13 +5,13 @@
     <img src="../assets/images/result-page-leaf.svg" alt="Morph Icon Right" class="Icon--leaf" />
     <img src="../assets/images/baller-emoji.svg" alt="Morph Icon Right" class="Icon--baller" />
     <div class="baller">
-      Baller
+      Baller!
     </div>
     <div class="comment">
       You love to have access to your money, whenever and wherever, we think you’d be a perfect match for our solution, join the waitlist!
     </div>
-    <div class="amount">
-      ₦70,000
+    <div class="amount" v-for="(detail, index) in userDetails" :key="index">
+      <div>₦{{ detail.amount }}</div>
     </div>
     <img src="../assets/images/montly.svg" alt="Morph Icon Right" class="Icon--montly" />
     <div class="btn">JOIN THE WAITLIST</div>
@@ -27,12 +27,19 @@
 
 <script>
 export default {
-  
+  data() {
+    return {
+      userDetails: []
+    };
+  },
+  mounted() {
+    this.userDetails = JSON.parse(localStorage.getItem("user_details"));
+  },
 }
 </script>
 
 <style lang="scss" scoped>
-// @import "@/assets/styles/main";
+@import "@/assets/styles/main";
 
 .Icon {
   &--baller {
