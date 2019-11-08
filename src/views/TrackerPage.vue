@@ -202,6 +202,11 @@ export default {
       } else if (this.amount === 0) {
         alert("Please input figures");
       } else {
+        this.userDetails.map(details => {
+          details.amount = this.amount;
+        });
+        localStorage.setItem("user_details", JSON.stringify(this.userDetails));
+        console.log(this.userDetails);
         this.$router.push("/result");
       }
     },
