@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="258" height="58" viewBox="0 0 258 58">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#F1EBEB" d="M20.988 0h215.978c7.132 0 9.718.743 12.326 2.137a14.538 14.538 0 0 1 6.048 6.048c1.394 2.608 2.137 5.194 2.137 12.326V37.49c0 7.132-.743 9.718-2.137 12.326a14.538 14.538 0 0 1-6.048 6.048C246.684 57.257 244.098 58 236.966 58H20.988c-7.132 0-9.718-.743-12.326-2.137a14.538 14.538 0 0 1-6.048-6.048C1.22 47.207.477 44.62.477 37.489V20.51c0-7.132.743-9.718 2.137-12.326a14.538 14.538 0 0 1 6.048-6.048C11.27.743 13.856 0 20.988 0z"/>
+        <text fill="#3F3F3F" font-family="Graphik-Medium, Graphik" font-size="15" font-weight="400">
+            <tspan x="24" y="34">MONTHLY</tspan>
+        </text>
+        <path stroke="#3F3F3F" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.785" d="M231.823 25.654l-6.47 6.692-6.914-6.692"/>
+    </g>
+</svg>

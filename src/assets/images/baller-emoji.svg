@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="182" height="135" viewBox="0 0 182 135">
+    <defs>
+        <path id="a" d="M28.8 28.8c15.906 0 28.8-12.894 28.8-28.8H0c0 15.906 12.894 28.8 28.8 28.8z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="rotate(-15 91 14.83)">
+            <circle cx="150.4" cy="65.6" r="16" fill="#FFC94F" fill-rule="nonzero"/>
+            <path fill="#000" fill-rule="nonzero" d="M157.269 59.669l-16 16a1.6 1.6 0 1 0 2.262 2.262l16-16a1.6 1.6 0 1 0-2.262-2.262z"/>
+            <circle cx="16" cy="65.6" r="16" fill="#FFC94F" fill-rule="nonzero"/>
+            <path fill="#000" fill-rule="nonzero" d="M10.731 59.669l16 16a1.6 1.6 0 1 1-2.262 2.262l-16-16a1.6 1.6 0 1 1 2.262-2.262z"/>
+            <circle cx="83.2" cy="67.2" r="67.2" fill="#FFC94F" fill-rule="nonzero"/>
+            <path fill="#000" fill-rule="nonzero" d="M140.962 32.838C129.238 13.173 107.757 0 83.2 0 58.03 0 36.092 13.838 24.58 34.32c10.756-.33 32.096-.51 53.905-.68 1.408-.01 3.306-8.029 4.715-8.04 1.97-.015 3.452 7.976 5.411 7.96 22.203-.174 43.258-.364 52.351-.722z"/>
+            <circle cx="54.4" cy="62.4" r="6.4" fill="#000" fill-rule="nonzero"/>
+            <circle cx="112" cy="62.4" r="6.4" fill="#000" fill-rule="nonzero"/>
+            <g transform="translate(54.4 86.4)">
+                <mask id="b" fill="#fff">
+                    <use xlink:href="#a"/>
+                </mask>
+                <use fill="#674B0A" fill-rule="nonzero" xlink:href="#a"/>
+                <path fill="#F47079" fill-rule="nonzero" d="M44.8 38.4c15.906 0 28.8-12.894 28.8-28.8H16c0 15.906 12.894 28.8 28.8 28.8z" mask="url(#b)" transform="matrix(1 0 0 -1 0 48)"/>
+            </g>
+        </g>
+        <path fill="#000" d="M156 36l-34.935 59.87-38.357-21.912L60.51 112 0 77.434l60.646-16.078-.091-.052L156 36z"/>
+        <path fill="#000" fill-rule="nonzero" d="M114.58 51.914l66-20a2 2 0 0 0-1.16-3.828l-66 20a2 2 0 0 0 1.16 3.828z"/>
+    </g>
+</svg>
