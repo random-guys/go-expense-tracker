@@ -47,7 +47,7 @@ export default {
     top: 7rem;
     left: auto;
     width: 19.7rem;
-    height: 17.5rem;
+    // height: 17.5rem;
     object-fit: contain;
   }
   &--leaf {
@@ -85,7 +85,7 @@ export default {
 .baller {
   width: 72.4rem;
   height: 8.2rem;
-  margin-top: 27rem;
+  margin-top: 24rem;
   font-family: Graphik;
   font-size: 6rem;
   font-weight: 600;
@@ -116,7 +116,7 @@ export default {
 .amount {
   width: 37.4rem;
   height: 8.8rem;
-  margin-top: 3.2rem;
+  margin-top: 3rem;
   font-family: Graphik;
   font-size: 8.8rem;
   font-weight: bold;
@@ -134,7 +134,7 @@ export default {
   align-items: center;
   width: 25.8rem;
   height: 5.8rem;
-  margin-top: 10rem;
+  margin-top: 12.5rem;
   // padding: 1.7rem 5rem;
   font-family: Graphik;
   font-size: 1.7rem;
