@@ -108,7 +108,8 @@ export default {
         let userObject = {
           first_name: this.first_name,
           last_name: this.last_name,
-          email: this.email
+          email: this.email,
+          amount: ""
         };
         this.userDetails.push(userObject);
         localStorage.setItem("user_details", JSON.stringify(this.userDetails));
@@ -189,6 +190,10 @@ export default {
         alert("Incorrect email");
         return;
       } else {
+        this.userDetails.map(details => {
+          details.email = this.email;
+        });
+        localStorage.setItem("user_details", JSON.stringify(this.userDetails));
         this.$router.push("/tracker-page");
       }
     },
