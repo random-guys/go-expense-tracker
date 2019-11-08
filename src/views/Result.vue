@@ -74,7 +74,7 @@ export default {
   }
   &--montly {
     position: absolute;
-    top: 53rem;
+    top: 50rem;
     left: auto;
     width: 19.7rem;
     height: 17.5rem;
@@ -129,13 +129,13 @@ export default {
 }
 
 .btn {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 25.8rem;
   height: 5.8rem;
-  margin-top: 12.5rem;
-  // padding: 1.7rem 5rem;
+  margin-top: 10rem;
   font-family: Graphik;
   font-size: 1.7rem;
   font-weight: 500;
@@ -147,6 +147,8 @@ export default {
   color: #ffffff;
   background-color: #f47079;
   border-radius: 16px;
+  z-index: 3;
+  cursor: pointer;
 }
 
 .share-icon {
