@@ -293,14 +293,14 @@ body {
     }
 
     .leaf-left {
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       width: 25%;
     }
 
     .leaf-right {
-      position: fixed;
+      position: absolute;
       top: 0;
       right: -2rem;
       width: 25%;
