@@ -59,7 +59,7 @@ export default {
 
     tl.fromTo(".greenDot", 10, {x: 0, y: 0}, {x: 130, y: 130, ease:Linear.easeNone, repeat: -1, yoyo: true, repeatDelay: 0.4})
       .fromTo(".yellowDot", 1, {x: 0, y: 0}, {x: 200, y: 200, ease:Linear.easeNone, repeat: -1, yoyo: true, repeatDelay: 0.4}, 0.1)
-      .fromTo(".purpleDot", 2, {x: 0, y: 0}, {x: 400, y: 500, ease:Linear.easeNone, repeat: -1, yoyo: true, repeatDelay: 0.4}, 0.1)
+      .fromTo(".purpleDot", 2, {x: 0, y: 0}, {x: 350, y: 450, ease:Linear.easeNone, repeat: -1, yoyo: true, repeatDelay: 0.4}, 0.1)
       .fromTo(".pinkDot", 3, {x: 0, y: 0}, {x: 350, y: 350, ease:Linear.easeNone, repeat: -1, yoyo: true, repeatDelay: 0.4}, 0.1)
 
     tl.to(".btnGo", 2.5, {repeat: -1, yoyo: true, repeatDelay: 0, ease:Linear.easeNone, scale: "1.5"}, 1)
