@@ -35,7 +35,7 @@
         <div><img src="../assets/images/yellow-dot.svg" alt="Gomoney Logo" class="yellow-dot yellowDot" /></div>
         <div><img src="../assets/images/pie-chart.svg" alt="Gomoney Logo" class="pie-chart pieChart" /></div>
         <div><img src="../assets/images/green-dot.svg" alt="Gomoney Logo" class="green-dot greenDot" /></div>
-        <div><img src="../assets/images/home-triangle.svg" alt="Gomoney Logo" class="home-triangle" /></div>
+        <div><img src="../assets/images/home-triangle.svg" alt="Gomoney Logo" class="home-triangle triangleDot" /></div>
         <img src="../assets/images/star.svg" alt="Gomoney Logo" class="star starIcon" />
       </div>
     </div>
@@ -58,11 +58,11 @@ export default {
     tl.fromTo(".homePage", 1.5, {opacity: 0}, {opacity: 1})
 
     tl.fromTo(".greenDot", 10, {x: 0, y: 0}, {x: 130, y: 130, ease:Linear.easeNone, repeat: -1, yoyo: true, repeatDelay: 0.4})
-      .fromTo(".yellowDot", 1, {x: 0, y: 0}, {x: 200, y: 200, ease:Linear.easeNone, repeat: -1, yoyo: true, repeatDelay: 0.4}, 0.1)
-      .fromTo(".purpleDot", 2, {x: 0, y: 0}, {x: 350, y: 450, ease:Linear.easeNone, repeat: -1, yoyo: true, repeatDelay: 0.4}, 0.1)
-      .fromTo(".pinkDot", 3, {x: 0, y: 0}, {x: 350, y: 350, ease:Linear.easeNone, repeat: -1, yoyo: true, repeatDelay: 0.4}, 0.1)
+      .fromTo(".yellowDot", 2, {x: 0, y: 0}, {x: 200, y: 200, ease: Bounce.easeInOut, repeat: -1, yoyo: true, repeatDelay: 1}, 0.1)
+      .fromTo(".purpleDot", 30, {x: 0, y: 0}, {x: 350, y: 450, ease:SteppedEase.config(10), repeat: -1, yoyo: true, repeatDelay: 0.4}, 0.1)
+      .fromTo(".pinkDot", 3, {x: 0, y: 0}, {x: 350, y: 350, ease: Back.easeInOut.config(1.7), repeat: -1, yoyo: true, repeatDelay: 1}, 0.1)
 
-    tl.to(".btnGo", 2.5, {repeat: -1, yoyo: true, repeatDelay: 0, ease:Linear.easeNone, scale: "1.5"}, 1)
+    // tl.to(".btnGo", 2.5, {repeat: -1, yoyo: true, repeatDelay: 0, ease:Linear.easeNone, scale: "1.5"}, 1)
 
     TweenMax.to(".pieChart", 50, {rotation:"360", ease:Linear.easeNone, repeat:-1});
     TweenMax.fromTo(
