@@ -69,8 +69,10 @@
         </div>
       </div>
     </div>
-
-    <p class="hero-text__secondary">Press the Enter key when done.</p>
+    <div>
+      <p class="hero-text__secondary">Press the Enter key when done.</p>
+      <div><img src="../assets/images/pie-chart.svg" alt="Gomoney Logo" class="pie-chart" /></div>
+    </div>
   </div>
 </template>
 
@@ -311,15 +313,25 @@ export default {
     right: 0;
   }
   &--4 {
-    position: absolute;
-    top: 25rem;
+    position: fixed;
+    bottom: 0rem;
     left: 0;
+    width: 40%;
+    transform: rotate(-60deg);
   }
   &--5 {
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: fixed;
+    bottom: 9rem;
+    right: 5rem;
+    width: 57%;
+    transform: rotate(300deg);
   }
+}
+
+.pie-chart {
+  position: relative;
+  top: 13rem;
+  left: 26rem;
 }
 
 .hero-text {
