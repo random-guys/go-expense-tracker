@@ -10,7 +10,7 @@
     <div v-for="(detail, index) in userDetails" :key="index">
       <h2 class="hero-text__primary">
         Hi
-        <b class="capitalize">{{ detail.first_name }}</b>, time to find out where all of that money goes to every month.
+        <b class="capitalize">{{ detail.first_name }}</b>, time to find out where all of that <br> money goes to every month.
       </h2>
     </div>
     <div class="card-container">
@@ -20,7 +20,7 @@
           <p class="card-text transportText">Transport</p>
           <input
             type="text"
-            placeholder="N.00"
+            placeholder="₦.00"
             class="input transportInput"
             v-model="transport"
             @change="inputTransportationAmount()"
@@ -32,7 +32,7 @@
           <p class="card-text transferText">Transfer</p>
           <input
             type="text"
-            placeholder="N.00"
+            placeholder="₦.00"
             class="input transferInput"
             v-model="transfer"
             @change="inputTransferAmount()"
@@ -44,7 +44,7 @@
           <p class="card-text eatingText">Eating Out</p>
           <input
             type="text"
-            placeholder="N.00"
+            placeholder="₦.00"
             class="input eatingInput"
             v-model="eating"
             @change="inputEatingAmount()"
@@ -56,7 +56,7 @@
           <p class="card-text billsText">Bills</p>
           <input
             type="text"
-            placeholder="N.00"
+            placeholder="₦.00"
             class="input billsInput"
             v-model="bills"
             @change="inputBillsAmount()"
@@ -70,7 +70,7 @@
           <p class="card-text familyText">Family</p>
           <input
             type="text"
-            placeholder="N.00"
+            placeholder="₦.00"
             class="input familyInput"
             v-model="family"
             @change="inputFamilyAmount()"
@@ -82,7 +82,7 @@
           <p class="card-text groceriesText">Groceries</p>
           <input
             type="text"
-            placeholder="N.00"
+            placeholder="₦.00"
             class="input groceriesInput"
             v-model="groceries"
             @change="inputGroceriesAmount()"
@@ -94,7 +94,7 @@
           <p class="card-text shoppingText">Shopping</p>
           <input
             type="text"
-            placeholder="N.00"
+            placeholder="₦.00"
             class="input shoppingInput"
             v-model="shopping"
             @change="inputShoppingAmount()"
@@ -106,7 +106,7 @@
           <p class="card-text careText">Personal Care</p>
           <input
             type="text"
-            placeholder="N.00"
+            placeholder="₦.00"
             class="input careInput"
             v-model="care"
             @change="inputCareAmount()"
@@ -120,7 +120,7 @@
           <p class="card-text vacationText">vacation</p>
           <input
             type="text"
-            placeholder="N.00"
+            placeholder="₦.00"
             class="input vacationInput"
             v-model="vacation"
             @change="inputVacationAmount()"
@@ -132,7 +132,7 @@
           <p class="card-text payrollText">Payroll</p>
           <input
             type="text"
-            placeholder="N.00"
+            placeholder="₦.00"
             class="input payrollInput"
             v-model="payroll"
             @change="inputPayrollAmount()"
@@ -144,7 +144,7 @@
           <p class="card-text entertainmentText">Entertainment</p>
           <input
             type="text"
-            placeholder="N.00"
+            placeholder="₦.00"
             class="input entertainmentInput"
             v-model="entertainment"
             @change="inputEntertainmentAmount()"
@@ -156,7 +156,7 @@
           <p class="card-text investmentText">Investment</p>
           <input
             type="text"
-            placeholder="N.00"
+            placeholder="₦.00"
             class="input investmentInput"
             v-model="investment"
             @change="inputInvestmentAmount()"
@@ -1114,14 +1114,18 @@ export default {
     right: 0;
   }
   &--4 {
-    position: absolute;
-    top: 25rem;
+    position: fixed;
+    bottom: 0rem;
     left: 0;
+    width: 40%;
+    transform: rotate(-60deg);
   }
   &--5 {
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: fixed;
+    bottom: 9rem;
+    right: 5rem;
+    width: 57%;
+    transform: rotate(300deg);
   }
 
   &--6 {
@@ -1149,7 +1153,6 @@ export default {
     letter-spacing: normal;
     text-align: center;
     color: $color-text;
-    padding: 0 50rem;
     margin-top: 4rem;
     margin-bottom: 1rem;
   }
