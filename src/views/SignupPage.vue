@@ -10,7 +10,7 @@
     <h2 class="header2-text margin-top header2">One more thing</h2>
     <div class="header2-text margin-bottom" v-for="(detail, index) in userDetails" :key="index">
       <h2
-        class="header2-text margin-bottom display-none capitalize header2"
+        class="header2-text name-color margin-bottom display-none uppercase header2"
       >{{ detail.first_name }}</h2>
     </div>
     <div class="slider">
@@ -380,6 +380,10 @@ export default {
 
   .margin-bottom {
     margin-bottom: 3.2rem;
+  }
+
+  .name-color {
+    color: #15777c;
   }
 }
 
