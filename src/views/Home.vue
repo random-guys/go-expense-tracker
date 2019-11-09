@@ -1,9 +1,9 @@
 <template>
   <div id="app" class="main">
-    <div class="home">
-      <img src="../assets/images/group-copy-8.svg" alt="Leaf Icon Left" class="leaf-left" />
-      <img src="../assets/images/group-copy-9.svg" alt="Leaf Icon Right" class="leaf-right" />
-      <svg xmlns="http://www.w3.org/2000/svg" width="637" height="639" viewBox="0 0 637 639" class="morph-icon-left">
+    <div class="home homePage">
+      <img src="../assets/images/group-copy-8.svg" alt="Leaf Icon Left" class="leaf-left leafLeft" />
+      <img src="../assets/images/group-copy-9.svg" alt="Leaf Icon Right" class="leaf-right leafRight" />
+      <svg xmlns="http://www.w3.org/2000/svg" width="637" height="639" viewBox="0 0 637 639" class="morph-icon-left morphIconLeft">
         <g fill="none" fill-rule="nonzero" stroke="#F47079" opacity=".251">
             <path id="start" d="M318.17 505.5c30.607 0 52.322-1.282 71.893-4.82 23.432-4.237 42.438-11.705 58.08-23.456 35.398-26.594 54.001-75.912 55.935-157.236 1.921-80.803-16.029-130.367-52.856-157.208-16.081-11.72-35.788-19.204-60.004-23.459-20.107-3.532-42.31-4.821-73.048-4.821-26.32 0-45.424 7.815-60.317 23.287-11.904 12.365-20.09 27.387-32.071 55.81-1.06 2.517-5.778 13.823-7.077 16.899-2.812 6.662-5.169 12.067-7.556 17.269-14.681 31.998-30.137 54.498-52.63 72.624-37.161 29.948-30.35 74.326 10.968 116.804 38.746 39.834 99.199 68.307 148.683 68.307z"/>
             <!-- <path id="end" d="M318.771 505.5c50.12 0 102.246-21.562 139.429-56.76 38.688-36.622 56.468-83.188 46.089-128.629-11.58-50.695-33.15-96.031-62.611-128.88-32.902-36.685-74.416-56.731-122.907-56.731-26.263 0-45.325 7.815-60.185 23.286-11.878 12.366-20.046 27.387-32.002 55.812-1.058 2.515-5.766 13.822-7.061 16.897-2.807 6.663-5.158 12.068-7.54 17.27-14.65 31.997-30.072 54.497-52.516 72.624-37.082 29.948-30.285 74.326 10.944 116.804 38.662 39.834 98.983 68.307 148.36 68.307z"/> -->
@@ -12,7 +12,7 @@
             <path d="M316.194 638.5c54.31 0 100.605-6.53 135.707-21.23 42.524-17.806 66.736-46.9 69.222-88.964 1.356-22.951 8.042-43.243 19.646-62.355 9.24-15.22 20.609-28.561 37.92-45.805-2.224 2.215 21.579-21.102 27.37-27.198 11.936-12.56 19.705-22.945 24.571-33.723 5.692-12.606 7.12-25.471 3.897-39.614-19.86-87.138-56.857-165.068-107.4-221.544C470.667 34.98 399.416.5 316.194.5c-45.11 0-77.877 13.463-103.417 40.11-11.14 11.621-20.98 25.774-30.481 43.286-7.733 14.252-14.728 29.546-24.443 52.693-1.815 4.322-9.883 23.743-12.103 29.025-4.81 11.442-8.839 20.723-12.92 29.654-25.089 54.918-51.494 93.524-89.914 124.62-32.994 26.705-46.086 59.86-40.428 96.884 5.18 33.902 26.083 70.139 59.154 104.286C127.975 589.548 231.458 638.5 316.194 638.5z"/>
         </g>
       </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" width="871" height="959" viewBox="0 0 871 959" class="morph-icon-right">
+      <svg xmlns="http://www.w3.org/2000/svg" width="871" height="959" viewBox="0 0 871 959" class="morph-icon-right morphIconRight">
           <g fill="none" fill-rule="nonzero" stroke="#F47079" opacity=".251">
               <path d="M478.771 665.5c50.12 0 102.246-21.562 139.429-56.76 38.688-36.622 56.468-83.188 46.089-128.629-11.58-50.695-33.15-96.031-62.611-128.88-32.902-36.685-74.416-56.731-122.907-56.731-26.263 0-45.325 7.815-60.185 23.286-11.878 12.366-20.046 27.387-32.002 55.812-1.058 2.515-5.766 13.822-7.061 16.897-2.807 6.663-5.158 12.068-7.54 17.27-14.65 31.997-30.072 54.497-52.516 72.624-37.082 29.948-30.285 74.326 10.944 116.804 38.662 39.834 98.983 68.307 148.36 68.307z"/>
               <path d="M477.932 730.5c67.364 0 137.42-28.999 187.393-76.337 52.006-49.263 75.91-111.91 61.955-173.052-15.56-68.166-44.543-129.128-84.137-173.304C598.92 258.465 543.114 231.5 477.932 231.5c-35.32 0-60.969 10.523-80.963 31.351-15.973 16.641-26.95 36.845-43.017 75.068-1.422 3.382-7.745 18.579-9.485 22.712-3.769 8.954-6.927 16.217-10.125 23.206-19.667 42.986-40.367 73.207-70.49 97.552-25.824 20.87-36.068 46.775-31.64 75.707 4.056 26.503 20.424 54.837 46.325 81.542 51.96 53.571 133.025 91.862 199.395 91.862z"/>
@@ -24,19 +24,19 @@
       <img src="../assets/images/logo.svg" alt="Gomoney Logo" class="logo" />
       <div>
         <h1 class="hero-text__primary">Discover your <br> spending habits in 1 min.</h1>
-        <img src="../assets/images/purple-dot.svg" alt="Gomoney Logo" class="purple-dot" />
+        <img src="../assets/images/purple-dot.svg" alt="Gomoney Logo" class="purple-dot purpleDot" />
       </div>
       <div>
         <p class="hero-text__secondary">Try our expense tracker to see where your money <br> goes every month</p>
-        <img src="../assets/images/pink-dot.svg" alt="Gomoney Logo" class="pink-dot" />
+        <img src="../assets/images/pink-dot.svg" alt="Gomoney Logo" class="pink-dot pinkDot" />
       </div>
       <div class="buton">
-        <router-link to="/sign-up-page" class="btn">Go</router-link>
-        <div><img src="../assets/images/yellow-dot.svg" alt="Gomoney Logo" class="yellow-dot" /></div>
-        <div><img src="../assets/images/pie-chart.svg" alt="Gomoney Logo" class="pie-chart" /></div>
-        <div><img src="../assets/images/green-dot.svg" alt="Gomoney Logo" class="green-dot" /></div>
+        <router-link to="/sign-up-page" class="btn btnGo">Go</router-link>
+        <div><img src="../assets/images/yellow-dot.svg" alt="Gomoney Logo" class="yellow-dot yellowDot" /></div>
+        <div><img src="../assets/images/pie-chart.svg" alt="Gomoney Logo" class="pie-chart pieChart" /></div>
+        <div><img src="../assets/images/green-dot.svg" alt="Gomoney Logo" class="green-dot greenDot" /></div>
         <div><img src="../assets/images/home-triangle.svg" alt="Gomoney Logo" class="home-triangle" /></div>
-        <img src="../assets/images/star.svg" alt="Gomoney Logo" class="star" />
+        <img src="../assets/images/star.svg" alt="Gomoney Logo" class="star starIcon" />
       </div>
     </div>
   </div>
@@ -55,7 +55,73 @@ export default {
   mounted() {
     const tl = new TimelineMax();
 
-    tl.to("#start", 2, {morphSVG:"#end"})
+    tl.fromTo(".homePage", 1.5, {opacity: 0}, {opacity: 1})
+
+    tl.fromTo(".greenDot", 10, {x: 0, y: 0}, {x: 130, y: 130, ease:Linear.easeNone, repeat: -1, yoyo: true, repeatDelay: 0.4})
+      .fromTo(".yellowDot", 100, {x: 0, y: 0}, {x: 200, y: 200, ease:Linear.easeNone, repeat: -1, yoyo: true, repeatDelay: 0.4}, 0.1)
+      .fromTo(".purpleDot", 200, {x: 0, y: 0}, {x: 500, y: 500, ease:Linear.easeNone, repeat: -1, yoyo: true, repeatDelay: 0.4}, 0.1)
+      .fromTo(".pinkDot", 200, {x: 0, y: 0}, {x: 350, y: 350, ease:Linear.easeNone, repeat: -1, yoyo: true, repeatDelay: 0.4}, 0.1)
+
+    tl.to(".btnGo", 2.5, {repeat: -1, yoyo: true, repeatDelay: 0, ease:Linear.easeNone, scale: "1.5"}, 0.1)
+
+    TweenMax.to(".pieChart", 50, {rotation:"360", ease:Linear.easeNone, repeat:-1});
+    TweenMax.fromTo(
+      ".leafLeft",
+      2,
+      { x: 0, y: 0 },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease:Linear.easeNone,
+        x: -3, y: -10
+      },
+      -3
+    );
+    TweenMax.fromTo(
+      ".leafRight",
+      5,
+      { x: 0, y: 0 },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease:Linear.easeNone,
+        x: 10, y: -30
+      },
+      -3
+    );
+    TweenMax.to(
+      ".starIcon",
+      300,
+      {rotation:"360", ease: SteppedEase.config(250), repeat:-1}
+    );
+    TweenMax.fromTo(
+      ".morphIconLeft",
+      600,
+      { scale: "1", rotation: "0" },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease:Linear.easeNone,
+        scale: "2", rotation: "360"
+      },
+      -3
+    );
+    TweenMax.fromTo(
+      ".morphIconRight",
+      200,
+      { scale: "1", rotation: "0" },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease:Linear.easeNone,
+        scale: "0.8", rotation: "-120"
+      },
+      -3
+    );
   },
 };
 </script>
@@ -162,6 +228,7 @@ export default {
     position: relative;
     bottom: 12rem;
     left: 20rem;
+    z-index: -1;
   }
 
   .pink-dot {
@@ -184,7 +251,7 @@ export default {
 
   .green-dot {
     position: relative;
-    bottom: 8rem;
+    bottom: 6.4rem;
     right: 23rem;
   }
 
