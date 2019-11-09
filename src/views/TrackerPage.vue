@@ -291,14 +291,14 @@ export default {
         tl.to(
           ".transfer",
           0.5,
-          { backgroundColor: "#1b5ece", color: "#ffffff" },
+          { backgroundColor: "#D0001B", color: "#ffffff" },
           0.1
         )
           .to(".transferText", 0.5, { color: "#ffffff" }, 0.1)
           .to(
             ".transferInput",
             0.5,
-            { backgroundColor: "#1b5ece", color: "#ffffff" },
+            { backgroundColor: "#D0001B", color: "#ffffff" },
             0.1
           )
           .to(".errorMsgTransfer", 0.5, { display: "none" }, 0.1);
@@ -364,14 +364,14 @@ export default {
         tl.to(
           ".eating",
           0.5,
-          { backgroundColor: "#1b5ece", color: "#ffffff" },
+          { backgroundColor: "#14777C", color: "#ffffff" },
           0.1
         )
           .to(".eatingText", 0.5, { color: "#ffffff" }, 0.1)
           .to(
             ".eatingInput",
             0.5,
-            { backgroundColor: "#1b5ece", color: "#ffffff" },
+            { backgroundColor: "#14777C", color: "#ffffff" },
             0.1
           )
           .to(".errorMsgEating", 0.5, { display: "none" }, 0.1);
@@ -434,14 +434,14 @@ export default {
         tl.to(
           ".bills",
           0.5,
-          { backgroundColor: "#1b5ece", color: "#ffffff" },
+          { backgroundColor: "#D0001B", color: "#ffffff" },
           0.1
         )
           .to(".billsText", 0.5, { color: "#ffffff" }, 0.1)
           .to(
             ".billsInput",
             0.5,
-            { backgroundColor: "#1b5ece", color: "#ffffff" },
+            { backgroundColor: "#D0001B", color: "#ffffff" },
             0.1
           )
           .to(".errorMsgBills", 0.5, { display: "none" }, 0.1);
@@ -504,14 +504,14 @@ export default {
         tl.to(
           ".family",
           0.5,
-          { backgroundColor: "#1b5ece", color: "#ffffff" },
+          { backgroundColor: "#5D29DE", color: "#ffffff" },
           0.1
         )
           .to(".familyText", 0.5, { color: "#ffffff" }, 0.1)
           .to(
             ".familyInput",
             0.5,
-            { backgroundColor: "#1b5ece", color: "#ffffff" },
+            { backgroundColor: "#5D29DE", color: "#ffffff" },
             0.1
           )
           .to(".errorMsgFamily", 0.5, { display: "none" }, 0.1);
@@ -574,14 +574,14 @@ export default {
         tl.to(
           ".groceries",
           0.5,
-          { backgroundColor: "#1b5ece", color: "#ffffff" },
+          { backgroundColor: "#14777C", color: "#ffffff" },
           0.1
         )
           .to(".groceriesText", 0.5, { color: "#ffffff" }, 0.1)
           .to(
             ".groceriesInput",
             0.5,
-            { backgroundColor: "#1b5ece", color: "#ffffff" },
+            { backgroundColor: "#14777C", color: "#ffffff" },
             0.1
           )
           .to(".errorMsgGroceries", 0.5, { display: "none" }, 0.1);
@@ -647,14 +647,14 @@ export default {
         tl.to(
           ".shopping",
           0.5,
-          { backgroundColor: "#1b5ece", color: "#ffffff" },
+          { backgroundColor: "#F1663D", color: "#ffffff" },
           0.1
         )
           .to(".shoppingText", 0.5, { color: "#ffffff" }, 0.1)
           .to(
             ".shoppingInput",
             0.5,
-            { backgroundColor: "#1b5ece", color: "#ffffff" },
+            { backgroundColor: "#F1663D", color: "#ffffff" },
             0.1
           )
           .to(".errorMsgShopping", 0.5, { display: "none" }, 0.1);
@@ -790,14 +790,14 @@ export default {
         tl.to(
           ".vacation",
           0.5,
-          { backgroundColor: "#1b5ece", color: "#ffffff" },
+          { backgroundColor: "#F1663D", color: "#ffffff" },
           0.1
         )
           .to(".vacationText", 0.5, { color: "#ffffff" }, 0.1)
           .to(
             ".vacationInput",
             0.5,
-            { backgroundColor: "#1b5ece", color: "#ffffff" },
+            { backgroundColor: "#F1663D", color: "#ffffff" },
             0.1
           )
           .to(".errorMsgVacation", 0.5, { display: "none" }, 0.1);
@@ -939,14 +939,14 @@ export default {
         tl.to(
           ".entertainment",
           0.5,
-          { backgroundColor: "#1b5ece", color: "#ffffff" },
+          { backgroundColor: "#5D29DE", color: "#ffffff" },
           0.1
         )
           .to(".entertainmentText", 0.5, { color: "#ffffff" }, 0.1)
           .to(
             ".entertainmentInput",
             0.5,
-            { backgroundColor: "#1b5ece", color: "#ffffff" },
+            { backgroundColor: "#5D29DE", color: "#ffffff" },
             0.1
           )
           .to(".errorMsgEntertainment", 0.5, { display: "none" }, 0.1);
@@ -1012,14 +1012,14 @@ export default {
         tl.to(
           ".investment",
           0.5,
-          { backgroundColor: "#1b5ece", color: "#ffffff" },
+          { backgroundColor: "#14777C", color: "#ffffff" },
           0.1
         )
           .to(".investmentText", 0.5, { color: "#ffffff" }, 0.1)
           .to(
             ".investmentInput",
             0.5,
-            { backgroundColor: "#1b5ece", color: "#ffffff" },
+            { backgroundColor: "#14777C", color: "#ffffff" },
             0.1
           )
           .to(".errorMsgInvestment", 0.5, { display: "none" }, 0.1);
