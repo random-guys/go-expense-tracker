@@ -161,6 +161,7 @@ body {
     background-color: $color-btn-bkg;
     transition: all 0.4s;
     margin-top: 0rem;
+    transition: all .2s ease-in-out;
   }
 
   .leaf-left {
@@ -231,6 +232,10 @@ body {
     bottom: 22rem;
     left: 3rem;
   }
+
+  .btn:hover {
+    transform: scale(1.1);
+}
 }
 
 //Mobile
@@ -301,9 +306,9 @@ body {
 
     .leaf-right {
       position: absolute;
-      top: 0;
+      top: 8;
       right: -2rem;
-      width: 25%;
+      width: 30%;
     }
 
     .morph-icon-left {
