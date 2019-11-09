@@ -58,11 +58,11 @@ export default {
     tl.fromTo(".homePage", 1.5, {opacity: 0}, {opacity: 1})
 
     tl.fromTo(".greenDot", 10, {x: 0, y: 0}, {x: 130, y: 130, ease:Linear.easeNone, repeat: -1, yoyo: true, repeatDelay: 0.4})
-      .fromTo(".yellowDot", 100, {x: 0, y: 0}, {x: 200, y: 200, ease:Linear.easeNone, repeat: -1, yoyo: true, repeatDelay: 0.4}, 0.1)
-      .fromTo(".purpleDot", 200, {x: 0, y: 0}, {x: 500, y: 500, ease:Linear.easeNone, repeat: -1, yoyo: true, repeatDelay: 0.4}, 0.1)
-      .fromTo(".pinkDot", 200, {x: 0, y: 0}, {x: 350, y: 350, ease:Linear.easeNone, repeat: -1, yoyo: true, repeatDelay: 0.4}, 0.1)
+      .fromTo(".yellowDot", 1, {x: 0, y: 0}, {x: 200, y: 200, ease:Linear.easeNone, repeat: -1, yoyo: true, repeatDelay: 0.4}, 0.1)
+      .fromTo(".purpleDot", 2, {x: 0, y: 0}, {x: 500, y: 500, ease:Linear.easeNone, repeat: -1, yoyo: true, repeatDelay: 0.4}, 0.1)
+      .fromTo(".pinkDot", 3, {x: 0, y: 0}, {x: 350, y: 350, ease:Linear.easeNone, repeat: -1, yoyo: true, repeatDelay: 0.4}, 0.1)
 
-    tl.to(".btnGo", 2.5, {repeat: -1, yoyo: true, repeatDelay: 0, ease:Linear.easeNone, scale: "1.5"}, 0.1)
+    tl.to(".btnGo", 2.5, {repeat: -1, yoyo: true, repeatDelay: 0, ease:Linear.easeNone, scale: "1.5"}, 1)
 
     TweenMax.to(".pieChart", 50, {rotation:"360", ease:Linear.easeNone, repeat:-1});
     TweenMax.fromTo(
@@ -98,27 +98,27 @@ export default {
     );
     TweenMax.fromTo(
       ".morphIconLeft",
-      600,
+      60,
       { scale: "1", rotation: "0" },
       {
         repeat: -1,
         yoyo: true,
         repeatDelay: 0.4,
         ease:Linear.easeNone,
-        scale: "2", rotation: "360"
+        scale: "1.5", rotation: "-360",
       },
       -3
     );
     TweenMax.fromTo(
       ".morphIconRight",
-      200,
-      { scale: "1", rotation: "0" },
+      20,
+      { scale: "0.8", rotation: "0" },
       {
         repeat: -1,
         yoyo: true,
         repeatDelay: 0.4,
         ease:Linear.easeNone,
-        scale: "0.8", rotation: "-120"
+        scale: "1", rotation: "120",
       },
       -3
     );
@@ -128,143 +128,4 @@ export default {
 
 <style scoped lang="scss">
 @import "@/assets/styles/main";
-
-.home {
-  width: 100%;
-  position: relative;
-  text-align: center;
-  // background-color: red;
-
-  .logo {
-    width: 100%;
-    height: 6.2rem;
-    object-fit: contain;
-    text-align: center;
-  }
-
-  .hero-text {
-    &__primary {
-      // width: 724px;
-      height: 164px;
-      margin-top: 5.7rem;
-      font-family: Graphik;
-      font-size: 5.2rem;
-      font-weight: 600;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: 1.37;
-      letter-spacing: normal;
-      text-align: center;
-      color: #161616;
-    }
-    &__secondary {
-      // width: 610px;
-      height: 96px;
-      opacity: 0.6;
-      margin-top: 0rem;
-      font-family: Graphik;
-      font-size: 2.2rem;
-      font-weight: normal;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: 1.38;
-      letter-spacing: normal;
-      text-align: center;
-      color: #161616;
-    }
-  }
-
-  .button {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .btn {
-    display: inline-block;
-    text-decoration: none;
-    text-align: center;
-    font-size: 1.7rem;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.41;
-    letter-spacing: normal;
-    color: $color-white;
-    padding: 1.5rem 4.5rem;
-    border-radius: 1.2rem;
-    z-index: 2;
-    background-color: $color-btn-bkg;
-    transition: all 0.4s;
-    margin-top: 0rem;
-  }
-
-  .leaf-left {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  .leaf-right {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-
-  .morph-icon-left {
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
-
-  .morph-icon-right {
-    position: fixed;
-    top: 10rem;
-    right: 0;
-    width: 59%;
-    z-index: -1;
-  }
-
-  .purple-dot {
-    position: relative;
-    bottom: 12rem;
-    left: 20rem;
-    z-index: -1;
-  }
-
-  .pink-dot {
-    position: relative;
-    bottom: 1rem;
-    right: 14rem;
-  }
-
-  .yellow-dot {
-    position: relative;
-    top: 7rem;
-    left: 32rem;
-  }
-
-  .pie-chart {
-    position: relative;
-    top: 11rem;
-    left: 25rem
-  }
-
-  .green-dot {
-    position: relative;
-    bottom: 6.4rem;
-    right: 23rem;
-  }
-
-  .home-triangle {
-    position: relative;
-    bottom: 8rem;
-    right: 17.5rem
-  }
-
-  .star {
-    position: relative;
-    bottom: 22rem;
-    left: 3rem;
-  }
-}
 </style>
