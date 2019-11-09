@@ -324,7 +324,7 @@ body {
     }
 
     .purple-dot {
-      position: relative;
+      position: fixed;
       top: 20.5rem;
       left: 40rem;
       z-index: -1;
@@ -338,13 +338,13 @@ body {
 
     .yellow-dot {
       position: relative;
-      top: 65rem;
-      left: 35rem;
+      top: 2rem;
+      left: 0rem;
     }
 
     .pie-chart {
       position: relative;
-      top: 20rem;
+      top: 25rem;
       left: 20rem;
       width: 20%;
     }
@@ -354,14 +354,13 @@ body {
       bottom: 6.4rem;
       right: 23rem;
       width: 5%;
-
     }
 
     .home-triangle {
       position: relative;
       bottom: 8rem;
       right: 15.5rem;
-    //   width: 25%;
+      //   width: 25%;
     }
 
     .star {
