@@ -324,27 +324,27 @@ body {
     }
 
     .purple-dot {
-      position: fixed;
-      top: 20.5rem;
-      left: 40rem;
+      position: absolute;
+      top: 0rem;
+      left: 0rem;
       z-index: -1;
     }
 
     .pink-dot {
       position: relative;
-      bottom: 10rem;
+      bottom: 5rem;
       right: 25rem;
     }
 
     .yellow-dot {
       position: relative;
       top: 2rem;
-      left: 0rem;
+      left: -3rem;
     }
 
     .pie-chart {
       position: relative;
-      top: 25rem;
+      top: 0rem;
       left: 20rem;
       width: 20%;
     }
