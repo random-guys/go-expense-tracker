@@ -324,7 +324,7 @@ body {
     }
 
     .purple-dot {
-      position: fixed;
+      position: relative;
       top: 20.5rem;
       left: 40rem;
       z-index: -1;
@@ -337,7 +337,7 @@ body {
     }
 
     .yellow-dot {
-      position: fixed;
+      position: relative;
       top: 65rem;
       left: 35rem;
     }
