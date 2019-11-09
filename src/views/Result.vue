@@ -59,18 +59,18 @@ export default {
     object-fit: contain
   }
   &--small-circle {
-    position: absolute;
-    top: 25rem;
+    position: fixed;
+    bottom: 0rem;
     left: 0;
-    transform: rotate(290deg);
-    object-fit: contain
+    width: 40%;
+    transform: rotate(-60deg);
   }
   &--big-circle {
-    position: absolute;
-    top: -20rem;
-    right: 0;
-    transform: rotate(290deg);
-    object-fit: contain
+    position: fixed;
+    bottom: 9rem;
+    right: 5rem;
+    width: 57%;
+    transform: rotate(300deg);
   }
   &--montly {
     position: absolute;
