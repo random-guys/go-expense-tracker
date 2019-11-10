@@ -88,7 +88,7 @@
         <div class="figure"><p>₦{{ detail.amount.toLocaleString() }}</p></div>
       </div>
       <img src="../assets/images/montly.svg" alt="Morph Icon Right" class="montly" />
-      <div class="btn">JOIN THE WAITLIST</div>
+      <div class="btn"><p>JOIN THE WAITLIST</p></div>
       <div class="share-icon">
         <div class="icon1"></div>
         <div class="icon2"></div>
