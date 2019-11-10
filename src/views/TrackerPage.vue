@@ -34,6 +34,11 @@
           <b class="capitalize">{{ detail.first_name }}</b>, time to find out where all of that
           <br />money goes to every month.
         </h2>
+        <h2 class="hero-text__primary-mobile">
+          Hi
+          <b class="capitalize">{{ detail.first_name }}</b>, time to find out where all of <br> that
+          money goes to every month.
+        </h2>
       </div>
       <div class="card-container">
         <div class="card-container__card-row">
@@ -310,22 +315,20 @@ export default {
         ease: Linear.easeNone,
         x: -3,
         y: -10,
-        rotation: "5"
+        rotation: "5",
       },
       -3
     );
     TweenMax.fromTo(
       ".leafBottom",
-      2,
-      { x: 0, y: 0 },
+      20,
+      { scale: "0.5" },
       {
         repeat: -1,
         yoyo: true,
         repeatDelay: 0.4,
         ease: Linear.easeNone,
-        x: -3,
-        y: -10,
-        rotation: "5"
+        scale: "1.2"
       },
       -3
     );

@@ -11,7 +11,7 @@
     <div class="header2-text margin-bottom" v-for="(detail, index) in userDetails" :key="index">
       <h2
         class="header2-text name-color margin-bottom display-none uppercase header2"
-      >{{ detail.first_name }}</h2>
+      ><b>{{ detail.first_name }}</b></h2>
     </div>
     <div class="slider">
       <div class="btn1 button1" @click="toggleBack()">
