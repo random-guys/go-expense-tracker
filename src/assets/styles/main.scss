@@ -1073,7 +1073,7 @@ body {
       // position: absolute;
       width: 100%;
       display: flex;
-      overflow-x: scroll;
+      overflow-x: hidden;
 
       .btn1-mobile,
       .btn2-mobile {
@@ -1157,7 +1157,6 @@ body {
           border-radius: 8px;
           box-shadow: 0 40px 56px 0 rgba(11, 16, 51, 0.06);
           padding: 4rem 0;
-          // padding-left: 3rem;
           background-color: #ffffff;
 
           .header-mobile {
@@ -1192,12 +1191,14 @@ body {
 
             :focus {
               outline: none;
+              text-align: center;
             }
 
             .input_tag-mobile {
               border: none;
-              width: 50rem;
+              width: 51rem;
               font-family: Graphik;
+              text-align: center;
               padding: 1rem;
               font-size: 3.5rem;
               font-weight: 500;
@@ -1213,7 +1214,7 @@ body {
         }
 
         .card1-mobile {
-          margin-left: 2rem;
+          margin-left: 1rem;
         }
         .card1-mobile,
         .card2-mobile,
@@ -1235,8 +1236,9 @@ body {
 
     .pie-chart {
       position: relative;
-      top: 13rem;
-      left: 26rem;
+      top: 0rem;
+      left: 18rem;
+      width: 20%;
     }
   }
   // end of signup page media query
