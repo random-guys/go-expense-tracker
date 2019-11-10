@@ -1,14 +1,14 @@
 <template>
   <div id="app" class="main">
     <div class="signup-page">
-      <img src="../assets/images/group-copy-12.svg" alt="Leaf Icon Left" class="leaf-left" />
-      <img src="../assets/images/group-copy-11.svg" alt="Leaf Icon Left" class="leaf-center" />
-      <img src="../assets/images/group-copy-10.svg" alt="Leaf Icon Left" class="leaf-right" />
-      <img src="../assets/images/vector-shapes-1.svg" alt="Morph Icon Left" class="morph-icon-left" />
+      <img src="../assets/images/group-copy-12.svg" alt="Leaf Icon Left" class="leaf-left leafLeft" />
+      <img src="../assets/images/group-copy-11.svg" alt="Leaf Icon Left" class="leaf-center leafCenter" />
+      <img src="../assets/images/group-copy-10.svg" alt="Leaf Icon Left" class="leaf-right leafRight" />
+      <img src="../assets/images/vector-shapes-1.svg" alt="Morph Icon Left" class="morph-icon-left morphIconLeft" />
       <img
         src="../assets/images/vector-shapes-2.svg"
         alt="Morph Icon Right"
-        class="morph-icon-right"
+        class="morph-icon-right morphIconRight"
       />
       <img src="../assets/images/logo.svg" alt="Gomoney Logo" class="logo" />
       <h2 class="hero-text__primary header1">Hi there! Let’s make this personal</h2>
@@ -143,7 +143,7 @@
         <p class="hero-text__secondary">Press the Enter key when done.</p>
       </div>
       <div>
-        <!-- <img src="../assets/images/pie-chart.svg" alt="Pie Chart Shape" class="pie-chart" /> -->
+        <img src="../assets/images/pie-chart.svg" alt="Pie Chart Shape" class="pie-chart pieChart" />
       </div>
     </div>
   </div>
@@ -169,6 +169,7 @@ export default {
   },
   mounted() {
     const tl = new TimelineMax();
+    this.initialUserDetails();
 
     tl.to(".button1", 0, { display: "none" })
       .to(".cardTwo", 0, { opacity: "0.3", pointerEvents: "none" })
@@ -179,7 +180,78 @@ export default {
       .to(".cardTwoMobile", 0, { opacity: "0.3", pointerEvents: "none" })
       .to(".cardThreeMobile", 0, { opacity: "0.3", pointerEvents: "none" })
       .to(".header2", 0, { display: "none" });
-    this.initialUserDetails();
+      TweenMax.fromTo(
+      ".morphIconRight",
+      60,
+      { scale: "1" },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        scale: "0.9",
+        rotation: "-180",
+      },
+      -3
+    );
+    TweenMax.fromTo(
+      ".morphIconLeft",
+      20,
+      { scale: "1" },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease:Linear.easeNone,
+        scale: "1.2", rotation: "360",
+      },
+      -3
+    );
+    TweenMax.fromTo(
+      ".leafRight",
+      5,
+      { x: 0, y: 0 },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        x: 10,
+        y: -30
+      },
+      -3
+    );
+    TweenMax.fromTo(
+      ".leafLeft",
+      2,
+      { x: 0, y: 0 },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        x: -10,
+        y: -10
+      },
+      -3
+    );
+    TweenMax.fromTo(
+      ".leafCenter",
+      2,
+      { x: 0, y: 0 },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        x: -3,
+        y: -10,
+        rotation: "5",
+      },
+      -3
+    );
+    TweenMax.to(".pieChart", 50, {rotation:"360", ease:Linear.easeNone, repeat:-1});
+
   },
   methods: {
     initialUserDetails() {
@@ -228,9 +300,9 @@ export default {
           { display: "flex", pointerEvents: "visible" },
           0.1
         )
-          .to(".cardOneMobile", 0.3, { left: "-52rem", pointerEvents: "none" }, 0.1)
-          .to(".cardTwoMobile", 0.3, { left: "-52rem", pointerEvents: "visible" }, 0.1)
-          .to(".cardThreeMobile", 0.3, { left: "-52rem", pointerEvents: "none" }, 0.1)
+          .to(".cardOneMobile", 0.3, { left: "-53rem", pointerEvents: "none" }, 0.1)
+          .to(".cardTwoMobile", 0.3, { left: "-53rem", pointerEvents: "visible" }, 0.1)
+          .to(".cardThreeMobile", 0.3, { left: "-53rem", pointerEvents: "none" }, 0.1)
           .to(".cardTwoMobile", 0.5, { opacity: "1" }, 0.1)
           .to(".cardOneMobile", 0.5, { opacity: "0.3" }, 0.1);
         // .to(".header2", 0, { display: "none" }, 0.1)
@@ -267,12 +339,12 @@ export default {
           .to(".header1", 0, { display: "none" }, 0.1);
 
         tl.to(".button2Mobile", 0, { display: "none" }, 0.1)
-          .to(".cardOneMobile", 0.3, { left: "-104rem", pointerEvents: "none" }, 0.1)
-          .to(".cardTwoMobile", 0.3, { left: "-104rem", pointerEvents: "none" }, 0.1)
+          .to(".cardOneMobile", 0.3, { left: "-106rem", pointerEvents: "none" }, 0.1)
+          .to(".cardTwoMobile", 0.3, { left: "-106rem", pointerEvents: "none" }, 0.1)
           .to(
             ".cardThreeMobile",
             0.3,
-            { left: "-104rem", pointerEvents: "visible" },
+            { left: "-106rem", pointerEvents: "visible" },
             0.1
           )
           .to(".cardThreeMobile", 0.5, { opacity: "1" }, 0.1)
@@ -340,9 +412,9 @@ export default {
           .to(".header1", 0, { display: "flex" }, 0.1);
 
         tl.to(".button2Mobile", 0, { display: "flex", pointerEvents: "visible" }, 0.1)
-          .to(".cardOneMobile", 0.3, { left: "-52rem", pointerEvents: "none" }, 0.1)
-          .to(".cardTwoMobile", 0.3, { left: "-52rem", pointerEvents: "visible" }, 0.1)
-          .to(".cardThreeMobile", 0.3, { left: "-52rem", pointerEvents: "none" }, 0.1)
+          .to(".cardOneMobile", 0.3, { left: "-53rem", pointerEvents: "none" }, 0.1)
+          .to(".cardTwoMobile", 0.3, { left: "-53rem", pointerEvents: "visible" }, 0.1)
+          .to(".cardThreeMobile", 0.3, { left: "-53rem", pointerEvents: "none" }, 0.1)
           .to(".cardThreeMobile", 0.5, { opacity: "0.3" }, 0.1)
           .to(".cardTwoMobile", 0.5, { opacity: "1" }, 0.1)
           .to(".header2", 0, { display: "none" }, 0.1)
@@ -384,9 +456,9 @@ export default {
           { display: "flex", pointerEvents: "visible" },
           0.1
         )
-          .to(".cardOneMobile", 0.3, { left: "-52rem", pointerEvents: "none" }, 0.1)
-          .to(".cardTwoMobile", 0.3, { left: "-52rem", pointerEvents: "visible" }, 0.1)
-          .to(".cardThreeMobile", 0.3, { left: "-52rem", pointerEvents: "none" }, 0.1)
+          .to(".cardOneMobile", 0.3, { left: "-53rem", pointerEvents: "none" }, 0.1)
+          .to(".cardTwoMobile", 0.3, { left: "-53rem", pointerEvents: "visible" }, 0.1)
+          .to(".cardThreeMobile", 0.3, { left: "-53rem", pointerEvents: "none" }, 0.1)
           .to(".cardTwoMobile", 0.5, { opacity: "1" }, 0.1)
           .to(".cardOneMobile", 0.5, { opacity: "0.3" }, 0.1);
 
@@ -421,12 +493,12 @@ export default {
           .to(".header1", 0, { display: "none" }, 0.1);
 
         tl.to(".button2Mobile", 0.3, { display: "none", pointerEvents: "none" }, 0.1)
-          .to(".cardOneMobile", 0.3, { left: "-104rem", pointerEvents: "none" }, 0.1)
-          .to(".cardTwoMobile", 0.3, { left: "-104rem", pointerEvents: "none" }, 0.1)
+          .to(".cardOneMobile", 0.3, { left: "-106rem", pointerEvents: "none" }, 0.1)
+          .to(".cardTwoMobile", 0.3, { left: "-106rem", pointerEvents: "none" }, 0.1)
           .to(
             ".cardThreeMobile",
             0.3,
-            { left: "-104rem", pointerEvents: "visible" },
+            { left: "-106rem", pointerEvents: "visible" },
             0.1
           )
           .to(".cardThreeMobile", 0.5, { opacity: "1" }, 0.1)
