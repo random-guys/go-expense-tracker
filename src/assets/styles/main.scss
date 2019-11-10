@@ -90,7 +90,7 @@ body {
   z-index: 2;
   margin-top: 9rem;
   object-fit: contain;
-  text-align: center;
+  align-self: center;
 }
 
 .capitalize {
@@ -101,11 +101,12 @@ body {
   text-transform: uppercase;
 }
 
+//Home Page CSS
 .home {
   width: 100%;
-  position: relative;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  // background-color: red;
 
   .hero-text {
     &__primary {
@@ -161,7 +162,7 @@ body {
     background-color: $color-btn-bkg;
     transition: all 0.4s;
     margin-top: 0rem;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
 
   .leaf-left {
@@ -235,11 +236,196 @@ body {
 
   .btn:hover {
     transform: scale(1.1);
+  }
 }
+
+//Tracker Page CSS
+.tracker-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  .leaf-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .leaf-center {
+    position: absolute;
+    top: 0;
+    right: 45%;
+  }
+  .leaf-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .morph-icon-left {
+    position: fixed;
+    bottom: 0rem;
+    left: 0;
+    width: 40%;
+  }
+  .morph-icon-right {
+    position: fixed;
+    bottom: 10rem;
+    right: 0rem;
+    width: 57%;
+  }
+  .leaf-bottom {
+    object-fit: contain;
+    margin-bottom: 9rem;
+    object-fit: contain;
+    align-self: center;
+    position: fixed;
+    top: 18rem;
+    // right: auto;
+    // width: 127.4rem;
+    // height: 80.9rem;
+    // object-fit: contain;
+  }
+
+  .hero-text {
+    &__primary {
+      width: 100%;
+      height: 75px;
+      font-family: Graphik;
+      font-size: 29px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.3;
+      letter-spacing: normal;
+      text-align: center;
+      color: $color-text;
+      margin-top: 4rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .button {
+    width: 20.5rem;
+    // height: 5.3rem;
+    opacity: 0.5;
+    border-radius: 5px;
+    background-color: #f47079;
+    text-align: center;
+    color: #ffffff;
+    opacity: 0.5;
+    font-family: Graphik;
+    font-size: 17.1px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.94;
+    letter-spacing: normal;
+    padding: 2rem 0;
+    align-self: center;
+    margin-bottom: 5rem;
+    cursor: pointer;
+  }
+
+  .card-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50rem;
+    margin-bottom: 5.2rem;
+
+    &__card-row {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 4rem;
+
+      .card1,
+      .card2,
+      .card3,
+      .card4 {
+        width: 100%;
+        height: 50%;
+        padding: 1rem 1rem;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        background-color: #ffffff;
+
+        ::placeholder {
+          opacity: 0.48;
+          font-family: Graphik;
+          font-size: 24px;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: -0.58px;
+          text-align: center;
+          color: #252525;
+        }
+
+        :focus {
+          outline: none;
+        }
+
+        .card-img {
+          width: 50%;
+          margin-top: 1rem;
+        }
+
+        .error {
+          display: none;
+          color: red;
+        }
+
+        .card-text {
+          width: 100%;
+          margin-top: 0.5rem;
+          font-family: SFProDisplay;
+          font-size: 1.2rem;
+          font-weight: 600;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: -0.41px;
+          text-align: center;
+          color: #3a3737;
+        }
+
+        .input {
+          width: 10rem;
+          height: 3rem;
+          font-size: 2rem;
+          text-align: center;
+          margin-top: 1rem;
+          margin-bottom: 0.8rem;
+          border: none;
+          border-radius: 3px;
+          background-color: #f1f1f1;
+        }
+      }
+
+      .card1,
+      .card2,
+      .card3 {
+        margin-right: 4rem;
+      }
+    }
+  }
 }
 
 //Mobile
 @media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
+
+  //Home page Media Query
+  
   .home {
     width: 100%;
     position: relative;
@@ -372,6 +558,193 @@ body {
       position: relative;
       bottom: 18rem;
       left: 3rem;
+    }
+  }
+
+  //Tracker Page Media Query
+
+  .tracker-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  
+    .leaf-left {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 30%;
+    }
+    .leaf-center {
+      position: absolute;
+      top: 0;
+      right: 40%;
+      width: 20%;
+    }
+    .leaf-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 30%;
+    }
+  
+    .morph-icon-left {
+      position: fixed;
+      top: -20rem;
+      left: 0;
+      width: 80%;
+      height: 80%;
+    }
+    .morph-icon-right {
+      position: fixed;
+      top: 30rem;
+      left: auto;
+      width: 120%;
+      height: 100%;
+    }
+    .leaf-bottom {
+      object-fit: contain;
+      margin-bottom: 9rem;
+      object-fit: contain;
+      align-self: center;
+      position: fixed;
+      top: 18rem;
+      width: 40%;
+    }
+  
+    .hero-text {
+      &__primary {
+        width: 100%;
+        height: 75px;
+        font-family: Graphik;
+        font-size: 29px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.3;
+        letter-spacing: normal;
+        text-align: center;
+        color: $color-text;
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+      }
+    }
+  
+    .button {
+      width: 20.5rem;
+      // height: 5.3rem;
+      opacity: 0.5;
+      border-radius: 5px;
+      background-color: #f47079;
+      text-align: center;
+      color: #ffffff;
+      opacity: 0.5;
+      font-family: Graphik;
+      font-size: 17.1px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 0.94;
+      letter-spacing: normal;
+      padding: 2rem 0;
+      align-self: center;
+      margin-bottom: 5rem;
+      cursor: pointer;
+    }
+  
+    .card-container {
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      margin: 4rem auto;
+      margin-bottom: 5.2rem;
+  
+      &__card-row {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4rem;
+  
+        .card1,
+        .card2,
+        .card3,
+        .card4 {
+          width: 20%;
+          height: 50%;
+          padding: 1rem 1rem;
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+          align-items: center;
+          border-radius: 8px;
+          background-color: #ffffff;
+  
+          ::placeholder {
+            opacity: 0.48;
+            font-family: Graphik;
+            font-size: 24px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: -0.58px;
+            text-align: center;
+            color: #252525;
+          }
+  
+          :focus {
+            outline: none;
+          }
+  
+          .card-img {
+            width: 50%;
+            margin-top: 1rem;
+          }
+  
+          .error {
+            display: none;
+            color: red;
+          }
+  
+          .card-text {
+            width: 100%;
+            margin-top: 0.5rem;
+            font-family: SFProDisplay;
+            font-size: 1.2rem;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: -0.41px;
+            text-align: center;
+            color: #3a3737;
+          }
+  
+          .input {
+            width: 10rem;
+            height: 3rem;
+            font-size: 2rem;
+            text-align: center;
+            margin-top: 1rem;
+            margin-bottom: 0.8rem;
+            border: none;
+            border-radius: 3px;
+            background-color: #f1f1f1;
+          }
+        }
+  
+        .card1,
+        .card2,
+        .card3 {
+          margin-right: 2rem;
+        }
+      }
     }
   }
 }
