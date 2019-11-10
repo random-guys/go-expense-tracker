@@ -101,6 +101,10 @@ body {
   text-transform: uppercase;
 }
 
+.margin-top {
+  margin-top: 7.7rem;
+}
+
 //Home Page CSS
 .home {
   width: 100%;
@@ -238,8 +242,243 @@ body {
     transform: scale(1.1);
   }
 }
+//End of home page css
+
+//Signup page css
+
+.signup-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  .leaf-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .leaf-center {
+    position: absolute;
+    top: 0;
+    right: 45%;
+  }
+  .leaf-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .morph-icon-left {
+    position: fixed;
+    bottom: 0rem;
+    left: 0;
+    width: 40%;
+  }
+  .morph-icon-right {
+    position: fixed;
+    bottom: 10rem;
+    right: 0rem;
+    width: 57%;
+    z-index: -1;
+  }
+
+  .hero-text {
+    &__primary {
+      max-width: 42rem;
+      font-size: 4rem;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.25;
+      letter-spacing: normal;
+      align-self: center;
+      color: $color-text;
+      margin-top: 7.7rem;
+      margin-bottom: 3.2rem;
+    }
+    &__secondary {
+      width: 31.2rem;
+      opacity: 0.5;
+      font-size: 2.1rem;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.79;
+      letter-spacing: normal;
+      color: $color-text;
+      align-self: center;
+      margin-top: 3.2rem;
+    }
+  }
+
+  .header2-text {
+    max-width: 42rem;
+    font-size: 4rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    align-self: center;
+    color: $color-text;
+
+    .display-none {
+      display: none;
+    }
+
+    .margin-bottom {
+      margin-bottom: 3.2rem;
+    }
+
+    .name-color {
+      color: #15777c;
+    }
+  }
+
+  .slider {
+    // position: absolute;
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+
+    .btn1,
+    .btn2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 39rem;
+      width: 97px;
+      height: 180px;
+      z-index: 2;
+      background-color: #15777c;
+      cursor: pointer;
+    }
+
+    .btn1 {
+      border-bottom-right-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+
+    .btn2 {
+      border-bottom-left-radius: 12px;
+      border-top-left-radius: 12px;
+      right: 0;
+    }
+
+    .oval {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      opacity: 0.24;
+      background-color: #000000;
+
+      .arrow {
+        color: #ffffff;
+        font-size: 2rem;
+        margin-left: 2rem;
+        margin-top: 1rem;
+        font-weight: 900;
+        cursor: pointer;
+      }
+    }
+
+    &__slide {
+      display: flex;
+      width: 100%;
+      .card1,
+      .card2,
+      .card3 {
+        position: relative;
+        // width: 100%;
+        left: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        // width: 75.2rem;
+        border-radius: 8px;
+        box-shadow: 0 40px 56px 0 rgba(11, 16, 51, 0.06);
+        padding: 4rem 0;
+        padding-left: 3rem;
+        background-color: #ffffff;
+
+        .header {
+          font-family: Graphik;
+          font-size: 2.8rem;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.31;
+          letter-spacing: normal;
+          color: #000000;
+        }
+
+        .required {
+          font-family: Graphik;
+          font-size: 2rem;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.81;
+          letter-spacing: normal;
+          color: #f47079;
+          margin-top: 1rem;
+        }
+
+        .input {
+          ::placeholder {
+            opacity: 0.1;
+            text-align: center;
+          }
+
+          :focus {
+            outline: none;
+          }
+
+          .input_tag {
+            border: none;
+            width: 70rem;
+            font-family: Graphik;
+            font-size: 5.2rem;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 0.71;
+            letter-spacing: normal;
+            color: #4e4e4e;
+            margin-top: 1rem;
+            // pointer-events: visible;
+          }
+        }
+      }
+
+      .card1,
+      .card2 {
+        width: 51.2rem;
+        margin-right: 8rem;
+        .input {
+          .input_tag {
+            width: 48rem;
+          }
+        }
+      }
+    }
+  }
+
+  .slider-mobile {
+    display: none;
+  }
+
+  .pie-chart {
+    position: relative;
+    top: 13rem;
+    left: 26rem;
+  }
+}
+//end of signup page css
 
 //Tracker Page CSS
+
 .tracker-page {
   width: 100%;
   display: flex;
@@ -731,6 +970,276 @@ body {
       left: 3rem;
     }
   }
+  //end of home page media query
+
+  //signup page media query
+
+  .signup-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .leaf-left {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 30%;
+    }
+    .leaf-center {
+      position: absolute;
+      top: 0;
+      right: 40%;
+      width: 20%;
+    }
+    .leaf-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 30%;
+    }
+
+    .morph-icon-left {
+      position: fixed;
+      top: -20rem;
+      left: 0;
+      width: 80%;
+      height: 80%;
+      z-index: -1;
+    }
+    .morph-icon-right {
+      position: fixed;
+      top: 30rem;
+      left: auto;
+      width: 120%;
+      height: 100%;
+    }
+
+    .hero-text {
+      &__primary {
+        max-width: 42rem;
+        font-size: 4rem;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.25;
+        letter-spacing: normal;
+        align-self: center;
+        color: $color-text;
+        margin-top: 7.7rem;
+        margin-bottom: 7rem;
+      }
+      &__secondary {
+        width: 31.2rem;
+        opacity: 0.5;
+        font-size: 2.1rem;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.79;
+        letter-spacing: normal;
+        color: $color-text;
+        align-self: center;
+        margin-top: 3.2rem;
+      }
+    }
+
+    .header2-text {
+      max-width: 42rem;
+      font-size: 4rem;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.25;
+      letter-spacing: normal;
+      align-self: center;
+      // margin-bottom: 7rem;
+      color: $color-text;
+
+      .display-none {
+        display: none;
+      }
+
+      .margin-bottom {
+        margin-bottom: 7rem;
+      }
+
+      .name-color {
+        color: #15777c;
+      }
+    }
+
+    .slider-mobile {
+      // position: absolute;
+      width: 100%;
+      display: flex;
+      overflow-x: scroll;
+
+      .btn1-mobile,
+      .btn2-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50rem;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        z-index: 2;
+        // background-color: #15777c;
+        cursor: pointer;
+      }
+
+      .btn1-mobile {
+        border-bottom-right-radius: 0.8rem;
+        border-top-right-radius: 0.8rem;
+        left: 1rem;
+      }
+
+      .btn2-mobile {
+        border-bottom-left-radius: 0.8rem;
+        border-top-left-radius: 0.8rem;
+        right: 1rem;
+      }
+
+      .oval1-mobile {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        border-bottom-right-radius: 0.8rem;
+        border-top-right-radius: 0.8rem;
+        opacity: 0.24;
+        background-color: #000000;
+
+        .arrow-mobile {
+          color: #ffffff;
+          font-size: 2rem;
+          margin-left: 2rem;
+          margin-top: 1rem;
+          font-weight: 900;
+          cursor: pointer;
+        }
+      }
+
+      .oval2-mobile {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        border-bottom-left-radius: 0.8rem;
+        border-top-left-radius: 0.8rem;
+        opacity: 0.24;
+        background-color: #000000;
+
+        .arrow-mobile {
+          color: #ffffff;
+          font-size: 2rem;
+          margin-left: 2rem;
+          margin-top: 1rem;
+          font-weight: 900;
+          cursor: pointer;
+        }
+      }
+
+      &__slide-mobile {
+        display: flex;
+        width: 100%;
+        .card1-mobile,
+        .card2-mobile,
+        .card3-mobile {
+          position: relative;
+          // width: 3rem;
+          left: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          // width: 75.2rem;
+          border-radius: 8px;
+          box-shadow: 0 40px 56px 0 rgba(11, 16, 51, 0.06);
+          padding: 4rem 0;
+          // padding-left: 3rem;
+          background-color: #ffffff;
+
+          .header-mobile {
+            font-family: Graphik;
+            font-size: 2.8rem;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.31;
+            letter-spacing: normal;
+            color: #000000;
+          }
+
+          .required-mobile {
+            font-family: Graphik;
+            font-size: 2rem;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.81;
+            letter-spacing: normal;
+            color: #f47079;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+          }
+
+          .input-mobile {
+            ::placeholder {
+              opacity: 0.1;
+              text-align: center;
+            }
+
+            :focus {
+              outline: none;
+            }
+
+            .input_tag-mobile {
+              border: none;
+              width: 50rem;
+              font-family: Graphik;
+              padding: 1rem;
+              font-size: 3.5rem;
+              font-weight: 500;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 0.71;
+              letter-spacing: normal;
+              color: #4e4e4e;
+              margin-top: 1rem;
+              // pointer-events: visible;
+            }
+          }
+        }
+
+        .card1-mobile {
+          margin-left: 2rem;
+        }
+        .card1-mobile,
+        .card2-mobile,
+        .card3-mobile {
+          // width: 51.2rem;
+          margin-right: 2rem;
+          .input-mobile {
+            .input_tag-mobile {
+              // width: 50rem;
+            }
+          }
+        }
+      }
+    }
+
+    .slider {
+      display: none;
+    }
+
+    .pie-chart {
+      position: relative;
+      top: 13rem;
+      left: 26rem;
+    }
+  }
+  // end of signup page media query
 
   //Tracker Page Media Query
 
@@ -782,8 +1291,6 @@ body {
       top: 22rem;
       width: 200%;
     }
-
-
 
     .hero-text {
       &__primary {
