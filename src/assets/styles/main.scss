@@ -980,6 +980,13 @@ body {
     flex-direction: column;
     text-align: center;
 
+    .logo {
+      object-fit: contain;
+      text-align: center;
+      margin-top: 9rem;
+      margin-bottom: 3rem;
+    }
+
     .leaf-left {
       position: absolute;
       top: 0;
@@ -1026,7 +1033,7 @@ body {
         letter-spacing: normal;
         align-self: center;
         color: $color-text;
-        margin-top: 7.7rem;
+        margin-top: 3.2rem;
         margin-bottom: 7rem;
       }
       &__secondary {
