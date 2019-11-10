@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <div class="result">
+    <div class="result resultPage">
       <img
         src="../assets/images/vector-shapes-1.svg"
         alt="Morph Icon Left"
@@ -23,6 +23,7 @@
         height="135"
         viewBox="0 0 182 135"
         class="baller-emoji"
+        id="ballerEmoji"
       >
         <defs>
           <path
@@ -110,6 +111,10 @@ export default {
   mounted() {
     this.userDetails = JSON.parse(localStorage.getItem("user_details"));
 
+    const tl = new TimelineMax();
+
+    tl.fromTo(".resultPage", 1.5, {opacity: 0, ease: Power2.easeInOut}, {opacity: 1, ease: Power2.easeInOut})
+
     TweenMax.fromTo(
       ".morphIconRight",
       60,
@@ -126,7 +131,7 @@ export default {
     );
     TweenMax.fromTo(
       ".morphIconLeft",
-      20,
+      120,
       { scale: "1" },
       {
         repeat: -1,
