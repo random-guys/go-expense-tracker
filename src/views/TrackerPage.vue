@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="main">
-    <div class="tracker-page">
+    <div class="tracker-page trackerPage">
       <img src="../assets/images/group-copy-12.svg" alt="Leaf Icon Left" class="leaf-left leafLeft" />
       <img
         src="../assets/images/group-copy-11.svg"
@@ -41,8 +41,8 @@
         </h2>
       </div>
       <div class="card-container">
-        <div class="card-container__card-row">
-          <div class="card1 transport">
+        <!-- <div class="card-container__card-row"> -->
+          <div class="card-transport transport">
             <img
               src="../assets/images/transportation-icon.svg"
               alt="Leaf Icon Left"
@@ -60,7 +60,7 @@
             />
             <p class="error errorMsgTransport">!!!</p>
           </div>
-          <div class="card2 transfer">
+          <div class="card-transfer transfer">
             <img src="../assets/images/transfer.svg" alt="Leaf Icon Left" class="card-img" />
             <p class="card-text transferText">Transfer</p>
             <input
@@ -74,7 +74,7 @@
             />
             <p class="error errorMsgTransfer">!!!</p>
           </div>
-          <div class="card3 eating">
+          <div class="card-eating eating">
             <img src="../assets/images/eating.svg" alt="Leaf Icon Left" class="card-img" />
             <p class="card-text eatingText">Eating Out</p>
             <input
@@ -88,7 +88,7 @@
             />
             <p class="error errorMsgEating">!!!</p>
           </div>
-          <div class="card4 bills">
+          <div class="card-bills bills">
             <img src="../assets/images/bills.svg" alt="Leaf Icon Left" class="card-img" />
             <p class="card-text billsText">Bills</p>
             <input
@@ -102,9 +102,9 @@
             />
             <p class="error errorMsgBills">!!!</p>
           </div>
-        </div>
-        <div class="card-container__card-row">
-          <div class="card1 family">
+        <!-- </div> -->
+        <!-- <div class="card-container__card-row"> -->
+          <div class="card-family family">
             <img src="../assets/images/family.svg" alt="Leaf Icon Left" class="card-img" />
             <p class="card-text familyText">Family</p>
             <input
@@ -118,7 +118,7 @@
             />
             <p class="error errorMsgFamily">!!!</p>
           </div>
-          <div class="card2 groceries">
+          <div class="card-groceries groceries">
             <img src="../assets/images/Groceries.svg" alt="Leaf Icon Left" class="card-img" />
             <p class="card-text groceriesText">Groceries</p>
             <input
@@ -132,7 +132,7 @@
             />
             <p class="error errorMsgGroceries">!!!</p>
           </div>
-          <div class="card3 shopping">
+          <div class="card-shopping shopping">
             <img src="../assets/images/shopping.svg" alt="Leaf Icon Left" class="card-img" />
             <p class="card-text shoppingText">Shopping</p>
             <input
@@ -146,7 +146,7 @@
             />
             <p class="error errorMsgShopping">!!!</p>
           </div>
-          <div class="card4 care">
+          <div class="card-care care">
             <img src="../assets/images/personal-care.svg" alt="Leaf Icon Left" class="card-img" />
             <p class="card-text careText">Personal Care</p>
             <input
@@ -160,9 +160,9 @@
             />
             <p class="error errorMsgCare">!!!</p>
           </div>
-        </div>
-        <div class="card-container__card-row">
-          <div class="card1 vacation">
+        <!-- </div> -->
+        <!-- <div class="card-container__card-row"> -->
+          <div class="card-vacation vacation">
             <img src="../assets/images/vercation.svg" alt="Leaf Icon Left" class="card-img" />
             <p class="card-text vacationText">vacation</p>
             <input
@@ -176,7 +176,7 @@
             />
             <p class="error errorMsgVacation">!!!</p>
           </div>
-          <div class="card2 payroll">
+          <div class="card-payroll payroll">
             <img src="../assets/images/payroll.svg" alt="Leaf Icon Left" class="card-img" />
             <p class="card-text payrollText">Payroll</p>
             <input
@@ -190,7 +190,7 @@
             />
             <p class="error errorMsgPayroll">!!!</p>
           </div>
-          <div class="card3 entertainment">
+          <div class="card-entertainment entertainment">
             <img src="../assets/images/entertainment.svg" alt="Leaf Icon Left" class="card-img" />
             <p class="card-text entertainmentText">Entertainment</p>
             <input
@@ -204,7 +204,7 @@
             />
             <p class="error errorMsgEntertainment">!!!</p>
           </div>
-          <div class="card4 investment">
+          <div class="card-investment investment">
             <img src="../assets/images/investment.svg" alt="Leaf Icon Left" class="card-img" />
             <p class="card-text investmentText">Investment</p>
             <input
@@ -218,7 +218,7 @@
             />
             <p class="error errorMsgInvestment">!!!</p>
           </div>
-        </div>
+        <!-- </div> -->
       </div>
       <div class="button" @click="checkHabit()">Check Your Habit!</div>
     </div>
@@ -249,6 +249,8 @@ export default {
   },
   mounted() {
     this.userDetails = JSON.parse(localStorage.getItem("user_details"));
+    const tl = new TimelineMax();
+
     TweenMax.fromTo(
       ".morphIconRight",
       60,
@@ -265,7 +267,7 @@ export default {
     );
     TweenMax.fromTo(
       ".morphIconLeft",
-      20,
+      120,
       { scale: "1" },
       {
         repeat: -1,
@@ -279,20 +281,20 @@ export default {
     TweenMax.fromTo(
       ".leafRight",
       5,
-      { x: 0, y: 0 },
+      { x: 0, y: 0, rotation: "0" },
       {
         repeat: -1,
         yoyo: true,
         repeatDelay: 0.4,
         ease: Linear.easeNone,
         x: 10,
-        y: -30
+        y: -30, rotation: "5"
       },
       -3
     );
     TweenMax.fromTo(
       ".leafLeft",
-      2,
+      7,
       { x: 0, y: 0 },
       {
         repeat: -1,
@@ -300,7 +302,7 @@ export default {
         repeatDelay: 0.4,
         ease: Linear.easeNone,
         x: -10,
-        y: -10
+        y: -30
       },
       -3
     );
@@ -327,11 +329,26 @@ export default {
         repeat: -1,
         yoyo: true,
         repeatDelay: 0.4,
-        ease: Linear.easeNone,
+        ease: Power2.easeInOut,
         scale: "1.2"
       },
       -3
     );
+
+    tl.fromTo(".trackerPage", 1.5, {opacity: 0, ease: Power2.easeInOut}, {opacity: 1, ease: Power2.easeInOut})
+      .fromTo(".family", 0.1, {scale: 0, ease: Power2.easeInOut}, {scale: 1, ease: Power2.easeInOut}, 0.5)
+      .fromTo(".eating", 0.1, {opacity: 0, ease: Power2.easeInOut}, {opacity: 1, ease: Power2.easeInOut}, 0.6)
+      .fromTo(".vacation", 0.1, {opacity: 0, ease: Power2.easeInOut}, {opacity: 1, ease: Power2.easeInOut}, 0.7)
+      .fromTo(".care", 0.1, {scale: 0, ease: Power2.easeInOut}, {scale: 1, ease: Power2.easeInOut}, 0.8)
+      .fromTo(".transport", 0.1, {opacity: 0, ease: Power2.easeInOut}, {opacity: 1, ease: Power2.easeInOut}, 0.9)
+      .fromTo(".groceries", 0.1, {scale: 0, ease: Power2.easeInOut}, {scale: 1, ease: Power2.easeInOut}, 1)
+      .fromTo(".investment", 0.1, {opacity: 0, ease: Power2.easeInOut}, {opacity: 1, ease: Power2.easeInOut}, 1.1)
+      .fromTo(".bills", 0.1, {scale: 0, ease: Power2.easeInOut}, {scale: 1, ease: Power2.easeInOut}, 1.2)
+      .fromTo(".transfer", 0.1, {opacity: 0, ease: Power2.easeInOut}, {opacity: 1, ease: Power2.easeInOut}, 1.3)
+      .fromTo(".payroll", 0.1, {scale: 0, ease: Power2.easeInOut}, {scale: 1, ease: Power2.easeInOut}, 1.4)
+      .fromTo(".entertainment", 0.1, {opacity: 0, ease: Power2.easeInOut}, {opacity: 1, ease: Power2.easeInOut}, 1.5)
+      .fromTo(".shopping", 0.1, {opacity: 0, ease: Power2.easeInOut}, {opacity: 1, ease: Power2.easeInOut}, 1.6)
+
   },
   methods: {
     checkHabit() {
