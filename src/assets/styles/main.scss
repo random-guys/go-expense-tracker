@@ -173,18 +173,21 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
   }
 
   .leaf-right {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: -1;
   }
 
   .morph-icon-left {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: -1;
   }
 
   .morph-icon-right {
@@ -206,36 +209,42 @@ body {
     position: relative;
     bottom: 1rem;
     right: 14rem;
+    z-index: -1;
   }
 
   .yellow-dot {
     position: relative;
     top: 7rem;
     left: 32rem;
+    z-index: -1;
   }
 
   .pie-chart {
     position: relative;
     top: 11rem;
     left: 25rem;
+    z-index: -1;
   }
 
   .green-dot {
     position: relative;
     bottom: 6.4rem;
     right: 23rem;
+    z-index: -1;
   }
 
   .home-triangle {
     position: relative;
     bottom: 8rem;
     right: 17.5rem;
+    z-index: -1;
   }
 
   .star {
     position: relative;
     bottom: 22rem;
     left: 3rem;
+    z-index: -1;
   }
 
   .btn:hover {
@@ -256,28 +265,33 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
   }
   .leaf-center {
     position: absolute;
     top: 0;
     right: 45%;
+    z-index: -1;
   }
   .leaf-right {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: -1;
   }
   .morph-icon-left {
     position: fixed;
     bottom: 0rem;
     left: 0;
     width: 40%;
+    z-index: -1;
   }
   .morph-icon-right {
     position: fixed;
     bottom: 10rem;
     right: 0rem;
     width: 57%;
+    z-index: -1;
     z-index: -1;
   }
 
@@ -428,7 +442,6 @@ body {
         .input {
           ::placeholder {
             opacity: 0.1;
-            text-align: center;
           }
 
           :focus {
@@ -489,16 +502,19 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
   }
   .leaf-center {
     position: absolute;
     top: 0;
     right: 45%;
+    z-index: -1;
   }
   .leaf-right {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: -1;
   }
 
   .morph-icon-left {
@@ -506,12 +522,14 @@ body {
     bottom: 0rem;
     left: 0;
     width: 40%;
+    z-index: -1;
   }
   .morph-icon-right {
     position: fixed;
     bottom: 10rem;
     right: 0rem;
     width: 57%;
+    z-index: -1;
   }
   .leaf-bottom {
     object-fit: contain;
@@ -520,6 +538,7 @@ body {
     align-self: center;
     position: fixed;
     top: 18rem;
+    z-index: -1;
     // right: auto;
     // width: 127.4rem;
     // height: 80.9rem;
@@ -579,31 +598,35 @@ body {
     position: relative;
     width: 100%;
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding: 0 50rem;
     margin-bottom: 5.2rem;
 
-    &__card-row {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 4rem;
-
-      .card1,
-      .card2,
-      .card3,
-      .card4 {
-        width: 100%;
+      .card-transport,
+      .card-transfer,
+      .card-eating,
+      .card-bills,
+      .card-family,
+      .card-groceries,
+      .card-shopping,
+      .card-care,
+      .card-vacation,
+      .card-payroll,
+      .card-entertainment,
+      .card-investment {
+        width: 20%;
         height: 50%;
-        padding: 1rem 1rem;
+        padding: 1rem 0;
+        padding-bottom: 0.5rem;
         display: flex;
         flex-flow: column;
         justify-content: center;
         align-items: center;
         border-radius: 8px;
+        margin-top: 4rem;
         background-color: #ffffff;
 
         ::placeholder {
@@ -626,6 +649,7 @@ body {
         .card-img {
           width: 50%;
           margin-top: 1rem;
+          margin-bottom: 0.5rem;
         }
 
         .error {
@@ -648,11 +672,11 @@ body {
         }
 
         .input {
-          width: 10rem;
+          width: 95%;
           height: 3rem;
-          font-size: 2rem;
+          font-size: 1.8rem;
           text-align: center;
-          margin-top: 1rem;
+          margin-top: 1.5rem;
           margin-bottom: 0.8rem;
           border: none;
           border-radius: 3px;
@@ -660,12 +684,17 @@ body {
         }
       }
 
-      .card1,
-      .card2,
-      .card3 {
-        margin-right: 4rem;
+      .card-transport,
+      .card-transfer,
+      .card-eating,
+      .card-family,
+      .card-groceries,
+      .card-shopping,
+      .card-vacation,
+      .card-payroll,
+      .card-entertainment {
+        margin-right: 3rem;
       }
-    }
   }
 }
 
@@ -685,6 +714,7 @@ body {
     // height: 17.5rem;
     object-fit: contain;
     align-self: center;
+    z-index: -1;
   }
   .leaf-bottom-right {
     position: fixed;
@@ -693,20 +723,21 @@ body {
     width: 46rem;
     height: 55.4rem;
     object-fit: contain;
+    z-index: -1;
   }
   .morph-icon-left {
     position: fixed;
     bottom: 0rem;
     left: 0;
     width: 40%;
-    transform: rotate(-60deg);
+    z-index: -1;
   }
   .morph-icon-right {
     position: fixed;
     bottom: 9rem;
     right: 5rem;
     width: 57%;
-    transform: rotate(300deg);
+    z-index: -1;
   }
   .montly {
     position: absolute;
@@ -1326,7 +1357,7 @@ body {
     }
 
     .button {
-      width: 93%;
+      width: 85%;
       // height: 5.3rem;
       opacity: 0.5;
       border-radius: 5px;
@@ -1351,31 +1382,33 @@ body {
       position: relative;
       width: 100%;
       display: flex;
-      flex-direction: row;
+      // flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      padding: 0;
+      padding: 0 2rem;
       margin: 0rem auto;
       margin-bottom: 8rem;
 
-      &__card-row {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 3rem;
-
-        .card1,
-        .card2,
-        .card3,
-        .card4 {
-          width: 21%;
+      .card-transport,
+      .card-transfer,
+      .card-eating,
+      .card-bills,
+      .card-family,
+      .card-groceries,
+      .card-shopping,
+      .card-care,
+      .card-vacation,
+      .card-payroll,
+      .card-entertainment,
+      .card-investment {
+          width: 28%;
           height: 50%;
           padding: 1rem 1rem;
+          padding-bottom: 0.5rem;
           display: flex;
-          flex-flow: column;
-          justify-content: center;
+          // flex-flow: column;
+          justify-content: space-between;
           align-items: center;
           border-radius: 8px;
           background-color: #ffffff;
@@ -1400,6 +1433,7 @@ body {
           .card-img {
             width: 50%;
             margin-top: 1rem;
+            margin-bottom: 0.3rem;
           }
 
           .error {
@@ -1422,11 +1456,11 @@ body {
           }
 
           .input {
-            width: 10rem;
+            width: 98%;
             height: 3rem;
-            font-size: 2rem;
+            font-size: 1.8rem;
             text-align: center;
-            margin-top: 1rem;
+            margin-top: 2rem;
             margin-bottom: 0.8rem;
             border: none;
             border-radius: 3px;
@@ -1434,12 +1468,28 @@ body {
           }
         }
 
-        .card1,
-        .card2,
-        .card3 {
-          margin-right: 1.5rem;
+        .card-transport,
+        .card-transfer,
+        .card-eating,
+        .card-family,
+        .card-groceries,
+        .card-shopping,
+        .card-vacation,
+        .card-payroll,
+        .card-entertainment {
+          margin-right: 0rem;  
         }
-      }
+
+        .card-transport,
+        .card-family,
+        .card-bills,
+        .card-shopping,
+        .card-care,
+        .card-payroll,
+        .card-entertainment,
+        .card-transfer {
+          margin-right: 2rem;
+        }        
     }
   }
 
