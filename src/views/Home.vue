@@ -98,21 +98,21 @@ export default {
     );
     TweenMax.fromTo(
       ".morphIconLeft",
-      60,
-      { scale: "1", rotation: "0" },
+      120,
+      { scale: "1" },
       {
         repeat: -1,
         yoyo: true,
         repeatDelay: 0.4,
         ease:Linear.easeNone,
-        scale: "1.5", rotation: "-360",
+        scale: "1.5", rotation: "-720",
       },
       -3
     );
     TweenMax.fromTo(
       ".morphIconRight",
       20,
-      { scale: "0.8", rotation: "0" },
+      { scale: "0.8" },
       {
         repeat: -1,
         yoyo: true,
