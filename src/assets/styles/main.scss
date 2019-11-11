@@ -1225,6 +1225,9 @@ body {
       &__slide-mobile {
         display: flex;
         width: 100%;
+          box-shadow: 0 40px 56px 0 rgba(11, 16, 51, 0.06);
+          background-color: #ffffff;
+
         .card1-mobile,
         .card2-mobile,
         .card3-mobile {
@@ -1237,9 +1240,7 @@ body {
           align-items: center;
           // width: 75.2rem;
           border-radius: 8px;
-          box-shadow: 0 40px 56px 0 rgba(11, 16, 51, 0.06);
           padding: 4rem 0;
-          background-color: #ffffff;
 
           .header-mobile {
             font-family: Graphik;
