@@ -60,6 +60,7 @@
                 placeholder="First Name"
                 class="input_tag"
                 v-model="first_name"
+                autofocus
               />
             </form>
           </div>
