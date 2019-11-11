@@ -14,8 +14,8 @@
       <h2 class="hero-text__primary header1"><b>Hi there! <br> Let’s make this personal</b></h2>
       <!-- <h2 class="header2-text margin-top header2">One more thing</h2> -->
       <div class="header2-div" v-for="(detail, index) in userDetails" :key="index">
-        <h2 class="header2-text margin-bottom display-none uppercase header2">
-          <b>One more thing <br> <span class="name-color">{{ detail.first_name }}</span></b>
+        <h2 class="header2-text margin-bottom display-none header2">
+          <b>One more thing <br> <span class="name-color uppercase">{{ detail.first_name }}</span></b>
         </h2>
       </div>
 
