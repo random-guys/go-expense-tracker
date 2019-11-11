@@ -118,13 +118,13 @@ export default {
     TweenMax.fromTo(
       ".morphIconRight",
       60,
-      { scale: "1" },
+      { scale: "0.8" },
       {
         repeat: -1,
         yoyo: true,
         repeatDelay: 0.4,
         ease: Linear.easeNone,
-        scale: "0.9",
+        scale: "1",
         rotation: "-180"
       },
       -3
@@ -138,7 +138,7 @@ export default {
         yoyo: true,
         repeatDelay: 0.4,
         ease: Linear.easeNone,
-        scale: "1.2",
+        scale: "1.5",
         rotation: "360"
       },
       -3

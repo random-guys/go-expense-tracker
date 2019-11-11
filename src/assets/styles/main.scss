@@ -154,9 +154,11 @@ body {
   }
 
   .btn {
+    width: 15%;
     display: inline-block;
     text-decoration: none;
     text-align: center;
+    align-self: center;
     font-size: 1.7rem;
     font-weight: 500;
     font-stretch: normal;
@@ -165,7 +167,7 @@ body {
     letter-spacing: normal;
     color: $color-white;
     padding: 1.5rem 4.5rem;
-    border-radius: 1.2rem;
+    border-radius: 0.8rem;
     z-index: 2;
     background-color: $color-btn-bkg;
     transition: all 0.4s;
@@ -246,8 +248,9 @@ body {
 
   .star {
     position: relative;
-    bottom: 22rem;
-    left: 3rem;
+    bottom: 10rem;
+    left: 85rem;
+    width: 4%;
     z-index: -1;
   }
 
@@ -932,13 +935,15 @@ body {
     .button {
       display: flex;
       flex-direction: column;
+      justify-self: center;
     }
 
     .btn {
       width: 90%;
       display: inline-block;
       text-decoration: none;
-      text-align: center;
+      align-items: center;
+      align-self: center;
       font-size: 1.7rem;
       font-weight: 500;
       font-stretch: normal;
@@ -950,7 +955,7 @@ body {
       border-radius: 1.2rem;
       z-index: 2;
       background-color: $color-btn-bkg;
-      transition: all 0.4s;
+      transition: all 0.2s;
       // margin-top: 0rem;
     }
 
@@ -963,8 +968,8 @@ body {
 
     .leaf-right {
       position: absolute;
-      top: 8;
-      right: -2rem;
+      top: 0;
+      right: 0rem;
       width: 30%;
     }
 
@@ -980,7 +985,7 @@ body {
       position: fixed;
       top: 30rem;
       left: auto;
-      width: 120%;
+      width: 100%;
       height: 100%;
       z-index: -1;
     }
@@ -1014,21 +1019,22 @@ body {
     .green-dot {
       position: relative;
       bottom: 6rem;
-      right: 19rem;
+      right: 21rem;
       width: 5%;
     }
 
     .home-triangle {
       position: relative;
       bottom: 8rem;
-      right: 12rem;
+      right: 14rem;
       //   width: 25%;
     }
 
     .star {
       position: relative;
-      bottom: 8rem;
-      left: 0rem;
+      bottom: 4rem;
+      left: 28rem;
+      width: 10%;
     }
   }
   //end of home page media query

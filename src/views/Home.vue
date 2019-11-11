@@ -29,7 +29,7 @@
         <p class="hero-text__secondary-mobile">Try our expense tracker to see where your money goes every month</p>
         <img src="../assets/images/pink-dot.svg" alt="Gomoney Logo" class="pink-dot pinkDot" />
       </div>
-      <div class="buton">
+      <div class="button">
         <router-link to="/sign-up-page" class="btn btnGo">Go</router-link>
         <div><img src="../assets/images/yellow-dot.svg" alt="Gomoney Logo" class="yellow-dot yellowDot" /></div>
         <div><img src="../assets/images/pie-chart.svg" alt="Gomoney Logo" class="pie-chart pieChart" /></div>
@@ -98,26 +98,28 @@ export default {
     TweenMax.fromTo(
       ".morphIconLeft",
       120,
-      { scale: "1" },
+      { scale: "1", rotation: "0" },
       {
         repeat: -1,
         yoyo: true,
         repeatDelay: 0.4,
         ease:Linear.easeNone,
-        scale: "1.5", rotation: "-720",
+        scale: "1.5",
+        rotation: "-720",
       },
       -3
     );
     TweenMax.fromTo(
       ".morphIconRight",
       20,
-      { scale: "0.8" },
+      { scale: "0.8", rotation: "0" },
       {
         repeat: -1,
         yoyo: true,
         repeatDelay: 0.4,
         ease:Linear.easeNone,
-        scale: "1", rotation: "120",
+        scale: "1.1",
+        rotation: "120",
       },
       -3
     );
