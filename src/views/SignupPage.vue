@@ -344,17 +344,17 @@ export default {
           .to(".header2", 0, { display: "flex" }, 0.1)
           .to(".header1", 0, { display: "none" }, 0.1);
 
-        tl.to(".button2Mobile", 0, { display: "none" }, 0.1)
-          .to(".cardOneMobile", 0.3, { left: "-106rem", pointerEvents: "none" }, 0.1)
-          .to(".cardTwoMobile", 0.3, { left: "-106rem", pointerEvents: "none" }, 0.1)
+        tl.fromTo(".button2Mobile", 0.5, { opacity: "1"}, { opacity: "0", ease: Power3.easeInOut, display: "none" }, 0.1)
+          .to(".cardOneMobile", 0.5, { left: "-106rem", ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
+          .to(".cardTwoMobile", 0.5, { left: "-106rem", ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
           .to(
             ".cardThreeMobile",
-            0.3,
-            { left: "-106rem", pointerEvents: "visible" },
+            0.5,
+            { left: "-106rem", ease: Power3.easeInOut, pointerEvents: "visible" },
             0.1
           )
-          .to(".cardThreeMobile", 0.5, { opacity: "1" }, 0.1)
-          .to(".cardTwoMobile", 0.5, { opacity: "0.3" }, 0.1)
+          .to(".cardThreeMobile", 0.5, { opacity: "1", ease: Power3.easeInOut }, 0.1)
+          .to(".cardTwoMobile", 0.5, { opacity: "0.3", ease: Power3.easeInOut }, 0.1)
           .to(".header2", 0, { display: "flex" }, 0.1)
           .to(".header1", 0, { display: "none" }, 0.1);
 
@@ -393,12 +393,12 @@ export default {
           .to(".header2", 0, { display: "none" }, 0.1)
           .to(".header1", 0, { display: "flex" }, 0.1);
 
-        tl.to(".button1Mobile", 0.3, { display: "none", pointerEvents: "none" }, 0.1)
-          .to(".cardOneMobile", 0.3, { left: "0rem", pointerEvents: "visible" }, 0.1)
-          .to(".cardTwoMobile", 0.3, { left: "0rem", pointerEvents: "none" }, 0.1)
-          .to(".cardThreeMobile", 0.3, { left: "0rem", pointerEvents: "none" }, 0.1)
-          .to(".cardTwoMobile", 0.5, { opacity: "0.3" }, 0.1)
-          .to(".cardOneMobile", 0.5, { opacity: "1" }, 0.1)
+        tl.fromTo(".button1Mobile", 0.5, { opacity: "1"}, { opacity: "0", ease: Power3.easeInOut, display: "none", pointerEvents: "none" }, 0.1)
+          .to(".cardOneMobile", 0.5, { left: "0rem", ease: Power3.easeInOut, pointerEvents: "visible" }, 0.1)
+          .to(".cardTwoMobile", 0.5, { left: "0rem", ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
+          .to(".cardThreeMobile", 0.5, { left: "0rem", ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
+          .to(".cardTwoMobile", 0.5, { opacity: "0.3", ease: Power3.easeInOut, }, 0.1)
+          .to(".cardOneMobile", 0.5, { opacity: "1", ease: Power3.easeInOut, }, 0.1)
           .to(".header2", 0, { display: "none" }, 0.1)
           .to(".header1", 0, { display: "flex" }, 0.1);
 
@@ -417,12 +417,12 @@ export default {
           .to(".header2", 0, { display: "none" }, 0.1)
           .to(".header1", 0, { display: "flex" }, 0.1);
 
-        tl.to(".button2Mobile", 0, { display: "flex", pointerEvents: "visible" }, 0.1)
-          .to(".cardOneMobile", 0.3, { left: "-53rem", pointerEvents: "none" }, 0.1)
-          .to(".cardTwoMobile", 0.3, { left: "-53rem", pointerEvents: "visible" }, 0.1)
-          .to(".cardThreeMobile", 0.3, { left: "-53rem", pointerEvents: "none" }, 0.1)
-          .to(".cardThreeMobile", 0.5, { opacity: "0.3" }, 0.1)
-          .to(".cardTwoMobile", 0.5, { opacity: "1" }, 0.1)
+        tl.fromTo(".button2Mobile", 0.5, { opacity: "0"}, { opacity: "1", ease: Power3.easeInOut, display: "flex", pointerEvents: "visible" }, 0.1)
+          .to(".cardOneMobile", 0.5, { left: "-53rem", ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
+          .to(".cardTwoMobile", 0.5, { left: "-53rem", ease: Power3.easeInOut, pointerEvents: "visible" }, 0.1)
+          .to(".cardThreeMobile", 0.5, { left: "-53rem", ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
+          .to(".cardThreeMobile", 0.5, { opacity: "0.3", ease: Power3.easeInOut, }, 0.1)
+          .to(".cardTwoMobile", 0.5, { opacity: "1", ease: Power3.easeInOut, }, 0.1)
           .to(".header2", 0, { display: "none" }, 0.1)
           .to(".header1", 0, { display: "flex" }, 0.1);
 
@@ -456,17 +456,17 @@ export default {
           .to(".cardTwo", 0.5, { opacity: "1", ease: Power3.easeInOut }, 0.1)
           .to(".cardOne", 0.5, { opacity: "0.3", ease: Power3.easeInOut }, 0.1);
 
-        tl.to(
+        tl.fromTo(
           ".button1Mobile",
-          0.3,
-          { display: "flex", pointerEvents: "visible" },
+          0.5, {opacity: "0"},
+          {opacity: "1", ease: Power3.easeInOut, display: "flex", pointerEvents: "visible" },
           0.1
         )
-          .to(".cardOneMobile", 0.3, { left: "-53rem", pointerEvents: "none" }, 0.1)
-          .to(".cardTwoMobile", 0.3, { left: "-53rem", pointerEvents: "visible" }, 0.1)
-          .to(".cardThreeMobile", 0.3, { left: "-53rem", pointerEvents: "none" }, 0.1)
-          .to(".cardTwoMobile", 0.5, { opacity: "1" }, 0.1)
-          .to(".cardOneMobile", 0.5, { opacity: "0.3" }, 0.1);
+          .to(".cardOneMobile", 0.5, { left: "-53rem",ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
+          .to(".cardTwoMobile", 0.5, { left: "-53rem",ease: Power3.easeInOut, pointerEvents: "visible" }, 0.1)
+          .to(".cardThreeMobile", 0.5, { left: "-53rem",ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
+          .to(".cardTwoMobile", 0.5, { opacity: "1", ease: Power3.easeInOut }, 0.1)
+          .to(".cardOneMobile", 0.5, { opacity: "0.3", ease: Power3.easeInOut }, 0.1);
 
         this.toggleFoward = true;
       } else if (this.toggleFoward === true) {
@@ -498,17 +498,17 @@ export default {
           .to(".header2", 0, { display: "flex" }, 0.1)
           .to(".header1", 0, { display: "none" }, 0.1);
 
-        tl.to(".button2Mobile", 0.3, { display: "none", pointerEvents: "none" }, 0.1)
-          .to(".cardOneMobile", 0.3, { left: "-106rem", pointerEvents: "none" }, 0.1)
-          .to(".cardTwoMobile", 0.3, { left: "-106rem", pointerEvents: "none" }, 0.1)
+        tl.fromTo(".button2Mobile", 0.5, {opacity: "1"}, {opacity: "0", ease: Power3.easeInOut, display: "none", pointerEvents: "none" }, 0.1)
+          .to(".cardOneMobile", 0.5, { left: "-106rem",ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
+          .to(".cardTwoMobile", 0.5, { left: "-106rem",ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
           .to(
             ".cardThreeMobile",
-            0.3,
-            { left: "-106rem", pointerEvents: "visible" },
+            0.5,
+            { left: "-106rem",ease: Power3.easeInOut, pointerEvents: "visible" },
             0.1
           )
-          .to(".cardThreeMobile", 0.5, { opacity: "1" }, 0.1)
-          .to(".cardTwoMobile", 0.5, { opacity: "0.3" }, 0.1)
+          .to(".cardThreeMobile", 0.5, { opacity: "1", ease: Power3.easeInOut }, 0.1)
+          .to(".cardTwoMobile", 0.5, { opacity: "0.3", ease: Power3.easeInOut }, 0.1)
           .to(".header2", 0, { display: "flex" }, 0.1)
           .to(".header1", 0, { display: "none" }, 0.1);
 
