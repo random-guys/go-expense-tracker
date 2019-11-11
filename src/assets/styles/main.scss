@@ -297,7 +297,7 @@ body {
 
   .hero-text {
     &__primary {
-      max-width: 42rem;
+      max-width: 100%;
       font-size: 4rem;
       font-weight: 500;
       font-stretch: normal;
@@ -324,6 +324,14 @@ body {
     }
   }
 
+  .header2-div {
+    align-self: center;
+  }
+
+  .header2 {
+    display: none;
+  }
+
   .header2-text {
     max-width: 42rem;
     font-size: 4rem;
@@ -332,7 +340,9 @@ body {
     font-style: normal;
     line-height: 1.25;
     letter-spacing: normal;
-    align-self: center;
+      margin-top: 7.7rem;
+      margin-bottom: 3.2rem;
+      align-self: center;
     color: $color-text;
 
     .display-none {
@@ -1055,8 +1065,8 @@ body {
 
     .hero-text {
       &__primary {
-        max-width: 42rem;
-        font-size: 4rem;
+        max-width: 100%;
+        font-size: 2.5rem;
         font-weight: 500;
         font-stretch: normal;
         font-style: normal;
@@ -1065,7 +1075,7 @@ body {
         align-self: center;
         color: $color-text;
         margin-top: 3.2rem;
-        margin-bottom: 7rem;
+        margin-bottom: 3rem;
       }
       &__secondary {
         width: 31.2rem;
@@ -1078,28 +1088,29 @@ body {
         letter-spacing: normal;
         color: $color-text;
         align-self: center;
-        margin-top: 3.2rem;
+        margin-top: 2rem;
       }
     }
 
     .header2-text {
-      max-width: 42rem;
-      font-size: 4rem;
+      max-width: 100%;
+      font-size: 2.5rem;
       font-weight: 500;
       font-stretch: normal;
       font-style: normal;
       line-height: 1.25;
       letter-spacing: normal;
       align-self: center;
-      // margin-bottom: 7rem;
-      color: $color-text;
+      margin-bottom: 3rem;
+        margin-top: 3.2rem;
+        color: $color-text;
 
       .display-none {
         display: none;
       }
 
       .margin-bottom {
-        margin-bottom: 7rem;
+        margin-bottom: 0rem;
       }
 
       .name-color {
@@ -1119,7 +1130,7 @@ body {
         justify-content: center;
         align-items: center;
         position: absolute;
-        top: 50rem;
+        top: 41rem;
         width: 5rem;
         height: 5rem;
         border-radius: 50%;
