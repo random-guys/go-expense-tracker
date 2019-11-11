@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="main">
-    <div class="signup-page">
+    <div class="signup-page signupPage">
       <img src="../assets/images/group-copy-12.svg" alt="Leaf Icon Left" class="leaf-left leafLeft" />
       <img src="../assets/images/group-copy-11.svg" alt="Leaf Icon Left" class="leaf-center leafCenter" />
       <img src="../assets/images/group-copy-10.svg" alt="Leaf Icon Left" class="leaf-right leafRight" />
@@ -11,11 +11,11 @@
         class="morph-icon-right morphIconRight"
       />
       <img src="../assets/images/logo.svg" alt="Gomoney Logo" class="logo" />
-      <h2 class="hero-text__primary header1">Hi there! Let’s make this personal</h2>
-      <h2 class="header2-text margin-top header2">One more thing</h2>
-      <div class="header2-text margin-bottom" v-for="(detail, index) in userDetails" :key="index">
-        <h2 class="header2-text name-color margin-bottom display-none uppercase header2">
-          <b>{{ detail.first_name }}</b>
+      <h2 class="hero-text__primary header1"><b>Hi there! <br> Let’s make this personal</b></h2>
+      <!-- <h2 class="header2-text margin-top header2">One more thing</h2> -->
+      <div class="header2-div" v-for="(detail, index) in userDetails" :key="index">
+        <h2 class="header2-text margin-bottom display-none uppercase header2">
+          <b>One more thing <br> <span class="name-color">{{ detail.first_name }}</span></b>
         </h2>
       </div>
 
@@ -171,6 +171,7 @@ export default {
     const tl = new TimelineMax();
     this.initialUserDetails();
 
+
     tl.to(".button1", 0, { display: "none" })
       .to(".cardTwo", 0, { opacity: "0.3", pointerEvents: "none" })
       .to(".cardThree", 0, { opacity: "0.3", pointerEvents: "none" })
@@ -180,6 +181,9 @@ export default {
       .to(".cardTwoMobile", 0, { opacity: "0.3", pointerEvents: "none" })
       .to(".cardThreeMobile", 0, { opacity: "0.3", pointerEvents: "none" })
       .to(".header2", 0, { display: "none" });
+      
+    tl.fromTo(".signupPage", 1.5, {opacity: 0, ease: Power2.easeInOut}, {opacity: 1, ease: Power2.easeInOut})
+
       TweenMax.fromTo(
       ".morphIconRight",
       60,
@@ -196,7 +200,7 @@ export default {
     );
     TweenMax.fromTo(
       ".morphIconLeft",
-      20,
+      120,
       { scale: "1" },
       {
         repeat: -1,
@@ -291,8 +295,8 @@ export default {
           .to(".cardTwo", 0.3, { left: "-5rem", pointerEvents: "visible" }, 0.1)
           .to(".cardThree", 0.3, { left: "-5rem", pointerEvents: "none" }, 0.1)
           .to(".cardTwo", 0.5, { opacity: "1" }, 0.1)
-          .to(".cardOne", 0.5, { opacity: "0.3" }, 0.1);
-        // .to(".header2", 0, { display: "none" }, 0.1)
+          .to(".cardOne", 0.5, { opacity: "0.3" }, 0.1)
+          // .to(".header2", 0, { display: "none" }, 0.1)
 
         tl.to(
           ".button1Mobile",
