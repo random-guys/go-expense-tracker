@@ -131,7 +131,7 @@ body {
       // width: 610px;
       height: 96px;
       opacity: 0.6;
-      margin-top: 0rem;
+      // margin-top: 0rem;
       font-family: Graphik;
       font-size: 2.2rem;
       font-weight: normal;
@@ -165,7 +165,7 @@ body {
     z-index: 2;
     background-color: $color-btn-bkg;
     transition: all 0.4s;
-    margin-top: 0rem;
+    // margin-top: 0rem;
     transition: all 0.2s ease-in-out;
   }
 
@@ -880,7 +880,6 @@ body {
     width: 100%;
     position: relative;
     text-align: center;
-    // background-color: red;
 
     .logo {
       object-fit: contain;
@@ -891,10 +890,10 @@ body {
 
     .hero-text {
       &__primary {
-        // width: 724px;
-        height: 18rem;
+        width: 100%;
+        height: 14rem;
         font-family: Graphik;
-        font-size: 3.5rem;
+        font-size: 3rem;
         font-weight: 600;
         font-stretch: normal;
         font-style: normal;
@@ -905,7 +904,18 @@ body {
       }
       &__secondary {
         width: 100%;
-        height: 15rem;
+        height: 96px;
+        opacity: 0.6;
+        // margin-top: 0rem;
+        font-family: Graphik;
+        font-size: 2rem;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.38;
+        letter-spacing: normal;
+        text-align: center;
+        color: #161616;
       }
     }
 
@@ -915,7 +925,7 @@ body {
     }
 
     .btn {
-      width: 93%;
+      width: 80%;
       display: inline-block;
       text-decoration: none;
       text-align: center;
@@ -931,7 +941,7 @@ body {
       z-index: 2;
       background-color: $color-btn-bkg;
       transition: all 0.4s;
-      margin-top: 0rem;
+      // margin-top: 0rem;
     }
 
     .leaf-left {
