@@ -26,6 +26,7 @@
       </div>
       <div>
         <p class="hero-text__secondary">Try our expense tracker to see where your money <br> goes every month</p>
+        <p class="hero-text__secondary-mobile">Try our expense tracker to see where your money goes every month</p>
         <img src="../assets/images/pink-dot.svg" alt="Gomoney Logo" class="pink-dot pinkDot" />
       </div>
       <div class="buton">
