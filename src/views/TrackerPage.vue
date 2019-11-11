@@ -437,7 +437,6 @@ export default {
           details.amount = this.amount;
         });
         localStorage.setItem("user_details", JSON.stringify(this.userDetails));
-        console.log(this.userDetails);
         this.$router.push("/result");
       }
     },
