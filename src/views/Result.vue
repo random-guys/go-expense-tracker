@@ -81,15 +81,21 @@
         </g>
       </svg>
 
-      <div class="baller"><p>Baller!</p></div>
-      <div
-        class="comment"
-      ><p>You love to have access to your money, whenever and wherever, we think you’d be a perfect match for our solution, join the waitlist!</p></div>
+      <div class="baller">
+        <p>Baller!</p>
+      </div>
+      <div class="comment">
+        <p>You love to have access to your money, whenever and wherever, we think you’d be a perfect match for our solution, join the waitlist!</p>
+      </div>
       <div class="amount" v-for="(detail, index) in userDetails" :key="index">
-        <div class="figure"><p>₦{{ detail.amount.toLocaleString() }}</p></div>
+        <div class="figure">
+          <p>₦{{ detail.amount.toLocaleString() }}</p>
+        </div>
       </div>
       <img src="../assets/images/montly.svg" alt="Morph Icon Right" class="montly" />
-      <div class="btn"><p>JOIN THE WAITLIST</p></div>
+      <div class="btn">
+        <p>JOIN THE WAITLIST</p>
+      </div>
       <div class="share-icon">
         <div class="icon1"></div>
         <div class="icon2"></div>
@@ -113,7 +119,37 @@ export default {
 
     const tl = new TimelineMax();
 
-    tl.fromTo(".resultPage", 1.5, {opacity: 0, ease: Power2.easeInOut}, {opacity: 1, ease: Power2.easeInOut})
+    tl.fromTo(
+      ".resultPage",
+      1.5,
+      { opacity: 0, ease: Power2.easeInOut },
+      { opacity: 1, ease: Power2.easeInOut }
+    )
+      .fromTo(
+        "#sunShade",
+        0.3,
+        { y: "0" },
+        {
+          repeat: -1,
+          yoyo: true,
+          repeatDelay: 0.5,
+          ease: Linear.easeNone,
+          y: "-60"
+        }
+      )
+      .fromTo(
+        "#sunShadeHand",
+        0.3,
+        { y: "0" },
+        {
+          repeat: -1,
+          yoyo: true,
+          repeatDelay: 0.5,
+          ease: Linear.easeNone,
+          y: "-50",
+          rotation: "40"
+        }
+      );
 
     TweenMax.fromTo(
       ".morphIconRight",
@@ -155,34 +191,7 @@ export default {
         x: 10,
         y: -30,
         scale: "1.1"
-      },
-      -3
-    );
-    TweenMax.fromTo(
-      "#sunShade",
-      0.3,
-      { y: "0" },
-      {
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 0.5,
-        ease: Linear.easeNone,
-        y: "-60"
-      },
-      -3
-    );
-    TweenMax.fromTo(
-      "#sunShadeHand",
-      0.3,
-      { y: "0" },
-      {
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 0.5,
-        ease: Linear.easeNone,
-        y: "-50", rotation: "40"
-      },
-      -3
+      }
     );
   }
 };

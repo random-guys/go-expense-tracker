@@ -55,7 +55,7 @@ export default {
   mounted() {
     const tl = new TimelineMax();
 
-    tl.fromTo(".homePage", 1.5, {opacity: 0}, {opacity: 1})
+    tl.fromTo(".homePage", 1.5, {opacity: 0, ease: Power2.easeInOut}, {opacity: 1, ease: Power2.easeInOut})
 
     tl.fromTo(".greenDot", 10, {x: 0, y: 0}, {x: 130, y: 130, ease:Linear.easeNone, repeat: -1, yoyo: true, repeatDelay: 0.4})
       .fromTo(".yellowDot", 2, {x: 0, y: 0}, {x: 200, y: 200, ease: Bounce.easeInOut, repeat: -1, yoyo: true, repeatDelay: 1}, 0.1)
