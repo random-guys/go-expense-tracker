@@ -2,20 +2,41 @@
   <div id="app" class="main">
     <div class="signup-page signupPage">
       <img src="../assets/images/group-copy-12.svg" alt="Leaf Icon Left" class="leaf-left leafLeft" />
-      <img src="../assets/images/group-copy-11.svg" alt="Leaf Icon Left" class="leaf-center leafCenter" />
-      <img src="../assets/images/group-copy-10.svg" alt="Leaf Icon Left" class="leaf-right leafRight" />
-      <img src="../assets/images/vector-shapes-1.svg" alt="Morph Icon Left" class="morph-icon-left morphIconLeft" />
+      <img
+        src="../assets/images/group-copy-11.svg"
+        alt="Leaf Icon Left"
+        class="leaf-center leafCenter"
+      />
+      <img
+        src="../assets/images/group-copy-10.svg"
+        alt="Leaf Icon Left"
+        class="leaf-right leafRight"
+      />
+      <img
+        src="../assets/images/vector-shapes-1.svg"
+        alt="Morph Icon Left"
+        class="morph-icon-left morphIconLeft"
+      />
       <img
         src="../assets/images/vector-shapes-2.svg"
         alt="Morph Icon Right"
         class="morph-icon-right morphIconRight"
       />
       <img src="../assets/images/logo.svg" alt="Gomoney Logo" class="logo" />
-      <h2 class="hero-text__primary header1"><b>Hi there! <br> Let’s make this personal</b></h2>
+      <h2 class="hero-text__primary header1">
+        <b>
+          Hi there!
+          <br />Let’s make this personal
+        </b>
+      </h2>
       <!-- <h2 class="header2-text margin-top header2">One more thing</h2> -->
       <div class="header2-div" v-for="(detail, index) in userDetails" :key="index">
         <h2 class="header2-text margin-bottom display-none header2">
-          <b>One more thing <br> <span class="name-color uppercase">{{ detail.first_name }}</span></b>
+          <b>
+            One more thing
+            <br />
+            <span class="name-color uppercase">{{ detail.first_name }}</span>
+          </b>
         </h2>
       </div>
 
@@ -171,7 +192,6 @@ export default {
     const tl = new TimelineMax();
     this.initialUserDetails();
 
-
     tl.to(".button1", 0, { display: "none" })
       .to(".cardTwo", 0, { opacity: "0.3", pointerEvents: "none" })
       .to(".cardThree", 0, { opacity: "0.3", pointerEvents: "none" })
@@ -181,10 +201,15 @@ export default {
       .to(".cardTwoMobile", 0, { opacity: "0.3", pointerEvents: "none" })
       .to(".cardThreeMobile", 0, { opacity: "0.3", pointerEvents: "none" })
       .to(".header2", 0, { display: "none" });
-      
-    tl.fromTo(".signupPage", 1.5, {opacity: 0, ease: Power2.easeInOut}, {opacity: 1, ease: Power2.easeInOut})
 
-      TweenMax.fromTo(
+    tl.fromTo(
+      ".signupPage",
+      1.5,
+      { opacity: 0, ease: Power2.easeInOut },
+      { opacity: 1, ease: Power2.easeInOut }
+    );
+
+    TweenMax.fromTo(
       ".morphIconRight",
       60,
       { scale: "0.8" },
@@ -194,7 +219,7 @@ export default {
         repeatDelay: 0.4,
         ease: Linear.easeNone,
         scale: "1",
-        rotation: "-180",
+        rotation: "-180"
       },
       -3
     );
@@ -206,8 +231,9 @@ export default {
         repeat: -1,
         yoyo: true,
         repeatDelay: 0.4,
-        ease:Linear.easeNone,
-        scale: "1.5", rotation: "360",
+        ease: Linear.easeNone,
+        scale: "1.5",
+        rotation: "360"
       },
       -3
     );
@@ -250,12 +276,15 @@ export default {
         ease: Linear.easeNone,
         x: -3,
         y: -10,
-        rotation: "5",
+        rotation: "5"
       },
       -3
     );
-    TweenMax.to(".pieChart", 50, {rotation:"360", ease:Linear.easeNone, repeat:-1});
-
+    TweenMax.to(".pieChart", 50, {
+      rotation: "360",
+      ease: Linear.easeNone,
+      repeat: -1
+    });
   },
   methods: {
     initialUserDetails() {
@@ -288,29 +317,83 @@ export default {
         tl.fromTo(
           ".button1",
           0.5,
-          {opacity: "0"},
-          { display: "flex", opacity: "1", ease: Power3.easeInOut, pointerEvents: "visible" },
+          { opacity: "0" },
+          {
+            display: "flex",
+            opacity: "1",
+            ease: Power3.easeInOut,
+            pointerEvents: "visible"
+          },
           0.1
         )
-          .to(".cardOne", 0.5, { left: "-5rem", ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
-          .to(".cardTwo", 0.5, { left: "-5rem", ease: Power3.easeInOut, pointerEvents: "visible" }, 0.1)
-          .to(".cardThree", 0.5, { left: "-5rem", ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
+          .to(
+            ".cardOne",
+            0.5,
+            { left: "-5rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            0.1
+          )
+          .to(
+            ".cardTwo",
+            0.5,
+            { left: "-5rem", ease: Power3.easeInOut, pointerEvents: "visible" },
+            0.1
+          )
+          .to(
+            ".cardThree",
+            0.5,
+            { left: "-5rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            0.1
+          )
           .to(".cardTwo", 0.5, { opacity: "1", ease: Power3.easeInOut }, 0.1)
-          .to(".cardOne", 0.5, { opacity: "0.3", ease: Power3.easeInOut }, 0.1)
-          // .to(".header2", 0, { display: "none" }, 0.1)
+          .to(".cardOne", 0.5, { opacity: "0.3", ease: Power3.easeInOut }, 0.1);
+        // .to(".header2", 0, { display: "none" }, 0.1)
 
         tl.fromTo(
           ".button1Mobile",
           0.5,
-          {opacity: "0"},
-          { display: "flex", opacity: "1", ease: Power3.easeInOut, pointerEvents: "visible" },
+          { opacity: "0" },
+          {
+            display: "flex",
+            opacity: "1",
+            ease: Power3.easeInOut,
+            pointerEvents: "visible"
+          },
           0.1
         )
-          .to(".cardOneMobile", 1.1, { left: "-53rem", ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
-          .to(".cardTwoMobile", 1.1, { left: "-53rem", ease: Power3.easeInOut, pointerEvents: "visible" }, 0.1)
-          .to(".cardThreeMobile", 1.1, { left: "-53rem", ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
-          .to(".cardTwoMobile", 1.1, { opacity: "1", ease: Power3.easeInOut, }, 0.1)
-          .to(".cardOneMobile", 1.1, { opacity: "0.3", ease: Power3.easeInOut, }, 0.1);
+          .to(
+            ".cardOneMobile",
+            1.1,
+            { left: "-53rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            0.1
+          )
+          .to(
+            ".cardTwoMobile",
+            1.1,
+            {
+              left: "-53rem",
+              ease: Power3.easeInOut,
+              pointerEvents: "visible"
+            },
+            0.1
+          )
+          .to(
+            ".cardThreeMobile",
+            1.1,
+            { left: "-53rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            0.1
+          )
+          .to(
+            ".cardTwoMobile",
+            1.1,
+            { opacity: "1", ease: Power3.easeInOut },
+            0.1
+          )
+          .to(
+            ".cardOneMobile",
+            1.1,
+            { opacity: "0.3", ease: Power3.easeInOut },
+            0.1
+          );
         // .to(".header2", 0, { display: "none" }, 0.1)
         this.slide1 = true;
         this.toggleBackward = false;
@@ -330,13 +413,33 @@ export default {
       if (this.slide2 === false) {
         const tl = new TimelineMax();
 
-        tl.fromTo(".button2", 0.5, {opacity: "1"}, { opacity: "0", ease: Power3.easeInOut, display: "none" }, 0.1)
-          .to(".cardOne", 0.5, { left: "-75rem", ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
-          .to(".cardTwo", 0.5, { left: "-75rem", ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
+        tl.fromTo(
+          ".button2",
+          0.5,
+          { opacity: "1" },
+          { opacity: "0", ease: Power3.easeInOut, display: "none" },
+          0.1
+        )
+          .to(
+            ".cardOne",
+            0.5,
+            { left: "-75rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            0.1
+          )
+          .to(
+            ".cardTwo",
+            0.5,
+            { left: "-75rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            0.1
+          )
           .to(
             ".cardThree",
             0.5,
-            { left: "-75rem", ease: Power3.easeInOut, pointerEvents: "visible" },
+            {
+              left: "-75rem",
+              ease: Power3.easeInOut,
+              pointerEvents: "visible"
+            },
             0.1
           )
           .to(".cardThree", 0.5, { opacity: "1", ease: Power3.easeInOut }, 0.1)
@@ -344,17 +447,47 @@ export default {
           .to(".header2", 0, { display: "flex" }, 0.1)
           .to(".header1", 0, { display: "none" }, 0.1);
 
-        tl.fromTo(".button2Mobile", 0.5, { opacity: "1"}, { opacity: "0", ease: Power3.easeInOut, display: "none" }, 0.1)
-          .to(".cardOneMobile", 1.5, { left: "-106rem", ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
-          .to(".cardTwoMobile", 1.5, { left: "-106rem", ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
+        tl.fromTo(
+          ".button2Mobile",
+          0.5,
+          { opacity: "1" },
+          { opacity: "0", ease: Power3.easeInOut, display: "none" },
+          0.1
+        )
+          .to(
+            ".cardOneMobile",
+            1.5,
+            { left: "-106rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            0.1
+          )
+          .to(
+            ".cardTwoMobile",
+            1.5,
+            { left: "-106rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            0.1
+          )
           .to(
             ".cardThreeMobile",
             1.5,
-            { left: "-106rem", ease: Power3.easeInOut, pointerEvents: "visible" },
+            {
+              left: "-106rem",
+              ease: Power3.easeInOut,
+              pointerEvents: "visible"
+            },
             0.1
           )
-          .to(".cardThreeMobile", 1.5, { opacity: "1", ease: Power3.easeInOut }, 0.1)
-          .to(".cardTwoMobile", 1.5, { opacity: "0.3", ease: Power3.easeInOut }, 0.1)
+          .to(
+            ".cardThreeMobile",
+            1.5,
+            { opacity: "1", ease: Power3.easeInOut },
+            0.1
+          )
+          .to(
+            ".cardTwoMobile",
+            1.5,
+            { opacity: "0.3", ease: Power3.easeInOut },
+            0.1
+          )
           .to(".header2", 0, { display: "flex" }, 0.1)
           .to(".header1", 0, { display: "none" }, 0.1);
 
@@ -384,21 +517,83 @@ export default {
       if (this.toggleBackward === false) {
         const tl = new TimelineMax();
 
-        tl.fromTo(".button1", 0.5,{opacity: "1", }, { opacity: "0", ease: Power3.easeInOut, display: "none", pointerEvents: "none" }, 0.1)
-          .to(".cardOne", 0.5, { left: "55rem", ease: Power3.easeInOut, pointerEvents: "visible" }, 0.1)
-          .to(".cardTwo", 0.5, { left: "55rem", ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
-          .to(".cardThree", 0.5, { left: "55rem", ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
+        tl.fromTo(
+          ".button1",
+          0.5,
+          { opacity: "1" },
+          {
+            opacity: "0",
+            ease: Power3.easeInOut,
+            display: "none",
+            pointerEvents: "none"
+          },
+          0.1
+        )
+          .to(
+            ".cardOne",
+            0.5,
+            { left: "55rem", ease: Power3.easeInOut, pointerEvents: "visible" },
+            0.1
+          )
+          .to(
+            ".cardTwo",
+            0.5,
+            { left: "55rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            0.1
+          )
+          .to(
+            ".cardThree",
+            0.5,
+            { left: "55rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            0.1
+          )
           .to(".cardTwo", 0.5, { opacity: "0.3", ease: Power3.easeInOut }, 0.1)
           .to(".cardOne", 0.5, { opacity: "1", ease: Power3.easeInOut }, 0.1)
           .to(".header2", 0, { display: "none" }, 0.1)
           .to(".header1", 0, { display: "flex" }, 0.1);
 
-        tl.fromTo(".button1Mobile", 0.5, { opacity: "1"}, { opacity: "0", ease: Power3.easeInOut, display: "none", pointerEvents: "none" }, 0.1)
-          .to(".cardOneMobile", 1.5, { left: "0rem", ease: Power3.easeInOut, pointerEvents: "visible" }, 0.1)
-          .to(".cardTwoMobile", 1.5, { left: "0rem", ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
-          .to(".cardThreeMobile", 1.5, { left: "0rem", ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
-          .to(".cardTwoMobile", 1.5, { opacity: "0.3", ease: Power3.easeInOut, }, 0.1)
-          .to(".cardOneMobile", 1.5, { opacity: "1", ease: Power3.easeInOut, }, 0.1)
+        tl.fromTo(
+          ".button1Mobile",
+          0.5,
+          { opacity: "1" },
+          {
+            opacity: "0",
+            ease: Power3.easeInOut,
+            display: "none",
+            pointerEvents: "none"
+          },
+          0.1
+        )
+          .to(
+            ".cardOneMobile",
+            1.5,
+            { left: "0rem", ease: Power3.easeInOut, pointerEvents: "visible" },
+            0.1
+          )
+          .to(
+            ".cardTwoMobile",
+            1.5,
+            { left: "0rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            0.1
+          )
+          .to(
+            ".cardThreeMobile",
+            1.5,
+            { left: "0rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            0.1
+          )
+          .to(
+            ".cardTwoMobile",
+            1.5,
+            { opacity: "0.3", ease: Power3.easeInOut },
+            0.1
+          )
+          .to(
+            ".cardOneMobile",
+            1.5,
+            { opacity: "1", ease: Power3.easeInOut },
+            0.1
+          )
           .to(".header2", 0, { display: "none" }, 0.1)
           .to(".header1", 0, { display: "flex" }, 0.1);
 
@@ -408,21 +603,92 @@ export default {
       } else if (this.toggleBackward === true) {
         const tl = new TimelineMax();
 
-        tl.fromTo(".button2", 0.5, {opacity: "0"}, { opacity: "1", ease: Power3.easeInOut, display: "flex", pointerEvents: "visible" }, 0.1)
-          .to(".cardOne", 0.5, { left: "-5rem", ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
-          .to(".cardTwo", 0.5, { left: "-5rem", ease: Power3.easeInOut, pointerEvents: "visible" }, 0.1)
-          .to(".cardThree", 0.5, { left: "-5rem", ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
-          .to(".cardThree", 0.5, { opacity: "0.3", ease: Power3.easeInOut }, 0.1)
+        tl.fromTo(
+          ".button2",
+          0.5,
+          { opacity: "0" },
+          {
+            opacity: "1",
+            ease: Power3.easeInOut,
+            display: "flex",
+            pointerEvents: "visible"
+          },
+          0.1
+        )
+          .to(
+            ".cardOne",
+            0.5,
+            { left: "-5rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            0.1
+          )
+          .to(
+            ".cardTwo",
+            0.5,
+            { left: "-5rem", ease: Power3.easeInOut, pointerEvents: "visible" },
+            0.1
+          )
+          .to(
+            ".cardThree",
+            0.5,
+            { left: "-5rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            0.1
+          )
+          .to(
+            ".cardThree",
+            0.5,
+            { opacity: "0.3", ease: Power3.easeInOut },
+            0.1
+          )
           .to(".cardTwo", 0.5, { opacity: "1", ease: Power3.easeInOut }, 0.1)
           .to(".header2", 0, { display: "none" }, 0.1)
           .to(".header1", 0, { display: "flex" }, 0.1);
 
-        tl.fromTo(".button2Mobile", 0.5, { opacity: "0"}, { opacity: "1", ease: Power3.easeInOut, display: "flex", pointerEvents: "visible" }, 0.1)
-          .to(".cardOneMobile", 1.5, { left: "-53rem", ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
-          .to(".cardTwoMobile", 1.5, { left: "-53rem", ease: Power3.easeInOut, pointerEvents: "visible" }, 0.1)
-          .to(".cardThreeMobile", 1.5, { left: "-53rem", ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
-          .to(".cardThreeMobile", 1.5, { opacity: "0.3", ease: Power3.easeInOut, }, 0.1)
-          .to(".cardTwoMobile", 1.5, { opacity: "1", ease: Power3.easeInOut, }, 0.1)
+        tl.fromTo(
+          ".button2Mobile",
+          0.5,
+          { opacity: "0" },
+          {
+            opacity: "1",
+            ease: Power3.easeInOut,
+            display: "flex",
+            pointerEvents: "visible"
+          },
+          0.1
+        )
+          .to(
+            ".cardOneMobile",
+            1.5,
+            { left: "-53rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            0.1
+          )
+          .to(
+            ".cardTwoMobile",
+            1.5,
+            {
+              left: "-53rem",
+              ease: Power3.easeInOut,
+              pointerEvents: "visible"
+            },
+            0.1
+          )
+          .to(
+            ".cardThreeMobile",
+            1.5,
+            { left: "-53rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            0.1
+          )
+          .to(
+            ".cardThreeMobile",
+            1.5,
+            { opacity: "0.3", ease: Power3.easeInOut },
+            0.1
+          )
+          .to(
+            ".cardTwoMobile",
+            1.5,
+            { opacity: "1", ease: Power3.easeInOut },
+            0.1
+          )
           .to(".header2", 0, { display: "none" }, 0.1)
           .to(".header1", 0, { display: "flex" }, 0.1);
 
@@ -446,27 +712,83 @@ export default {
 
         tl.fromTo(
           ".button1",
-          0.5,{opacity: "0"},
-          { opacity: "1", display: "flex", ease: Power3.easeInOut, pointerEvents: "visible" },
+          0.5,
+          { opacity: "0" },
+          {
+            opacity: "1",
+            display: "flex",
+            ease: Power3.easeInOut,
+            pointerEvents: "visible"
+          },
           0.1
         )
-          .to(".cardOne", 0.5, { left: "-5rem", ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
-          .to(".cardTwo", 0.5, { left: "-5rem", ease: Power3.easeInOut, pointerEvents: "visible" }, 0.1)
-          .to(".cardThree", 0.5, { left: "-5rem", ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
+          .to(
+            ".cardOne",
+            0.5,
+            { left: "-5rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            0.1
+          )
+          .to(
+            ".cardTwo",
+            0.5,
+            { left: "-5rem", ease: Power3.easeInOut, pointerEvents: "visible" },
+            0.1
+          )
+          .to(
+            ".cardThree",
+            0.5,
+            { left: "-5rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            0.1
+          )
           .to(".cardTwo", 0.5, { opacity: "1", ease: Power3.easeInOut }, 0.1)
           .to(".cardOne", 0.5, { opacity: "0.3", ease: Power3.easeInOut }, 0.1);
 
         tl.fromTo(
           ".button1Mobile",
-          0.5, {opacity: "0"},
-          {opacity: "1", ease: Power3.easeInOut, display: "flex", pointerEvents: "visible" },
+          0.5,
+          { opacity: "0" },
+          {
+            opacity: "1",
+            ease: Power3.easeInOut,
+            display: "flex",
+            pointerEvents: "visible"
+          },
           0.1
         )
-          .to(".cardOneMobile", 1.5, { left: "-53rem",ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
-          .to(".cardTwoMobile", 1.5, { left: "-53rem",ease: Power3.easeInOut, pointerEvents: "visible" }, 0.1)
-          .to(".cardThreeMobile", 1.5, { left: "-53rem",ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
-          .to(".cardTwoMobile", 1.5, { opacity: "1", ease: Power3.easeInOut }, 0.1)
-          .to(".cardOneMobile", 1.5, { opacity: "0.3", ease: Power3.easeInOut }, 0.1);
+          .to(
+            ".cardOneMobile",
+            1.5,
+            { left: "-53rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            0.1
+          )
+          .to(
+            ".cardTwoMobile",
+            1.5,
+            {
+              left: "-53rem",
+              ease: Power3.easeInOut,
+              pointerEvents: "visible"
+            },
+            0.1
+          )
+          .to(
+            ".cardThreeMobile",
+            1.5,
+            { left: "-53rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            0.1
+          )
+          .to(
+            ".cardTwoMobile",
+            1.5,
+            { opacity: "1", ease: Power3.easeInOut },
+            0.1
+          )
+          .to(
+            ".cardOneMobile",
+            1.5,
+            { opacity: "0.3", ease: Power3.easeInOut },
+            0.1
+          );
 
         this.toggleFoward = true;
       } else if (this.toggleFoward === true) {
@@ -484,13 +806,38 @@ export default {
         }
         const tl = new TimelineMax();
 
-        tl.fromTo(".button2", 0.5, {opacity: "1"}, { opacity: "0", display: "none", ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
-          .to(".cardOne", 0.5, { left: "-75rem", ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
-          .to(".cardTwo", 0.5, { left: "-75rem", ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
+        tl.fromTo(
+          ".button2",
+          0.5,
+          { opacity: "1" },
+          {
+            opacity: "0",
+            display: "none",
+            ease: Power3.easeInOut,
+            pointerEvents: "none"
+          },
+          0.1
+        )
+          .to(
+            ".cardOne",
+            0.5,
+            { left: "-75rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            0.1
+          )
+          .to(
+            ".cardTwo",
+            0.5,
+            { left: "-75rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            0.1
+          )
           .to(
             ".cardThree",
             0.5,
-            { left: "-75rem", ease: Power3.easeInOut, pointerEvents: "visible" },
+            {
+              left: "-75rem",
+              ease: Power3.easeInOut,
+              pointerEvents: "visible"
+            },
             0.1
           )
           .to(".cardThree", 0.5, { ease: Power3.easeInOut, opacity: "1" }, 0.1)
@@ -498,17 +845,52 @@ export default {
           .to(".header2", 0, { display: "flex" }, 0.1)
           .to(".header1", 0, { display: "none" }, 0.1);
 
-        tl.fromTo(".button2Mobile", 0.5, {opacity: "1"}, {opacity: "0", ease: Power3.easeInOut, display: "none", pointerEvents: "none" }, 0.1)
-          .to(".cardOneMobile", 1.5, { left: "-106rem",ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
-          .to(".cardTwoMobile", 1.5, { left: "-106rem",ease: Power3.easeInOut, pointerEvents: "none" }, 0.1)
+        tl.fromTo(
+          ".button2Mobile",
+          0.5,
+          { opacity: "1" },
+          {
+            opacity: "0",
+            ease: Power3.easeInOut,
+            display: "none",
+            pointerEvents: "none"
+          },
+          0.1
+        )
+          .to(
+            ".cardOneMobile",
+            1.5,
+            { left: "-106rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            0.1
+          )
+          .to(
+            ".cardTwoMobile",
+            1.5,
+            { left: "-106rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            0.1
+          )
           .to(
             ".cardThreeMobile",
             1.5,
-            { left: "-106rem",ease: Power3.easeInOut, pointerEvents: "visible" },
+            {
+              left: "-106rem",
+              ease: Power3.easeInOut,
+              pointerEvents: "visible"
+            },
             0.1
           )
-          .to(".cardThreeMobile", 1.5, { opacity: "1", ease: Power3.easeInOut }, 0.1)
-          .to(".cardTwoMobile", 1.5, { opacity: "0.3", ease: Power3.easeInOut }, 0.1)
+          .to(
+            ".cardThreeMobile",
+            1.5,
+            { opacity: "1", ease: Power3.easeInOut },
+            0.1
+          )
+          .to(
+            ".cardTwoMobile",
+            1.5,
+            { opacity: "0.3", ease: Power3.easeInOut },
+            0.1
+          )
           .to(".header2", 0, { display: "flex" }, 0.1)
           .to(".header1", 0, { display: "none" }, 0.1);
 

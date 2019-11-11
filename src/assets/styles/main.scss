@@ -347,9 +347,9 @@ body {
     font-style: normal;
     line-height: 1.25;
     letter-spacing: normal;
-      margin-top: 7.7rem;
-      margin-bottom: 3.2rem;
-      align-self: center;
+    margin-top: 7.7rem;
+    margin-bottom: 3.2rem;
+    align-self: center;
     color: $color-text;
 
     .display-none {
@@ -622,96 +622,96 @@ body {
     padding: 0 40rem;
     margin-bottom: 5.2rem;
 
-      .card-transport,
-      .card-transfer,
-      .card-eating,
-      .card-bills,
-      .card-family,
-      .card-groceries,
-      .card-shopping,
-      .card-care,
-      .card-vacation,
-      .card-payroll,
-      .card-entertainment,
-      .card-investment {
-        width: 20%;
-        height: 50%;
-        padding: 1rem 0;
-        padding-bottom: 0.5rem;
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 8px;
-        margin-top: 4rem;
-        background-color: #ffffff;
+    .card-transport,
+    .card-transfer,
+    .card-eating,
+    .card-bills,
+    .card-family,
+    .card-groceries,
+    .card-shopping,
+    .card-care,
+    .card-vacation,
+    .card-payroll,
+    .card-entertainment,
+    .card-investment {
+      width: 20%;
+      height: 50%;
+      padding: 1rem 0;
+      padding-bottom: 0.5rem;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      margin-top: 4rem;
+      background-color: #ffffff;
 
-        ::placeholder {
-          opacity: 0.48;
-          font-family: Graphik;
-          font-size: 24px;
-          font-weight: 500;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: normal;
-          letter-spacing: -0.58px;
-          text-align: center;
-          color: #252525;
-        }
-
-        :focus {
-          outline: none;
-        }
-
-        .card-img {
-          width: 50%;
-          margin-top: 1rem;
-          margin-bottom: 0.5rem;
-        }
-
-        .error {
-          display: none;
-          color: red;
-        }
-
-        .card-text {
-          width: 100%;
-          margin-top: 0.5rem;
-          font-family: SFProDisplay;
-          font-size: 1.2rem;
-          font-weight: 600;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: normal;
-          letter-spacing: -0.41px;
-          text-align: center;
-          color: #3a3737;
-        }
-
-        .input {
-          width: 95%;
-          height: 3rem;
-          font-size: 1.8rem;
-          text-align: center;
-          margin-top: 1.5rem;
-          margin-bottom: 0.8rem;
-          border: none;
-          border-radius: 3px;
-          background-color: #f1f1f1;
-        }
+      ::placeholder {
+        opacity: 0.48;
+        font-family: Graphik;
+        font-size: 24px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: -0.58px;
+        text-align: center;
+        color: #252525;
       }
 
-      .card-transport,
-      .card-transfer,
-      .card-eating,
-      .card-family,
-      .card-groceries,
-      .card-shopping,
-      .card-vacation,
-      .card-payroll,
-      .card-entertainment {
-        margin-right: 3rem;
+      :focus {
+        outline: none;
       }
+
+      .card-img {
+        width: 50%;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .error {
+        display: none;
+        color: red;
+      }
+
+      .card-text {
+        width: 100%;
+        margin-top: 0.5rem;
+        font-family: SFProDisplay;
+        font-size: 1.2rem;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: -0.41px;
+        text-align: center;
+        color: #3a3737;
+      }
+
+      .input {
+        width: 95%;
+        height: 3rem;
+        font-size: 1.8rem;
+        text-align: center;
+        margin-top: 1.5rem;
+        margin-bottom: 0.8rem;
+        border: none;
+        border-radius: 3px;
+        background-color: #f1f1f1;
+      }
+    }
+
+    .card-transport,
+    .card-transfer,
+    .card-eating,
+    .card-family,
+    .card-groceries,
+    .card-shopping,
+    .card-vacation,
+    .card-payroll,
+    .card-entertainment {
+      margin-right: 3rem;
+    }
   }
 }
 
@@ -1135,8 +1135,8 @@ body {
       letter-spacing: normal;
       align-self: center;
       margin-bottom: 2rem;
-        margin-top: 2rem;
-        color: $color-text;
+      margin-top: 2rem;
+      color: $color-text;
 
       .display-none {
         display: none;
@@ -1225,8 +1225,8 @@ body {
       &__slide-mobile {
         display: flex;
         width: 100%;
-          box-shadow: 0 40px 56px 0 rgba(11, 16, 51, 0.06);
-          background-color: #ffffff;
+        box-shadow: 0 40px 56px 0 rgba(11, 16, 51, 0.06);
+        background-color: #ffffff;
 
         .card1-mobile,
         .card2-mobile,
@@ -1440,94 +1440,94 @@ body {
       .card-payroll,
       .card-entertainment,
       .card-investment {
-          width: 28%;
-          height: 50%;
-          padding: 1rem 1rem;
-          padding-bottom: 0.5rem;
-          display: flex;
-          // flex-flow: column;
-          justify-content: space-between;
-          align-items: center;
-          border-radius: 8px;
-          background-color: #ffffff;
+        width: 28%;
+        height: 50%;
+        padding: 1rem 1rem;
+        padding-bottom: 0.5rem;
+        display: flex;
+        // flex-flow: column;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 8px;
+        background-color: #ffffff;
 
-          ::placeholder {
-            opacity: 0.48;
-            font-family: Graphik;
-            font-size: 20px;
-            font-weight: 500;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
-            letter-spacing: -0.58px;
-            text-align: center;
-            color: #252525;
-          }
-
-          :focus {
-            outline: none;
-          }
-
-          .card-img {
-            width: 50%;
-            margin-top: 1rem;
-            margin-bottom: 0.3rem;
-          }
-
-          .error {
-            display: none;
-            color: red;
-          }
-
-          .card-text {
-            width: 100%;
-            margin-top: 0.5rem;
-            font-family: SFProDisplay;
-            font-size: 1.2rem;
-            font-weight: 600;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
-            letter-spacing: -0.41px;
-            text-align: center;
-            color: #3a3737;
-          }
-
-          .input {
-            width: 98%;
-            height: 3rem;
-            font-size: 1.8rem;
-            text-align: center;
-            margin-top: 2rem;
-            margin-bottom: 0.8rem;
-            border: none;
-            border-radius: 3px;
-            background-color: #f1f1f1;
-          }
+        ::placeholder {
+          opacity: 0.48;
+          font-family: Graphik;
+          font-size: 20px;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: -0.58px;
+          text-align: center;
+          color: #252525;
         }
 
-        .card-transport,
-        .card-transfer,
-        .card-eating,
-        .card-family,
-        .card-groceries,
-        .card-shopping,
-        .card-vacation,
-        .card-payroll,
-        .card-entertainment {
-          margin-right: 0rem;  
+        :focus {
+          outline: none;
         }
 
-        .card-transport,
-        .card-family,
-        .card-bills,
-        .card-shopping,
-        .card-care,
-        .card-payroll,
-        .card-entertainment,
-        .card-transfer {
-          margin-right: 2rem;
-        }        
+        .card-img {
+          width: 50%;
+          margin-top: 1rem;
+          margin-bottom: 0.3rem;
+        }
+
+        .error {
+          display: none;
+          color: red;
+        }
+
+        .card-text {
+          width: 100%;
+          margin-top: 0.5rem;
+          font-family: SFProDisplay;
+          font-size: 1.2rem;
+          font-weight: 600;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: -0.41px;
+          text-align: center;
+          color: #3a3737;
+        }
+
+        .input {
+          width: 98%;
+          height: 3rem;
+          font-size: 1.8rem;
+          text-align: center;
+          margin-top: 2rem;
+          margin-bottom: 0.8rem;
+          border: none;
+          border-radius: 3px;
+          background-color: #f1f1f1;
+        }
+      }
+
+      .card-transport,
+      .card-transfer,
+      .card-eating,
+      .card-family,
+      .card-groceries,
+      .card-shopping,
+      .card-vacation,
+      .card-payroll,
+      .card-entertainment {
+        margin-right: 0rem;
+      }
+
+      .card-transport,
+      .card-family,
+      .card-bills,
+      .card-shopping,
+      .card-care,
+      .card-payroll,
+      .card-entertainment,
+      .card-transfer {
+        margin-right: 2rem;
+      }
     }
   }
 

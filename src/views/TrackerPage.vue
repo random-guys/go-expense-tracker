@@ -36,188 +36,185 @@
         </h2>
         <h2 class="hero-text__primary-mobile">
           Hi
-          <b class="capitalize">{{ detail.first_name }}</b>, time to find out where all of <br> that
+          <b class="capitalize">{{ detail.first_name }}</b>, time to find out where all
+          <br />of that
           money goes to every month.
         </h2>
       </div>
       <div class="card-container">
         <!-- <div class="card-container__card-row"> -->
-          <div class="card-transport transport">
-            <img
-              src="../assets/images/transportation-icon.svg"
-              alt="Leaf Icon Left"
-              class="card-img"
-            />
-            <p class="card-text transportText">Transport</p>
-            <input
-              type="text"
-              placeholder="₦.00"
-              onfocus="this.placeholder=''"
-              onblur="this.placeholder='₦.00'"
-              class="input transportInput"
-              v-model="transport"
-              @change="inputTransportationAmount()"
-            />
-            <p class="error errorMsgTransport">!!!</p>
-          </div>
-          <div class="card-transfer transfer">
-            <img src="../assets/images/transfer.svg" alt="Leaf Icon Left" class="card-img" />
-            <p class="card-text transferText">Transfer</p>
-            <input
-              type="text"
-              placeholder="₦.00"
-              onfocus="this.placeholder=''"
-              onblur="this.placeholder='₦.00'"
-              class="input transferInput"
-              v-model="transfer"
-              @change="inputTransferAmount()"
-            />
-            <p class="error errorMsgTransfer">!!!</p>
-          </div>
-          <div class="card-eating eating">
-            <img src="../assets/images/eating.svg" alt="Leaf Icon Left" class="card-img" />
-            <p class="card-text eatingText">Eating Out</p>
-            <input
-              type="text"
-              placeholder="₦.00"
-              onfocus="this.placeholder=''"
-              onblur="this.placeholder='₦.00'"
-              class="input eatingInput"
-              v-model="eating"
-              @change="inputEatingAmount()"
-            />
-            <p class="error errorMsgEating">!!!</p>
-          </div>
-          <div class="card-bills bills">
-            <img src="../assets/images/bills.svg" alt="Leaf Icon Left" class="card-img" />
-            <p class="card-text billsText">Bills</p>
-            <input
-              type="text"
-              placeholder="₦.00"
-              onfocus="this.placeholder=''"
-              onblur="this.placeholder='₦.00'"
-              class="input billsInput"
-              v-model="bills"
-              @change="inputBillsAmount()"
-            />
-            <p class="error errorMsgBills">!!!</p>
-          </div>
+        <div class="card-transport transport">
+          <img src="../assets/images/transportation-icon.svg" alt="Leaf Icon Left" class="card-img" />
+          <p class="card-text transportText">Transport</p>
+          <input
+            type="text"
+            placeholder="₦.00"
+            onfocus="this.placeholder=''"
+            onblur="this.placeholder='₦.00'"
+            class="input transportInput"
+            v-model="transport"
+            @change="inputTransportationAmount()"
+          />
+          <p class="error errorMsgTransport">!!!</p>
+        </div>
+        <div class="card-transfer transfer">
+          <img src="../assets/images/transfer.svg" alt="Leaf Icon Left" class="card-img" />
+          <p class="card-text transferText">Transfer</p>
+          <input
+            type="text"
+            placeholder="₦.00"
+            onfocus="this.placeholder=''"
+            onblur="this.placeholder='₦.00'"
+            class="input transferInput"
+            v-model="transfer"
+            @change="inputTransferAmount()"
+          />
+          <p class="error errorMsgTransfer">!!!</p>
+        </div>
+        <div class="card-eating eating">
+          <img src="../assets/images/eating.svg" alt="Leaf Icon Left" class="card-img" />
+          <p class="card-text eatingText">Eating Out</p>
+          <input
+            type="text"
+            placeholder="₦.00"
+            onfocus="this.placeholder=''"
+            onblur="this.placeholder='₦.00'"
+            class="input eatingInput"
+            v-model="eating"
+            @change="inputEatingAmount()"
+          />
+          <p class="error errorMsgEating">!!!</p>
+        </div>
+        <div class="card-bills bills">
+          <img src="../assets/images/bills.svg" alt="Leaf Icon Left" class="card-img" />
+          <p class="card-text billsText">Bills</p>
+          <input
+            type="text"
+            placeholder="₦.00"
+            onfocus="this.placeholder=''"
+            onblur="this.placeholder='₦.00'"
+            class="input billsInput"
+            v-model="bills"
+            @change="inputBillsAmount()"
+          />
+          <p class="error errorMsgBills">!!!</p>
+        </div>
         <!-- </div> -->
         <!-- <div class="card-container__card-row"> -->
-          <div class="card-family family">
-            <img src="../assets/images/family.svg" alt="Leaf Icon Left" class="card-img" />
-            <p class="card-text familyText">Family</p>
-            <input
-              type="text"
-              placeholder="₦.00"
-              onfocus="this.placeholder=''"
-              onblur="this.placeholder='₦.00'"
-              class="input familyInput"
-              v-model="family"
-              @change="inputFamilyAmount()"
-            />
-            <p class="error errorMsgFamily">!!!</p>
-          </div>
-          <div class="card-groceries groceries">
-            <img src="../assets/images/Groceries.svg" alt="Leaf Icon Left" class="card-img" />
-            <p class="card-text groceriesText">Groceries</p>
-            <input
-              type="text"
-              placeholder="₦.00"
-              onfocus="this.placeholder=''"
-              onblur="this.placeholder='₦.00'"
-              class="input groceriesInput"
-              v-model="groceries"
-              @change="inputGroceriesAmount()"
-            />
-            <p class="error errorMsgGroceries">!!!</p>
-          </div>
-          <div class="card-shopping shopping">
-            <img src="../assets/images/shopping.svg" alt="Leaf Icon Left" class="card-img" />
-            <p class="card-text shoppingText">Shopping</p>
-            <input
-              type="text"
-              placeholder="₦.00"
-              onfocus="this.placeholder=''"
-              onblur="this.placeholder='₦.00'"
-              class="input shoppingInput"
-              v-model="shopping"
-              @change="inputShoppingAmount()"
-            />
-            <p class="error errorMsgShopping">!!!</p>
-          </div>
-          <div class="card-care care">
-            <img src="../assets/images/personal-care.svg" alt="Leaf Icon Left" class="card-img" />
-            <p class="card-text careText">Personal Care</p>
-            <input
-              type="text"
-              placeholder="₦.00"
-              onfocus="this.placeholder=''"
-              onblur="this.placeholder='₦.00'"
-              class="input careInput"
-              v-model="care"
-              @change="inputCareAmount()"
-            />
-            <p class="error errorMsgCare">!!!</p>
-          </div>
+        <div class="card-family family">
+          <img src="../assets/images/family.svg" alt="Leaf Icon Left" class="card-img" />
+          <p class="card-text familyText">Family</p>
+          <input
+            type="text"
+            placeholder="₦.00"
+            onfocus="this.placeholder=''"
+            onblur="this.placeholder='₦.00'"
+            class="input familyInput"
+            v-model="family"
+            @change="inputFamilyAmount()"
+          />
+          <p class="error errorMsgFamily">!!!</p>
+        </div>
+        <div class="card-groceries groceries">
+          <img src="../assets/images/Groceries.svg" alt="Leaf Icon Left" class="card-img" />
+          <p class="card-text groceriesText">Groceries</p>
+          <input
+            type="text"
+            placeholder="₦.00"
+            onfocus="this.placeholder=''"
+            onblur="this.placeholder='₦.00'"
+            class="input groceriesInput"
+            v-model="groceries"
+            @change="inputGroceriesAmount()"
+          />
+          <p class="error errorMsgGroceries">!!!</p>
+        </div>
+        <div class="card-shopping shopping">
+          <img src="../assets/images/shopping.svg" alt="Leaf Icon Left" class="card-img" />
+          <p class="card-text shoppingText">Shopping</p>
+          <input
+            type="text"
+            placeholder="₦.00"
+            onfocus="this.placeholder=''"
+            onblur="this.placeholder='₦.00'"
+            class="input shoppingInput"
+            v-model="shopping"
+            @change="inputShoppingAmount()"
+          />
+          <p class="error errorMsgShopping">!!!</p>
+        </div>
+        <div class="card-care care">
+          <img src="../assets/images/personal-care.svg" alt="Leaf Icon Left" class="card-img" />
+          <p class="card-text careText">Personal Care</p>
+          <input
+            type="text"
+            placeholder="₦.00"
+            onfocus="this.placeholder=''"
+            onblur="this.placeholder='₦.00'"
+            class="input careInput"
+            v-model="care"
+            @change="inputCareAmount()"
+          />
+          <p class="error errorMsgCare">!!!</p>
+        </div>
         <!-- </div> -->
         <!-- <div class="card-container__card-row"> -->
-          <div class="card-vacation vacation">
-            <img src="../assets/images/vercation.svg" alt="Leaf Icon Left" class="card-img" />
-            <p class="card-text vacationText">vacation</p>
-            <input
-              type="text"
-              placeholder="₦.00"
-              onfocus="this.placeholder=''"
-              onblur="this.placeholder='₦.00'"
-              class="input vacationInput"
-              v-model="vacation"
-              @change="inputVacationAmount()"
-            />
-            <p class="error errorMsgVacation">!!!</p>
-          </div>
-          <div class="card-payroll payroll">
-            <img src="../assets/images/payroll.svg" alt="Leaf Icon Left" class="card-img" />
-            <p class="card-text payrollText">Payroll</p>
-            <input
-              type="text"
-              placeholder="₦.00"
-              onfocus="this.placeholder=''"
-              onblur="this.placeholder='₦.00'"
-              class="input payrollInput"
-              v-model="payroll"
-              @change="inputPayrollAmount()"
-            />
-            <p class="error errorMsgPayroll">!!!</p>
-          </div>
-          <div class="card-entertainment entertainment">
-            <img src="../assets/images/entertainment.svg" alt="Leaf Icon Left" class="card-img" />
-            <p class="card-text entertainmentText">Entertainment</p>
-            <input
-              type="text"
-              placeholder="₦.00"
-              onfocus="this.placeholder=''"
-              onblur="this.placeholder='₦.00'"
-              class="input entertainmentInput"
-              v-model="entertainment"
-              @change="inputEntertainmentAmount()"
-            />
-            <p class="error errorMsgEntertainment">!!!</p>
-          </div>
-          <div class="card-investment investment">
-            <img src="../assets/images/investment.svg" alt="Leaf Icon Left" class="card-img" />
-            <p class="card-text investmentText">Investment</p>
-            <input
-              type="text"
-              placeholder="₦.00"
-              onfocus="this.placeholder=''"
-              onblur="this.placeholder='₦.00'"
-              class="input investmentInput"
-              v-model="investment"
-              @change="inputInvestmentAmount()"
-            />
-            <p class="error errorMsgInvestment">!!!</p>
-          </div>
+        <div class="card-vacation vacation">
+          <img src="../assets/images/vercation.svg" alt="Leaf Icon Left" class="card-img" />
+          <p class="card-text vacationText">vacation</p>
+          <input
+            type="text"
+            placeholder="₦.00"
+            onfocus="this.placeholder=''"
+            onblur="this.placeholder='₦.00'"
+            class="input vacationInput"
+            v-model="vacation"
+            @change="inputVacationAmount()"
+          />
+          <p class="error errorMsgVacation">!!!</p>
+        </div>
+        <div class="card-payroll payroll">
+          <img src="../assets/images/payroll.svg" alt="Leaf Icon Left" class="card-img" />
+          <p class="card-text payrollText">Payroll</p>
+          <input
+            type="text"
+            placeholder="₦.00"
+            onfocus="this.placeholder=''"
+            onblur="this.placeholder='₦.00'"
+            class="input payrollInput"
+            v-model="payroll"
+            @change="inputPayrollAmount()"
+          />
+          <p class="error errorMsgPayroll">!!!</p>
+        </div>
+        <div class="card-entertainment entertainment">
+          <img src="../assets/images/entertainment.svg" alt="Leaf Icon Left" class="card-img" />
+          <p class="card-text entertainmentText">Entertainment</p>
+          <input
+            type="text"
+            placeholder="₦.00"
+            onfocus="this.placeholder=''"
+            onblur="this.placeholder='₦.00'"
+            class="input entertainmentInput"
+            v-model="entertainment"
+            @change="inputEntertainmentAmount()"
+          />
+          <p class="error errorMsgEntertainment">!!!</p>
+        </div>
+        <div class="card-investment investment">
+          <img src="../assets/images/investment.svg" alt="Leaf Icon Left" class="card-img" />
+          <p class="card-text investmentText">Investment</p>
+          <input
+            type="text"
+            placeholder="₦.00"
+            onfocus="this.placeholder=''"
+            onblur="this.placeholder='₦.00'"
+            class="input investmentInput"
+            v-model="investment"
+            @change="inputInvestmentAmount()"
+          />
+          <p class="error errorMsgInvestment">!!!</p>
+        </div>
         <!-- </div> -->
       </div>
       <div class="button" @click="checkHabit()">Check Your Habit!</div>
@@ -261,7 +258,7 @@ export default {
         repeatDelay: 0.4,
         ease: Linear.easeNone,
         scale: "1",
-        rotation: "-180",
+        rotation: "-180"
       },
       -3
     );
@@ -273,8 +270,9 @@ export default {
         repeat: -1,
         yoyo: true,
         repeatDelay: 0.4,
-        ease:Linear.easeNone,
-        scale: "1.5", rotation: "360",
+        ease: Linear.easeNone,
+        scale: "1.5",
+        rotation: "360"
       },
       -3
     );
@@ -288,7 +286,8 @@ export default {
         repeatDelay: 0.4,
         ease: Linear.easeNone,
         x: 10,
-        y: -30, rotation: "5"
+        y: -30,
+        rotation: "5"
       },
       -3
     );
@@ -317,7 +316,7 @@ export default {
         ease: Linear.easeNone,
         x: -3,
         y: -10,
-        rotation: "5",
+        rotation: "5"
       },
       -3
     );
@@ -335,20 +334,96 @@ export default {
       -3
     );
 
-    tl.fromTo(".trackerPage", 1.5, {opacity: 0, ease: Power2.easeInOut}, {opacity: 1, ease: Power2.easeInOut})
-      .fromTo(".family", 0.1, {scale: 0, ease: Power2.easeInOut}, {scale: 1, ease: Power2.easeInOut}, 0.5)
-      .fromTo(".eating", 0.1, {opacity: 0, ease: Power2.easeInOut}, {opacity: 1, ease: Power2.easeInOut}, 0.6)
-      .fromTo(".vacation", 0.1, {opacity: 0, ease: Power2.easeInOut}, {opacity: 1, ease: Power2.easeInOut}, 0.7)
-      .fromTo(".care", 0.1, {scale: 0, ease: Power2.easeInOut}, {scale: 1, ease: Power2.easeInOut}, 0.8)
-      .fromTo(".transport", 0.1, {opacity: 0, ease: Power2.easeInOut}, {opacity: 1, ease: Power2.easeInOut}, 0.9)
-      .fromTo(".groceries", 0.1, {scale: 0, ease: Power2.easeInOut}, {scale: 1, ease: Power2.easeInOut}, 1)
-      .fromTo(".investment", 0.1, {opacity: 0, ease: Power2.easeInOut}, {opacity: 1, ease: Power2.easeInOut}, 1.1)
-      .fromTo(".bills", 0.1, {scale: 0, ease: Power2.easeInOut}, {scale: 1, ease: Power2.easeInOut}, 1.2)
-      .fromTo(".transfer", 0.1, {opacity: 0, ease: Power2.easeInOut}, {opacity: 1, ease: Power2.easeInOut}, 1.3)
-      .fromTo(".payroll", 0.1, {scale: 0, ease: Power2.easeInOut}, {scale: 1, ease: Power2.easeInOut}, 1.4)
-      .fromTo(".entertainment", 0.1, {opacity: 0, ease: Power2.easeInOut}, {opacity: 1, ease: Power2.easeInOut}, 1.5)
-      .fromTo(".shopping", 0.1, {opacity: 0, ease: Power2.easeInOut}, {opacity: 1, ease: Power2.easeInOut}, 1.6)
-
+    tl.fromTo(
+      ".trackerPage",
+      1.5,
+      { opacity: 0, ease: Power2.easeInOut },
+      { opacity: 1, ease: Power2.easeInOut }
+    )
+      .fromTo(
+        ".family",
+        0.1,
+        { scale: 0, ease: Power2.easeInOut },
+        { scale: 1, ease: Power2.easeInOut },
+        0.5
+      )
+      .fromTo(
+        ".eating",
+        0.1,
+        { opacity: 0, ease: Power2.easeInOut },
+        { opacity: 1, ease: Power2.easeInOut },
+        0.6
+      )
+      .fromTo(
+        ".vacation",
+        0.1,
+        { opacity: 0, ease: Power2.easeInOut },
+        { opacity: 1, ease: Power2.easeInOut },
+        0.7
+      )
+      .fromTo(
+        ".care",
+        0.1,
+        { scale: 0, ease: Power2.easeInOut },
+        { scale: 1, ease: Power2.easeInOut },
+        0.8
+      )
+      .fromTo(
+        ".transport",
+        0.1,
+        { opacity: 0, ease: Power2.easeInOut },
+        { opacity: 1, ease: Power2.easeInOut },
+        0.9
+      )
+      .fromTo(
+        ".groceries",
+        0.1,
+        { scale: 0, ease: Power2.easeInOut },
+        { scale: 1, ease: Power2.easeInOut },
+        1
+      )
+      .fromTo(
+        ".investment",
+        0.1,
+        { opacity: 0, ease: Power2.easeInOut },
+        { opacity: 1, ease: Power2.easeInOut },
+        1.1
+      )
+      .fromTo(
+        ".bills",
+        0.1,
+        { scale: 0, ease: Power2.easeInOut },
+        { scale: 1, ease: Power2.easeInOut },
+        1.2
+      )
+      .fromTo(
+        ".transfer",
+        0.1,
+        { opacity: 0, ease: Power2.easeInOut },
+        { opacity: 1, ease: Power2.easeInOut },
+        1.3
+      )
+      .fromTo(
+        ".payroll",
+        0.1,
+        { scale: 0, ease: Power2.easeInOut },
+        { scale: 1, ease: Power2.easeInOut },
+        1.4
+      )
+      .fromTo(
+        ".entertainment",
+        0.1,
+        { opacity: 0, ease: Power2.easeInOut },
+        { opacity: 1, ease: Power2.easeInOut },
+        1.5
+      )
+      .fromTo(
+        ".shopping",
+        0.1,
+        { opacity: 0, ease: Power2.easeInOut },
+        { opacity: 1, ease: Power2.easeInOut },
+        1.6
+      );
   },
   methods: {
     checkHabit() {
