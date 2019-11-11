@@ -23,12 +23,7 @@
         class="morph-icon-right morphIconRight"
       />
       <img src="../assets/images/logo.svg" alt="Gomoney Logo" class="logo" />
-      <h2 class="hero-text__primary header1">
-        <b>
-          Hi there!
-          <br />Let’s make this personal
-        </b>
-      </h2>
+
       <!-- <h2 class="header2-text margin-top header2">One more thing</h2> -->
       <div class="header2-div" v-for="(detail, index) in userDetails" :key="index">
         <h2 class="header2-text margin-bottom display-none header2">
@@ -39,6 +34,13 @@
           </b>
         </h2>
       </div>
+
+      <h2 class="hero-text__primary header1">
+        <b>
+          Hi there!
+          <br />Let’s make this personal
+        </b>
+      </h2>
 
       <!-- Desktop Slider -->
 
@@ -330,19 +332,19 @@ export default {
           .to(
             ".cardOne",
             0.5,
-            { left: "-5rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            { left: "-4vw", ease: Power3.easeInOut, pointerEvents: "none" },
             0.1
           )
           .to(
             ".cardTwo",
             0.5,
-            { left: "-5rem", ease: Power3.easeInOut, pointerEvents: "visible" },
+            { left: "-4vw", ease: Power3.easeInOut, pointerEvents: "visible" },
             0.1
           )
           .to(
             ".cardThree",
             0.5,
-            { left: "-5rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            { left: "-4vw", ease: Power3.easeInOut, pointerEvents: "none" },
             0.1
           )
           .to(".cardTwo", 0.5, { opacity: "1", ease: Power3.easeInOut }, 0.1)
@@ -364,14 +366,14 @@ export default {
           .to(
             ".cardOneMobile",
             1.1,
-            { left: "-53rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            { left: "-100vw", ease: Power3.easeInOut, pointerEvents: "none" },
             0.1
           )
           .to(
             ".cardTwoMobile",
             1.1,
             {
-              left: "-53rem",
+              left: "-100vw",
               ease: Power3.easeInOut,
               pointerEvents: "visible"
             },
@@ -380,7 +382,7 @@ export default {
           .to(
             ".cardThreeMobile",
             1.1,
-            { left: "-53rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            { left: "-100vw", ease: Power3.easeInOut, pointerEvents: "none" },
             0.1
           )
           .to(
@@ -424,20 +426,20 @@ export default {
           .to(
             ".cardOne",
             0.5,
-            { left: "-75rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            { left: "-48vw", ease: Power3.easeInOut, pointerEvents: "none" },
             0.1
           )
           .to(
             ".cardTwo",
             0.5,
-            { left: "-75rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            { left: "-48vw", ease: Power3.easeInOut, pointerEvents: "none" },
             0.1
           )
           .to(
             ".cardThree",
             0.5,
             {
-              left: "-75rem",
+              left: "-48vw",
               ease: Power3.easeInOut,
               pointerEvents: "visible"
             },
@@ -458,20 +460,20 @@ export default {
           .to(
             ".cardOneMobile",
             1.5,
-            { left: "-106rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            { left: "-200vw", ease: Power3.easeInOut, pointerEvents: "none" },
             0.1
           )
           .to(
             ".cardTwoMobile",
             1.5,
-            { left: "-106rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            { left: "-200vw", ease: Power3.easeInOut, pointerEvents: "none" },
             0.1
           )
           .to(
             ".cardThreeMobile",
             1.5,
             {
-              left: "-106rem",
+              left: "-200vw",
               ease: Power3.easeInOut,
               pointerEvents: "visible"
             },
@@ -533,19 +535,19 @@ export default {
           .to(
             ".cardOne",
             0.5,
-            { left: "55rem", ease: Power3.easeInOut, pointerEvents: "visible" },
+            { left: "33vw", ease: Power3.easeInOut, pointerEvents: "visible" },
             0.1
           )
           .to(
             ".cardTwo",
             0.5,
-            { left: "55rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            { left: "33vw", ease: Power3.easeInOut, pointerEvents: "none" },
             0.1
           )
           .to(
             ".cardThree",
             0.5,
-            { left: "55rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            { left: "33vw", ease: Power3.easeInOut, pointerEvents: "none" },
             0.1
           )
           .to(".cardTwo", 0.5, { opacity: "0.3", ease: Power3.easeInOut }, 0.1)
@@ -568,19 +570,19 @@ export default {
           .to(
             ".cardOneMobile",
             1.5,
-            { left: "0rem", ease: Power3.easeInOut, pointerEvents: "visible" },
+            { left: "0", ease: Power3.easeInOut, pointerEvents: "visible" },
             0.1
           )
           .to(
             ".cardTwoMobile",
             1.5,
-            { left: "0rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            { left: "0", ease: Power3.easeInOut, pointerEvents: "none" },
             0.1
           )
           .to(
             ".cardThreeMobile",
             1.5,
-            { left: "0rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            { left: "0", ease: Power3.easeInOut, pointerEvents: "none" },
             0.1
           )
           .to(
@@ -619,19 +621,19 @@ export default {
           .to(
             ".cardOne",
             0.5,
-            { left: "-5rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            { left: "-5vw", ease: Power3.easeInOut, pointerEvents: "none" },
             0.1
           )
           .to(
             ".cardTwo",
             0.5,
-            { left: "-5rem", ease: Power3.easeInOut, pointerEvents: "visible" },
+            { left: "-5vw", ease: Power3.easeInOut, pointerEvents: "visible" },
             0.1
           )
           .to(
             ".cardThree",
             0.5,
-            { left: "-5rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            { left: "-5vw", ease: Power3.easeInOut, pointerEvents: "none" },
             0.1
           )
           .to(
@@ -659,14 +661,14 @@ export default {
           .to(
             ".cardOneMobile",
             1.5,
-            { left: "-53rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            { left: "-100vw", ease: Power3.easeInOut, pointerEvents: "none" },
             0.1
           )
           .to(
             ".cardTwoMobile",
             1.5,
             {
-              left: "-53rem",
+              left: "-100vw",
               ease: Power3.easeInOut,
               pointerEvents: "visible"
             },
@@ -675,7 +677,7 @@ export default {
           .to(
             ".cardThreeMobile",
             1.5,
-            { left: "-53rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            { left: "-100vw", ease: Power3.easeInOut, pointerEvents: "none" },
             0.1
           )
           .to(
@@ -726,19 +728,19 @@ export default {
           .to(
             ".cardOne",
             0.5,
-            { left: "-5rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            { left: "-5vw", ease: Power3.easeInOut, pointerEvents: "none" },
             0.1
           )
           .to(
             ".cardTwo",
             0.5,
-            { left: "-5rem", ease: Power3.easeInOut, pointerEvents: "visible" },
+            { left: "-5vw", ease: Power3.easeInOut, pointerEvents: "visible" },
             0.1
           )
           .to(
             ".cardThree",
             0.5,
-            { left: "-5rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            { left: "-5vw", ease: Power3.easeInOut, pointerEvents: "none" },
             0.1
           )
           .to(".cardTwo", 0.5, { opacity: "1", ease: Power3.easeInOut }, 0.1)
@@ -759,14 +761,14 @@ export default {
           .to(
             ".cardOneMobile",
             1.5,
-            { left: "-53rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            { left: "-100vw", ease: Power3.easeInOut, pointerEvents: "none" },
             0.1
           )
           .to(
             ".cardTwoMobile",
             1.5,
             {
-              left: "-53rem",
+              left: "-100vw",
               ease: Power3.easeInOut,
               pointerEvents: "visible"
             },
@@ -775,7 +777,7 @@ export default {
           .to(
             ".cardThreeMobile",
             1.5,
-            { left: "-53rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            { left: "-100vw", ease: Power3.easeInOut, pointerEvents: "none" },
             0.1
           )
           .to(
@@ -822,20 +824,20 @@ export default {
           .to(
             ".cardOne",
             0.5,
-            { left: "-75rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            { left: "-48vw", ease: Power3.easeInOut, pointerEvents: "none" },
             0.1
           )
           .to(
             ".cardTwo",
             0.5,
-            { left: "-75rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            { left: "-48vw", ease: Power3.easeInOut, pointerEvents: "none" },
             0.1
           )
           .to(
             ".cardThree",
             0.5,
             {
-              left: "-75rem",
+              left: "-48vw",
               ease: Power3.easeInOut,
               pointerEvents: "visible"
             },
@@ -861,20 +863,20 @@ export default {
           .to(
             ".cardOneMobile",
             1.5,
-            { left: "-106rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            { left: "-200vw", ease: Power3.easeInOut, pointerEvents: "none" },
             0.1
           )
           .to(
             ".cardTwoMobile",
             1.5,
-            { left: "-106rem", ease: Power3.easeInOut, pointerEvents: "none" },
+            { left: "-200vw", ease: Power3.easeInOut, pointerEvents: "none" },
             0.1
           )
           .to(
             ".cardThreeMobile",
             1.5,
             {
-              left: "-106rem",
+              left: "-200vw",
               ease: Power3.easeInOut,
               pointerEvents: "visible"
             },
