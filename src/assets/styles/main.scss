@@ -524,7 +524,7 @@ body {
     position: fixed;
     top: 0;
     right: 45%;
-    // z-index: -1;
+    z-index: 1;
   }
   .leaf-right {
     position: fixed;
@@ -578,7 +578,7 @@ body {
       letter-spacing: normal;
       color: $color-text;
       margin-top: 4rem;
-      margin-bottom: 1rem;
+      margin-bottom: 4.4rem;
     }
   }
 
@@ -600,7 +600,7 @@ body {
     letter-spacing: normal;
     padding: 2rem 0;
     align-self: center;
-    margin-bottom: 5rem;
+    margin: 5rem 0;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
   }
@@ -617,7 +617,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 0 40rem;
+    padding: 0 30rem;
     margin-bottom: 5.2rem;
 
     .card-transport,
@@ -632,7 +632,7 @@ body {
     .card-payroll,
     .card-entertainment,
     .card-investment {
-      width: 20%;
+      width: 18%;
       height: 50%;
       padding: 1rem 0;
       padding-bottom: 0.5rem;
@@ -641,19 +641,18 @@ body {
       justify-content: center;
       align-items: center;
       border-radius: 8px;
-      margin-top: 4rem;
+      margin: 2rem 0;
       background-color: #ffffff;
 
       ::placeholder {
         opacity: 0.48;
         font-family: Graphik;
-        font-size: 24px;
+        font-size: 2.8rem;
         font-weight: 500;
         font-stretch: normal;
         font-style: normal;
         line-height: normal;
         letter-spacing: -0.58px;
-        text-align: center;
         color: #252525;
       }
 
@@ -676,7 +675,7 @@ body {
         width: 100%;
         margin-top: 0.5rem;
         font-family: SFProDisplay;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         font-weight: 600;
         font-stretch: normal;
         font-style: normal;
@@ -687,9 +686,9 @@ body {
       }
 
       .input {
-        width: 95%;
+        width: 80%;
         height: 3rem;
-        font-size: 1.8rem;
+        font-size: 2.8rem;
         text-align: center;
         margin-top: 1.5rem;
         margin-bottom: 0.8rem;
@@ -708,7 +707,7 @@ body {
     .card-vacation,
     .card-payroll,
     .card-entertainment {
-      margin-right: 3rem;
+      margin-right: 3.5rem;
     }
   }
 }
