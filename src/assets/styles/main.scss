@@ -1054,22 +1054,25 @@ body {
     }
 
     .leaf-left {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       width: 30%;
+      z-index: 1;
     }
     .leaf-center {
-      position: absolute;
+      position: fixed;
       top: 0;
       right: 40%;
       width: 20%;
+      z-index: 1;
     }
     .leaf-right {
-      position: absolute;
+      position: fixed;
       top: 0;
       right: 0;
       width: 30%;
+      z-index: 1;
     }
 
     .morph-icon-left {
@@ -1327,22 +1330,25 @@ body {
     text-align: center;
 
     .leaf-left {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       width: 30%;
+      z-index: 1;
     }
     .leaf-center {
-      position: absolute;
+      position: fixed;
       top: 0;
       right: 40%;
       width: 20%;
+      z-index: 1;
     }
     .leaf-right {
-      position: absolute;
+      position: fixed;
       top: 0;
       right: 0;
       width: 30%;
+      z-index: 1;
     }
 
     .morph-icon-left {
