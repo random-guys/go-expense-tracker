@@ -30,7 +30,7 @@
           <b>
             One more thing
             <br />
-            <span class="name-color uppercase">{{ detail.first_name }}</span>
+            <span class="name-color uppercase">{{ detail.first_name }} {{ detail.last_name }}</span>
           </b>
         </h2>
       </div>
@@ -56,6 +56,7 @@
             <p class="required">(Required)</p>
             <form class="input" v-on:submit.prevent="firstNameInput()">
               <input
+                ref="firstName"
                 tabindex="-1"
                 type="text"
                 name="first_name"
@@ -71,6 +72,7 @@
             <p class="required">(Required)</p>
             <form class="input" v-on:submit.prevent="lastNameInput()">
               <input
+                ref="lastName"
                 tabindex="-1"
                 type="text"
                 name="last_name"
@@ -85,6 +87,7 @@
             <p class="required">(Required)</p>
             <form class="input" v-on:submit.prevent="emailInput()">
               <input
+                ref="emailAddress"
                 tabindex="-1"
                 type="email"
                 name="email"
@@ -310,6 +313,7 @@ export default {
           details.first_name = this.first_name;
         });
         localStorage.setItem("user_details", JSON.stringify(this.userDetails));
+        this.$refs.lastName.focus()
       } else {
         this.$swal.fire({
           type: "info",
@@ -412,6 +416,7 @@ export default {
           details.last_name = this.last_name;
         });
         localStorage.setItem("user_details", JSON.stringify(this.userDetails));
+        this.$refs.emailAddress.focus()
       } else {
         this.$swal.fire({
           type: "info",
