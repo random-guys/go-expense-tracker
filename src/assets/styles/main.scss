@@ -398,17 +398,19 @@ body {
     }
 
     .oval {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 50px;
       height: 50px;
       border-radius: 50%;
+      z-index: -1;
       opacity: 0.24;
       background-color: #000000;
 
       .arrow {
         color: #ffffff;
-        font-size: 2rem;
-        margin-left: 2rem;
-        margin-top: 1rem;
+        font-size: 3.5rem;
         font-weight: 900;
         cursor: pointer;
       }
@@ -1172,7 +1174,7 @@ body {
       .btn1-mobile {
         border-bottom-right-radius: 0.8rem;
         border-top-right-radius: 0.8rem;
-        left: 1rem;
+        left: 0rem;
       }
 
       .btn2-mobile {
@@ -1187,12 +1189,13 @@ body {
         border-radius: 50%;
         border-bottom-right-radius: 0.8rem;
         border-top-right-radius: 0.8rem;
-        opacity: 0.24;
-        background-color: #000000;
+        // opacity: 0.24;
+        text-align: start;
+        // background-color: #000000;
 
         .arrow-mobile {
-          color: #ffffff;
-          font-size: 2rem;
+          color: #15777c;
+          font-size: 3.5rem;
           margin-left: 2rem;
           margin-top: 1rem;
           font-weight: 900;
@@ -1206,12 +1209,12 @@ body {
         border-radius: 50%;
         border-bottom-left-radius: 0.8rem;
         border-top-left-radius: 0.8rem;
-        opacity: 0.24;
-        background-color: #000000;
+        // opacity: 0.24;
+        // background-color: #000000;
 
         .arrow-mobile {
-          color: #ffffff;
-          font-size: 2rem;
+          color: #15777c;
+          font-size: 3.5rem;
           margin-left: 2rem;
           margin-top: 1rem;
           font-weight: 900;

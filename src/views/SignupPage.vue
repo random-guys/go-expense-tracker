@@ -47,7 +47,7 @@
       <div class="slider">
         <div class="btn1 button1" @click="toggleBack()">
           <div class="oval">
-            <p class="arrow foward"></p>
+            <p class="arrow foward">&#60;</p>
           </div>
         </div>
         <div class="slider__slide">
@@ -97,7 +97,7 @@
         </div>
         <div class="btn2 button2" @click="toggleFront()">
           <div class="oval">
-            <p class="arrow"></p>
+            <p class="arrow">&#62;</p>
           </div>
         </div>
       </div>
@@ -109,7 +109,7 @@
       <div class="slider-mobile">
         <div class="btn1-mobile button1Mobile" @click="toggleBack()">
           <div class="oval1-mobile">
-            <p class="arrow-mobile fowardMobile"></p>
+            <p class="arrow-mobile fowardMobile">&#60;</p>
           </div>
         </div>
         <div class="slider-mobile__slide-mobile">
@@ -158,7 +158,7 @@
         </div>
         <div class="btn2-mobile button2Mobile" @click="toggleFront()">
           <div class="oval2-mobile">
-            <p class="arrow-mobile"></p>
+            <p class="arrow-mobile">&#62;</p>
           </div>
         </div>
       </div>
