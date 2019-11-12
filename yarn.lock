@@ -2178,6 +2178,11 @@ concat-stream@^1.5.0:
     readable-stream "^2.2.2"
     typedarray "^0.0.6"
 
+confetti-js@^0.0.15:
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/confetti-js/-/confetti-js-0.0.15.tgz#414d1a6fd2cec1885a10940c245f187f0c265aa8"
+  integrity sha512-Y3rwiQ7boCujKlHzs2yoaJhz8dbREUFSgl6iWvDRopT30cqx2t9AfS/la6FgTPuvC1DktYrWGt70jiajNcVZeA==
+
 connect-history-api-fallback@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/connect-history-api-fallback/-/connect-history-api-fallback-1.6.0.tgz#8b32089359308d111115d81cad3fceab888f97bc"
@@ -7764,6 +7769,11 @@ vm-browserify@^1.0.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
+
+vue-confetti@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/vue-confetti/-/vue-confetti-2.0.5.tgz#99a8c5aa4d6505c7a8f07a1ff63d4bd217596051"
+  integrity sha512-UNIu8baNPSCNkQ2ZpFFy9PA034nEXGuYXx9GQ8IEUlOUroTmlNymuHlSyFu8mK3VsU/XajvHOstcOoxRrWKkxw==
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
