@@ -1,6 +1,7 @@
 <template>
   <div class="main">
     <div class="result resultPage">
+    <canvas id="confetti" class="canvas"></canvas>
       <img
         src="../assets/images/vector-shapes-1.svg"
         alt="Morph Icon Left"
@@ -97,10 +98,22 @@
         <p>JOIN THE WAITLIST</p>
       </div>
       <div class="share-icon">
-        <div class="icon1"></div>
-        <div class="icon2"></div>
-        <div class="icon3"></div>
-        <div class="icon4"></div>
+        <div class="icon1">
+          <a href="https://www.instagram.com/gomoneyng/" class="link" target="_blank">
+            <img src="../assets/images/instagram.svg" alt="Instagram Icon" class="footer__icon">
+          </a>
+        </div>
+        <div class="icon2">
+          <a href="https://www.facebook.com/GoMoneyGlobal/" class="link" target="_blank">
+            <img src="../assets/images/facebook.svg" alt="Facebook Icon" class="footer__icon">
+          </a>
+        </div>
+        <div class="icon3">
+          <a href="https://twitter.com/gomoneyng" class="link" target="_blank">
+            <img src="../assets/images/twitter.svg" alt="Twitter Icon" class="footer__icon">
+          </a>
+        </div>
+        <!-- <div class="icon4"></div> -->
       </div>
       <div class="share">SHARE</div>
     </div>
@@ -108,7 +121,10 @@
 </template>
 
 <script>
+import ConfettiGenerator from "confetti-js";
+
 export default {
+  name: 'app',
   data() {
     return {
       userDetails: []
@@ -116,6 +132,19 @@ export default {
   },
   mounted() {
     this.userDetails = JSON.parse(localStorage.getItem("user_details"));
+
+    const headerCanvasSettings = {
+      target: 'confetti',
+      max: '200',
+      size: '3',
+      animate: true,
+      props: ['circle', 'square', 'triangle', 'line', 'rectangle'],
+      colors: [[165, 104, 246], [230, 61, 135], [0, 199, 228], [253, 214, 126], [57, 181, 74], [237, 28, 36], [252, 238, 33], [251, 176, 59], [0, 255, 255], [237, 30, 121]],
+      clock: '10',
+      rotate: true
+    }
+    const canvas = new ConfettiGenerator(headerCanvasSettings)
+    canvas.render()
 
     const tl = new TimelineMax();
 
