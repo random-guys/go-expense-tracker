@@ -311,7 +311,10 @@ export default {
         });
         localStorage.setItem("user_details", JSON.stringify(this.userDetails));
       } else {
-        alert("Please enter first name");
+        this.$swal.fire({
+          type: "info",
+          html: `please enter first name`
+        });
         return;
       }
       if (this.slide1 === false) {
@@ -410,7 +413,10 @@ export default {
         });
         localStorage.setItem("user_details", JSON.stringify(this.userDetails));
       } else {
-        alert("Please enter last name");
+        this.$swal.fire({
+          type: "info",
+          html: `please enter last name`
+        });
         return;
       }
       if (this.slide2 === false) {
@@ -506,7 +512,10 @@ export default {
         this.last_name.length === 0 ||
         test === false
       ) {
-        alert("Incorrect email");
+        this.$swal.fire({
+          type: "info",
+          html: `Invalid email`
+        });
         return;
       } else {
         this.userDetails.map(details => {
@@ -707,7 +716,10 @@ export default {
         });
         localStorage.setItem("user_details", JSON.stringify(this.userDetails));
       } else {
-        alert("Please enter first name");
+        this.$swal.fire({
+          type: "info",
+          html: `Please enter first name`
+        });
         return;
       }
       if (this.toggleFoward === false) {
@@ -804,7 +816,10 @@ export default {
             JSON.stringify(this.userDetails)
           );
         } else {
-          alert("Please enter last name");
+        this.$swal.fire({
+          type: "info",
+          html: `Please enter last name`
+        });
           return;
         }
         const tl = new TimelineMax();
