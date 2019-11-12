@@ -30,15 +30,7 @@
       />
       <div v-for="(detail, index) in userDetails" :key="index">
         <h2 class="hero-text__primary">
-          Hi
-          <b class="capitalize">{{ detail.first_name }}</b>, time to find out where all of that
-          <br />money goes to every month.
-        </h2>
-        <h2 class="hero-text__primary-mobile">
-          Hi
-          <b class="capitalize">{{ detail.first_name }}</b>, time to find out where all
-          <br />of that
-          money goes to every month.
+          Hi <b class="capitalize">{{ detail.first_name }}</b>, time to find out where all of that money goes to every month.
         </h2>
       </div>
       <div class="card-container">
@@ -322,14 +314,15 @@ export default {
     );
     TweenMax.fromTo(
       ".leafBottom",
-      20,
-      { scale: "0.5" },
+      10,
+      {  scale: "0.8" },
       {
         repeat: -1,
         yoyo: true,
         repeatDelay: 0.4,
         ease: Power2.easeInOut,
-        scale: "1.2"
+        rotation: "5",
+        scale: "1"
       },
       -3
     );
@@ -428,10 +421,16 @@ export default {
   methods: {
     checkHabit() {
       if (isNaN(this.amount) === true) {
-        alert("Please check input for error");
+        this.$swal.fire({
+          type: "info",
+          html: `Input error(Numbers only)`
+        });
         return;
       } else if (this.amount === 0) {
-        alert("Please input figures");
+        this.$swal.fire({
+          type: "info",
+          html: `Please enter amount(Numbers only)`
+        });
       } else {
         this.userDetails.map(details => {
           details.amount = this.amount;
