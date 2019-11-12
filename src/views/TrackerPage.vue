@@ -36,6 +36,7 @@
       <div class="card-container">
         <!-- <div class="card-container__card-row"> -->
         <div class="card-transport transport">
+          <input type="radio" name="" value="" class="radio">
           <img src="../assets/images/transportation-icon.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text transportText">Transport</p>
           <input
@@ -50,6 +51,7 @@
           <p class="error errorMsgTransport">!!!</p>
         </div>
         <div class="card-transfer transfer">
+          <input type="radio" name="" value="" class="radio">
           <img src="../assets/images/transfer.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text transferText">Transfer</p>
           <input
@@ -64,6 +66,7 @@
           <p class="error errorMsgTransfer">!!!</p>
         </div>
         <div class="card-eating eating">
+          <input type="radio" name="" value="" class="radio">
           <img src="../assets/images/eating.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text eatingText">Eating Out</p>
           <input
@@ -78,6 +81,7 @@
           <p class="error errorMsgEating">!!!</p>
         </div>
         <div class="card-bills bills">
+          <input type="radio" name="" value="" class="radio">
           <img src="../assets/images/bills.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text billsText">Bills</p>
           <input
@@ -94,6 +98,7 @@
         <!-- </div> -->
         <!-- <div class="card-container__card-row"> -->
         <div class="card-family family">
+          <input type="radio" name="" value="" class="radio">
           <img src="../assets/images/family.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text familyText">Family</p>
           <input
@@ -108,6 +113,7 @@
           <p class="error errorMsgFamily">!!!</p>
         </div>
         <div class="card-groceries groceries">
+          <input type="radio" name="" value="" class="radio">
           <img src="../assets/images/Groceries.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text groceriesText">Groceries</p>
           <input
@@ -122,6 +128,7 @@
           <p class="error errorMsgGroceries">!!!</p>
         </div>
         <div class="card-shopping shopping">
+          <input type="radio" name="" value="" class="radio">
           <img src="../assets/images/shopping.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text shoppingText">Shopping</p>
           <input
@@ -136,6 +143,7 @@
           <p class="error errorMsgShopping">!!!</p>
         </div>
         <div class="card-care care">
+          <input type="radio" name="" value="" class="radio">
           <img src="../assets/images/personal-care.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text careText">Personal Care</p>
           <input
@@ -152,6 +160,7 @@
         <!-- </div> -->
         <!-- <div class="card-container__card-row"> -->
         <div class="card-vacation vacation">
+          <input type="radio" name="" value="" class="radio">
           <img src="../assets/images/vercation.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text vacationText">vacation</p>
           <input
@@ -166,6 +175,7 @@
           <p class="error errorMsgVacation">!!!</p>
         </div>
         <div class="card-payroll payroll">
+          <input type="radio" name="" value="" class="radio">
           <img src="../assets/images/payroll.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text payrollText">Payroll</p>
           <input
@@ -180,6 +190,7 @@
           <p class="error errorMsgPayroll">!!!</p>
         </div>
         <div class="card-entertainment entertainment">
+          <input type="radio" name="" value="" class="radio">
           <img src="../assets/images/entertainment.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text entertainmentText">Entertainment</p>
           <input
@@ -194,6 +205,7 @@
           <p class="error errorMsgEntertainment">!!!</p>
         </div>
         <div class="card-investment investment">
+          <input type="radio" name="" value="" class="radio">
           <img src="../assets/images/investment.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text investmentText">Investment</p>
           <input
@@ -314,13 +326,13 @@ export default {
     );
     TweenMax.fromTo(
       ".leafBottom",
-      10,
+      5,
       {  scale: "0.8" },
       {
         repeat: -1,
         yoyo: true,
-        repeatDelay: 0.4,
-        ease: Power2.easeInOut,
+        repeatDelay: 0,
+        ease: Elastic.easeInOut.config(2, 2),
         rotation: "5",
         scale: "1"
       },

@@ -646,6 +646,11 @@ body {
       margin: 2rem 0;
       background-color: #ffffff;
 
+      .radio {
+        align-self: flex-end;
+        margin-right: 1.5rem;
+      }
+
       ::placeholder {
         opacity: 0.48;
         font-family: Graphik;
