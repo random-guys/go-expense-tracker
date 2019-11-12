@@ -41,7 +41,7 @@
           <p class="card-text transportText">Transport</p>
           <input
             type="text"
-            placeholder="₦.00"
+            placeholder="N.00"
             onfocus="this.placeholder=''"
             onblur="this.placeholder='₦.00'"
             class="input transportInput"
@@ -56,7 +56,7 @@
           <p class="card-text transferText">Transfer</p>
           <input
             type="text"
-            placeholder="₦.00"
+            placeholder="N.00"
             onfocus="this.placeholder=''"
             onblur="this.placeholder='₦.00'"
             class="input transferInput"
@@ -71,7 +71,7 @@
           <p class="card-text eatingText">Eating Out</p>
           <input
             type="text"
-            placeholder="₦.00"
+            placeholder="N.00"
             onfocus="this.placeholder=''"
             onblur="this.placeholder='₦.00'"
             class="input eatingInput"
@@ -86,7 +86,7 @@
           <p class="card-text billsText">Bills</p>
           <input
             type="text"
-            placeholder="₦.00"
+            placeholder="N.00"
             onfocus="this.placeholder=''"
             onblur="this.placeholder='₦.00'"
             class="input billsInput"
@@ -103,7 +103,7 @@
           <p class="card-text familyText">Family</p>
           <input
             type="text"
-            placeholder="₦.00"
+            placeholder="N.00"
             onfocus="this.placeholder=''"
             onblur="this.placeholder='₦.00'"
             class="input familyInput"
@@ -118,7 +118,7 @@
           <p class="card-text groceriesText">Groceries</p>
           <input
             type="text"
-            placeholder="₦.00"
+            placeholder="N.00"
             onfocus="this.placeholder=''"
             onblur="this.placeholder='₦.00'"
             class="input groceriesInput"
@@ -133,7 +133,7 @@
           <p class="card-text shoppingText">Shopping</p>
           <input
             type="text"
-            placeholder="₦.00"
+            placeholder="N.00"
             onfocus="this.placeholder=''"
             onblur="this.placeholder='₦.00'"
             class="input shoppingInput"
@@ -148,7 +148,7 @@
           <p class="card-text careText">Personal Care</p>
           <input
             type="text"
-            placeholder="₦.00"
+            placeholder="N.00"
             onfocus="this.placeholder=''"
             onblur="this.placeholder='₦.00'"
             class="input careInput"
@@ -165,7 +165,7 @@
           <p class="card-text vacationText">vacation</p>
           <input
             type="text"
-            placeholder="₦.00"
+            placeholder="N.00"
             onfocus="this.placeholder=''"
             onblur="this.placeholder='₦.00'"
             class="input vacationInput"
@@ -180,7 +180,7 @@
           <p class="card-text payrollText">Payroll</p>
           <input
             type="text"
-            placeholder="₦.00"
+            placeholder="N.00"
             onfocus="this.placeholder=''"
             onblur="this.placeholder='₦.00'"
             class="input payrollInput"
@@ -195,7 +195,7 @@
           <p class="card-text entertainmentText">Entertainment</p>
           <input
             type="text"
-            placeholder="₦.00"
+            placeholder="N.00"
             onfocus="this.placeholder=''"
             onblur="this.placeholder='₦.00'"
             class="input entertainmentInput"
@@ -210,7 +210,7 @@
           <p class="card-text investmentText">Investment</p>
           <input
             type="text"
-            placeholder="₦.00"
+            placeholder="N.00"
             onfocus="this.placeholder=''"
             onblur="this.placeholder='₦.00'"
             class="input investmentInput"
