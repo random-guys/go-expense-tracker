@@ -99,17 +99,17 @@
       </div>
       <div class="share-icon">
         <div class="icon1">
-          <a href="https://www.instagram.com/gomoneyng/" class="link" target="_blank">
+          <a href="https://www.instagram.com" class="link" target="_blank">
             <img src="../assets/images/instagram.svg" alt="Instagram Icon" class="icon">
           </a>
         </div>
         <div class="icon2">
-          <a href="https://www.facebook.com/GoMoneyGlobal/" class="link" target="_blank">
+          <a href="https://www.facebook.com" class="link" target="_blank">
             <img src="../assets/images/facebook.svg" alt="Facebook Icon" class="icon">
           </a>
         </div>
         <div class="icon3">
-          <a href="https://twitter.com/gomoneyng" class="link" target="_blank">
+          <a href="https://twitter.com" class="link" target="_blank">
             <img src="../assets/images/twitter.svg" alt="Twitter Icon" class="icon">
           </a>
         </div>
@@ -135,12 +135,12 @@ export default {
 
     const headerCanvasSettings = {
       target: 'confetti',
-      max: '200',
+      max: '100',
       size: '3',
       animate: true,
-      props: ['circle', 'square', 'triangle', 'line', 'rectangle'],
+      props: ['circle', 'square', 'triangle', 'rectangle'],
       colors: [[165, 104, 246], [230, 61, 135], [0, 199, 228], [253, 214, 126], [57, 181, 74], [237, 28, 36], [252, 238, 33], [251, 176, 59], [0, 255, 255], [237, 30, 121]],
-      clock: '10',
+      clock: '50',
       rotate: true
     }
     const canvas = new ConfettiGenerator(headerCanvasSettings)
