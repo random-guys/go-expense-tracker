@@ -136,8 +136,6 @@ export default {
     const headerCanvasSettings = {
       target: 'confetti',
       max: '100',
-      width: '1700',
-      height: '1000',
       size: '3',
       animate: true,
       props: ['circle', 'square', 'triangle', 'rectangle'],
