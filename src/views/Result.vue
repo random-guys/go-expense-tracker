@@ -88,14 +88,12 @@
       <div class="comment">
         <p>You love to have access to your money, whenever and wherever, we think you’d be a perfect match for our solution, join the waitlist!</p>
       </div>
-      <div class="amount" v-for="(detail, index) in userDetails" :key="index">
+      <div class="amount" v-for="(detail, index) in amountBreakDown" :key="index">
         <div class="figure">
-          <p>₦{{ detail.amount.toLocaleString() }}</p>
+          <p>₦{{ detail.value.toLocaleString() }}</p>
         </div>
       </div>
-      <!-- <img src="../assets/images/montly.svg" alt="Morph Icon Right" class="montly" /> -->
-      <select v-model="selected" class="monthly">
-        <!-- <option disabled value="Please select one">Please select one</option> -->
+      <select v-model="selected" class="monthly" @change="calcAmount($event)">
         <option>Weekly</option>
         <option>Monthly</option>
         <option>Yearly</option>
@@ -135,12 +133,24 @@ export default {
   data() {
     return {
       userDetails: [],
-      selected: "Monthly"
+      amountBreakDown: [],
+      selected: "Monthly",
+      weekly: "",
+      monthly: "",
+      yearly: ""
     };
   },
   mounted() {
     this.userDetails = JSON.parse(localStorage.getItem("user_details"));
-
+    this.amountBreakDown = [{
+      value: 0
+    }]
+    this.userDetails.map(details => {
+      this.monthly = details.amount
+    })
+    this.amountBreakDown.map(amount => {
+      amount.value = this.monthly
+    })
     const headerCanvasSettings = {
       target: 'confetti',
       max: '100',
@@ -230,6 +240,32 @@ export default {
         rotation: "40"
       }
     );
+  },
+  methods: {
+    calcAmount() {
+      let amount = ""
+      this.userDetails.map(detail => {
+        amount = detail.amount
+      })
+      if(this.selected === "Weekly") {
+        this.weekly = amount / 4
+        this.amountBreakDown.map(amount => {
+          amount.value = this.weekly
+        })
+      }
+      if(this.selected === "Monthly") {
+        this.monthly = amount
+        this.amountBreakDown.map(amount => {
+          amount.value = this.monthly
+        })
+      }
+      if(this.selected === "Yearly") {
+        this.yearly = amount * 12
+        this.amountBreakDown.map(amount => {
+          amount.value = this.yearly
+        })
+      }
+    }
   }
 };
 </script>
