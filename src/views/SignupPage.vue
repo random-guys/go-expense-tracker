@@ -30,7 +30,7 @@
           <b>
             One more thing
             <br />
-            <span class="name-color uppercase">{{ detail.first_name }} {{ detail.last_name }}</span>
+            <span class="name-color capitalize">{{ detail.first_name }} {{ detail.last_name }}</span>
           </b>
         </h2>
       </div>
@@ -52,7 +52,7 @@
         </div>
         <div class="slider__slide">
           <div class="card1 cardOne">
-            <p class="header">So, what's your...?</p>
+            <p class="header">So, what's your First Name?</p>
             <p class="required">(Required)</p>
             <form class="input" v-on:submit.prevent="firstNameInput()">
               <input
@@ -68,7 +68,7 @@
             </form>
           </div>
           <div class="card2 cardTwo">
-            <p class="header">And, what's your...?</p>
+            <p class="header">And, what's your Last Name?</p>
             <p class="required">(Required)</p>
             <form class="input" v-on:submit.prevent="lastNameInput()">
               <input
