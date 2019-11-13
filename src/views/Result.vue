@@ -1,7 +1,7 @@
 <template>
   <div class="main">
-    <div class="result resultPage">
     <canvas id="confetti" class="canvas"></canvas>
+    <div class="result resultPage">
       <img
         src="../assets/images/vector-shapes-1.svg"
         alt="Morph Icon Left"

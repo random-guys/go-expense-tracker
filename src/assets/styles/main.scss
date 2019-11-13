@@ -105,6 +105,26 @@ body {
   margin-top: 7.7rem;
 }
 
+.canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  // z-index: 1;
+  opacity: 0.5;
+  mask-image: linear-gradient(
+    to top,
+    from(rgba(255, 255, 255, 1)),
+    to(rgba(255, 255, 255, 0))
+  );
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(255, 255, 255, 1)),
+    to(rgba(255, 255, 255, 0))
+  );
+}
+
 //Home Page CSS
 .home {
   width: 100%;
@@ -725,25 +745,6 @@ body {
   flex-direction: column;
   text-align: center;
   justify-content: center;
-
-  .canvas {
-    position: absolute;
-    left: 0;
-    // z-index: 1;
-    opacity: 0.5;
-    mask-image: linear-gradient(
-      to top,
-      from(rgba(255, 255, 255, 1)),
-      to(rgba(255, 255, 255, 0))
-    );
-    -webkit-mask-image: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      from(rgba(255, 255, 255, 1)),
-      to(rgba(255, 255, 255, 0))
-    );
-}
 
   .baller-emoji {
     position: absolute;
@@ -1711,18 +1712,18 @@ body {
       .icon2,
       .icon3,
       .icon4 {
-        width: 62px;
-        height: 62px;
+        // width: 62px;
+        // height: 62px;
         border-radius: 50%;
         margin-top: 6.7rem;
-        background-color: #d8d8d8;
+        // background-color: #d8d8d8;
       }
 
-      .icon1,
-      .icon2,
-      .icon3 {
-        margin-right: 2rem;
-      }
+      // .icon1,
+      // .icon2,
+      // .icon3 {
+      //   margin-right: 2rem;
+      // }
     }
 
     .share {
