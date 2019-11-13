@@ -100,17 +100,17 @@
       <div class="share-icon">
         <div class="icon1">
           <a href="https://www.instagram.com/gomoneyng/" class="link" target="_blank">
-            <img src="../assets/images/instagram.svg" alt="Instagram Icon" class="footer__icon">
+            <img src="../assets/images/instagram.svg" alt="Instagram Icon" class="icon">
           </a>
         </div>
         <div class="icon2">
           <a href="https://www.facebook.com/GoMoneyGlobal/" class="link" target="_blank">
-            <img src="../assets/images/facebook.svg" alt="Facebook Icon" class="footer__icon">
+            <img src="../assets/images/facebook.svg" alt="Facebook Icon" class="icon">
           </a>
         </div>
         <div class="icon3">
           <a href="https://twitter.com/gomoneyng" class="link" target="_blank">
-            <img src="../assets/images/twitter.svg" alt="Twitter Icon" class="footer__icon">
+            <img src="../assets/images/twitter.svg" alt="Twitter Icon" class="icon">
           </a>
         </div>
         <!-- <div class="icon4"></div> -->
