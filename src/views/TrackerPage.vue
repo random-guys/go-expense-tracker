@@ -221,7 +221,7 @@
         </div>
         <!-- </div> -->
       </div>
-      <div class="button" @click="checkHabit()">Check Your Habit!</div>
+      <div class="button btn" @click="checkHabit()">Check Your Habit!</div>
     </div>
   </div>
 </template>
@@ -429,6 +429,7 @@ export default {
         { opacity: 1, ease: Power2.easeInOut },
         1.6
       );
+    this.btnDisable()
   },
   methods: {
     checkHabit() {
@@ -470,6 +471,7 @@ export default {
             0.1
           )
           .to(".errorMsgTransport", 0.5, { display: "none" }, 0.1);
+        this.btnEnabled()
         this.inputAmount();
       } else if (
         this.transport.length > 0 &&
@@ -502,6 +504,7 @@ export default {
             display: "flex"
           }
         );
+        this.btnDisable()
         this.inputAmount();
       } else if (this.transport.length === 0) {
         const tl = new TimelineMax();
@@ -520,6 +523,7 @@ export default {
             0.1
           )
           .to(".errorMsgTransport", 0.5, { display: "none" }, 0.1);
+        this.btnDisable() 
         this.inputAmount();
       }
     },
@@ -543,6 +547,7 @@ export default {
             0.1
           )
           .to(".errorMsgTransfer", 0.5, { display: "none" }, 0.1);
+        this.btnEnabled()
         this.inputAmount();
       } else if (
         this.transfer.length > 0 &&
@@ -575,6 +580,7 @@ export default {
             display: "flex"
           }
         );
+        this.btnDisable()
         this.inputAmount();
       } else if (this.transfer.length === 0) {
         const tl = new TimelineMax();
@@ -593,6 +599,7 @@ export default {
             0.1
           )
           .to(".errorMsgTransfer", 0.5, { display: "none" }, 0.1);
+        this.btnDisable()
         this.inputAmount();
       }
     },
@@ -616,6 +623,7 @@ export default {
             0.1
           )
           .to(".errorMsgEating", 0.5, { display: "none" }, 0.1);
+        this.btnEnabled()
         this.inputAmount();
       } else if (this.eating.length > 0 && regEx.test(this.eating) === false) {
         const tl = new TimelineMax();
@@ -645,6 +653,7 @@ export default {
             display: "flex"
           }
         );
+        this.btnDisable()
         this.inputAmount();
       } else {
         const tl = new TimelineMax();
@@ -663,6 +672,7 @@ export default {
             0.1
           )
           .to(".errorMsgEating", 0.5, { display: "none" }, 0.1);
+        this.btnDisable()
         this.inputAmount();
       }
     },
@@ -686,6 +696,7 @@ export default {
             0.1
           )
           .to(".errorMsgBills", 0.5, { display: "none" }, 0.1);
+        this.btnEnabled()
         this.inputAmount();
       } else if (this.bills.length > 0 && regEx.test(this.bills) === false) {
         const tl = new TimelineMax();
@@ -715,6 +726,7 @@ export default {
             display: "flex"
           }
         );
+        this.btnDisable()
         this.inputAmount();
       } else {
         const tl = new TimelineMax();
@@ -733,6 +745,7 @@ export default {
             0.1
           )
           .to(".errorMsgBills", 0.5, { display: "none" }, 0.1);
+        this.btnDisable()
         this.inputAmount();
       }
     },
@@ -756,6 +769,7 @@ export default {
             0.1
           )
           .to(".errorMsgFamily", 0.5, { display: "none" }, 0.1);
+        this.btnEnabled()
         this.inputAmount();
       } else if (this.family.length > 0 && regEx.test(this.family) === false) {
         const tl = new TimelineMax();
@@ -785,6 +799,7 @@ export default {
             display: "flex"
           }
         );
+        this.btnDisable()
         this.inputAmount();
       } else {
         const tl = new TimelineMax();
@@ -803,6 +818,7 @@ export default {
             0.1
           )
           .to(".errorMsgFamily", 0.5, { display: "none" }, 0.1);
+        this.btnDisable()
         this.inputAmount();
       }
     },
@@ -826,6 +842,7 @@ export default {
             0.1
           )
           .to(".errorMsgGroceries", 0.5, { display: "none" }, 0.1);
+        this.btnEnabled()
         this.inputAmount();
       } else if (
         this.groceries.length > 0 &&
@@ -858,6 +875,7 @@ export default {
             display: "flex"
           }
         );
+        this.btnDisable()
         this.inputAmount();
       } else {
         const tl = new TimelineMax();
@@ -876,6 +894,7 @@ export default {
             0.1
           )
           .to(".errorMsgGroceries", 0.5, { display: "none" }, 0.1);
+        this.btnDisable()
         this.inputAmount();
       }
     },
@@ -899,6 +918,7 @@ export default {
             0.1
           )
           .to(".errorMsgShopping", 0.5, { display: "none" }, 0.1);
+        this.btnEnabled()
         this.inputAmount();
       } else if (
         this.shopping.length > 0 &&
@@ -931,6 +951,7 @@ export default {
             display: "flex"
           }
         );
+        this.btnDisable()
         this.inputAmount();
       } else {
         const tl = new TimelineMax();
@@ -949,6 +970,7 @@ export default {
             0.1
           )
           .to(".errorMsgShopping", 0.5, { display: "none" }, 0.1);
+        this.btnDisable()
         this.inputAmount();
       }
     },
@@ -972,6 +994,7 @@ export default {
             0.1
           )
           .to(".errorMsgCare", 0.5, { display: "none" }, 0.1);
+        this.btnEnabled()
         this.inputAmount();
       } else if (this.care.length > 0 && regEx.test(this.care) === false) {
         const tl = new TimelineMax();
@@ -1001,6 +1024,7 @@ export default {
             display: "flex"
           }
         );
+        this.btnDisable()
         this.inputAmount();
       } else {
         const tl = new TimelineMax();
@@ -1019,6 +1043,7 @@ export default {
             0.1
           )
           .to(".errorMsgCare", 0.5, { display: "none" }, 0.1);
+        this.btnDisable()
         this.inputAmount();
       }
     },
@@ -1042,6 +1067,7 @@ export default {
             0.1
           )
           .to(".errorMsgVacation", 0.5, { display: "none" }, 0.1);
+        this.btnEnabled()
         this.inputAmount();
       } else if (
         this.vacation.length > 0 &&
@@ -1074,6 +1100,7 @@ export default {
             display: "flex"
           }
         );
+        this.btnDisable()
         this.inputAmount();
       } else {
         const tl = new TimelineMax();
@@ -1092,6 +1119,7 @@ export default {
             0.1
           )
           .to(".errorMsgVacation", 0.5, { display: "none" }, 0.1);
+        this.btnDisable()
         this.inputAmount();
       }
     },
@@ -1115,6 +1143,7 @@ export default {
             0.1
           )
           .to(".errorMsgPayroll", 0.5, { display: "none" }, 0.1);
+        this.btnEnabled()
         this.inputAmount();
       } else if (
         this.payroll.length > 0 &&
@@ -1147,6 +1176,7 @@ export default {
             display: "flex"
           }
         );
+        this.btnDisable()
         this.inputAmount();
       } else {
         const tl = new TimelineMax();
@@ -1165,6 +1195,7 @@ export default {
             0.1
           )
           .to(".errorMsgPayroll", 0.5, { display: "none" }, 0.1);
+        this.btnDisable()
         this.inputAmount();
       }
     },
@@ -1191,6 +1222,7 @@ export default {
             0.1
           )
           .to(".errorMsgEntertainment", 0.5, { display: "none" }, 0.1);
+        this.btnEnabled()
         this.inputAmount();
       } else if (
         this.entertainment.length > 0 &&
@@ -1223,6 +1255,7 @@ export default {
             display: "flex"
           }
         );
+        this.btnDisable()
         this.inputAmount();
       } else {
         const tl = new TimelineMax();
@@ -1241,6 +1274,7 @@ export default {
             0.1
           )
           .to(".errorMsgEntertainment", 0.5, { display: "none" }, 0.1);
+        this.btnDisable()
         this.inputAmount();
       }
     },
@@ -1264,6 +1298,7 @@ export default {
             0.1
           )
           .to(".errorMsgInvestment", 0.5, { display: "none" }, 0.1);
+        this.btnEnabled()
         this.inputAmount();
       } else if (
         this.investment.length > 0 &&
@@ -1296,6 +1331,7 @@ export default {
             display: "flex"
           }
         );
+        this.btnDisable()
         this.inputAmount();
       } else {
         const tl = new TimelineMax();
@@ -1314,6 +1350,7 @@ export default {
             0.1
           )
           .to(".errorMsgInvestment", 0.5, { display: "none" }, 0.1);
+        this.btnDisable()
         this.inputAmount();
       }
     },
@@ -1331,6 +1368,12 @@ export default {
         Number(this.payroll) +
         Number(this.entertainment) +
         Number(this.investment);
+    },
+    btnDisable() {
+      TweenMax.to(".btn", 0, { opacity: "0.5", pointerEvents: "none" })
+    },
+    btnEnabled() {
+      TweenMax.to(".btn", 0, { opacity: "1", pointerEvents: "visible" })
     }
   }
 };
