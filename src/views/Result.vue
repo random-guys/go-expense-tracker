@@ -1,6 +1,5 @@
 <template>
   <div class="main">
-    <canvas id="confetti" class="canvas"></canvas>
     <div class="result resultPage">
       <img
         src="../assets/images/vector-shapes-1.svg"
@@ -122,6 +121,7 @@
       </div>
       <div class="share">SHARE</div>
     </div>
+    <canvas id="confetti" class="canvas"></canvas>
   </div>
 </template>
 
