@@ -235,17 +235,29 @@ export default {
       amount: 0,
       userDetails: [],
       transport: "",
+      inputTransport: "",
       transfer: "",
+      inputTransfer: "",
       eating: "",
+      inputEating: "",
       bills: "",
+      inputBills: "",
       family: "",
+      inputFamily: "",
       groceries: "",
+      inputGroceries: "",
       shopping: "",
+      inputShopping: "",
       care: "",
+      inputCare: "",
       vacation: "",
+      inputVacation: "",
       payroll: "",
+      inputPayroll: "",
       entertainment: "",
-      investment: ""
+      inputEntertainment: "",
+      investment: "",
+      inputInvestment: ""
     };
   },
   mounted() {
@@ -455,6 +467,8 @@ export default {
     inputTransportationAmount() {
       let regEx = /^[0-9]*$/gm;
       if (this.transport.length > 0 && regEx.test(this.transport) === true) {
+        this.inputTransport = event.target.value
+        this.transport =  `N${this.inputTransport}`
         const tl = new TimelineMax();
 
         tl.to(
@@ -531,6 +545,8 @@ export default {
       let regEx = /^[0-9]*$/gm;
 
       if (this.transfer.length > 0 && regEx.test(this.transfer) === true) {
+        this.inputTransfer = event.target.value
+        this.transfer =  `N${this.inputTransfer}`
         const tl = new TimelineMax();
 
         tl.to(
@@ -607,6 +623,8 @@ export default {
       let regEx = /^[0-9]*$/gm;
 
       if (this.eating.length > 0 && regEx.test(this.eating) === true) {
+        this.inputEating = event.target.value
+        this.eating =  `N${this.inputEating}`
         const tl = new TimelineMax();
 
         tl.to(
@@ -680,6 +698,8 @@ export default {
       let regEx = /^[0-9]*$/gm;
 
       if (this.bills.length > 0 && regEx.test(this.bills) === true) {
+        this.inputBills = event.target.value
+        this.bills =  `N${this.inputBills}`
         const tl = new TimelineMax();
 
         tl.to(
@@ -753,6 +773,8 @@ export default {
       let regEx = /^[0-9]*$/gm;
 
       if (this.family.length > 0 && regEx.test(this.family) === true) {
+        this.inputFamily = event.target.value
+        this.family =  `N${this.inputFamily}`
         const tl = new TimelineMax();
 
         tl.to(
@@ -826,6 +848,8 @@ export default {
       let regEx = /^[0-9]*$/gm;
 
       if (this.groceries.length > 0 && regEx.test(this.groceries) === true) {
+        this.inputGroceries = event.target.value
+        this.groceries =  `N${this.inputGroceries}`
         const tl = new TimelineMax();
 
         tl.to(
@@ -902,6 +926,8 @@ export default {
       let regEx = /^[0-9]*$/gm;
 
       if (this.shopping.length > 0 && regEx.test(this.shopping) === true) {
+        this.inputShopping = event.target.value
+        this.shopping =  `N${this.inputShopping}`
         const tl = new TimelineMax();
 
         tl.to(
@@ -978,6 +1004,8 @@ export default {
       let regEx = /^[0-9]*$/gm;
 
       if (this.care.length > 0 && regEx.test(this.care) === true) {
+        this.inputCare = event.target.value
+        this.care =  `N${this.inputCare}`
         const tl = new TimelineMax();
 
         tl.to(
@@ -1051,6 +1079,8 @@ export default {
       let regEx = /^[0-9]*$/gm;
 
       if (this.vacation.length > 0 && regEx.test(this.vacation) === true) {
+        this.inputVacation = event.target.value
+        this.vacation =  `N${this.inputVacation}`
         const tl = new TimelineMax();
 
         tl.to(
@@ -1127,6 +1157,8 @@ export default {
       let regEx = /^[0-9]*$/gm;
 
       if (this.payroll.length > 0 && regEx.test(this.payroll) === true) {
+        this.inputPayroll = event.target.value
+        this.payroll =  `N${this.inputPayroll}`
         const tl = new TimelineMax();
 
         tl.to(
@@ -1206,6 +1238,8 @@ export default {
         this.entertainment.length > 0 &&
         regEx.test(this.entertainment) === true
       ) {
+        this.inputEntertainment = event.target.value
+        this.entertainment =  `N${this.inputEntertainment}`
         const tl = new TimelineMax();
 
         tl.to(
@@ -1282,6 +1316,8 @@ export default {
       let regEx = /^[0-9]*$/gm;
 
       if (this.investment.length > 0 && regEx.test(this.investment) === true) {
+        this.inputInvestment = event.target.value
+        this.investment =  `N${this.inputInvestment}`
         const tl = new TimelineMax();
 
         tl.to(
@@ -1355,19 +1391,20 @@ export default {
       }
     },
     inputAmount() {
+      console.log(this.inputTransport);
       this.amount =
-        Number(this.transport) +
-        Number(this.transfer) +
-        Number(this.eating) +
-        Number(this.bills) +
-        Number(this.family) +
-        Number(this.groceries) +
-        Number(this.shopping) +
-        Number(this.care) +
-        Number(this.vacation) +
-        Number(this.payroll) +
-        Number(this.entertainment) +
-        Number(this.investment);
+        Number(this.inputTransport) +
+        Number(this.inputTransfer) +
+        Number(this.inputEating) +
+        Number(this.inputBills) +
+        Number(this.inputFamily) +
+        Number(this.inputGroceries) +
+        Number(this.inputShopping) +
+        Number(this.inputCare) +
+        Number(this.inputVacation) +
+        Number(this.inputPayroll) +
+        Number(this.inputEntertainment) +
+        Number(this.inputInvestment);
     },
     btnDisable() {
       TweenMax.to(".btn", 0, { opacity: "0.5", pointerEvents: "none" })

@@ -722,6 +722,10 @@ body {
         border-radius: 3px;
         background-color: #f1f1f1;
       }
+
+      input[type= text]::before {
+        content: "N";
+      }
     }
 
     .card-transport,
