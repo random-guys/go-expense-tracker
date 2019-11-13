@@ -93,7 +93,14 @@
           <p>₦{{ detail.amount.toLocaleString() }}</p>
         </div>
       </div>
-      <img src="../assets/images/montly.svg" alt="Morph Icon Right" class="montly" />
+      <!-- <img src="../assets/images/montly.svg" alt="Morph Icon Right" class="montly" /> -->
+      <select v-model="selected" class="monthly">
+        <!-- <option disabled value="Please select one">Please select one</option> -->
+        <option>Weekly</option>
+        <option>Monthly</option>
+        <option>Yearly</option>
+      </select>
+
       <div class="btn">
         <p>JOIN THE WAITLIST</p>
       </div>
@@ -127,7 +134,8 @@ export default {
   name: 'app',
   data() {
     return {
-      userDetails: []
+      userDetails: [],
+      selected: "Monthly"
     };
   },
   mounted() {
