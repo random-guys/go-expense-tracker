@@ -275,10 +275,10 @@ export default {
     };
   },
   created () {
-      this.handleScroll()
+    window.scrollTo(0,0);
   },
   destroyed () {
-      this.handleScroll()
+    window.scrollTo(0,0);
   },
   mounted() {
     this.initialTrackerDetails()
