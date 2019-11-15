@@ -12,7 +12,7 @@
         alt="Leaf Icon Left"
         class="leaf-right leafRight"
       />
-      <img src="../assets/images/logo.svg" alt="Gomoney Logo" class="logo" />
+      <img src="../assets/images/logo.svg" alt="Gomoney Logo" class="logo logo-fixed" />
       <img
         src="../assets/images/vector-shapes-1.svg"
         alt="Morph Icon Left"
@@ -33,6 +33,7 @@
           Hi <b class="capitalize">{{ detail.first_name }}</b>, time to find out where all of that money goes to every month.
         </h2>
       </div>
+      <!-- <div class="break"></div> -->
       <div class="card-container">
         <!-- <div class="card-container__card-row"> -->
         <div class="card-transport transport">
@@ -40,6 +41,7 @@
           <img src="../assets/images/transportation-icon.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text transportText">Transport</p>
           <input
+            ref="refTransport"
             type="text"
             placeholder="N.00"
             onfocus="this.placeholder=''"
@@ -55,6 +57,7 @@
           <img src="../assets/images/transfer.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text transferText">Transfer</p>
           <input
+            ref="refTransfer"
             type="text"
             placeholder="N.00"
             onfocus="this.placeholder=''"
@@ -70,6 +73,7 @@
           <img src="../assets/images/eating.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text eatingText">Eating Out</p>
           <input
+            ref="refEating"
             type="text"
             placeholder="N.00"
             onfocus="this.placeholder=''"
@@ -85,6 +89,7 @@
           <img src="../assets/images/bills.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text billsText">Bills</p>
           <input
+          ref="refBills"
             type="text"
             placeholder="N.00"
             onfocus="this.placeholder=''"
@@ -102,6 +107,7 @@
           <img src="../assets/images/family.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text familyText">Family</p>
           <input
+            ref="refFamily"
             type="text"
             placeholder="N.00"
             onfocus="this.placeholder=''"
@@ -117,6 +123,7 @@
           <img src="../assets/images/Groceries.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text groceriesText">Groceries</p>
           <input
+            ref="refGroceries"
             type="text"
             placeholder="N.00"
             onfocus="this.placeholder=''"
@@ -132,6 +139,7 @@
           <img src="../assets/images/shopping.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text shoppingText">Shopping</p>
           <input
+            ref="refShopping"
             type="text"
             placeholder="N.00"
             onfocus="this.placeholder=''"
@@ -147,6 +155,7 @@
           <img src="../assets/images/personal-care.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text careText">Personal Care</p>
           <input
+            ref="refCare"
             type="text"
             placeholder="N.00"
             onfocus="this.placeholder=''"
@@ -164,6 +173,7 @@
           <img src="../assets/images/vercation.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text vacationText">vacation</p>
           <input
+            ref="refVacation"
             type="text"
             placeholder="N.00"
             onfocus="this.placeholder=''"
@@ -179,6 +189,7 @@
           <img src="../assets/images/payroll.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text payrollText">Payroll</p>
           <input
+          ref="refPayroll"
             type="text"
             placeholder="N.00"
             onfocus="this.placeholder=''"
@@ -194,6 +205,7 @@
           <img src="../assets/images/entertainment.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text entertainmentText">Entertainment</p>
           <input
+          ref="refEntertainment"
             type="text"
             placeholder="N.00"
             onfocus="this.placeholder=''"
@@ -209,6 +221,7 @@
           <img src="../assets/images/investment.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text investmentText">Investment</p>
           <input
+            ref="refInvestment"
             type="text"
             placeholder="N.00"
             onfocus="this.placeholder=''"
@@ -221,7 +234,7 @@
         </div>
         <!-- </div> -->
       </div>
-      <div class="button btn" @click="checkHabit()">Check Your Habit!</div>
+      <div ref="refButton" class="button btn" @click="checkHabit()">Check Your Habit!</div>
     </div>
   </div>
 </template>
@@ -234,6 +247,7 @@ export default {
     return {
       amount: 0,
       userDetails: [],
+      amountTracker: [],
       transport: "",
       inputTransport: "",
       transfer: "",
@@ -260,7 +274,17 @@ export default {
       inputInvestment: ""
     };
   },
+  created () {
+      this.handleScroll()
+  },
+  destroyed () {
+      this.handleScroll()
+  },
   mounted() {
+    this.initialTrackerDetails()
+    window.scrollTo(0,0);
+      this.handleScroll()
+
     this.userDetails = JSON.parse(localStorage.getItem("user_details"));
     const tl = new TimelineMax();
 
@@ -355,95 +379,153 @@ export default {
       ".trackerPage",
       1.5,
       { opacity: 0, ease: Power2.easeInOut },
-      { opacity: 1, ease: Power2.easeInOut }
+      { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut }
     )
       .fromTo(
         ".family",
         0.1,
-        { scale: 0, ease: Power2.easeInOut },
-        { scale: 1, ease: Power2.easeInOut },
+        { opacity: 0, ease: Power2.easeInOut },
+        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
         0.5
       )
       .fromTo(
         ".eating",
         0.1,
         { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, ease: Power2.easeInOut },
+        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
         0.6
       )
       .fromTo(
         ".vacation",
         0.1,
         { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, ease: Power2.easeInOut },
+        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
         0.7
       )
       .fromTo(
         ".care",
         0.1,
-        { scale: 0, ease: Power2.easeInOut },
-        { scale: 1, ease: Power2.easeInOut },
+        { opacity: 0, ease: Power2.easeInOut },
+        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
         0.8
       )
       .fromTo(
         ".transport",
         0.1,
         { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, ease: Power2.easeInOut },
+        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
         0.9
       )
       .fromTo(
         ".groceries",
         0.1,
-        { scale: 0, ease: Power2.easeInOut },
-        { scale: 1, ease: Power2.easeInOut },
+        { opacity: 0, ease: Power2.easeInOut },
+        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
         1
       )
       .fromTo(
         ".investment",
         0.1,
         { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, ease: Power2.easeInOut },
+        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
         1.1
       )
       .fromTo(
         ".bills",
         0.1,
-        { scale: 0, ease: Power2.easeInOut },
-        { scale: 1, ease: Power2.easeInOut },
+        { opacity: 0, ease: Power2.easeInOut },
+        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
         1.2
       )
       .fromTo(
         ".transfer",
         0.1,
         { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, ease: Power2.easeInOut },
+        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
         1.3
       )
       .fromTo(
         ".payroll",
         0.1,
-        { scale: 0, ease: Power2.easeInOut },
-        { scale: 1, ease: Power2.easeInOut },
+        { opacity: 0, ease: Power2.easeInOut },
+        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
         1.4
       )
       .fromTo(
         ".entertainment",
         0.1,
         { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, ease: Power2.easeInOut },
+        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
         1.5
       )
       .fromTo(
         ".shopping",
         0.1,
         { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, ease: Power2.easeInOut },
+        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
         1.6
       );
-    this.btnDisable()
+    // this.btnDisable()
   },
   methods: {
+    handleScroll() {
+
+      const crlt = new ScrollMagic.Controller()
+      let tml = new TimelineMax()
+      tml.to(".card-transport", 0.1, {opacity: 0, pointerEvents: "none"}, 0.1)
+         .to(".card-transfer", 0.1, {opacity: 0, pointerEvents: "none"}, 0.1)
+         .to(".card-eating", 0.1, {opacity: 0, pointerEvents: "none"}, 0.1)
+         .to(".card-bills", 0.1, {opacity: 0, pointerEvents: "none"}, 0.1)
+
+      const scene = new ScrollMagic.Scene({
+        triggerElement: ".break",
+        triggerHook: "onLeave",//onEnter
+        // offSet: "5px",
+        duration: "45%"
+      })
+        .setPin(".hero-text__primary")
+        .setTween(tml)
+          .addTo(crlt)
+
+
+      const crlt2 = new ScrollMagic.Controller()
+      let tml2 = new TimelineMax()
+      tml2.to(".card-family", 0.1, {opacity: 0, pointerEvents: "none"}, 0.1)
+         .to(".card-groceries", 0.1, {opacity: 0, pointerEvents: "none"}, 0.1)
+         .to(".card-shopping", 0.1, {opacity: 0, pointerEvents: "none"}, 0.1)
+         .to(".card-care", 0.1, {opacity: 0, pointerEvents: "none"}, 0.1)
+
+      const scene2 = new ScrollMagic.Scene({
+        triggerElement: ".break",
+        triggerHook: "onLeave",//onEnter
+        // offSet: "500px",
+        duration: "100%"
+      })
+        .setPin(".hero-text__primary")
+        .setTween(tml2)
+          .addTo(crlt2)
+
+    },
+    initialTrackerDetails() {
+        this.amountTracker = [];
+        let trackerObject = {
+          transport: this.inputTransport,
+          transfer: this.inputTransfer,
+          eating: this.inputEating,
+          bills: this.inputBills,
+          family: this.inputFamily,
+          groceries: this.inputGroceries,
+          shopping: this.inputShopping,
+          care: this.inputCare,
+          vacation: this.inputVacation,
+          payroll: this.inputPayroll,
+          entertainment: this.inputEntertainment,
+          investment: this.inputInvestment
+        };
+        this.amountTracker.push(trackerObject);
+        localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
+
+    },
     checkHabit() {
       if (isNaN(this.amount) === true) {
         this.$swal.fire({
@@ -466,9 +548,26 @@ export default {
     },
     inputTransportationAmount() {
       let regEx = /^[0-9]*$/gm;
+      this.initialTrackerDetails()
+      // this.amountTracker = JSON.parse(localStorage.getItem("amount_tracker"));
+        if(this.transport.charAt(0) === "N"){
+          this.transport = this.transport.substr(1)
+          // console.log(this.transport);
+        }
+
       if (this.transport.length > 0 && regEx.test(this.transport) === true) {
         this.inputTransport = event.target.value
+        if(this.inputTransport.charAt(0) === "N"){
+          this.inputTransport = this.inputTransport.substr(1)
+          // console.log(this.inputTransport);
+        }
+
         this.transport =  `N${this.inputTransport}`
+        this.amountTracker.map(amount => {
+          amount.transport = this.inputTransport
+        })
+        localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
+        this.$refs.refTransfer.focus()
         const tl = new TimelineMax();
 
         tl.to(
@@ -485,7 +584,7 @@ export default {
             0.1
           )
           .to(".errorMsgTransport", 0.5, { display: "none" }, 0.1);
-        this.btnEnabled()
+        // this.btnEnabled()
         this.inputAmount();
       } else if (
         this.transport.length > 0 &&
@@ -518,9 +617,16 @@ export default {
             display: "flex"
           }
         );
-        this.btnDisable()
+        // this.btnDisable()
         this.inputAmount();
       } else if (this.transport.length === 0) {
+        this.amountTracker.map(amount => {
+          amount.transport = 0
+        })
+        this.$refs.refTransfer.focus()
+
+        localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
+
         const tl = new TimelineMax();
 
         tl.to(
@@ -537,16 +643,29 @@ export default {
             0.1
           )
           .to(".errorMsgTransport", 0.5, { display: "none" }, 0.1);
-        this.btnDisable() 
+        // this.btnDisable() 
         this.inputAmount();
       }
     },
     inputTransferAmount() {
       let regEx = /^[0-9]*$/gm;
-
+      this.initialTrackerDetails()
+        if(this.transfer.charAt(0) === "N"){
+          this.transfer = this.transfer.substr(1)
+          // console.log(this.transport);
+        }
       if (this.transfer.length > 0 && regEx.test(this.transfer) === true) {
         this.inputTransfer = event.target.value
+        if(this.inputTransfer.charAt(0) === "N"){
+          this.inputTransfer = this.inputTransfer.substr(1)
+          // console.log(this.inputTransport);
+        }
         this.transfer =  `N${this.inputTransfer}`
+        this.amountTracker.map(amount => {
+          amount.transfer = this.inputTransfer
+        })
+        localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
+        this.$refs.refEating.focus()
         const tl = new TimelineMax();
 
         tl.to(
@@ -563,7 +682,7 @@ export default {
             0.1
           )
           .to(".errorMsgTransfer", 0.5, { display: "none" }, 0.1);
-        this.btnEnabled()
+        // this.btnEnabled()
         this.inputAmount();
       } else if (
         this.transfer.length > 0 &&
@@ -596,9 +715,15 @@ export default {
             display: "flex"
           }
         );
-        this.btnDisable()
+        // this.btnDisable()
         this.inputAmount();
       } else if (this.transfer.length === 0) {
+        this.amountTracker.map(amount => {
+          amount.transfer = 0
+        })
+        this.$refs.refTransfer.focus()
+
+        localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         const tl = new TimelineMax();
 
         tl.to(
@@ -615,16 +740,29 @@ export default {
             0.1
           )
           .to(".errorMsgTransfer", 0.5, { display: "none" }, 0.1);
-        this.btnDisable()
+        // this.btnDisable()
         this.inputAmount();
       }
     },
     inputEatingAmount() {
       let regEx = /^[0-9]*$/gm;
-
+      this.initialTrackerDetails()
+        if(this.eating.charAt(0) === "N"){
+          this.eating = this.eating.substr(1)
+          // console.log(this.transport);
+        }
       if (this.eating.length > 0 && regEx.test(this.eating) === true) {
         this.inputEating = event.target.value
+        if(this.inputEating.charAt(0) === "N"){
+          this.inputEating = this.inputEating.substr(1)
+          // console.log(this.transport);
+        }
         this.eating =  `N${this.inputEating}`
+        this.amountTracker.map(amount => {
+          amount.eating = this.inputEating
+        })
+        localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
+        this.$refs.refBills.focus()
         const tl = new TimelineMax();
 
         tl.to(
@@ -641,7 +779,7 @@ export default {
             0.1
           )
           .to(".errorMsgEating", 0.5, { display: "none" }, 0.1);
-        this.btnEnabled()
+        // this.btnEnabled()
         this.inputAmount();
       } else if (this.eating.length > 0 && regEx.test(this.eating) === false) {
         const tl = new TimelineMax();
@@ -671,9 +809,15 @@ export default {
             display: "flex"
           }
         );
-        this.btnDisable()
+        // this.btnDisable()
         this.inputAmount();
       } else {
+        this.amountTracker.map(amount => {
+          amount.eating = 0
+        })
+        this.$refs.refBills.focus()
+
+        localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         const tl = new TimelineMax();
 
         tl.to(
@@ -690,16 +834,29 @@ export default {
             0.1
           )
           .to(".errorMsgEating", 0.5, { display: "none" }, 0.1);
-        this.btnDisable()
+        // this.btnDisable()
         this.inputAmount();
       }
     },
     inputBillsAmount() {
       let regEx = /^[0-9]*$/gm;
-
+      this.initialTrackerDetails()
+        if(this.bills.charAt(0) === "N"){
+          this.bills = this.bills.substr(1)
+          // console.log(this.transport);
+        }
       if (this.bills.length > 0 && regEx.test(this.bills) === true) {
         this.inputBills = event.target.value
+                if(this.inputBills.charAt(0) === "N"){
+          this.inputBills = this.inputBills.substr(1)
+          // console.log(this.transport);
+        }
         this.bills =  `N${this.inputBills}`
+        this.amountTracker.map(amount => {
+          amount.bills = this.inputBills
+        })
+        localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
+        this.$refs.refFamily.focus()
         const tl = new TimelineMax();
 
         tl.to(
@@ -716,7 +873,7 @@ export default {
             0.1
           )
           .to(".errorMsgBills", 0.5, { display: "none" }, 0.1);
-        this.btnEnabled()
+        // this.btnEnabled()
         this.inputAmount();
       } else if (this.bills.length > 0 && regEx.test(this.bills) === false) {
         const tl = new TimelineMax();
@@ -746,9 +903,14 @@ export default {
             display: "flex"
           }
         );
-        this.btnDisable()
+        // this.btnDisable()
         this.inputAmount();
       } else {
+        this.amountTracker.map(amount => {
+          amount.bills = 0
+        })
+        this.$refs.refFamily.focus()
+        localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         const tl = new TimelineMax();
 
         tl.to(
@@ -765,16 +927,29 @@ export default {
             0.1
           )
           .to(".errorMsgBills", 0.5, { display: "none" }, 0.1);
-        this.btnDisable()
+        // this.btnDisable()
         this.inputAmount();
       }
     },
     inputFamilyAmount() {
       let regEx = /^[0-9]*$/gm;
-
+      this.initialTrackerDetails()
+        if(this.family.charAt(0) === "N"){
+          this.family = this.family.substr(1)
+          // console.log(this.transport);
+        }
       if (this.family.length > 0 && regEx.test(this.family) === true) {
         this.inputFamily = event.target.value
+                if(this.inputFamily.charAt(0) === "N"){
+          this.inputFamily = this.inputFamily.substr(1)
+          // console.log(this.transport);
+        }
         this.family =  `N${this.inputFamily}`
+        this.amountTracker.map(amount => {
+          amount.family = this.inputFamily
+        })
+        localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
+        this.$refs.refGroceries.focus()
         const tl = new TimelineMax();
 
         tl.to(
@@ -791,7 +966,7 @@ export default {
             0.1
           )
           .to(".errorMsgFamily", 0.5, { display: "none" }, 0.1);
-        this.btnEnabled()
+        // this.btnEnabled()
         this.inputAmount();
       } else if (this.family.length > 0 && regEx.test(this.family) === false) {
         const tl = new TimelineMax();
@@ -821,9 +996,15 @@ export default {
             display: "flex"
           }
         );
-        this.btnDisable()
+        // this.btnDisable()
         this.inputAmount();
       } else {
+        this.amountTracker.map(amount => {
+          amount.family = 0
+        })
+        this.$refs.refGroceries.focus()
+
+        localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         const tl = new TimelineMax();
 
         tl.to(
@@ -840,16 +1021,29 @@ export default {
             0.1
           )
           .to(".errorMsgFamily", 0.5, { display: "none" }, 0.1);
-        this.btnDisable()
+        // this.btnDisable()
         this.inputAmount();
       }
     },
     inputGroceriesAmount() {
       let regEx = /^[0-9]*$/gm;
-
+      this.initialTrackerDetails()
+        if(this.groceries.charAt(0) === "N"){
+          this.groceries = this.groceries.substr(1)
+          // console.log(this.transport);
+        }
       if (this.groceries.length > 0 && regEx.test(this.groceries) === true) {
         this.inputGroceries = event.target.value
+                if(this.inputGroceries.charAt(0) === "N"){
+          this.inputGroceries = this.inputGroceries.substr(1)
+          // console.log(this.transport);
+        }
         this.groceries =  `N${this.inputGroceries}`
+        this.amountTracker.map(amount => {
+          amount.groceries = this.inputGroceries
+        })
+        localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
+        this.$refs.refShopping.focus()
         const tl = new TimelineMax();
 
         tl.to(
@@ -866,7 +1060,7 @@ export default {
             0.1
           )
           .to(".errorMsgGroceries", 0.5, { display: "none" }, 0.1);
-        this.btnEnabled()
+        // this.btnEnabled()
         this.inputAmount();
       } else if (
         this.groceries.length > 0 &&
@@ -899,9 +1093,14 @@ export default {
             display: "flex"
           }
         );
-        this.btnDisable()
+        // this.btnDisable()
         this.inputAmount();
       } else {
+        this.amountTracker.map(amount => {
+          amount.groceries = 0
+        })
+        this.$refs.refShopping.focus()
+        localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         const tl = new TimelineMax();
 
         tl.to(
@@ -918,16 +1117,29 @@ export default {
             0.1
           )
           .to(".errorMsgGroceries", 0.5, { display: "none" }, 0.1);
-        this.btnDisable()
+        // this.btnDisable()
         this.inputAmount();
       }
     },
     inputShoppingAmount() {
       let regEx = /^[0-9]*$/gm;
-
+      this.initialTrackerDetails()
+        if(this.shopping.charAt(0) === "N"){
+          this.shopping = this.shopping.substr(1)
+          // console.log(this.transport);
+        }
       if (this.shopping.length > 0 && regEx.test(this.shopping) === true) {
         this.inputShopping = event.target.value
+                if(this.inputShopping.charAt(0) === "N"){
+          this.inputShopping = this.inputShopping.substr(1)
+          // console.log(this.transport);
+        }
         this.shopping =  `N${this.inputShopping}`
+        this.amountTracker.map(amount => {
+          amount.shopping = this.inputShopping
+        })
+        localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
+        this.$refs.refCare.focus()
         const tl = new TimelineMax();
 
         tl.to(
@@ -944,7 +1156,7 @@ export default {
             0.1
           )
           .to(".errorMsgShopping", 0.5, { display: "none" }, 0.1);
-        this.btnEnabled()
+        // this.btnEnabled()
         this.inputAmount();
       } else if (
         this.shopping.length > 0 &&
@@ -977,9 +1189,15 @@ export default {
             display: "flex"
           }
         );
-        this.btnDisable()
+        // this.btnDisable()
         this.inputAmount();
       } else {
+        this.amountTracker.map(amount => {
+          amount.shopping = 0
+        })
+        this.$refs.refCare.focus()
+
+        localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         const tl = new TimelineMax();
 
         tl.to(
@@ -996,16 +1214,29 @@ export default {
             0.1
           )
           .to(".errorMsgShopping", 0.5, { display: "none" }, 0.1);
-        this.btnDisable()
+        // this.btnDisable()
         this.inputAmount();
       }
     },
     inputCareAmount() {
       let regEx = /^[0-9]*$/gm;
-
+      this.initialTrackerDetails()
+        if(this.care.charAt(0) === "N"){
+          this.care = this.care.substr(1)
+          // console.log(this.transport);
+        }
       if (this.care.length > 0 && regEx.test(this.care) === true) {
         this.inputCare = event.target.value
+                if(this.inputCare.charAt(0) === "N"){
+          this.inputCare = this.inputCare.substr(1)
+          // console.log(this.transport);
+        }
         this.care =  `N${this.inputCare}`
+        this.amountTracker.map(amount => {
+          amount.care = this.inputCare
+        })
+        localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
+        this.$refs.refVacation.focus()
         const tl = new TimelineMax();
 
         tl.to(
@@ -1022,7 +1253,7 @@ export default {
             0.1
           )
           .to(".errorMsgCare", 0.5, { display: "none" }, 0.1);
-        this.btnEnabled()
+        // this.btnEnabled()
         this.inputAmount();
       } else if (this.care.length > 0 && regEx.test(this.care) === false) {
         const tl = new TimelineMax();
@@ -1052,9 +1283,14 @@ export default {
             display: "flex"
           }
         );
-        this.btnDisable()
+        // this.btnDisable()
         this.inputAmount();
       } else {
+        this.amountTracker.map(amount => {
+          amount.care = 0
+        })
+        this.$refs.refVacation.focus()
+        localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         const tl = new TimelineMax();
 
         tl.to(
@@ -1071,16 +1307,29 @@ export default {
             0.1
           )
           .to(".errorMsgCare", 0.5, { display: "none" }, 0.1);
-        this.btnDisable()
+        // this.btnDisable()
         this.inputAmount();
       }
     },
     inputVacationAmount() {
       let regEx = /^[0-9]*$/gm;
-
+      this.initialTrackerDetails()
+        if(this.vacation.charAt(0) === "N"){
+          this.vacation = this.vacation.substr(1)
+          // console.log(this.transport);
+        }
       if (this.vacation.length > 0 && regEx.test(this.vacation) === true) {
         this.inputVacation = event.target.value
+                if(this.inputVacation.charAt(0) === "N"){
+          this.inputVacation = this.inputVacation.substr(1)
+          // console.log(this.transport);
+        }
         this.vacation =  `N${this.inputVacation}`
+        this.amountTracker.map(amount => {
+          amount.vacation = this.inputVacation
+        })
+        localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
+        this.$refs.refPayroll.focus()
         const tl = new TimelineMax();
 
         tl.to(
@@ -1097,7 +1346,7 @@ export default {
             0.1
           )
           .to(".errorMsgVacation", 0.5, { display: "none" }, 0.1);
-        this.btnEnabled()
+        // this.btnEnabled()
         this.inputAmount();
       } else if (
         this.vacation.length > 0 &&
@@ -1130,9 +1379,14 @@ export default {
             display: "flex"
           }
         );
-        this.btnDisable()
+        // this.btnDisable()
         this.inputAmount();
       } else {
+        this.amountTracker.map(amount => {
+          amount.vacation = 0
+        })
+        this.$refs.refPayroll.focus()
+        localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         const tl = new TimelineMax();
 
         tl.to(
@@ -1149,16 +1403,29 @@ export default {
             0.1
           )
           .to(".errorMsgVacation", 0.5, { display: "none" }, 0.1);
-        this.btnDisable()
+        // this.btnDisable()
         this.inputAmount();
       }
     },
     inputPayrollAmount() {
       let regEx = /^[0-9]*$/gm;
-
+      this.initialTrackerDetails()
+        if(this.payroll.charAt(0) === "N"){
+          this.payroll = this.payroll.substr(1)
+          // console.log(this.transport);
+        }
       if (this.payroll.length > 0 && regEx.test(this.payroll) === true) {
         this.inputPayroll = event.target.value
+                if(this.inputPayroll.charAt(0) === "N"){
+          this.inputPayroll = this.inputPayroll.substr(1)
+          // console.log(this.transport);
+        }
         this.payroll =  `N${this.inputPayroll}`
+        this.amountTracker.map(amount => {
+          amount.payroll = this.inputPayroll
+        })
+        localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
+        this.$refs.refEntertainment.focus()
         const tl = new TimelineMax();
 
         tl.to(
@@ -1175,7 +1442,7 @@ export default {
             0.1
           )
           .to(".errorMsgPayroll", 0.5, { display: "none" }, 0.1);
-        this.btnEnabled()
+        // this.btnEnabled()
         this.inputAmount();
       } else if (
         this.payroll.length > 0 &&
@@ -1208,9 +1475,14 @@ export default {
             display: "flex"
           }
         );
-        this.btnDisable()
+        // this.btnDisable()
         this.inputAmount();
       } else {
+        this.amountTracker.map(amount => {
+          amount.payroll = 0
+        })
+        this.$refs.refEntertainment.focus()
+        localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         const tl = new TimelineMax();
 
         tl.to(
@@ -1227,19 +1499,32 @@ export default {
             0.1
           )
           .to(".errorMsgPayroll", 0.5, { display: "none" }, 0.1);
-        this.btnDisable()
+        // this.btnDisable()
         this.inputAmount();
       }
     },
     inputEntertainmentAmount() {
       let regEx = /^[0-9]*$/gm;
-
+      this.initialTrackerDetails()
+        if(this.entertainment.charAt(0) === "N"){
+          this.entertainment = this.entertainment.substr(1)
+          // console.log(this.transport);
+        }
       if (
         this.entertainment.length > 0 &&
         regEx.test(this.entertainment) === true
       ) {
         this.inputEntertainment = event.target.value
+                if(this.inputEntertainment.charAt(0) === "N"){
+          this.inputEntertainment = this.inputEntertainment.substr(1)
+          // console.log(this.transport);
+        }
         this.entertainment =  `N${this.inputEntertainment}`
+        this.amountTracker.map(amount => {
+          amount.entertainment = this.inputEntertainment
+        })
+        localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
+        this.$refs.refInvestment.focus()
         const tl = new TimelineMax();
 
         tl.to(
@@ -1256,7 +1541,7 @@ export default {
             0.1
           )
           .to(".errorMsgEntertainment", 0.5, { display: "none" }, 0.1);
-        this.btnEnabled()
+        // this.btnEnabled()
         this.inputAmount();
       } else if (
         this.entertainment.length > 0 &&
@@ -1289,9 +1574,14 @@ export default {
             display: "flex"
           }
         );
-        this.btnDisable()
+        // this.btnDisable()
         this.inputAmount();
       } else {
+        this.amountTracker.map(amount => {
+          amount.entertainment = 0
+        })
+        localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
+        this.$refs.refInvestment.focus()
         const tl = new TimelineMax();
 
         tl.to(
@@ -1308,16 +1598,29 @@ export default {
             0.1
           )
           .to(".errorMsgEntertainment", 0.5, { display: "none" }, 0.1);
-        this.btnDisable()
+        // this.btnDisable()
         this.inputAmount();
       }
     },
     inputInvestmentAmount() {
       let regEx = /^[0-9]*$/gm;
-
+      this.initialTrackerDetails()
+        if(this.investment.charAt(0) === "N"){
+          this.investment = this.investment.substr(1)
+          // console.log(this.transport);
+        }
       if (this.investment.length > 0 && regEx.test(this.investment) === true) {
         this.inputInvestment = event.target.value
+                if(this.inputInvestment.charAt(0) === "N"){
+          this.inputInvestment = this.inputInvestment.substr(1)
+          // console.log(this.transport);
+        }
         this.investment =  `N${this.inputInvestment}`
+        this.amountTracker.map(amount => {
+          amount.investment = this.inputInvestment
+        })
+        localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
+        // this.$refs.refButton.focus()
         const tl = new TimelineMax();
 
         tl.to(
@@ -1334,7 +1637,7 @@ export default {
             0.1
           )
           .to(".errorMsgInvestment", 0.5, { display: "none" }, 0.1);
-        this.btnEnabled()
+        // this.btnEnabled()
         this.inputAmount();
       } else if (
         this.investment.length > 0 &&
@@ -1367,9 +1670,14 @@ export default {
             display: "flex"
           }
         );
-        this.btnDisable()
+        // this.btnDisable()
         this.inputAmount();
       } else {
+        this.amountTracker.map(amount => {
+          amount.investment = 0
+        })
+        // this.$refs.refButton.focus()
+        localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         const tl = new TimelineMax();
 
         tl.to(
@@ -1386,12 +1694,12 @@ export default {
             0.1
           )
           .to(".errorMsgInvestment", 0.5, { display: "none" }, 0.1);
-        this.btnDisable()
+        // this.btnDisable()
         this.inputAmount();
       }
     },
     inputAmount() {
-      console.log(this.inputTransport);
+
       this.amount =
         Number(this.inputTransport) +
         Number(this.inputTransfer) +
@@ -1405,13 +1713,8 @@ export default {
         Number(this.inputPayroll) +
         Number(this.inputEntertainment) +
         Number(this.inputInvestment);
+        
     },
-    btnDisable() {
-      TweenMax.to(".btn", 0, { opacity: "0.5", pointerEvents: "none" })
-    },
-    btnEnabled() {
-      TweenMax.to(".btn", 0, { opacity: "1", pointerEvents: "visible" })
-    }
   }
 };
 </script>
