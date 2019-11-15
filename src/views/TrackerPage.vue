@@ -275,10 +275,10 @@ export default {
     };
   },
   created () {
-    window.scrollTo(0,0);
+      this.handleScroll()
   },
   destroyed () {
-    window.scrollTo(0,0);
+      this.handleScroll()
   },
   mounted() {
     this.initialTrackerDetails()
@@ -478,16 +478,16 @@ export default {
          .to(".card-bills", 0.1, {opacity: 0, pointerEvents: "none"}, 0.1)
 
       const scene = new ScrollMagic.Scene({
-        triggerElement: ".break",
-        triggerHook: "onLeave",//onEnter
+        triggerElement: ".hero-text__primary",
+        // triggerHook: "onEnter",//onEnter
         // offSet: "5px",
-        duration: "45%"
+        duration: "10%"
       })
         .setPin(".hero-text__primary")
         .setTween(tml)
           .addTo(crlt)
 
-
+          
       const crlt2 = new ScrollMagic.Controller()
       let tml2 = new TimelineMax()
       tml2.to(".card-family", 0.1, {opacity: 0, pointerEvents: "none"}, 0.1)
@@ -496,10 +496,10 @@ export default {
          .to(".card-care", 0.1, {opacity: 0, pointerEvents: "none"}, 0.1)
 
       const scene2 = new ScrollMagic.Scene({
-        triggerElement: ".break",
-        triggerHook: "onLeave",//onEnter
+        triggerElement: ".hero-text__primary",
+        // triggerHook: "onEnter",//onEnter
         // offSet: "500px",
-        duration: "100%"
+        duration: "45%"
       })
         .setPin(".hero-text__primary")
         .setTween(tml2)
