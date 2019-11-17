@@ -840,7 +840,15 @@ body {
     color: #3f3f3f;
   }
 
-  .comment {
+  .the-money-monk-comment,
+  .the-essentialist-comment,
+  .the-sensible-sage-comment,
+  .the-baby-baller-comment,
+  .the-spontanious-spender-comment,
+  .the-big-spender-comment,
+  .the-generous-sage-comment,
+  .the-money-maestro-comment {
+    display: none;
     width: 90%;
     height: 7.7rem;
     margin-top: 1.2rem;
@@ -874,7 +882,7 @@ body {
   }
 
   .btn {
-    position: static;
+    // position: static;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -882,6 +890,7 @@ body {
     height: 5.8rem;
     margin-top: 6rem;
     font-family: Graphik;
+    text-decoration: none;
     font-size: 1.7rem;
     font-weight: 500;
     font-stretch: normal;
