@@ -1286,7 +1286,7 @@ export default {
         { opacity: "0" },
         {
           repeat: -1,
-          yoyo: true,
+          // yoyo: true,
           repeatDelay: 0.5,
           ease: Linear.easeNone,
           display: "block",
@@ -1906,9 +1906,9 @@ export default {
         { opacity: "0" },
         {
           repeat: -1,
-          yoyo: true,
-          repeatDelay: 0.5,
-          ease: Linear.easeNone,
+          // yoyo: true,
+          repeatDelay: 1,
+          // ease: Linear.easeNone,
           display: "block",
           opacity: "1"
         }

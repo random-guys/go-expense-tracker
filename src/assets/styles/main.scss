@@ -827,7 +827,7 @@ body {
 
   .baller {
     width: 100%;
-    height: 8.2rem;
+    // height: 8.2rem;
     margin-top: 24rem;
     font-family: Graphik;
     font-size: 6rem;
@@ -1634,15 +1634,16 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
+    justify-content: center;
 
     .baller-emoji {
       position: absolute;
-      top: 7rem;
-      left: auto;
-      width: 19.7rem;
+      top: 3rem;
+      // left: auto;
+      // width: 19.7rem;
       // height: 17.5rem;
-      object-fit: contain;
-      align-self: center;
+      object-fit: cover;;
+      // align-self: center;
     }
     .leaf-bottom-right {
       position: fixed;
@@ -1679,7 +1680,7 @@ body {
     .baller {
       width: 90%;
       // height: 8.2rem;
-      margin-top: 24rem;
+      margin-top: 22rem;
       font-family: Graphik;
       font-size: 3rem;
       font-weight: 600;
@@ -1701,9 +1702,9 @@ body {
     .the-money-maestro-comment {
       // position: relative;
       width: 100%;
-      height: 7.7rem;
+      height: 0rem;
       padding: 0 3rem;
-      margin-top: 0.5rem;
+      margin-top: 2rem;
       opacity: 0.6;
       font-family: Graphik;
       font-size: 2rem;
