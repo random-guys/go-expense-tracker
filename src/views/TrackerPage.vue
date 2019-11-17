@@ -279,7 +279,7 @@ export default {
   mounted() {
     this.initialTrackerDetails()
     window.scrollTo(0,0);
-    this.handleScroll()
+    // this.handleScroll()
 
     this.userDetails = JSON.parse(localStorage.getItem("user_details"));
     const tl = new TimelineMax();
@@ -377,90 +377,90 @@ export default {
       { opacity: 0, ease: Power2.easeInOut },
       { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut }
     )
-      // .fromTo(
-      //   ".family",
-      //   0.1,
-      //   { opacity: 0, ease: Power2.easeInOut },
-      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-      //   0.5
-      // )
-      // .fromTo(
-      //   ".eating",
-      //   0.1,
-      //   { opacity: 0, ease: Power2.easeInOut },
-      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-      //   0.6
-      // )
-      // .fromTo(
-      //   ".vacation",
-      //   0.1,
-      //   { opacity: 0, ease: Power2.easeInOut },
-      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-      //   0.7
-      // )
-      // .fromTo(
-      //   ".care",
-      //   0.1,
-      //   { opacity: 0, ease: Power2.easeInOut },
-      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-      //   0.8
-      // )
-      // .fromTo(
-      //   ".transport",
-      //   0.1,
-      //   { opacity: 0, ease: Power2.easeInOut },
-      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-      //   0.9
-      // )
-      // .fromTo(
-      //   ".groceries",
-      //   0.1,
-      //   { opacity: 0, ease: Power2.easeInOut },
-      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-      //   1
-      // )
-      // .fromTo(
-      //   ".investment",
-      //   0.1,
-      //   { opacity: 0, ease: Power2.easeInOut },
-      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-      //   1.1
-      // )
-      // .fromTo(
-      //   ".bills",
-      //   0.1,
-      //   { opacity: 0, ease: Power2.easeInOut },
-      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-      //   1.2
-      // )
-      // .fromTo(
-      //   ".transfer",
-      //   0.1,
-      //   { opacity: 0, ease: Power2.easeInOut },
-      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-      //   1.3
-      // )
-      // .fromTo(
-      //   ".payroll",
-      //   0.1,
-      //   { opacity: 0, ease: Power2.easeInOut },
-      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-      //   1.4
-      // )
-      // .fromTo(
-      //   ".entertainment",
-      //   0.1,
-      //   { opacity: 0, ease: Power2.easeInOut },
-      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-      //   1.5
-      // )
-      // .fromTo(
-      //   ".shopping",
-      //   0.1,
-      //   { opacity: 0, ease: Power2.easeInOut },
-      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-      //   1.6
-      // );
+      .fromTo(
+        ".family",
+        0.1,
+        { opacity: 0, ease: Power2.easeInOut },
+        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+        0.5
+      )
+      .fromTo(
+        ".eating",
+        0.1,
+        { opacity: 0, ease: Power2.easeInOut },
+        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+        0.6
+      )
+      .fromTo(
+        ".vacation",
+        0.1,
+        { opacity: 0, ease: Power2.easeInOut },
+        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+        0.7
+      )
+      .fromTo(
+        ".care",
+        0.1,
+        { opacity: 0, ease: Power2.easeInOut },
+        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+        0.8
+      )
+      .fromTo(
+        ".transport",
+        0.1,
+        { opacity: 0, ease: Power2.easeInOut },
+        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+        0.9
+      )
+      .fromTo(
+        ".groceries",
+        0.1,
+        { opacity: 0, ease: Power2.easeInOut },
+        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+        1
+      )
+      .fromTo(
+        ".investment",
+        0.1,
+        { opacity: 0, ease: Power2.easeInOut },
+        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+        1.1
+      )
+      .fromTo(
+        ".bills",
+        0.1,
+        { opacity: 0, ease: Power2.easeInOut },
+        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+        1.2
+      )
+      .fromTo(
+        ".transfer",
+        0.1,
+        { opacity: 0, ease: Power2.easeInOut },
+        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+        1.3
+      )
+      .fromTo(
+        ".payroll",
+        0.1,
+        { opacity: 0, ease: Power2.easeInOut },
+        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+        1.4
+      )
+      .fromTo(
+        ".entertainment",
+        0.1,
+        { opacity: 0, ease: Power2.easeInOut },
+        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+        1.5
+      )
+      .fromTo(
+        ".shopping",
+        0.1,
+        { opacity: 0, ease: Power2.easeInOut },
+        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+        1.6
+      );
     // this.btnDisable()
   },
   methods: {
