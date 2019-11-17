@@ -248,6 +248,8 @@ export default {
       amount: 0,
       userDetails: [],
       amountTracker: [],
+      maxExpense: [],
+      max: 0,
       transport: "",
       inputTransport: "",
       transfer: "",
@@ -274,16 +276,10 @@ export default {
       inputInvestment: ""
     };
   },
-  created () {
-      this.handleScroll()
-  },
-  destroyed () {
-      this.handleScroll()
-  },
   mounted() {
     this.initialTrackerDetails()
     window.scrollTo(0,0);
-      this.handleScroll()
+    this.handleScroll()
 
     this.userDetails = JSON.parse(localStorage.getItem("user_details"));
     const tl = new TimelineMax();
@@ -381,101 +377,102 @@ export default {
       { opacity: 0, ease: Power2.easeInOut },
       { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut }
     )
-      .fromTo(
-        ".family",
-        0.1,
-        { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-        0.5
-      )
-      .fromTo(
-        ".eating",
-        0.1,
-        { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-        0.6
-      )
-      .fromTo(
-        ".vacation",
-        0.1,
-        { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-        0.7
-      )
-      .fromTo(
-        ".care",
-        0.1,
-        { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-        0.8
-      )
-      .fromTo(
-        ".transport",
-        0.1,
-        { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-        0.9
-      )
-      .fromTo(
-        ".groceries",
-        0.1,
-        { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-        1
-      )
-      .fromTo(
-        ".investment",
-        0.1,
-        { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-        1.1
-      )
-      .fromTo(
-        ".bills",
-        0.1,
-        { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-        1.2
-      )
-      .fromTo(
-        ".transfer",
-        0.1,
-        { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-        1.3
-      )
-      .fromTo(
-        ".payroll",
-        0.1,
-        { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-        1.4
-      )
-      .fromTo(
-        ".entertainment",
-        0.1,
-        { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-        1.5
-      )
-      .fromTo(
-        ".shopping",
-        0.1,
-        { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-        1.6
-      );
+      // .fromTo(
+      //   ".family",
+      //   0.1,
+      //   { opacity: 0, ease: Power2.easeInOut },
+      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+      //   0.5
+      // )
+      // .fromTo(
+      //   ".eating",
+      //   0.1,
+      //   { opacity: 0, ease: Power2.easeInOut },
+      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+      //   0.6
+      // )
+      // .fromTo(
+      //   ".vacation",
+      //   0.1,
+      //   { opacity: 0, ease: Power2.easeInOut },
+      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+      //   0.7
+      // )
+      // .fromTo(
+      //   ".care",
+      //   0.1,
+      //   { opacity: 0, ease: Power2.easeInOut },
+      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+      //   0.8
+      // )
+      // .fromTo(
+      //   ".transport",
+      //   0.1,
+      //   { opacity: 0, ease: Power2.easeInOut },
+      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+      //   0.9
+      // )
+      // .fromTo(
+      //   ".groceries",
+      //   0.1,
+      //   { opacity: 0, ease: Power2.easeInOut },
+      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+      //   1
+      // )
+      // .fromTo(
+      //   ".investment",
+      //   0.1,
+      //   { opacity: 0, ease: Power2.easeInOut },
+      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+      //   1.1
+      // )
+      // .fromTo(
+      //   ".bills",
+      //   0.1,
+      //   { opacity: 0, ease: Power2.easeInOut },
+      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+      //   1.2
+      // )
+      // .fromTo(
+      //   ".transfer",
+      //   0.1,
+      //   { opacity: 0, ease: Power2.easeInOut },
+      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+      //   1.3
+      // )
+      // .fromTo(
+      //   ".payroll",
+      //   0.1,
+      //   { opacity: 0, ease: Power2.easeInOut },
+      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+      //   1.4
+      // )
+      // .fromTo(
+      //   ".entertainment",
+      //   0.1,
+      //   { opacity: 0, ease: Power2.easeInOut },
+      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+      //   1.5
+      // )
+      // .fromTo(
+      //   ".shopping",
+      //   0.1,
+      //   { opacity: 0, ease: Power2.easeInOut },
+      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+      //   1.6
+      // );
     // this.btnDisable()
   },
   methods: {
     handleScroll() {
+      window.scrollTo(0,0);
 
       const crlt = new ScrollMagic.Controller()
       let tml = new TimelineMax()
-      tml.to(".card-transport", 0.1, {opacity: 0, pointerEvents: "none"}, 0.1)
-         .to(".card-transfer", 0.1, {opacity: 0, pointerEvents: "none"}, 0.1)
-         .to(".card-eating", 0.1, {opacity: 0, pointerEvents: "none"}, 0.1)
-         .to(".card-bills", 0.1, {opacity: 0, pointerEvents: "none"}, 0.1)
+      tml.to(".card-transport", 0.1, {opacity: 1, pointerEvents: "visible"}, 0.1)
+         .to(".card-transfer", 0.1, {opacity: 1, pointerEvents: "visible"}, 0.1)
+         .to(".card-eating", 0.1, {opacity: 1, pointerEvents: "visible"}, 0.1)
+         .to(".card-bills", 0.1, {opacity: 1, pointerEvents: "visible"}, 0.1)
 
       const scene = new ScrollMagic.Scene({
         triggerElement: ".hero-text__primary",
@@ -483,17 +480,17 @@ export default {
         // offSet: "5px",
         duration: "10%"
       })
-        .setPin(".hero-text__primary")
+        // .setPin(".hero-text__primary")
         .setTween(tml)
           .addTo(crlt)
 
           
       const crlt2 = new ScrollMagic.Controller()
       let tml2 = new TimelineMax()
-      tml2.to(".card-family", 0.1, {opacity: 0, pointerEvents: "none"}, 0.1)
-         .to(".card-groceries", 0.1, {opacity: 0, pointerEvents: "none"}, 0.1)
-         .to(".card-shopping", 0.1, {opacity: 0, pointerEvents: "none"}, 0.1)
-         .to(".card-care", 0.1, {opacity: 0, pointerEvents: "none"}, 0.1)
+      tml2.to(".card-family", 0.1, {opacity: 1, pointerEvents: "visible"}, 0.1)
+         .to(".card-groceries", 0.1, {opacity: 1, pointerEvents: "visible"}, 0.1)
+         .to(".card-shopping", 0.1, {opacity: 1, pointerEvents: "visible"}, 0.1)
+         .to(".card-care", 0.1, {opacity: 1, pointerEvents: "visible"}, 0.1)
 
       const scene2 = new ScrollMagic.Scene({
         triggerElement: ".hero-text__primary",
@@ -501,7 +498,7 @@ export default {
         // offSet: "500px",
         duration: "45%"
       })
-        .setPin(".hero-text__primary")
+        // .setPin(".hero-text__primary")
         .setTween(tml2)
           .addTo(crlt2)
 
@@ -539,6 +536,92 @@ export default {
           html: `Please enter amount(Numbers only)`
         });
       } else {
+        this.max = Math.max.apply(Math, this.maxExpense.map(function(o) { return o.amount; }))
+        
+            if(this.inputTransport == this.max){
+              this.userDetails.map(details => {
+                details.key = "transport",
+                details.highest_expense = this.max
+              })
+              localStorage.setItem("user_details", JSON.stringify(this.userDetails));
+            }
+            if(this.inputTransfer == this.max){
+              this.userDetails.map(details => {
+                details.key = "transfer",
+                details.highest_expense = this.max
+              })
+              localStorage.setItem("user_details", JSON.stringify(this.userDetails));
+            }
+            if(this.inputEating == this.max){
+              this.userDetails.map(details => {
+                details.key = "eating",
+                details.highest_expense = this.max
+              })
+              localStorage.setItem("user_details", JSON.stringify(this.userDetails));
+            }
+            if(this.inputBills == this.max){
+              this.userDetails.map(details => {
+                details.key = "bills",
+                details.highest_expense = this.max
+              })
+              localStorage.setItem("user_details", JSON.stringify(this.userDetails));
+            }
+            if(this.inputFamily == this.max){
+              this.userDetails.map(details => {
+                details.key = "family",
+                details.highest_expense = this.max
+              })
+              localStorage.setItem("user_details", JSON.stringify(this.userDetails));
+            }
+            if(this.inputGroceries == this.max){
+              this.userDetails.map(details => {
+                details.key = "groceries",
+                details.highest_expense = this.max
+              })
+              localStorage.setItem("user_details", JSON.stringify(this.userDetails));
+            }
+            if(this.inputShopping == this.max){
+              this.userDetails.map(details => {
+                details.key = "shopping",
+                details.highest_expense = this.max
+              })
+              localStorage.setItem("user_details", JSON.stringify(this.userDetails));
+            }
+            if(this.inputCare == this.max){
+              this.userDetails.map(details => {
+                details.key = "care",
+                details.highest_expense = this.max
+              })
+              localStorage.setItem("user_details", JSON.stringify(this.userDetails));
+            }
+            if(this.inputVacation == this.max){
+              this.userDetails.map(details => {
+                details.key = "vacation",
+                details.highest_expense = this.max
+              })
+              localStorage.setItem("user_details", JSON.stringify(this.userDetails));
+            }
+            if(this.inputPayroll == this.max){
+              this.userDetails.map(details => {
+                details.key = "payroll",
+                details.highest_expense = this.max
+              })
+              localStorage.setItem("user_details", JSON.stringify(this.userDetails));
+            }
+            if(this.inputEntertainment == this.max){
+              this.userDetails.map(details => {
+                details.key = "entertainment",
+                details.highest_expense = this.max
+              })
+              localStorage.setItem("user_details", JSON.stringify(this.userDetails));
+            }
+            if(this.inputInvestment == this.max){
+              this.userDetails.map(details => {
+                details.key = "investment",
+                details.highest_expense = this.max
+              })
+              localStorage.setItem("user_details", JSON.stringify(this.userDetails));
+            }
         this.userDetails.map(details => {
           details.amount = this.amount;
         });
@@ -566,6 +649,29 @@ export default {
         this.amountTracker.map(amount => {
           amount.transport = this.inputTransport
         })
+
+          if(this.maxExpense.length === 0){
+            let eachExpense = {
+              key: "transport",
+              amount: this.inputTransport
+            }
+            this.maxExpense.push(eachExpense)
+            console.log(this.eachExpense);
+          }else{
+            this.maxExpense.map(obj => {
+              if(obj.key === "transport"){
+                obj.amount = this.inputTransport
+                console.log(this.eachExpense);
+              }else{
+                let eachExpense = {
+                  key: "transport",
+                  amount: this.inputTransport
+                }
+                this.maxExpense.push(eachExpense)
+              }
+            })
+          }
+        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         this.$refs.refTransfer.focus()
         const tl = new TimelineMax();
@@ -590,6 +696,7 @@ export default {
         this.transport.length > 0 &&
         regEx.test(this.transport) === false
       ) {
+        this.inputTransport = event.target.value
         const tl = new TimelineMax();
 
         tl.to(
@@ -623,6 +730,23 @@ export default {
         this.amountTracker.map(amount => {
           amount.transport = 0
         })
+          if(this.maxExpense.length === 0){
+            let eachExpense = {
+              key: "transport",
+              amount: 0
+            }
+            this.maxExpense.push(eachExpense)
+            console.log(this.eachExpense);
+          }else{
+            this.maxExpense.map(obj => {
+              if(obj.key === "transport"){
+                obj.amount = 0
+                console.log(this.eachExpense);
+              }
+            })
+          }
+        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
+        console.log(this.maxExpense);
         this.$refs.refTransfer.focus()
 
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
@@ -664,6 +788,29 @@ export default {
         this.amountTracker.map(amount => {
           amount.transfer = this.inputTransfer
         })
+          if(this.maxExpense.length === 0){
+            let eachExpense = {
+              key: "transfer",
+              amount: this.inputTransfer
+            }
+            this.maxExpense.push(eachExpense)
+            console.log(this.eachExpense);
+          }else{
+            this.maxExpense.map(obj => {
+              if(obj.key === "transfer"){
+                obj.amount = this.inputTransfer
+                console.log(this.eachExpense);
+              }
+              else{
+                let eachExpense = {
+                  key: "transfer",
+                  amount: this.inputTransfer
+                }
+                this.maxExpense.push(eachExpense)
+              }
+            })
+          }
+        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         this.$refs.refEating.focus()
         const tl = new TimelineMax();
@@ -688,6 +835,7 @@ export default {
         this.transfer.length > 0 &&
         regEx.test(this.transfer) === false
       ) {
+        this.inputTransfer = event.target.value
         const tl = new TimelineMax();
 
         tl.to(
@@ -721,6 +869,23 @@ export default {
         this.amountTracker.map(amount => {
           amount.transfer = 0
         })
+        if(this.maxExpense.length === 0){
+            let eachExpense = {
+              key: "transfer",
+              amount: 0
+            }
+            this.maxExpense.push(eachExpense)
+            console.log(this.eachExpense);
+          }else{
+            this.maxExpense.map(obj => {
+              if(obj.key === "transfer"){
+                obj.amount = 0
+                console.log(this.eachExpense);
+              }
+            })
+          }
+        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
+        console.log(this.maxExpense);
         this.$refs.refTransfer.focus()
 
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
@@ -761,6 +926,29 @@ export default {
         this.amountTracker.map(amount => {
           amount.eating = this.inputEating
         })
+          if(this.maxExpense.length === 0){
+            let eachExpense = {
+              key: "eating",
+              amount: this.inputEating
+            }
+            this.maxExpense.push(eachExpense)
+            console.log(this.eachExpense);
+          }else{
+            this.maxExpense.map(obj => {
+              if(obj.key === "eating"){
+                obj.amount = this.inputEating
+                console.log(this.eachExpense);
+              }
+              else{
+                let eachExpense = {
+                  key: "eating",
+                  amount: this.inputEating
+                }
+                this.maxExpense.push(eachExpense)
+              }
+            })
+          }
+        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         this.$refs.refBills.focus()
         const tl = new TimelineMax();
@@ -782,6 +970,7 @@ export default {
         // this.btnEnabled()
         this.inputAmount();
       } else if (this.eating.length > 0 && regEx.test(this.eating) === false) {
+        this.inputEating = event.target.value
         const tl = new TimelineMax();
 
         tl.to(
@@ -815,6 +1004,22 @@ export default {
         this.amountTracker.map(amount => {
           amount.eating = 0
         })
+        if(this.maxExpense.length === 0){
+            let eachExpense = {
+              key: "eating",
+              amount: 0
+            }
+            this.maxExpense.push(eachExpense)
+            console.log(this.eachExpense);
+          }else{
+            this.maxExpense.map(obj => {
+              if(obj.key === "eating"){
+                obj.amount = 0
+                console.log(this.eachExpense);
+              }
+            })
+          }
+        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         this.$refs.refBills.focus()
 
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
@@ -847,7 +1052,7 @@ export default {
         }
       if (this.bills.length > 0 && regEx.test(this.bills) === true) {
         this.inputBills = event.target.value
-                if(this.inputBills.charAt(0) === "N"){
+        if(this.inputBills.charAt(0) === "N"){
           this.inputBills = this.inputBills.substr(1)
           // console.log(this.transport);
         }
@@ -855,6 +1060,29 @@ export default {
         this.amountTracker.map(amount => {
           amount.bills = this.inputBills
         })
+          if(this.maxExpense.length === 0){
+            let eachExpense = {
+              key: "bills",
+              amount: this.inputBills
+            }
+            this.maxExpense.push(eachExpense)
+            console.log(this.eachExpense);
+          }else{
+            this.maxExpense.map(obj => {
+              if(obj.key === "bills"){
+                obj.amount = this.inputBills
+                console.log(this.eachExpense);
+              }
+              else{
+                let eachExpense = {
+                  key: "bills",
+                  amount: this.inputBills
+                }
+                this.maxExpense.push(eachExpense)
+              }
+            })
+          }
+        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         this.$refs.refFamily.focus()
         const tl = new TimelineMax();
@@ -876,6 +1104,7 @@ export default {
         // this.btnEnabled()
         this.inputAmount();
       } else if (this.bills.length > 0 && regEx.test(this.bills) === false) {
+        this.inputBills = event.target.value
         const tl = new TimelineMax();
 
         tl.to(
@@ -909,6 +1138,22 @@ export default {
         this.amountTracker.map(amount => {
           amount.bills = 0
         })
+        if(this.maxExpense.length === 0){
+            let eachExpense = {
+              key: "bills",
+              amount: 0
+            }
+            this.maxExpense.push(eachExpense)
+            console.log(this.eachExpense);
+          }else{
+            this.maxExpense.map(obj => {
+              if(obj.key === "bills"){
+                obj.amount = 0
+                console.log(this.eachExpense);
+              }
+            })
+          }
+        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         this.$refs.refFamily.focus()
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         const tl = new TimelineMax();
@@ -948,6 +1193,28 @@ export default {
         this.amountTracker.map(amount => {
           amount.family = this.inputFamily
         })
+          if(this.maxExpense.length === 0){
+            let eachExpense = {
+              key: "family",
+              amount: this.inputFamily
+            }
+            this.maxExpense.push(eachExpense)
+            console.log(this.eachExpense);
+          }else{
+            this.maxExpense.map(obj => {
+              if(obj.key === "family"){
+                obj.amount = this.inputFamily
+                console.log(this.eachExpense);
+              }else{
+                let eachExpense = {
+                  key: "family",
+                  amount: this.inputFamily
+                }
+                this.maxExpense.push(eachExpense)
+              }
+            })
+          }
+        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         this.$refs.refGroceries.focus()
         const tl = new TimelineMax();
@@ -969,6 +1236,7 @@ export default {
         // this.btnEnabled()
         this.inputAmount();
       } else if (this.family.length > 0 && regEx.test(this.family) === false) {
+        this.inputFamily = event.target.value
         const tl = new TimelineMax();
 
         tl.to(
@@ -1002,6 +1270,22 @@ export default {
         this.amountTracker.map(amount => {
           amount.family = 0
         })
+        if(this.maxExpense.length === 0){
+            let eachExpense = {
+              key: "family",
+              amount: 0
+            }
+            this.maxExpense.push(eachExpense)
+            console.log(this.eachExpense);
+          }else{
+            this.maxExpense.map(obj => {
+              if(obj.key === "family"){
+                obj.amount = 0
+                console.log(this.eachExpense);
+              }
+            })
+          }
+        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         this.$refs.refGroceries.focus()
 
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
@@ -1042,6 +1326,28 @@ export default {
         this.amountTracker.map(amount => {
           amount.groceries = this.inputGroceries
         })
+          if(this.maxExpense.length === 0){
+            let eachExpense = {
+              key: "groceries",
+              amount: this.inputGroceries
+            }
+            this.maxExpense.push(eachExpense)
+            console.log(this.eachExpense);
+          }else{
+            this.maxExpense.map(obj => {
+              if(obj.key === "groceries"){
+                obj.amount = this.inputGroceries
+                console.log(this.eachExpense);
+              }else{
+                let eachExpense = {
+                  key: "groceries",
+                  amount: this.inputGroceries
+                }
+                this.maxExpense.push(eachExpense)
+              }
+            })
+          }
+        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         this.$refs.refShopping.focus()
         const tl = new TimelineMax();
@@ -1066,6 +1372,8 @@ export default {
         this.groceries.length > 0 &&
         regEx.test(this.groceries) === false
       ) {
+        this.inputGroceries = event.target.value
+
         const tl = new TimelineMax();
 
         tl.to(
@@ -1099,6 +1407,22 @@ export default {
         this.amountTracker.map(amount => {
           amount.groceries = 0
         })
+        if(this.maxExpense.length === 0){
+            let eachExpense = {
+              key: "groceries",
+              amount: 0
+            }
+            this.maxExpense.push(eachExpense)
+            console.log(this.eachExpense);
+          }else{
+            this.maxExpense.map(obj => {
+              if(obj.key === "groceries"){
+                obj.amount = 0
+                console.log(this.eachExpense);
+              }
+            })
+          }
+        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         this.$refs.refShopping.focus()
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         const tl = new TimelineMax();
@@ -1138,6 +1462,28 @@ export default {
         this.amountTracker.map(amount => {
           amount.shopping = this.inputShopping
         })
+          if(this.maxExpense.length === 0){
+            let eachExpense = {
+              key: "shopping",
+              amount: this.inputShopping
+            }
+            this.maxExpense.push(eachExpense)
+            console.log(this.eachExpense);
+          }else{
+            this.maxExpense.map(obj => {
+              if(obj.key === "shopping"){
+                obj.amount = this.inputShopping
+                console.log(this.eachExpense);
+              }else{
+                let eachExpense = {
+                  key: "shopping",
+                  amount: this.inputShopping
+                }
+                this.maxExpense.push(eachExpense)
+              }
+            })
+          }
+        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         this.$refs.refCare.focus()
         const tl = new TimelineMax();
@@ -1162,6 +1508,8 @@ export default {
         this.shopping.length > 0 &&
         regEx.test(this.shopping) === false
       ) {
+        this.inputShopping = event.target.value
+
         const tl = new TimelineMax();
 
         tl.to(
@@ -1195,6 +1543,22 @@ export default {
         this.amountTracker.map(amount => {
           amount.shopping = 0
         })
+        if(this.maxExpense.length === 0){
+            let eachExpense = {
+              key: "shopping",
+              amount: 0
+            }
+            this.maxExpense.push(eachExpense)
+            console.log(this.eachExpense);
+          }else{
+            this.maxExpense.map(obj => {
+              if(obj.key === "shopping"){
+                obj.amount = 0
+                console.log(this.eachExpense);
+              }
+            })
+          }
+        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         this.$refs.refCare.focus()
 
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
@@ -1235,6 +1599,28 @@ export default {
         this.amountTracker.map(amount => {
           amount.care = this.inputCare
         })
+          if(this.maxExpense.length === 0){
+            let eachExpense = {
+              key: "care",
+              amount: this.inputCare
+            }
+            this.maxExpense.push(eachExpense)
+            console.log(this.eachExpense);
+          }else{
+            this.maxExpense.map(obj => {
+              if(obj.key === "care"){
+                obj.amount = this.inputCare
+                console.log(this.eachExpense);
+              }else{
+                let eachExpense = {
+                  key: "care",
+                  amount: this.inputCare
+                }
+                this.maxExpense.push(eachExpense)
+              }
+            })
+          }
+        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         this.$refs.refVacation.focus()
         const tl = new TimelineMax();
@@ -1256,6 +1642,7 @@ export default {
         // this.btnEnabled()
         this.inputAmount();
       } else if (this.care.length > 0 && regEx.test(this.care) === false) {
+        this.inputCare = event.target.value
         const tl = new TimelineMax();
 
         tl.to(
@@ -1289,6 +1676,22 @@ export default {
         this.amountTracker.map(amount => {
           amount.care = 0
         })
+        if(this.maxExpense.length === 0){
+            let eachExpense = {
+              key: "care",
+              amount: 0
+            }
+            this.maxExpense.push(eachExpense)
+            console.log(this.eachExpense);
+          }else{
+            this.maxExpense.map(obj => {
+              if(obj.key === "care"){
+                obj.amount = 0
+                console.log(this.eachExpense);
+              }
+            })
+          }
+        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         this.$refs.refVacation.focus()
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         const tl = new TimelineMax();
@@ -1328,6 +1731,28 @@ export default {
         this.amountTracker.map(amount => {
           amount.vacation = this.inputVacation
         })
+          if(this.maxExpense.length === 0){
+            let eachExpense = {
+              key: "vacation",
+              amount: this.inputVacation
+            }
+            this.maxExpense.push(eachExpense)
+            console.log(this.eachExpense);
+          }else{
+            this.maxExpense.map(obj => {
+              if(obj.key === "vacation"){
+                obj.amount = this.inputVacation
+                console.log(this.eachExpense);
+              }else{
+                let eachExpense = {
+                  key: "vacation",
+                  amount: this.inputVacation
+                }
+                this.maxExpense.push(eachExpense)
+              }
+            })
+          }
+        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         this.$refs.refPayroll.focus()
         const tl = new TimelineMax();
@@ -1352,6 +1777,7 @@ export default {
         this.vacation.length > 0 &&
         regEx.test(this.vacation) === false
       ) {
+        this.inputVacation = event.target.value
         const tl = new TimelineMax();
 
         tl.to(
@@ -1385,6 +1811,22 @@ export default {
         this.amountTracker.map(amount => {
           amount.vacation = 0
         })
+        if(this.maxExpense.length === 0){
+            let eachExpense = {
+              key: "vacation",
+              amount: 0
+            }
+            this.maxExpense.push(eachExpense)
+            console.log(this.eachExpense);
+          }else{
+            this.maxExpense.map(obj => {
+              if(obj.key === "vacation"){
+                obj.amount = 0
+                console.log(this.eachExpense);
+              }
+            })
+          }
+        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         this.$refs.refPayroll.focus()
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         const tl = new TimelineMax();
@@ -1424,6 +1866,28 @@ export default {
         this.amountTracker.map(amount => {
           amount.payroll = this.inputPayroll
         })
+          if(this.maxExpense.length === 0){
+            let eachExpense = {
+              key: "payroll",
+              amount: this.inputPayroll
+            }
+            this.maxExpense.push(eachExpense)
+            console.log(this.eachExpense);
+          }else{
+            this.maxExpense.map(obj => {
+              if(obj.key === "payroll"){
+                obj.amount = this.inputPayroll
+                console.log(this.eachExpense);
+              }else{
+                let eachExpense = {
+                  key: "payroll",
+                  amount: this.inputPayroll
+                }
+                this.maxExpense.push(eachExpense)
+              }
+            })
+          }
+        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         this.$refs.refEntertainment.focus()
         const tl = new TimelineMax();
@@ -1448,6 +1912,8 @@ export default {
         this.payroll.length > 0 &&
         regEx.test(this.payroll) === false
       ) {
+        this.inputPayroll = event.target.value
+
         const tl = new TimelineMax();
 
         tl.to(
@@ -1481,6 +1947,22 @@ export default {
         this.amountTracker.map(amount => {
           amount.payroll = 0
         })
+        if(this.maxExpense.length === 0){
+            let eachExpense = {
+              key: "payroll",
+              amount: 0
+            }
+            this.maxExpense.push(eachExpense)
+            console.log(this.eachExpense);
+          }else{
+            this.maxExpense.map(obj => {
+              if(obj.key === "payroll"){
+                obj.amount = 0
+                console.log(this.eachExpense);
+              }
+            })
+          }
+        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         this.$refs.refEntertainment.focus()
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         const tl = new TimelineMax();
@@ -1523,6 +2005,28 @@ export default {
         this.amountTracker.map(amount => {
           amount.entertainment = this.inputEntertainment
         })
+          if(this.maxExpense.length === 0){
+            let eachExpense = {
+              key: "entertainment",
+              amount: this.inputEntertainment
+            }
+            this.maxExpense.push(eachExpense)
+            console.log(this.eachExpense);
+          }else{
+            this.maxExpense.map(obj => {
+              if(obj.key === "entertainment"){
+                obj.amount = this.inputEntertainment
+                console.log(this.eachExpense);
+              }else{
+                let eachExpense = {
+                  key: "entertainment",
+                  amount: this.inputEntertainment
+                }
+                this.maxExpense.push(eachExpense)
+              }
+            })
+          }
+        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         this.$refs.refInvestment.focus()
         const tl = new TimelineMax();
@@ -1547,6 +2051,7 @@ export default {
         this.entertainment.length > 0 &&
         regEx.test(this.entertainment) === false
       ) {
+        this.inputEntertainment = event.target.value
         const tl = new TimelineMax();
 
         tl.to(
@@ -1580,6 +2085,22 @@ export default {
         this.amountTracker.map(amount => {
           amount.entertainment = 0
         })
+        if(this.maxExpense.length === 0){
+            let eachExpense = {
+              key: "entertainment",
+              amount: 0
+            }
+            this.maxExpense.push(eachExpense)
+            console.log(this.eachExpense);
+          }else{
+            this.maxExpense.map(obj => {
+              if(obj.key === "entertainment"){
+                obj.amount = 0
+                console.log(this.eachExpense);
+              }
+            })
+          }
+        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         this.$refs.refInvestment.focus()
         const tl = new TimelineMax();
@@ -1619,6 +2140,28 @@ export default {
         this.amountTracker.map(amount => {
           amount.investment = this.inputInvestment
         })
+          if(this.maxExpense.length === 0){
+            let eachExpense = {
+              key: "investment",
+              amount: this.inputInvestment
+            }
+            this.maxExpense.push(eachExpense)
+            console.log(this.eachExpense);
+          }else{
+            this.maxExpense.map(obj => {
+              if(obj.key === "investment"){
+                obj.amount = this.inputInvestment
+                console.log(this.eachExpense);
+              }else{
+                let eachExpense = {
+                  key: "investment",
+                  amount: this.inputInvestment
+                }
+                this.maxExpense.push(eachExpense)
+              }
+            })
+          }
+        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         // this.$refs.refButton.focus()
         const tl = new TimelineMax();
@@ -1643,6 +2186,7 @@ export default {
         this.investment.length > 0 &&
         regEx.test(this.investment) === false
       ) {
+        this.inputInvestment = event.target.value
         const tl = new TimelineMax();
 
         tl.to(
@@ -1676,6 +2220,22 @@ export default {
         this.amountTracker.map(amount => {
           amount.investment = 0
         })
+        if(this.maxExpense.length === 0){
+            let eachExpense = {
+              key: "investment",
+              amount: 0
+            }
+            this.maxExpense.push(eachExpense)
+            console.log(this.eachExpense);
+          }else{
+            this.maxExpense.map(obj => {
+              if(obj.key === "investment"){
+                obj.amount = 0
+                console.log(this.eachExpense);
+              }
+            })
+          }
+        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         // this.$refs.refButton.focus()
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         const tl = new TimelineMax();
