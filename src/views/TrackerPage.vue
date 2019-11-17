@@ -12,7 +12,7 @@
         alt="Leaf Icon Left"
         class="leaf-right leafRight"
       />
-      <img src="../assets/images/logo.svg" alt="Gomoney Logo" class="logo logo-fixed" />
+      <img src="../assets/images/logo.svg" alt="Gomoney Logo" class="logo" />
       <img
         src="../assets/images/vector-shapes-1.svg"
         alt="Morph Icon Left"
