@@ -1197,7 +1197,7 @@ export default {
         [0, 255, 255],
         [237, 30, 121]
       ],
-      clock: "50",
+      clock: "80",
       rotate: true
     };
     const canvas = new ConfettiGenerator(headerCanvasSettings);
