@@ -300,7 +300,9 @@ export default {
           first_name: this.first_name,
           last_name: this.last_name,
           email: this.email,
-          amount: ""
+          amount: "",
+          key: "",
+          highest_expense: ""
         };
         this.userDetails.push(userObject);
         localStorage.setItem("user_details", JSON.stringify(this.userDetails));
