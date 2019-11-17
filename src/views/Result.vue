@@ -1282,13 +1282,13 @@ export default {
     if (this.monthly <= 20000) {
       TweenMax.fromTo(
         ".the-money-monk",
-        0.3,
+        1,
         { opacity: "0" },
         {
           repeat: -1,
-          // yoyo: true,
+          yoyo: false,
           repeatDelay: 0.5,
-          ease: Linear.easeNone,
+          ease:Power1.easeInOut,
           display: "block",
           opacity: "1"
         }
@@ -1438,9 +1438,13 @@ export default {
     if (this.monthly > 20000 && this.monthly <= 30000) {
       TweenMax.fromTo(
         ".the-essentialist",
-        0.3,
+        1,
         { opacity: "0" },
         {
+          repeat: -1,
+          yoyo: false,
+          repeatDelay: 0.5,
+          ease:Power1.easeInOut,
           display: "block",
           opacity: "1"
         }
@@ -1590,13 +1594,13 @@ export default {
     if (this.monthly > 30000 && this.monthly <= 50000) {
       TweenMax.fromTo(
         ".the-sensible-sage",
-        0.3,
+        1,
         { opacity: "0" },
         {
           repeat: -1,
-          yoyo: true,
+          yoyo: false,
           repeatDelay: 0.5,
-          ease: Linear.easeNone,
+          ease:Power1.easeInOut,
           display: "block",
           opacity: "1"
         }
@@ -1746,13 +1750,13 @@ export default {
     if (this.monthly > 50000 && this.monthly <= 70000) {
       TweenMax.fromTo(
         ".the-baby-baller",
-        0.3,
+        1,
         { opacity: "0" },
         {
           repeat: -1,
-          yoyo: true,
+          yoyo: false,
           repeatDelay: 0.5,
-          ease: Linear.easeNone,
+          ease:Power1.easeInOut,
           display: "block",
           opacity: "1"
         }
@@ -1902,13 +1906,13 @@ export default {
     if (this.monthly > 70000 && this.monthly <= 85000) {
       TweenMax.fromTo(
         ".the-spontanious-spender",
-        0.3,
+        1,
         { opacity: "0" },
         {
           repeat: -1,
-          // yoyo: true,
-          repeatDelay: 1,
-          // ease: Linear.easeNone,
+          yoyo: false,
+          repeatDelay: 0.5,
+          ease:Power1.easeInOut,
           display: "block",
           opacity: "1"
         }
@@ -2058,13 +2062,13 @@ export default {
     if (this.monthly > 85000 && this.monthly <= 100000) {
       TweenMax.fromTo(
         ".the-big-spender",
-        0.3,
+        1,
         { opacity: "0" },
         {
           repeat: -1,
-          yoyo: true,
+          yoyo: false,
           repeatDelay: 0.5,
-          ease: Linear.easeNone,
+          ease:Power1.easeInOut,
           display: "block",
           opacity: "1"
         }
@@ -2214,16 +2218,16 @@ export default {
     // if (this.monthly > 85000 && this.monthly <= 100000) {
     //   TweenMax.fromTo(
     //     ".the-generous-sage",
-    //     0.3,
-    //     { opacity: "0" },
-    //     {
-    //       repeat: -1,
-    //       yoyo: true,
-    //       repeatDelay: 0.5,
-    //       ease: Linear.easeNone,
-    //       display: "block",
-    //       opacity: "1"
-    //     }
+        // 1,
+        // { opacity: "0" },
+        // {
+        //   repeat: -1,
+        //   yoyo: false,
+        //   repeatDelay: 0.5,
+        //   ease:Power1.easeInOut,
+        //   display: "block",
+        //   opacity: "1"
+        // }
     //   );
     //   TweenMax.fromTo(
     //     ".the-generous-sage-comment",
@@ -2370,13 +2374,13 @@ export default {
     if (this.monthly > 100000) {
       TweenMax.fromTo(
         ".the-money-maestro",
-        0.3,
+        1,
         { opacity: "0" },
         {
           repeat: -1,
-          yoyo: true,
+          yoyo: false,
           repeatDelay: 0.5,
-          ease: Linear.easeNone,
+          ease:Power1.easeInOut,
           display: "block",
           opacity: "1"
         }
