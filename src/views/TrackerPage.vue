@@ -635,14 +635,12 @@ export default {
       // this.amountTracker = JSON.parse(localStorage.getItem("amount_tracker"));
         if(this.transport.charAt(0) === "N"){
           this.transport = this.transport.substr(1)
-          // console.log(this.transport);
         }
 
       if (this.transport.length > 0 && regEx.test(this.transport) === true) {
         this.inputTransport = event.target.value
         if(this.inputTransport.charAt(0) === "N"){
           this.inputTransport = this.inputTransport.substr(1)
-          // console.log(this.inputTransport);
         }
 
         this.transport =  `N${this.inputTransport}`
@@ -656,12 +654,10 @@ export default {
               amount: this.inputTransport
             }
             this.maxExpense.push(eachExpense)
-            console.log(this.eachExpense);
           }else{
             this.maxExpense.map(obj => {
               if(obj.key === "transport"){
                 obj.amount = this.inputTransport
-                console.log(this.eachExpense);
               }else{
                 let eachExpense = {
                   key: "transport",
@@ -736,17 +732,14 @@ export default {
               amount: 0
             }
             this.maxExpense.push(eachExpense)
-            console.log(this.eachExpense);
           }else{
             this.maxExpense.map(obj => {
               if(obj.key === "transport"){
                 obj.amount = 0
-                console.log(this.eachExpense);
               }
             })
           }
         localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        console.log(this.maxExpense);
         this.$refs.refTransfer.focus()
 
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
@@ -776,13 +769,11 @@ export default {
       this.initialTrackerDetails()
         if(this.transfer.charAt(0) === "N"){
           this.transfer = this.transfer.substr(1)
-          // console.log(this.transport);
         }
       if (this.transfer.length > 0 && regEx.test(this.transfer) === true) {
         this.inputTransfer = event.target.value
         if(this.inputTransfer.charAt(0) === "N"){
           this.inputTransfer = this.inputTransfer.substr(1)
-          // console.log(this.inputTransport);
         }
         this.transfer =  `N${this.inputTransfer}`
         this.amountTracker.map(amount => {
@@ -794,12 +785,10 @@ export default {
               amount: this.inputTransfer
             }
             this.maxExpense.push(eachExpense)
-            console.log(this.eachExpense);
           }else{
             this.maxExpense.map(obj => {
               if(obj.key === "transfer"){
                 obj.amount = this.inputTransfer
-                console.log(this.eachExpense);
               }
               else{
                 let eachExpense = {
@@ -875,17 +864,14 @@ export default {
               amount: 0
             }
             this.maxExpense.push(eachExpense)
-            console.log(this.eachExpense);
           }else{
             this.maxExpense.map(obj => {
               if(obj.key === "transfer"){
                 obj.amount = 0
-                console.log(this.eachExpense);
               }
             })
           }
         localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        console.log(this.maxExpense);
         this.$refs.refTransfer.focus()
 
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
@@ -914,13 +900,11 @@ export default {
       this.initialTrackerDetails()
         if(this.eating.charAt(0) === "N"){
           this.eating = this.eating.substr(1)
-          // console.log(this.transport);
         }
       if (this.eating.length > 0 && regEx.test(this.eating) === true) {
         this.inputEating = event.target.value
         if(this.inputEating.charAt(0) === "N"){
           this.inputEating = this.inputEating.substr(1)
-          // console.log(this.transport);
         }
         this.eating =  `N${this.inputEating}`
         this.amountTracker.map(amount => {
@@ -932,12 +916,10 @@ export default {
               amount: this.inputEating
             }
             this.maxExpense.push(eachExpense)
-            console.log(this.eachExpense);
           }else{
             this.maxExpense.map(obj => {
               if(obj.key === "eating"){
                 obj.amount = this.inputEating
-                console.log(this.eachExpense);
               }
               else{
                 let eachExpense = {
@@ -1010,12 +992,10 @@ export default {
               amount: 0
             }
             this.maxExpense.push(eachExpense)
-            console.log(this.eachExpense);
           }else{
             this.maxExpense.map(obj => {
               if(obj.key === "eating"){
                 obj.amount = 0
-                console.log(this.eachExpense);
               }
             })
           }
@@ -1048,13 +1028,11 @@ export default {
       this.initialTrackerDetails()
         if(this.bills.charAt(0) === "N"){
           this.bills = this.bills.substr(1)
-          // console.log(this.transport);
         }
       if (this.bills.length > 0 && regEx.test(this.bills) === true) {
         this.inputBills = event.target.value
         if(this.inputBills.charAt(0) === "N"){
           this.inputBills = this.inputBills.substr(1)
-          // console.log(this.transport);
         }
         this.bills =  `N${this.inputBills}`
         this.amountTracker.map(amount => {
@@ -1066,12 +1044,10 @@ export default {
               amount: this.inputBills
             }
             this.maxExpense.push(eachExpense)
-            console.log(this.eachExpense);
           }else{
             this.maxExpense.map(obj => {
               if(obj.key === "bills"){
                 obj.amount = this.inputBills
-                console.log(this.eachExpense);
               }
               else{
                 let eachExpense = {
@@ -1144,12 +1120,10 @@ export default {
               amount: 0
             }
             this.maxExpense.push(eachExpense)
-            console.log(this.eachExpense);
           }else{
             this.maxExpense.map(obj => {
               if(obj.key === "bills"){
                 obj.amount = 0
-                console.log(this.eachExpense);
               }
             })
           }
@@ -1181,13 +1155,11 @@ export default {
       this.initialTrackerDetails()
         if(this.family.charAt(0) === "N"){
           this.family = this.family.substr(1)
-          // console.log(this.transport);
         }
       if (this.family.length > 0 && regEx.test(this.family) === true) {
         this.inputFamily = event.target.value
                 if(this.inputFamily.charAt(0) === "N"){
           this.inputFamily = this.inputFamily.substr(1)
-          // console.log(this.transport);
         }
         this.family =  `N${this.inputFamily}`
         this.amountTracker.map(amount => {
@@ -1199,12 +1171,10 @@ export default {
               amount: this.inputFamily
             }
             this.maxExpense.push(eachExpense)
-            console.log(this.eachExpense);
           }else{
             this.maxExpense.map(obj => {
               if(obj.key === "family"){
                 obj.amount = this.inputFamily
-                console.log(this.eachExpense);
               }else{
                 let eachExpense = {
                   key: "family",
@@ -1276,12 +1246,10 @@ export default {
               amount: 0
             }
             this.maxExpense.push(eachExpense)
-            console.log(this.eachExpense);
           }else{
             this.maxExpense.map(obj => {
               if(obj.key === "family"){
                 obj.amount = 0
-                console.log(this.eachExpense);
               }
             })
           }
@@ -1314,13 +1282,11 @@ export default {
       this.initialTrackerDetails()
         if(this.groceries.charAt(0) === "N"){
           this.groceries = this.groceries.substr(1)
-          // console.log(this.transport);
         }
       if (this.groceries.length > 0 && regEx.test(this.groceries) === true) {
         this.inputGroceries = event.target.value
                 if(this.inputGroceries.charAt(0) === "N"){
           this.inputGroceries = this.inputGroceries.substr(1)
-          // console.log(this.transport);
         }
         this.groceries =  `N${this.inputGroceries}`
         this.amountTracker.map(amount => {
@@ -1332,12 +1298,10 @@ export default {
               amount: this.inputGroceries
             }
             this.maxExpense.push(eachExpense)
-            console.log(this.eachExpense);
           }else{
             this.maxExpense.map(obj => {
               if(obj.key === "groceries"){
                 obj.amount = this.inputGroceries
-                console.log(this.eachExpense);
               }else{
                 let eachExpense = {
                   key: "groceries",
@@ -1413,12 +1377,10 @@ export default {
               amount: 0
             }
             this.maxExpense.push(eachExpense)
-            console.log(this.eachExpense);
           }else{
             this.maxExpense.map(obj => {
               if(obj.key === "groceries"){
                 obj.amount = 0
-                console.log(this.eachExpense);
               }
             })
           }
@@ -1450,13 +1412,11 @@ export default {
       this.initialTrackerDetails()
         if(this.shopping.charAt(0) === "N"){
           this.shopping = this.shopping.substr(1)
-          // console.log(this.transport);
         }
       if (this.shopping.length > 0 && regEx.test(this.shopping) === true) {
         this.inputShopping = event.target.value
                 if(this.inputShopping.charAt(0) === "N"){
           this.inputShopping = this.inputShopping.substr(1)
-          // console.log(this.transport);
         }
         this.shopping =  `N${this.inputShopping}`
         this.amountTracker.map(amount => {
@@ -1468,12 +1428,10 @@ export default {
               amount: this.inputShopping
             }
             this.maxExpense.push(eachExpense)
-            console.log(this.eachExpense);
           }else{
             this.maxExpense.map(obj => {
               if(obj.key === "shopping"){
                 obj.amount = this.inputShopping
-                console.log(this.eachExpense);
               }else{
                 let eachExpense = {
                   key: "shopping",
@@ -1549,12 +1507,10 @@ export default {
               amount: 0
             }
             this.maxExpense.push(eachExpense)
-            console.log(this.eachExpense);
           }else{
             this.maxExpense.map(obj => {
               if(obj.key === "shopping"){
                 obj.amount = 0
-                console.log(this.eachExpense);
               }
             })
           }
@@ -1587,13 +1543,11 @@ export default {
       this.initialTrackerDetails()
         if(this.care.charAt(0) === "N"){
           this.care = this.care.substr(1)
-          // console.log(this.transport);
         }
       if (this.care.length > 0 && regEx.test(this.care) === true) {
         this.inputCare = event.target.value
                 if(this.inputCare.charAt(0) === "N"){
           this.inputCare = this.inputCare.substr(1)
-          // console.log(this.transport);
         }
         this.care =  `N${this.inputCare}`
         this.amountTracker.map(amount => {
@@ -1605,12 +1559,10 @@ export default {
               amount: this.inputCare
             }
             this.maxExpense.push(eachExpense)
-            console.log(this.eachExpense);
           }else{
             this.maxExpense.map(obj => {
               if(obj.key === "care"){
                 obj.amount = this.inputCare
-                console.log(this.eachExpense);
               }else{
                 let eachExpense = {
                   key: "care",
@@ -1682,12 +1634,10 @@ export default {
               amount: 0
             }
             this.maxExpense.push(eachExpense)
-            console.log(this.eachExpense);
           }else{
             this.maxExpense.map(obj => {
               if(obj.key === "care"){
                 obj.amount = 0
-                console.log(this.eachExpense);
               }
             })
           }
@@ -1719,13 +1669,11 @@ export default {
       this.initialTrackerDetails()
         if(this.vacation.charAt(0) === "N"){
           this.vacation = this.vacation.substr(1)
-          // console.log(this.transport);
         }
       if (this.vacation.length > 0 && regEx.test(this.vacation) === true) {
         this.inputVacation = event.target.value
                 if(this.inputVacation.charAt(0) === "N"){
           this.inputVacation = this.inputVacation.substr(1)
-          // console.log(this.transport);
         }
         this.vacation =  `N${this.inputVacation}`
         this.amountTracker.map(amount => {
@@ -1737,12 +1685,10 @@ export default {
               amount: this.inputVacation
             }
             this.maxExpense.push(eachExpense)
-            console.log(this.eachExpense);
           }else{
             this.maxExpense.map(obj => {
               if(obj.key === "vacation"){
                 obj.amount = this.inputVacation
-                console.log(this.eachExpense);
               }else{
                 let eachExpense = {
                   key: "vacation",
@@ -1817,12 +1763,10 @@ export default {
               amount: 0
             }
             this.maxExpense.push(eachExpense)
-            console.log(this.eachExpense);
           }else{
             this.maxExpense.map(obj => {
               if(obj.key === "vacation"){
                 obj.amount = 0
-                console.log(this.eachExpense);
               }
             })
           }
@@ -1854,13 +1798,11 @@ export default {
       this.initialTrackerDetails()
         if(this.payroll.charAt(0) === "N"){
           this.payroll = this.payroll.substr(1)
-          // console.log(this.transport);
         }
       if (this.payroll.length > 0 && regEx.test(this.payroll) === true) {
         this.inputPayroll = event.target.value
                 if(this.inputPayroll.charAt(0) === "N"){
           this.inputPayroll = this.inputPayroll.substr(1)
-          // console.log(this.transport);
         }
         this.payroll =  `N${this.inputPayroll}`
         this.amountTracker.map(amount => {
@@ -1872,12 +1814,10 @@ export default {
               amount: this.inputPayroll
             }
             this.maxExpense.push(eachExpense)
-            console.log(this.eachExpense);
           }else{
             this.maxExpense.map(obj => {
               if(obj.key === "payroll"){
                 obj.amount = this.inputPayroll
-                console.log(this.eachExpense);
               }else{
                 let eachExpense = {
                   key: "payroll",
@@ -1953,12 +1893,10 @@ export default {
               amount: 0
             }
             this.maxExpense.push(eachExpense)
-            console.log(this.eachExpense);
           }else{
             this.maxExpense.map(obj => {
               if(obj.key === "payroll"){
                 obj.amount = 0
-                console.log(this.eachExpense);
               }
             })
           }
@@ -1990,7 +1928,6 @@ export default {
       this.initialTrackerDetails()
         if(this.entertainment.charAt(0) === "N"){
           this.entertainment = this.entertainment.substr(1)
-          // console.log(this.transport);
         }
       if (
         this.entertainment.length > 0 &&
@@ -1999,7 +1936,6 @@ export default {
         this.inputEntertainment = event.target.value
                 if(this.inputEntertainment.charAt(0) === "N"){
           this.inputEntertainment = this.inputEntertainment.substr(1)
-          // console.log(this.transport);
         }
         this.entertainment =  `N${this.inputEntertainment}`
         this.amountTracker.map(amount => {
@@ -2011,12 +1947,10 @@ export default {
               amount: this.inputEntertainment
             }
             this.maxExpense.push(eachExpense)
-            console.log(this.eachExpense);
           }else{
             this.maxExpense.map(obj => {
               if(obj.key === "entertainment"){
                 obj.amount = this.inputEntertainment
-                console.log(this.eachExpense);
               }else{
                 let eachExpense = {
                   key: "entertainment",
@@ -2091,12 +2025,10 @@ export default {
               amount: 0
             }
             this.maxExpense.push(eachExpense)
-            console.log(this.eachExpense);
           }else{
             this.maxExpense.map(obj => {
               if(obj.key === "entertainment"){
                 obj.amount = 0
-                console.log(this.eachExpense);
               }
             })
           }
@@ -2128,13 +2060,11 @@ export default {
       this.initialTrackerDetails()
         if(this.investment.charAt(0) === "N"){
           this.investment = this.investment.substr(1)
-          // console.log(this.transport);
         }
       if (this.investment.length > 0 && regEx.test(this.investment) === true) {
         this.inputInvestment = event.target.value
                 if(this.inputInvestment.charAt(0) === "N"){
           this.inputInvestment = this.inputInvestment.substr(1)
-          // console.log(this.transport);
         }
         this.investment =  `N${this.inputInvestment}`
         this.amountTracker.map(amount => {
@@ -2146,12 +2076,10 @@ export default {
               amount: this.inputInvestment
             }
             this.maxExpense.push(eachExpense)
-            console.log(this.eachExpense);
           }else{
             this.maxExpense.map(obj => {
               if(obj.key === "investment"){
                 obj.amount = this.inputInvestment
-                console.log(this.eachExpense);
               }else{
                 let eachExpense = {
                   key: "investment",
@@ -2226,12 +2154,10 @@ export default {
               amount: 0
             }
             this.maxExpense.push(eachExpense)
-            console.log(this.eachExpense);
           }else{
             this.maxExpense.map(obj => {
               if(obj.key === "investment"){
                 obj.amount = 0
-                console.log(this.eachExpense);
               }
             })
           }
