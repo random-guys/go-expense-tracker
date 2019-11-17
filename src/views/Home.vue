@@ -106,6 +106,7 @@ export default {
     return {};
   },
   mounted() {
+    localStorage.clear()
     const tl = new TimelineMax();
 
     tl.fromTo(
