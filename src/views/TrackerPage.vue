@@ -37,7 +37,7 @@
       <div class="card-container">
         <!-- <div class="card-container__card-row"> -->
         <div class="card-transport transport">
-          <input type="radio" name="" value="" class="radio">
+          <span class="radio opacity-zero transportRadio" @click="resetTransportCard()">&#215;</span>
           <img src="../assets/images/transportation-icon.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text transportText">Transport</p>
           <input
@@ -53,7 +53,7 @@
           <p class="error errorMsgTransport">!!!</p>
         </div>
         <div class="card-transfer transfer">
-          <input type="radio" name="" value="" class="radio">
+          <span class="radio opacity-zero transferRadio" @click="resetTransferCard()">&#215;</span>
           <img src="../assets/images/transfer.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text transferText">Transfer</p>
           <input
@@ -69,7 +69,8 @@
           <p class="error errorMsgTransfer">!!!</p>
         </div>
         <div class="card-eating eating">
-          <input type="radio" name="" value="" class="radio">
+          <span class="radio opacity-zero eatingRadio" @click="resetEatingCard()">&#215;</span>
+          <!-- <input type="radio" name="" value="" class="radio"> -->
           <img src="../assets/images/eating.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text eatingText">Eating Out</p>
           <input
@@ -85,7 +86,8 @@
           <p class="error errorMsgEating">!!!</p>
         </div>
         <div class="card-bills bills">
-          <input type="radio" name="" value="" class="radio">
+          <span class="radio opacity-zero billsRadio" @click="resetBillsCard()">&#215;</span>
+          <!-- <input type="radio" name="" value="" class="radio"> -->
           <img src="../assets/images/bills.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text billsText">Bills</p>
           <input
@@ -103,7 +105,8 @@
         <!-- </div> -->
         <!-- <div class="card-container__card-row"> -->
         <div class="card-family family">
-          <input type="radio" name="" value="" class="radio">
+          <span class="radio opacity-zero familyRadio" @click="resetFamilyCard()">&#215;</span>
+          <!-- <input type="radio" name="" value="" class="radio"> -->
           <img src="../assets/images/family.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text familyText">Family</p>
           <input
@@ -119,7 +122,8 @@
           <p class="error errorMsgFamily">!!!</p>
         </div>
         <div class="card-groceries groceries">
-          <input type="radio" name="" value="" class="radio">
+          <span class="radio opacity-zero groceriesRadio" @click="resetGroceriesCard()">&#215;</span>
+          <!-- <input type="radio" name="" value="" class="radio"> -->
           <img src="../assets/images/Groceries.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text groceriesText">Groceries</p>
           <input
@@ -135,7 +139,8 @@
           <p class="error errorMsgGroceries">!!!</p>
         </div>
         <div class="card-shopping shopping">
-          <input type="radio" name="" value="" class="radio">
+          <span class="radio opacity-zero shoppingRadio" @click="resetShoppingCard()">&#215;</span>
+          <!-- <input type="radio" name="" value="" class="radio"> -->
           <img src="../assets/images/shopping.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text shoppingText">Shopping</p>
           <input
@@ -151,7 +156,8 @@
           <p class="error errorMsgShopping">!!!</p>
         </div>
         <div class="card-care care">
-          <input type="radio" name="" value="" class="radio">
+          <span class="radio opacity-zero careRadio" @click="resetCareCard()">&#215;</span>
+          <!-- <input type="radio" name="" value="" class="radio"> -->
           <img src="../assets/images/personal-care.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text careText">Personal Care</p>
           <input
@@ -169,7 +175,8 @@
         <!-- </div> -->
         <!-- <div class="card-container__card-row"> -->
         <div class="card-vacation vacation">
-          <input type="radio" name="" value="" class="radio">
+          <span class="radio opacity-zero vacationRadio" @click="resetVacationCard()">&#215;</span>
+          <!-- <input type="radio" name="" value="" class="radio"> -->
           <img src="../assets/images/vercation.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text vacationText">vacation</p>
           <input
@@ -185,7 +192,8 @@
           <p class="error errorMsgVacation">!!!</p>
         </div>
         <div class="card-payroll payroll">
-          <input type="radio" name="" value="" class="radio">
+          <span class="radio opacity-zero paypallRadio" @click="resetPaypallCard()">&#215;</span>
+          <!-- <input type="radio" name="" value="" class="radio"> -->
           <img src="../assets/images/payroll.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text payrollText">Payroll</p>
           <input
@@ -201,7 +209,8 @@
           <p class="error errorMsgPayroll">!!!</p>
         </div>
         <div class="card-entertainment entertainment">
-          <input type="radio" name="" value="" class="radio">
+          <span class="radio opacity-zero entertainmentRadio" @click="resetEntertainmentCard()">&#215;</span>
+          <!-- <input type="radio" name="" value="" class="radio"> -->
           <img src="../assets/images/entertainment.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text entertainmentText">Entertainment</p>
           <input
@@ -217,7 +226,8 @@
           <p class="error errorMsgEntertainment">!!!</p>
         </div>
         <div class="card-investment investment">
-          <input type="radio" name="" value="" class="radio">
+          <span class="radio opacity-zero investmentRadio" @click="resetInvestmentCard()">&#215;</span>
+          <!-- <input type="radio" name="" value="" class="radio"> -->
           <img src="../assets/images/investment.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text investmentText">Investment</p>
           <input
@@ -377,90 +387,90 @@ export default {
       { opacity: 0, ease: Power2.easeInOut },
       { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut }
     )
-      .fromTo(
-        ".family",
-        0.1,
-        { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-        0.5
-      )
-      .fromTo(
-        ".eating",
-        0.1,
-        { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-        0.6
-      )
-      .fromTo(
-        ".vacation",
-        0.1,
-        { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-        0.7
-      )
-      .fromTo(
-        ".care",
-        0.1,
-        { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-        0.8
-      )
-      .fromTo(
-        ".transport",
-        0.1,
-        { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-        0.9
-      )
-      .fromTo(
-        ".groceries",
-        0.1,
-        { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-        1
-      )
-      .fromTo(
-        ".investment",
-        0.1,
-        { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-        1.1
-      )
-      .fromTo(
-        ".bills",
-        0.1,
-        { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-        1.2
-      )
-      .fromTo(
-        ".transfer",
-        0.1,
-        { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-        1.3
-      )
-      .fromTo(
-        ".payroll",
-        0.1,
-        { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-        1.4
-      )
-      .fromTo(
-        ".entertainment",
-        0.1,
-        { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-        1.5
-      )
-      .fromTo(
-        ".shopping",
-        0.1,
-        { opacity: 0, ease: Power2.easeInOut },
-        { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-        1.6
-      );
+      // .fromTo(
+      //   ".family",
+      //   0.1,
+      //   { opacity: 0, ease: Power2.easeInOut },
+      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+      //   0.5
+      // )
+      // .fromTo(
+      //   ".eating",
+      //   0.1,
+      //   { opacity: 0, ease: Power2.easeInOut },
+      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+      //   0.6
+      // )
+      // .fromTo(
+      //   ".vacation",
+      //   0.1,
+      //   { opacity: 0, ease: Power2.easeInOut },
+      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+      //   0.7
+      // )
+      // .fromTo(
+      //   ".care",
+      //   0.1,
+      //   { opacity: 0, ease: Power2.easeInOut },
+      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+      //   0.8
+      // )
+      // .fromTo(
+      //   ".transport",
+      //   0.1,
+      //   { opacity: 0, ease: Power2.easeInOut },
+      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+      //   0.9
+      // )
+      // .fromTo(
+      //   ".groceries",
+      //   0.1,
+      //   { opacity: 0, ease: Power2.easeInOut },
+      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+      //   1
+      // )
+      // .fromTo(
+      //   ".investment",
+      //   0.1,
+      //   { opacity: 0, ease: Power2.easeInOut },
+      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+      //   1.1
+      // )
+      // .fromTo(
+      //   ".bills",
+      //   0.1,
+      //   { opacity: 0, ease: Power2.easeInOut },
+      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+      //   1.2
+      // )
+      // .fromTo(
+      //   ".transfer",
+      //   0.1,
+      //   { opacity: 0, ease: Power2.easeInOut },
+      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+      //   1.3
+      // )
+      // .fromTo(
+      //   ".payroll",
+      //   0.1,
+      //   { opacity: 0, ease: Power2.easeInOut },
+      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+      //   1.4
+      // )
+      // .fromTo(
+      //   ".entertainment",
+      //   0.1,
+      //   { opacity: 0, ease: Power2.easeInOut },
+      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+      //   1.5
+      // )
+      // .fromTo(
+      //   ".shopping",
+      //   0.1,
+      //   { opacity: 0, ease: Power2.easeInOut },
+      //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
+      //   1.6
+      // );
     // this.btnDisable()
   },
   methods: {
@@ -629,6 +639,246 @@ export default {
         this.$router.push("/result");
       }
     },
+    resetTransportCard(){
+      this.transport = ""
+      const tl = new TimelineMax();
+
+      tl.to(
+        ".transport",
+        0.5,
+        { backgroundColor: "#ffffff", color: "#3a3737" },
+        0.1
+      )
+        .to(".transportText", 0.5, { color: "#3a3737" }, 0.1)
+        .to(
+          ".transportInput",
+          0.5,
+          { backgroundColor: "#f1f1f1", color: "#252525" },
+          0.1
+        )
+        .to(".transportRadio", 0.5, {opacity: "0", pointerEvents: "none"}, 0.1)
+        .to(".errorMsgTransport", 0.5, { display: "none" }, 0.1);
+    },
+    resetTransferCard(){
+      this.transfer = ""
+      const tl = new TimelineMax();
+
+      tl.to(
+        ".transfer",
+        0.5,
+        { backgroundColor: "#ffffff", color: "#3a3737" },
+        0.1
+      )
+        .to(".transferText", 0.5, { color: "#3a3737" }, 0.1)
+        .to(
+          ".transferInput",
+          0.5,
+          { backgroundColor: "#f1f1f1", color: "#252525" },
+          0.1
+        )
+        .to(".transferRadio", 0.5, {opacity: "0", pointerEvents: "none"}, 0.1)
+        .to(".errorMsgTransfer", 0.5, { display: "none" }, 0.1);
+    },
+    resetEatingCard(){
+      this.eating = ""
+      const tl = new TimelineMax();
+
+      tl.to(
+        ".eating",
+        0.5,
+        { backgroundColor: "#ffffff", color: "#3a3737" },
+        0.1
+      )
+        .to(".eatingText", 0.5, { color: "#3a3737" }, 0.1)
+        .to(
+          ".eatingInput",
+          0.5,
+          { backgroundColor: "#f1f1f1", color: "#252525" },
+          0.1
+        )
+        .to(".eatingRadio", 0.5, {opacity: "0", pointerEvents: "none"}, 0.1)
+        .to(".errorMsgEating", 0.5, { display: "none" }, 0.1);
+    },
+    resetBillsCard(){
+      this.bills = ""
+      const tl = new TimelineMax();
+
+      tl.to(
+        ".bills",
+        0.5,
+        { backgroundColor: "#ffffff", color: "#3a3737" },
+        0.1
+      )
+        .to(".billsText", 0.5, { color: "#3a3737" }, 0.1)
+        .to(
+          ".billsInput",
+          0.5,
+          { backgroundColor: "#f1f1f1", color: "#252525" },
+          0.1
+        )
+        .to(".billsRadio", 0.5, {opacity: "0", pointerEvents: "none"}, 0.1)
+        .to(".errorMsgBills", 0.5, { display: "none" }, 0.1);
+    },
+    resetFamilyCard(){
+      this.family = ""
+      const tl = new TimelineMax();
+
+      tl.to(
+        ".family",
+        0.5,
+        { backgroundColor: "#ffffff", color: "#3a3737" },
+        0.1
+      )
+        .to(".familyText", 0.5, { color: "#3a3737" }, 0.1)
+        .to(
+          ".familyInput",
+          0.5,
+          { backgroundColor: "#f1f1f1", color: "#252525" },
+          0.1
+        )
+        .to(".familyRadio", 0.5, {opacity: "0", pointerEvents: "none"}, 0.1)
+        .to(".errorMsgFamily", 0.5, { display: "none" }, 0.1);
+    },
+    resetGroceriesCard(){
+      this.groceries = ""
+      const tl = new TimelineMax();
+
+      tl.to(
+        ".groceries",
+        0.5,
+        { backgroundColor: "#ffffff", color: "#3a3737" },
+        0.1
+      )
+        .to(".groceriesText", 0.5, { color: "#3a3737" }, 0.1)
+        .to(
+          ".groceriesInput",
+          0.5,
+          { backgroundColor: "#f1f1f1", color: "#252525" },
+          0.1
+        )
+        .to(".groceriesRadio", 0.5, {opacity: "0", pointerEvents: "none"}, 0.1)
+        .to(".errorMsgGroceries", 0.5, { display: "none" }, 0.1);
+    },
+    resetShoppingCard(){
+      this.shopping = ""
+      const tl = new TimelineMax();
+
+      tl.to(
+        ".shopping",
+        0.5,
+        { backgroundColor: "#ffffff", color: "#3a3737" },
+        0.1
+      )
+        .to(".shoppingText", 0.5, { color: "#3a3737" }, 0.1)
+        .to(
+          ".shoppingInput",
+          0.5,
+          { backgroundColor: "#f1f1f1", color: "#252525" },
+          0.1
+        )
+        .to(".shoppingRadio", 0.5, {opacity: "0", pointerEvents: "none"}, 0.1)
+        .to(".errorMsgShopping", 0.5, { display: "none" }, 0.1);
+    },
+    resetCareCard(){
+      this.care = ""
+      const tl = new TimelineMax();
+
+      tl.to(
+        ".care",
+        0.5,
+        { backgroundColor: "#ffffff", color: "#3a3737" },
+        0.1
+      )
+        .to(".careText", 0.5, { color: "#3a3737" }, 0.1)
+        .to(
+          ".careInput",
+          0.5,
+          { backgroundColor: "#f1f1f1", color: "#252525" },
+          0.1
+        )
+        .to(".careRadio", 0.5, {opacity: "0", pointerEvents: "none"}, 0.1)
+        .to(".errorMsgCare", 0.5, { display: "none" }, 0.1);
+    },
+    resetVacationCard(){
+      this.vacation = ""
+      const tl = new TimelineMax();
+
+      tl.to(
+        ".vacation",
+        0.5,
+        { backgroundColor: "#ffffff", color: "#3a3737" },
+        0.1
+      )
+        .to(".vacationText", 0.5, { color: "#3a3737" }, 0.1)
+        .to(
+          ".vacationInput",
+          0.5,
+          { backgroundColor: "#f1f1f1", color: "#252525" },
+          0.1
+        )
+        .to(".vacationRadio", 0.5, {opacity: "0", pointerEvents: "none"}, 0.1)
+        .to(".errorMsgVacation", 0.5, { display: "none" }, 0.1);
+    },
+    resetPaypallCard(){
+      this.payroll = ""
+      const tl = new TimelineMax();
+
+      tl.to(
+        ".paypall",
+        0.5,
+        { backgroundColor: "#ffffff", color: "#3a3737" },
+        0.1
+      )
+        .to(".paypallText", 0.5, { color: "#3a3737" }, 0.1)
+        .to(
+          ".paypallInput",
+          0.5,
+          { backgroundColor: "#f1f1f1", color: "#252525" },
+          0.1
+        )
+        .to(".paypallRadio", 0.5, {opacity: "0", pointerEvents: "none"}, 0.1)
+        .to(".errorMsgVacation", 0.5, { display: "none" }, 0.1);
+    },
+    resetEntertainmentCard(){
+      this.entertainment = ""
+      const tl = new TimelineMax();
+
+      tl.to(
+        ".entertainment",
+        0.5,
+        { backgroundColor: "#ffffff", color: "#3a3737" },
+        0.1
+      )
+        .to(".entertainmentText", 0.5, { color: "#3a3737" }, 0.1)
+        .to(
+          ".entertainmentInput",
+          0.5,
+          { backgroundColor: "#f1f1f1", color: "#252525" },
+          0.1
+        )
+        .to(".entertainmentRadio", 0.5, {opacity: "0", pointerEvents: "none"}, 0.1)
+        .to(".errorMsgEntertainment", 0.5, { display: "none" }, 0.1);
+    },
+    resetInvestmentCard(){
+      this.investment = ""
+      const tl = new TimelineMax();
+
+      tl.to(
+        ".investment",
+        0.5,
+        { backgroundColor: "#ffffff", color: "#3a3737" },
+        0.1
+      )
+        .to(".investmentText", 0.5, { color: "#3a3737" }, 0.1)
+        .to(
+          ".investmentInput",
+          0.5,
+          { backgroundColor: "#f1f1f1", color: "#252525" },
+          0.1
+        )
+        .to(".investmentRadio", 0.5, {opacity: "0", pointerEvents: "none"}, 0.1)
+        .to(".errorMsgInvestment", 0.5, { display: "none" }, 0.1);
+    },
     inputTransportationAmount() {
       let regEx = /^[0-9]*$/gm;
       this.initialTrackerDetails()
@@ -685,7 +935,8 @@ export default {
             { backgroundColor: "#1b5ece", color: "#ffffff" },
             0.1
           )
-          .to(".errorMsgTransport", 0.5, { display: "none" }, 0.1);
+          .to(".errorMsgTransport", 0.5, { display: "none" }, 0.1)
+          .to(".transportRadio", 0.5, {opacity: "1", pointerEvents: "visible",   cursor: "pointer"}, 0.1)
         // this.btnEnabled()
         this.inputAmount();
       } else if (
@@ -707,7 +958,8 @@ export default {
             0.5,
             { backgroundColor: "#f1f1f1", color: "#252525" },
             0.1
-          );
+          )
+          .to(".transportRadio", 0.5, {opacity: "1", pointerEvents: "visible",   cursor: "pointer"}, 0.1)
         TweenMax.fromTo(
           ".errorMsgTransport",
           0.5,
@@ -759,7 +1011,8 @@ export default {
             { backgroundColor: "#f1f1f1", color: "#252525" },
             0.1
           )
-          .to(".errorMsgTransport", 0.5, { display: "none" }, 0.1);
+          .to(".errorMsgTransport", 0.5, { display: "none" }, 0.1)
+
         // this.btnDisable() 
         this.inputAmount();
       }
@@ -817,7 +1070,9 @@ export default {
             { backgroundColor: "#D0001B", color: "#ffffff" },
             0.1
           )
-          .to(".errorMsgTransfer", 0.5, { display: "none" }, 0.1);
+          .to(".errorMsgTransfer", 0.5, { display: "none" }, 0.1)
+          .to(".transferRadio", 0.5, {opacity: "1", pointerEvents: "visible",   cursor: "pointer"}, 0.1)
+          ;
         // this.btnEnabled()
         this.inputAmount();
       } else if (
@@ -839,7 +1094,8 @@ export default {
             0.5,
             { backgroundColor: "#f1f1f1", color: "#252525" },
             0.1
-          );
+          )
+          .to(".transferRadio", 0.5, {opacity: "1", pointerEvents: "visible",   cursor: "pointer"}, 0.1);
         TweenMax.fromTo(
           ".errorMsgTransfer",
           0.5,
@@ -948,7 +1204,8 @@ export default {
             { backgroundColor: "#14777C", color: "#ffffff" },
             0.1
           )
-          .to(".errorMsgEating", 0.5, { display: "none" }, 0.1);
+          .to(".errorMsgEating", 0.5, { display: "none" }, 0.1)
+          .to(".eatingRadio", 0.5, {opacity: "1", pointerEvents: "visible",   cursor: "pointer"}, 0.1)
         // this.btnEnabled()
         this.inputAmount();
       } else if (this.eating.length > 0 && regEx.test(this.eating) === false) {
@@ -967,7 +1224,8 @@ export default {
             0.5,
             { backgroundColor: "#f1f1f1", color: "#252525" },
             0.1
-          );
+          )
+          .to(".eatingRadio", 0.5, {opacity: "1", pointerEvents: "visible",   cursor: "pointer"}, 0.1)
         TweenMax.fromTo(
           ".errorMsgEating",
           0.5,
@@ -1076,7 +1334,8 @@ export default {
             { backgroundColor: "#D0001B", color: "#ffffff" },
             0.1
           )
-          .to(".errorMsgBills", 0.5, { display: "none" }, 0.1);
+          .to(".errorMsgBills", 0.5, { display: "none" }, 0.1)
+          .to(".billsRadio", 0.5, {opacity: "1", pointerEvents: "visible",   cursor: "pointer"}, 0.1)
         // this.btnEnabled()
         this.inputAmount();
       } else if (this.bills.length > 0 && regEx.test(this.bills) === false) {
@@ -1095,7 +1354,8 @@ export default {
             0.5,
             { backgroundColor: "#f1f1f1", color: "#252525" },
             0.1
-          );
+          )
+          .to(".billsRadio", 0.5, {opacity: "1", pointerEvents: "visible",   cursor: "pointer"}, 0.1)
         TweenMax.fromTo(
           ".errorMsgBills",
           0.5,
@@ -1202,7 +1462,8 @@ export default {
             { backgroundColor: "#5D29DE", color: "#ffffff" },
             0.1
           )
-          .to(".errorMsgFamily", 0.5, { display: "none" }, 0.1);
+          .to(".errorMsgFamily", 0.5, { display: "none" }, 0.1)
+          .to(".familyRadio", 0.5, {opacity: "1", pointerEvents: "visible",   cursor: "pointer"}, 0.1)
         // this.btnEnabled()
         this.inputAmount();
       } else if (this.family.length > 0 && regEx.test(this.family) === false) {
@@ -1221,7 +1482,8 @@ export default {
             0.5,
             { backgroundColor: "#f1f1f1", color: "#252525" },
             0.1
-          );
+          )
+          .to(".familyRadio", 0.5, {opacity: "1", pointerEvents: "visible",   cursor: "pointer"}, 0.1)
         TweenMax.fromTo(
           ".errorMsgFamily",
           0.5,
@@ -1329,7 +1591,8 @@ export default {
             { backgroundColor: "#14777C", color: "#ffffff" },
             0.1
           )
-          .to(".errorMsgGroceries", 0.5, { display: "none" }, 0.1);
+          .to(".errorMsgGroceries", 0.5, { display: "none" }, 0.1)
+          .to(".groceriesRadio", 0.5, {opacity: "1", pointerEvents: "visible",   cursor: "pointer"}, 0.1)
         // this.btnEnabled()
         this.inputAmount();
       } else if (
@@ -1352,7 +1615,8 @@ export default {
             0.5,
             { backgroundColor: "#f1f1f1", color: "#252525" },
             0.1
-          );
+          )
+          .to(".groceriesRadio", 0.5, {opacity: "1", pointerEvents: "visible",   cursor: "pointer"}, 0.1)
         TweenMax.fromTo(
           ".errorMsgGroceries",
           0.5,
@@ -1459,7 +1723,8 @@ export default {
             { backgroundColor: "#F1663D", color: "#ffffff" },
             0.1
           )
-          .to(".errorMsgShopping", 0.5, { display: "none" }, 0.1);
+          .to(".errorMsgShopping", 0.5, { display: "none" }, 0.1)
+          .to(".shoppingRadio", 0.5, {opacity: "1", pointerEvents: "visible",   cursor: "pointer"}, 0.1)
         // this.btnEnabled()
         this.inputAmount();
       } else if (
@@ -1482,7 +1747,8 @@ export default {
             0.5,
             { backgroundColor: "#f1f1f1", color: "#252525" },
             0.1
-          );
+          )
+          .to(".shoppingRadio", 0.5, {opacity: "1", pointerEvents: "visible",   cursor: "pointer"}, 0.1)
         TweenMax.fromTo(
           ".errorMsgShopping",
           0.5,
@@ -1590,7 +1856,8 @@ export default {
             { backgroundColor: "#1b5ece", color: "#ffffff" },
             0.1
           )
-          .to(".errorMsgCare", 0.5, { display: "none" }, 0.1);
+          .to(".errorMsgCare", 0.5, { display: "none" }, 0.1)
+          .to(".careRadio", 0.5, {opacity: "1", pointerEvents: "visible",   cursor: "pointer"}, 0.1)
         // this.btnEnabled()
         this.inputAmount();
       } else if (this.care.length > 0 && regEx.test(this.care) === false) {
@@ -1609,7 +1876,8 @@ export default {
             0.5,
             { backgroundColor: "#f1f1f1", color: "#252525" },
             0.1
-          );
+          )
+          .to(".careRadio", 0.5, {opacity: "1", pointerEvents: "visible",   cursor: "pointer"}, 0.1)
         TweenMax.fromTo(
           ".errorMsgCare",
           0.5,
@@ -1716,7 +1984,8 @@ export default {
             { backgroundColor: "#F1663D", color: "#ffffff" },
             0.1
           )
-          .to(".errorMsgVacation", 0.5, { display: "none" }, 0.1);
+          .to(".errorMsgVacation", 0.5, { display: "none" }, 0.1)
+          .to(".vacationRadio", 0.5, {opacity: "1", pointerEvents: "visible",   cursor: "pointer"}, 0.1)
         // this.btnEnabled()
         this.inputAmount();
       } else if (
@@ -1738,7 +2007,8 @@ export default {
             0.5,
             { backgroundColor: "#f1f1f1", color: "#252525" },
             0.1
-          );
+          )
+          .to(".vacationRadio", 0.5, {opacity: "1", pointerEvents: "visible",   cursor: "pointer"}, 0.1)
         TweenMax.fromTo(
           ".errorMsgVacation",
           0.5,
@@ -1845,7 +2115,8 @@ export default {
             { backgroundColor: "#1b5ece", color: "#ffffff" },
             0.1
           )
-          .to(".errorMsgPayroll", 0.5, { display: "none" }, 0.1);
+          .to(".errorMsgPayroll", 0.5, { display: "none" }, 0.1)
+          .to(".payrollRadio", 0.5, {opacity: "1", pointerEvents: "visible",   cursor: "pointer"}, 0.1)
         // this.btnEnabled()
         this.inputAmount();
       } else if (
@@ -1868,7 +2139,8 @@ export default {
             0.5,
             { backgroundColor: "#f1f1f1", color: "#252525" },
             0.1
-          );
+          )
+          .to(".payrollRadio", 0.5, {opacity: "1", pointerEvents: "visible",   cursor: "pointer"}, 0.1)
         TweenMax.fromTo(
           ".errorMsgPayroll",
           0.5,
@@ -1978,7 +2250,8 @@ export default {
             { backgroundColor: "#5D29DE", color: "#ffffff" },
             0.1
           )
-          .to(".errorMsgEntertainment", 0.5, { display: "none" }, 0.1);
+          .to(".errorMsgEntertainment", 0.5, { display: "none" }, 0.1)
+          .to(".entertainmentRadio", 0.5, {opacity: "1", pointerEvents: "visible",   cursor: "pointer"}, 0.1)
         // this.btnEnabled()
         this.inputAmount();
       } else if (
@@ -2000,7 +2273,8 @@ export default {
             0.5,
             { backgroundColor: "#f1f1f1", color: "#252525" },
             0.1
-          );
+          )
+          .to(".entertainmentRadio", 0.5, {opacity: "1", pointerEvents: "visible",   cursor: "pointer"}, 0.1)
         TweenMax.fromTo(
           ".errorMsgEntertainment",
           0.5,
@@ -2107,7 +2381,8 @@ export default {
             { backgroundColor: "#14777C", color: "#ffffff" },
             0.1
           )
-          .to(".errorMsgInvestment", 0.5, { display: "none" }, 0.1);
+          .to(".errorMsgInvestment", 0.5, { display: "none" }, 0.1)
+          .to(".investmentRadio", 0.5, {opacity: "1", pointerEvents: "visible",   cursor: "pointer"}, 0.1)
         // this.btnEnabled()
         this.inputAmount();
       } else if (
@@ -2129,7 +2404,8 @@ export default {
             0.5,
             { backgroundColor: "#f1f1f1", color: "#252525" },
             0.1
-          );
+          )
+          .to(".investmentRadio", 0.5, {opacity: "1", pointerEvents: "visible",   cursor: "pointer"}, 0.1)
         TweenMax.fromTo(
           ".errorMsgInvestment",
           0.5,
