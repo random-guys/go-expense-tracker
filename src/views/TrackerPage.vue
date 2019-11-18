@@ -669,7 +669,7 @@ export default {
           }
         localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
-        this.$refs.refTransfer.focus()
+        // this.$refs.refTransfer.focus()
         const tl = new TimelineMax();
 
         tl.to(
@@ -740,7 +740,7 @@ export default {
             })
           }
         localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        this.$refs.refTransfer.focus()
+        // this.$refs.refTransfer.focus()
 
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
 
@@ -801,7 +801,7 @@ export default {
           }
         localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
-        this.$refs.refEating.focus()
+        // this.$refs.refEating.focus()
         const tl = new TimelineMax();
 
         tl.to(
@@ -872,7 +872,7 @@ export default {
             })
           }
         localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        this.$refs.refTransfer.focus()
+        // this.$refs.refTransfer.focus()
 
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         const tl = new TimelineMax();
@@ -932,7 +932,7 @@ export default {
           }
         localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
-        this.$refs.refBills.focus()
+        // this.$refs.refBills.focus()
         const tl = new TimelineMax();
 
         tl.to(
@@ -1000,7 +1000,7 @@ export default {
             })
           }
         localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        this.$refs.refBills.focus()
+        // this.$refs.refBills.focus()
 
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         const tl = new TimelineMax();
@@ -1060,7 +1060,7 @@ export default {
           }
         localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
-        this.$refs.refFamily.focus()
+        // this.$refs.refFamily.focus()
         const tl = new TimelineMax();
 
         tl.to(
@@ -1128,7 +1128,7 @@ export default {
             })
           }
         localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        this.$refs.refFamily.focus()
+        // this.$refs.refFamily.focus()
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         const tl = new TimelineMax();
 
@@ -1186,7 +1186,7 @@ export default {
           }
         localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
-        this.$refs.refGroceries.focus()
+        // this.$refs.refGroceries.focus()
         const tl = new TimelineMax();
 
         tl.to(
@@ -1254,7 +1254,7 @@ export default {
             })
           }
         localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        this.$refs.refGroceries.focus()
+        // this.$refs.refGroceries.focus()
 
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         const tl = new TimelineMax();
@@ -1313,7 +1313,7 @@ export default {
           }
         localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
-        this.$refs.refShopping.focus()
+        // this.$refs.refShopping.focus()
         const tl = new TimelineMax();
 
         tl.to(
@@ -1385,7 +1385,7 @@ export default {
             })
           }
         localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        this.$refs.refShopping.focus()
+        // this.$refs.refShopping.focus()
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         const tl = new TimelineMax();
 
@@ -1443,7 +1443,7 @@ export default {
           }
         localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
-        this.$refs.refCare.focus()
+        // this.$refs.refCare.focus()
         const tl = new TimelineMax();
 
         tl.to(
@@ -1515,7 +1515,7 @@ export default {
             })
           }
         localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        this.$refs.refCare.focus()
+        // this.$refs.refCare.focus()
 
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         const tl = new TimelineMax();
@@ -1574,7 +1574,7 @@ export default {
           }
         localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
-        this.$refs.refVacation.focus()
+        // this.$refs.refVacation.focus()
         const tl = new TimelineMax();
 
         tl.to(
@@ -1642,7 +1642,7 @@ export default {
             })
           }
         localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        this.$refs.refVacation.focus()
+        // this.$refs.refVacation.focus()
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         const tl = new TimelineMax();
 
@@ -1700,7 +1700,7 @@ export default {
           }
         localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
-        this.$refs.refPayroll.focus()
+        // this.$refs.refPayroll.focus()
         const tl = new TimelineMax();
 
         tl.to(
@@ -1771,7 +1771,7 @@ export default {
             })
           }
         localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        this.$refs.refPayroll.focus()
+        // this.$refs.refPayroll.focus()
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         const tl = new TimelineMax();
 
@@ -1829,7 +1829,7 @@ export default {
           }
         localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
-        this.$refs.refEntertainment.focus()
+        // this.$refs.refEntertainment.focus()
         const tl = new TimelineMax();
 
         tl.to(
@@ -1901,7 +1901,7 @@ export default {
             })
           }
         localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        this.$refs.refEntertainment.focus()
+        // this.$refs.refEntertainment.focus()
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
         const tl = new TimelineMax();
 
@@ -1962,7 +1962,7 @@ export default {
           }
         localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
-        this.$refs.refInvestment.focus()
+        // this.$refs.refInvestment.focus()
         const tl = new TimelineMax();
 
         tl.to(
@@ -2034,7 +2034,7 @@ export default {
           }
         localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
         localStorage.setItem("amount_tracker", JSON.stringify(this.amountTracker));
-        this.$refs.refInvestment.focus()
+        // this.$refs.refInvestment.focus()
         const tl = new TimelineMax();
 
         tl.to(
