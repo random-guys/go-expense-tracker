@@ -1429,11 +1429,9 @@ body {
     .slider {
       display: none;
     }
-  }
-  // end of signup page media query
+  }// end of signup page media query
 
   //Tracker Page Media Query
-
   .tracker-page {
     width: 100%;
     display: flex;
@@ -1540,8 +1538,8 @@ body {
       justify-content: center;
       align-items: center;
       padding: 0 2rem;
-      margin: 2rem auto;
-      margin-bottom: 8rem;
+      margin: 6rem auto;
+      margin-bottom: 4rem;
 
       .card-transport,
       .card-transfer,
