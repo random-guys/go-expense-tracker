@@ -156,7 +156,7 @@
           <b>{{ this.key }}</b> and other expenses because you cannot come and
           die. It's not that you're bad at planning, you just haven't taken your
           needs and personality into account when creating your budget. GoMoney
-          can help.Monitor your expenses without spending time mapping out a
+          can help. Monitor your expenses without spending time mapping out a
           budget. With GoMoney, you get to see exactly how you are spending in
           real-time, and effortlessly adjust to suit your goals.
         </p>
@@ -328,7 +328,7 @@ export default {
         [0, 255, 255],
         [237, 30, 121]
       ],
-      clock: "80",
+      clock: "60",
       rotate: true
     };
     const canvas = new ConfettiGenerator(headerCanvasSettings);
