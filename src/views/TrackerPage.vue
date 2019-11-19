@@ -192,7 +192,7 @@
           <p class="error errorMsgVacation">!!!</p>
         </div>
         <div class="card-payroll payroll">
-          <span class="radio opacity-zero paypallRadio" @click="resetPaypallCard()">&#215;</span>
+          <span class="radio opacity-zero payrollRadio" @click="resetPayrollCard()">&#215;</span>
           <!-- <input type="radio" name="" value="" class="radio"> -->
           <img src="../assets/images/payroll.svg" alt="Leaf Icon Left" class="card-img" />
           <p class="card-text payrollText">Payroll</p>
@@ -564,7 +564,7 @@ export default {
             }
             if(this.inputEating == this.max){
               this.userDetails.map(details => {
-                details.key = "eating",
+                details.key = "eating out",
                 details.highest_expense = this.max
               })
               localStorage.setItem("user_details", JSON.stringify(this.userDetails));
@@ -599,7 +599,7 @@ export default {
             }
             if(this.inputCare == this.max){
               this.userDetails.map(details => {
-                details.key = "care",
+                details.key = "personal care",
                 details.highest_expense = this.max
               })
               localStorage.setItem("user_details", JSON.stringify(this.userDetails));
@@ -819,25 +819,25 @@ export default {
         .to(".vacationRadio", 0.5, {opacity: "0", pointerEvents: "none"}, 0.1)
         .to(".errorMsgVacation", 0.5, { display: "none" }, 0.1);
     },
-    resetPaypallCard(){
+    resetPayrollCard(){
       this.payroll = ""
       const tl = new TimelineMax();
 
       tl.to(
-        ".paypall",
+        ".payroll",
         0.5,
         { backgroundColor: "#ffffff", color: "#3a3737" },
         0.1
       )
-        .to(".paypallText", 0.5, { color: "#3a3737" }, 0.1)
+        .to(".payrollText", 0.5, { color: "#3a3737" }, 0.1)
         .to(
-          ".paypallInput",
+          ".payrollInput",
           0.5,
           { backgroundColor: "#f1f1f1", color: "#252525" },
           0.1
         )
-        .to(".paypallRadio", 0.5, {opacity: "0", pointerEvents: "none"}, 0.1)
-        .to(".errorMsgVacation", 0.5, { display: "none" }, 0.1);
+        .to(".payrollRadio", 0.5, {opacity: "0", pointerEvents: "none"}, 0.1)
+        .to(".errorMsgPayroll", 0.5, { display: "none" }, 0.1);
     },
     resetEntertainmentCard(){
       this.entertainment = ""
@@ -1168,18 +1168,18 @@ export default {
         })
           if(this.maxExpense.length === 0){
             let eachExpense = {
-              key: "eating",
+              key: "eating out",
               amount: this.inputEating
             }
             this.maxExpense.push(eachExpense)
           }else{
             this.maxExpense.map(obj => {
-              if(obj.key === "eating"){
+              if(obj.key === "eating out"){
                 obj.amount = this.inputEating
               }
               else{
                 let eachExpense = {
-                  key: "eating",
+                  key: "eating out",
                   amount: this.inputEating
                 }
                 this.maxExpense.push(eachExpense)
@@ -1246,13 +1246,13 @@ export default {
         })
         if(this.maxExpense.length === 0){
             let eachExpense = {
-              key: "eating",
+              key: "eating out",
               amount: 0
             }
             this.maxExpense.push(eachExpense)
           }else{
             this.maxExpense.map(obj => {
-              if(obj.key === "eating"){
+              if(obj.key === "eating out"){
                 obj.amount = 0
               }
             })
@@ -1821,17 +1821,17 @@ export default {
         })
           if(this.maxExpense.length === 0){
             let eachExpense = {
-              key: "care",
+              key: "personal care",
               amount: this.inputCare
             }
             this.maxExpense.push(eachExpense)
           }else{
             this.maxExpense.map(obj => {
-              if(obj.key === "care"){
+              if(obj.key === "personal care"){
                 obj.amount = this.inputCare
               }else{
                 let eachExpense = {
-                  key: "care",
+                  key: "personal care",
                   amount: this.inputCare
                 }
                 this.maxExpense.push(eachExpense)
@@ -1898,13 +1898,13 @@ export default {
         })
         if(this.maxExpense.length === 0){
             let eachExpense = {
-              key: "care",
+              key: "personal care",
               amount: 0
             }
             this.maxExpense.push(eachExpense)
           }else{
             this.maxExpense.map(obj => {
-              if(obj.key === "care"){
+              if(obj.key === "personal care"){
                 obj.amount = 0
               }
             })
@@ -2475,7 +2475,6 @@ export default {
         Number(this.inputPayroll) +
         Number(this.inputEntertainment) +
         Number(this.inputInvestment);
-        
     },
   }
 };
