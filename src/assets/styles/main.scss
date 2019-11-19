@@ -1951,21 +1951,21 @@ body {
       top: 0;
       left: 0;
       width: 30%;
-      z-index: 1;
+      z-index: -1;
     }
     .leaf-center {
       position: absolute;
       top: 0;
       right: 40%;
       width: 20%;
-      z-index: 1;
+      z-index: -1;
     }
     .leaf-right {
       position: absolute;
       top: 0;
       right: 0;
       width: 30%;
-      z-index: 1;
+      z-index: -1;
     }
 
     .morph-icon-left {
@@ -2136,6 +2136,7 @@ body {
           align-items: center;
           border-radius: 8px;
           padding: 4rem 0;
+          z-index: 1;
 
           .header-mobile {
             font-family: Graphik;
@@ -2209,21 +2210,21 @@ body {
       top: 0;
       left: 0;
       width: 30%;
-      z-index: -1;
+      z-index: 1;
     }
     .leaf-center {
       position: absolute;
       top: 0;
       right: 40%;
       width: 20%;
-      z-index: -1;
+      z-index: 1;
     }
     .leaf-right {
       position: absolute;
       top: 0;
       right: 0;
       width: 30%;
-      z-index: -1;
+      z-index: 1;
     }
 
     .morph-icon-left {
@@ -2705,21 +2706,21 @@ body {
       top: 0;
       left: 0;
       width: 30%;
-      z-index: 1;
+      z-index: -1;
     }
     .leaf-center {
       position: fixed;
       top: 0;
       right: 40%;
       width: 20%;
-      z-index: 1;
+      z-index: -1;
     }
     .leaf-right {
       position: fixed;
       top: 0;
       right: 0;
       width: 30%;
-      z-index: 1;
+      z-index: -1;
     }
 
     .morph-icon-left {
@@ -2888,6 +2889,7 @@ body {
           align-items: center;
           border-radius: 8px;
           padding: 4rem 0;
+          z-index: 1;
 
           .header-mobile {
             font-size: 2rem;
