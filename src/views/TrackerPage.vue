@@ -325,13 +325,13 @@ export default {
     TweenMax.fromTo(
       ".leafRight",
       5,
-      { x: 0, y: 0, rotation: "0" },
+      { x: -3, y: 0, rotation: "0" },
       {
         repeat: -1,
         yoyo: true,
         repeatDelay: 0.4,
         ease: Linear.easeNone,
-        x: 10,
+        x: -1,
         y: -30,
         rotation: "5"
       },
