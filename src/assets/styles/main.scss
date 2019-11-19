@@ -1739,7 +1739,7 @@ body {
 // }
 
 // Big Phone
-@media only screen and (min-device-width: 425px) and (max-device-width: 549px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 426px) and (max-device-width: 549px) and (-webkit-min-device-pixel-ratio: 2) {
   .canvas {
     position: absolute;
     height: 100vh;
@@ -2532,36 +2532,14 @@ body {
 }
 
 // Small Phone Media Query
-@media only screen and (min-device-width: 320px) and (max-device-width: 424px) and (-webkit-min-device-pixel-ratio: 2) {
-  .canvas {
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    left: 0;
-    top: 0;
-    // z-index: 1;
-    opacity: 0.5;
-    mask-image: linear-gradient(
-      to top,
-      from(rgba(255, 255, 255, 1)),
-      to(rgba(255, 255, 255, 0))
-    );
-    -webkit-mask-image: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      from(rgba(255, 255, 255, 1)),
-      to(rgba(255, 255, 255, 0))
-    );
-  }
-
+@media only screen and (min-device-width: 320px) and (max-device-width: 425px) and (-webkit-min-device-pixel-ratio: 2) {
   //Home page Media Query
   .home {
     .hero-text {
       &__primary {
         width: 100%;
         padding: 0 15%;
-        font-size: 3rem;
+        font-size: 4rem;
       }
       &__secondary {
         display: none;
@@ -2570,95 +2548,105 @@ body {
       &__secondary-mobile {
         opacity: 0.6;
         display: flex;
-        width: 90%;
+        width: 100%;
         margin: 1.5rem auto;
-        padding: 0 10%;
+        padding: 0 6%;
         font-size: 2rem;
       }
     }
 
-    .button {
-      display: flex;
-      flex-direction: column;
-      justify-self: center;
-    }
+    // .button {
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-self: center;
+    // }
 
     .btn {
       width: 33%;
       z-index: 2;
-    transition: all 0.2s;
+      transition: all 0.2s;
     }
 
     .leaf-left {
       position: absolute;
-      top: 8rem;
-      left: -6rem;
-      width: 50%;
+      top: 5rem;
+      left: -7rem;
+      width: 45%;
       transform: rotate(-10deg);
       transform-origin: 20% 145%;
     }
 
     .leaf-right {
       position: fixed;
-      top: -18rem;
+      top: -17rem;
       right: 0rem;
-      width: 60%;
-      transform: rotate(30deg);
-      transform-origin: 20% 108%;
+      width: 45%;
+      transform: rotate(28deg);
+      transform-origin: 10% 108%;
       overflow: hidden;
     }
 
     .morph-icon-left {
       position: fixed;
-      top: -20rem;
-      left: -18rem;
-      width: 80%;
+      top: -8rem;
+      left: -42rem;
+      width: 120%;
     }
 
     .morph-icon-right {
       position: fixed;
-      top: -5rem;
-      left: 10rem;
+      top: 10rem;
+      left: 20rem;
       width: 150%;
       z-index: -1;
     }
 
     .purple-dot {
-      display: none;
+      position: absolute;
+      top: 0rem;
+      left: 5rem;
+      z-index: -1;
+      width: 1rem;
     }
 
     .pink-dot {
-      display: none;
+      position: relative;
+      bottom: 10rem;
+      right: 34rem;
+      width: 2rem;
     }
 
     .yellow-dot {
-      display: none;
+      position: relative;
+      top: 0rem;
+      left: -20rem;
+      width: 2rem;
     }
 
     .pie-chart {
       position: relative;
       top: 15rem;
-      left: 15rem;
+      left: 21rem;
       width: 20%;
     }
 
     .green-dot {
       position: relative;
       bottom: 7rem;
-      right: 16rem;
-      width: 2rem;
+      right: 22.2rem;
+      width: 1.5rem;
     }
 
     .home-triangle {
       position: relative;
       bottom: 8rem;
-      right: 8rem;
+      right: 14rem;
     }
 
     .star {
       position: relative;
-      bottom: 20rem;
-      left: 20rem;
+      bottom: 24rem;
+      left: 30rem;
       width: 12%;
     }
   } //end of home page media query
