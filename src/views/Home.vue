@@ -70,7 +70,7 @@
         <img src="../assets/images/pink-dot.svg" alt="Gomoney Logo" class="pink-dot pinkDot" />
       </div>
       <div class="button">
-        <router-link to="/sign-up-page" class="btn btnGo">Go</router-link>
+        <router-link to="/sign-up-page" class="btn btnGo">GO</router-link>
         <div>
           <img
             src="../assets/images/yellow-dot.svg"
@@ -229,14 +229,14 @@ export default {
     TweenMax.fromTo(
       ".morphIconRight",
       20,
-      { scale: "0.8", rotation: "0" },
+      { scale: "0.8", rotation: "-50" },
       {
         repeat: -1,
         yoyo: true,
         repeatDelay: 0.4,
         ease: Linear.easeNone,
         scale: "1.1",
-        rotation: "120"
+        rotation: "70"
       },
       -3
     );
