@@ -2567,7 +2567,7 @@ body {
     }
 
     .leaf-left {
-      position: absolute;
+      position: fixed;
       top: 5rem;
       left: -7rem;
       width: 45%;
@@ -2576,7 +2576,7 @@ body {
     }
 
     .leaf-right {
-      position: absolute;
+      position: fixed;
       top: -17rem;
       right: 0rem;
       width: 45%;
