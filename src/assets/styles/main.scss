@@ -939,7 +939,7 @@ body {
 }
 
 // Tab
-@media only screen and (min-device-width: 768px) and (max-device-width: 1023px) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-device-width: 600px) and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
   .canvas {
     position: absolute;
     height: 100vh;
@@ -1780,8 +1780,8 @@ body {
   }
 }
 
-// Phone
-@media only screen and (min-device-width: 424px) and (max-device-width: 600px) and (-webkit-min-device-pixel-ratio: 2) {
+// Big Phone
+@media only screen and (min-device-width: 424px) and (max-device-width: 599px) and (-webkit-min-device-pixel-ratio: 2) {
   .canvas {
     position: absolute;
     height: 100vh;
@@ -2209,21 +2209,21 @@ body {
       top: 0;
       left: 0;
       width: 30%;
-      z-index: 1;
+      z-index: -1;
     }
     .leaf-center {
       position: absolute;
       top: 0;
       right: 40%;
       width: 20%;
-      z-index: 1;
+      z-index: -1;
     }
     .leaf-right {
       position: absolute;
       top: 0;
       right: 0;
       width: 30%;
-      z-index: 1;
+      z-index: -1;
     }
 
     .morph-icon-left {
