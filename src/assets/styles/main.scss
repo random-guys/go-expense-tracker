@@ -76,11 +76,12 @@ body {
 
 .main {
   width: 100%;
-  height: 100%;
+  // height: 100%;
   // position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .logo {
@@ -103,6 +104,10 @@ body {
 
 .display-none {
   display: none;
+}
+
+.position-fixed {
+  position: fixed;
 }
 
 .opacity-zero {
@@ -145,8 +150,6 @@ body {
 
   .hero-text {
     &__primary {
-      // width: 724px;
-      height: 164px;
       margin-top: 5.7rem;
       font-family: Graphik;
       font-size: 5.2rem;
@@ -163,10 +166,8 @@ body {
     }
 
     &__secondary {
-      // width: 610px;
-      height: 96px;
       opacity: 0.6;
-      // margin-top: 0rem;
+      margin-top: 3.8rem;
       font-family: Graphik;
       font-size: 2.2rem;
       font-weight: normal;
@@ -182,6 +183,7 @@ body {
   .button {
     display: flex;
     flex-direction: column;
+    margin-top: 3.2rem;
   }
 
   .btn {
@@ -202,21 +204,22 @@ body {
     z-index: 2;
     background-color: $color-btn-bkg;
     transition: all 0.4s;
-    // margin-top: 0rem;
     transition: all 0.2s ease-in-out;
   }
 
   .leaf-left {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
+    width: 20%;
     z-index: -1;
   }
 
   .leaf-right {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
+    width: 20%;
     z-index: -1;
   }
 
@@ -224,6 +227,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    width: 55%;
     z-index: -1;
   }
 
@@ -231,7 +235,7 @@ body {
     position: fixed;
     top: 10rem;
     right: 0;
-    width: 59%;
+    width: 55%;
     z-index: -1;
   }
 
@@ -244,21 +248,21 @@ body {
 
   .pink-dot {
     position: relative;
-    bottom: 1rem;
+    bottom: 5rem;
     right: 14rem;
     z-index: -1;
   }
 
   .yellow-dot {
     position: relative;
-    top: 7rem;
+    top: 3rem;
     left: 32rem;
     z-index: -1;
   }
 
   .pie-chart {
     position: relative;
-    top: 11rem;
+    top: 5rem;
     left: 25rem;
     z-index: -1;
   }
@@ -279,20 +283,18 @@ body {
 
   .star {
     position: relative;
-    bottom: 10rem;
+    bottom: 15rem;
     left: 85rem;
-    width: 4%;
+    width: 3%;
     z-index: -1;
   }
 
   .btn:hover {
     transform: scale(1.1);
   }
-}
-//End of home page css
+} //End of home page css
 
 //Signup page css
-
 .signup-page {
   width: 100%;
   display: flex;
@@ -300,21 +302,23 @@ body {
   text-align: center;
 
   .leaf-left {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
+    width: 20%;
     z-index: -1;
   }
   .leaf-center {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 45%;
     z-index: -1;
   }
   .leaf-right {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
+    width: 20%;
     z-index: -1;
   }
   .morph-icon-left {
@@ -328,14 +332,16 @@ body {
     position: fixed;
     bottom: 10rem;
     right: 0rem;
-    width: 57%;
-    z-index: -1;
+    width: 55%;
     z-index: -1;
   }
 
   .hero-text {
     &__primary {
-      max-width: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       font-size: 4rem;
       font-weight: 500;
       font-stretch: normal;
@@ -345,10 +351,9 @@ body {
       align-self: center;
       color: $color-text;
       margin-top: 7.7rem;
-      margin-bottom: 3.2rem;
     }
     &__secondary {
-      width: 31.2rem;
+      width: 100%;
       opacity: 0.5;
       font-size: 2.1rem;
       font-weight: 500;
@@ -358,7 +363,7 @@ body {
       letter-spacing: normal;
       color: $color-text;
       align-self: center;
-      margin-top: 3.2rem;
+      margin-top: 1rem;
     }
   }
 
@@ -371,7 +376,7 @@ body {
   }
 
   .header2-text {
-    max-width: 42rem;
+    width: 100%;
     font-size: 4rem;
     font-weight: 500;
     font-stretch: normal;
@@ -379,7 +384,6 @@ body {
     line-height: 1.25;
     letter-spacing: normal;
     margin-top: 7.7rem;
-    margin-bottom: 3.2rem;
     align-self: center;
     color: $color-text;
 
@@ -397,9 +401,7 @@ body {
   }
 
   .slider {
-    // position: relative;
     width: 100vw;
-    // margin: 0 auto;
     display: flex;
     overflow-x: hidden;
 
@@ -448,7 +450,6 @@ body {
 
     &__slide {
       display: flex;
-      // width: 500%;
       .card1,
       .card2,
       .card3 {
@@ -461,6 +462,7 @@ body {
         align-items: flex-start;
         border-radius: 8px;
         box-shadow: 0 40px 56px 0 rgba(11, 16, 51, 0.06);
+        margin-top: 3.2rem;
         padding: 4rem 0;
         padding-left: 3rem;
         background-color: #ffffff;
@@ -532,14 +534,12 @@ body {
 
   .pie-chart {
     position: relative;
-    top: 13rem;
+    top: 8rem;
     left: 26rem;
   }
-}
-//end of signup page css
+} //end of signup page css
 
 //Tracker Page CSS
-
 .tracker-page {
   width: 100%;
   display: flex;
@@ -550,19 +550,21 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    width: 20%;
+    z-index: -1;
   }
   .leaf-center {
     position: fixed;
     top: 0;
     right: 45%;
-    z-index: 1;
+    z-index: -1;
   }
   .leaf-right {
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 1;
+    width: 20%;
+    z-index: -1;
   }
 
   .morph-icon-left {
@@ -581,29 +583,16 @@ body {
   }
   .leaf-bottom {
     object-fit: contain;
-    // margin-bottom: 9rem;
     object-fit: contain;
     align-self: center;
     position: fixed;
     top: 16rem;
     z-index: -1;
-    // right: auto;
-    // width: 127.4rem;
-    // height: 80.9rem;
-    // object-fit: contain;
-  }
-
-  .logo-fixed {
-    position: fixed;
-    z-index: 10;
   }
 
   .hero-text {
     &__primary {
-      // position: fixed;
-      // z-index: 10;
       width: 100%;
-      height: 0px;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
@@ -616,16 +605,12 @@ body {
       line-height: 1.3;
       letter-spacing: normal;
       color: $color-text;
-      // background-color: #fef2f1;
-      margin-top: 10rem;
-      // margin-bottom: 2rem;
+      margin-top: 3rem;
     }
   }
 
   .button {
-    width: 20.5rem;
-    // height: 5.3rem;
-    // opacity: 0.5;
+    width: 20.5%;
     border-radius: 5px;
     background-color: #f47079;
     text-align: center;
@@ -639,7 +624,8 @@ body {
     letter-spacing: normal;
     padding: 2rem 0;
     align-self: center;
-    margin: 5rem 0;
+    margin: 4.5rem 0;
+    margin-bottom: 1rem;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
   }
@@ -649,28 +635,22 @@ body {
   }
 
   .break {
-    // position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 20vh;
-    // margin-top: 28rem;
     background-color: black;
   }
 
   .card-container {
     position: relative;
     width: 100%;
-    // z-index: -1;
     display: flex;
-    // flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 0 30rem;
-    margin-top: 12rem;
-    margin-bottom: 2rem;
-    // background-color: black;
+    padding: 0 10rem;
+    margin-top: 3rem;
 
     .card-transport,
     .card-transfer,
@@ -684,8 +664,7 @@ body {
     .card-payroll,
     .card-entertainment,
     .card-investment {
-      width: 18%;
-      height: 50%;
+      width: 13%;
       padding: 1rem 0;
       padding-bottom: 0.5rem;
       display: flex;
@@ -693,7 +672,7 @@ body {
       justify-content: center;
       align-items: center;
       border-radius: 8px;
-      margin: 2rem 0;
+      margin: 1.5rem 0;
       background-color: #ffffff;
 
       .radio {
@@ -731,9 +710,9 @@ body {
 
       .card-text {
         width: 100%;
-        margin-top: 0.9rem;
+        margin-top: 0.5rem;
         font-family: Graphik;
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         font-weight: 600;
         font-stretch: normal;
         font-style: normal;
@@ -745,38 +724,33 @@ body {
 
       .input {
         width: 80%;
-        height: 3rem;
         font-size: 2.4rem;
         text-align: center;
         margin-top: 2rem;
         margin-bottom: 0.8rem;
-        padding: 2rem 0;
+        padding: 0.5rem 0;
         border: none;
         border-radius: 3px;
         background-color: #f1f1f1;
-      }
-
-      input[type="text"]::before {
-        content: "N";
       }
     }
 
     .card-transport,
     .card-transfer,
     .card-eating,
+    .card-bills,
     .card-family,
-    .card-groceries,
     .card-shopping,
+    .card-care,
     .card-vacation,
     .card-payroll,
     .card-entertainment {
-      margin-right: 4rem;
+      margin-right: 2.5rem;
     }
   }
-}
+} //End of Tracker Page CSS
 
 //Result Page CSS
-
 .result {
   width: 100%;
   display: flex;
@@ -786,7 +760,7 @@ body {
 
   .baller-emoji {
     position: absolute;
-    top: 7rem;
+    top: 0;
     left: auto;
     width: 19rem;
     height: 20rem;
@@ -822,7 +796,7 @@ body {
     width: 19.7rem;
     align-self: center;
     z-index: 1;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
     color: #3f3f3f;
     font-weight: 600;
     font-size: 2.5rem;
@@ -837,8 +811,7 @@ body {
 
   .baller {
     width: 100%;
-    // height: 8.2rem;
-    margin-top: 24rem;
+    margin-top: 18rem;
     font-family: Graphik;
     font-size: 6rem;
     font-weight: 600;
@@ -859,8 +832,8 @@ body {
   .the-generous-sage-comment,
   .the-money-maestro-comment {
     display: none;
-    width: 90%;
-    margin-top: 1.2rem;
+    width: 80%;
+    margin-top: 1.5rem;
     opacity: 0.6;
     font-family: Graphik;
     font-size: 2.6rem;
@@ -877,7 +850,7 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 5rem;
     font-family: Graphik;
     font-size: 8.8rem;
     font-weight: bold;
@@ -890,7 +863,6 @@ body {
   }
 
   .btn {
-    // position: static;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -932,22 +904,12 @@ body {
       position: static;
       z-index: 1;
       display: flex;
-      // align-items: baseline;
       justify-content: center;
       width: 5rem;
-      height: 5rem;
       padding: 1rem;
       border-radius: 50%;
-      margin-top: 6.7rem;
-      // background-color: #15777c;
-      // border: solid 1px #091d57;
+      margin-top: 2rem;
     }
-
-    // .icon1,
-    // .icon2,
-    // .icon3 {
-    // margin-right: 2rem;
-    // }
 
     .link {
       .icon {
@@ -960,7 +922,7 @@ body {
     width: 57px;
     height: 24px;
     margin-top: 0.2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     font-family: Graphik;
     font-size: 17px;
     font-weight: 500;
@@ -973,8 +935,228 @@ body {
   }
 }
 
-//Mobile
-@media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
+// Big Tab / Mini Laptop
+@media only screen and (max-device-width: 1440px) {
+  .canvas {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    // z-index: -1;
+    opacity: 0.5;
+    mask-image: linear-gradient(
+      to top,
+      from(rgba(255, 255, 255, 1)),
+      to(rgba(255, 255, 255, 0))
+    );
+    -webkit-mask-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(255, 255, 255, 1)),
+      to(rgba(255, 255, 255, 0))
+    );
+  }
+
+  //Home Page Media Query CSS
+  .home {
+    .leaf-left {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 22%;
+      z-index: -1;
+    }
+
+    .leaf-right {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 24%;
+      z-index: -1;
+    }
+
+    .morph-icon-left {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 40%;
+      z-index: -1;
+    }
+
+    .morph-icon-right {
+      position: fixed;
+      top: 10%;
+      right: 0;
+      width: 45%;
+      z-index: -1;
+    }
+
+    .pink-dot {
+      position: relative;
+      bottom: 5%;
+      right: 12%;
+      z-index: -1;
+    }
+
+    .pie-chart {
+      position: relative;
+      top: 7rem;
+      left: 15%;
+      z-index: -1;
+    }
+
+    .green-dot {
+      position: relative;
+      bottom: 0rem;
+      right: 25.5rem;
+      z-index: -1;
+    }
+
+    .home-triangle {
+      position: relative;
+      bottom: 1.5rem;
+      right: 20rem;
+      z-index: -1;
+    }
+
+    .star {
+      position: relative;
+      bottom: 10rem;
+      left: 55%;
+      width: 3.5%;
+      z-index: -1;
+    }
+  } //End of Home Page Media Query css
+}
+
+// Tab
+@media only screen and (max-device-width: 1024px) {
+  .canvas {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    // z-index: -1;
+    opacity: 0.5;
+    mask-image: linear-gradient(
+      to top,
+      from(rgba(255, 255, 255, 1)),
+      to(rgba(255, 255, 255, 0))
+    );
+    -webkit-mask-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(255, 255, 255, 1)),
+      to(rgba(255, 255, 255, 0))
+    );
+  }
+
+  //Home Page Media Query CSS
+  .home {
+    .hero-text {
+      &__primary {
+        font-size: 5rem;
+      }
+      &__secondary-mobile {
+        display: none;
+      }
+
+      &__secondary {
+        margin-top: 3rem;
+      }
+    }
+
+    .leaf-left {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 22%;
+      z-index: -1;
+    }
+
+    .leaf-right {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 24%;
+      z-index: -1;
+    }
+
+    .morph-icon-left {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 40%;
+      z-index: -1;
+    }
+
+    .morph-icon-right {
+      position: fixed;
+      top: 10%;
+      right: 0;
+      width: 45%;
+      z-index: -1;
+    }
+
+    .purple-dot {
+      position: relative;
+      bottom: 12rem;
+      left: 10rem;
+      z-index: -1;
+    }
+
+    .pink-dot {
+      position: relative;
+      bottom: 5rem;
+      right: 20%;
+      z-index: -1;
+    }
+
+    .yellow-dot {
+      position: relative;
+      top: 0rem;
+      left: 22rem;
+      z-index: -1;
+    }
+
+    .pie-chart {
+      position: relative;
+      top: 7rem;
+      left: 17%;
+      width: 8%;
+      z-index: -1;
+    }
+
+    .green-dot {
+      position: relative;
+      bottom: 7.9rem;
+      right: 26rem;
+      z-index: -1;
+    }
+
+    .home-triangle {
+      position: relative;
+      bottom: 10rem;
+      right: 20rem;
+      z-index: -1;
+    }
+
+    .star {
+      position: relative;
+      bottom: 17rem;
+      left: 53%;
+      width: 3.5%;
+      z-index: -1;
+    }
+  } //End of Home Page Media Query css
+}
+
+// Small Tab
+@media only screen and (max-device-width: 768px) {
   .canvas {
     position: absolute;
     height: 100vh;
@@ -997,118 +1179,56 @@ body {
     );
   }
 
-  //Home page Media Query
-
+  //Home Page Media Query CSS
   .home {
-    width: 100%;
-    position: relative;
-    text-align: center;
-
-    .logo {
-      object-fit: contain;
-      text-align: center;
-      margin-top: 4rem;
-      margin-bottom: 3rem;
-    }
-
     .hero-text {
       &__primary {
-        width: 100%;
-        height: 12rem;
-        font-family: Graphik;
-        font-size: 3rem;
-        font-weight: 600;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.37;
-        letter-spacing: normal;
-        text-align: center;
-        color: #161616;
+        font-size: 5rem;
       }
-      &__secondary {
+      &__secondary-mobile {
         display: none;
       }
 
-      &__secondary-mobile {
-        display: flex;
-        width: 90%;
-        height: 15rem;
-        opacity: 0.6;
-        // margin-top: 0rem;
-        font-family: Graphik;
-        font-size: 2rem;
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.38;
-        margin: 0 auto;
-        letter-spacing: normal;
-        text-align: center;
-        color: #161616;
+      &__secondary {
+        margin-top: 3rem;
       }
     }
 
-    .button {
-      display: flex;
-      flex-direction: column;
-      justify-self: center;
-    }
-
-    .btn {
-      width: 90%;
-      display: inline-block;
-      text-decoration: none;
-      align-items: center;
-      align-self: center;
-      font-size: 1.7rem;
-      font-weight: 500;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: 1.41;
-      letter-spacing: normal;
-      color: $color-white;
-      padding: 1.5rem 4.5rem;
-      border-radius: 1.2rem;
-      z-index: 2;
-      background-color: $color-btn-bkg;
-      transition: all 0.2s;
-      // margin-top: 0rem;
-    }
-
     .leaf-left {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
-      width: 25%;
+      width: 22%;
+      z-index: -1;
     }
 
     .leaf-right {
-      position: absolute;
+      position: fixed;
       top: 0;
-      right: 0rem;
-      width: 30%;
+      right: 0;
+      width: 24%;
+      z-index: -1;
     }
 
     .morph-icon-left {
       position: fixed;
-      top: -20rem;
+      top: 0;
       left: 0;
-      width: 80%;
-      height: 80%;
+      width: 40%;
+      z-index: -1;
     }
 
     .morph-icon-right {
       position: fixed;
-      top: 30rem;
-      left: auto;
-      width: 100%;
-      height: 100%;
+      top: 10%;
+      right: 0;
+      width: 45%;
       z-index: -1;
     }
 
     .purple-dot {
-      position: absolute;
-      top: 0rem;
+      position: relative;
+      bottom: 18rem;
       left: 0rem;
       z-index: -1;
     }
@@ -1116,703 +1236,51 @@ body {
     .pink-dot {
       position: relative;
       bottom: 5rem;
-      right: 25rem;
+      right: 30%;
+      z-index: -1;
     }
 
     .yellow-dot {
       position: relative;
-      top: 2rem;
-      left: -3rem;
+      top: 0rem;
+      left: 20rem;
+      z-index: -1;
     }
 
     .pie-chart {
       position: relative;
-      top: 30rem;
-      left: 16rem;
-      width: 20%;
+      top: 7rem;
+      left: 17%;
+      width: 10%;
+      z-index: -1;
     }
 
     .green-dot {
       position: relative;
-      bottom: 6rem;
-      right: 21rem;
-      width: 5%;
+      bottom: 7rem;
+      right: 26rem;
+      z-index: -1;
     }
 
     .home-triangle {
       position: relative;
-      bottom: 8rem;
-      right: 14rem;
-      //   width: 25%;
+      bottom: 10rem;
+      right: 20rem;
+      z-index: -1;
     }
 
     .star {
       position: relative;
-      bottom: 4rem;
-      left: 28rem;
-      width: 10%;
-    }
-  }
-  //end of home page media query
-
-  //signup page media query
-
-  .signup-page {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-
-    .logo {
-      object-fit: contain;
-      text-align: center;
-      margin-top: 9rem;
-      margin-bottom: 3rem;
-    }
-
-    .leaf-left {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 30%;
-      z-index: 1;
-    }
-    .leaf-center {
-      position: absolute;
-      top: 0;
-      right: 40%;
-      width: 20%;
-      z-index: 1;
-    }
-    .leaf-right {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 30%;
-      z-index: 1;
-    }
-
-    .morph-icon-left {
-      position: fixed;
-      top: -20rem;
-      left: 0;
-      width: 80%;
-      height: 80%;
+      bottom: 17rem;
+      left: 50%;
+      width: 4%;
       z-index: -1;
     }
-    .morph-icon-right {
-      position: fixed;
-      top: 30rem;
-      left: auto;
-      width: 120%;
-      height: 100%;
-    }
-
-    .pie-chart {
-      position: relative;
-      top: 6rem;
-      left: 16rem;
-      width: 20%;
-    }
-
-    .hero-text {
-      &__primary {
-        max-width: 100%;
-        font-size: 2.5rem;
-        font-weight: 500;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.25;
-        letter-spacing: normal;
-        align-self: center;
-        color: $color-text;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-      }
-      &__secondary {
-        width: 31.2rem;
-        opacity: 0.5;
-        font-size: 2.1rem;
-        font-weight: 500;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.79;
-        letter-spacing: normal;
-        color: $color-text;
-        align-self: center;
-        margin-top: 1rem;
-      }
-    }
-
-    .header2-text {
-      max-width: 100%;
-      font-size: 2.5rem;
-      font-weight: 500;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: 1.25;
-      letter-spacing: normal;
-      align-self: center;
-      margin-bottom: 2rem;
-      margin-top: 2rem;
-      color: $color-text;
-
-      .display-none {
-        display: none;
-      }
-
-      .margin-bottom {
-        margin-bottom: 0rem;
-      }
-
-      .name-color {
-        color: #15777c;
-      }
-    }
-
-    .slider-mobile {
-      // position: absolute;
-      width: 100vw;
-      display: flex;
-      overflow-x: hidden;
-
-      .btn1-mobile,
-      .btn2-mobile {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 38rem;
-        width: 10vw;
-        height: 5vh;
-        border-radius: 50%;
-        z-index: 2;
-        // background-color: #15777c;
-        cursor: pointer;
-      }
-
-      .btn1-mobile {
-        border-bottom-right-radius: 0.8rem;
-        border-top-right-radius: 0.8rem;
-        left: -1rem;
-      }
-
-      .btn2-mobile {
-        border-bottom-left-radius: 0.8rem;
-        border-top-left-radius: 0.8rem;
-        right: 1rem;
-      }
-
-      .oval1-mobile {
-        width: 5rem;
-        height: 5rem;
-        border-radius: 50%;
-        border-bottom-right-radius: 0.8rem;
-        border-top-right-radius: 0.8rem;
-        // opacity: 0.24;
-        text-align: start;
-        // background-color: #000000;
-
-        .arrow-mobile {
-          color: #15777c;
-          font-size: 3.5rem;
-          margin-left: 2rem;
-          margin-top: 1rem;
-          font-weight: 900;
-          cursor: pointer;
-        }
-      }
-
-      .oval2-mobile {
-        width: 5rem;
-        height: 5rem;
-        border-radius: 50%;
-        border-bottom-left-radius: 0.8rem;
-        border-top-left-radius: 0.8rem;
-        // opacity: 0.24;
-        // background-color: #000000;
-
-        .arrow-mobile {
-          color: #15777c;
-          font-size: 3.5rem;
-          margin-left: 2rem;
-          margin-top: 1rem;
-          font-weight: 900;
-          cursor: pointer;
-        }
-      }
-
-      &__slide-mobile {
-        display: flex;
-        // width: 100%;
-        box-shadow: 0 40px 56px 0 rgba(11, 16, 51, 0.06);
-        background-color: #ffffff;
-
-        .card1-mobile,
-        .card2-mobile,
-        .card3-mobile {
-          position: relative;
-          width: 100vw;
-          left: 0;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          border-radius: 8px;
-          padding: 4rem 0;
-
-          .header-mobile {
-            font-family: Graphik;
-            font-size: 2.8rem;
-            font-weight: 500;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: 1.31;
-            letter-spacing: normal;
-            color: #000000;
-          }
-
-          .required-mobile {
-            font-family: Graphik;
-            font-size: 2rem;
-            font-weight: 500;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: 1.81;
-            letter-spacing: normal;
-            color: #f47079;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-          }
-
-          .input-mobile {
-            ::placeholder {
-              opacity: 0.1;
-              text-align: center;
-            }
-
-            :focus {
-              outline: none;
-              text-align: center;
-            }
-
-            .input_tag-mobile {
-              border: none;
-              width: 90vw;
-              font-family: Graphik;
-              text-align: center;
-              padding: 1rem;
-              font-size: 3.5rem;
-              font-weight: 500;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: 0.71;
-              letter-spacing: normal;
-              color: #4e4e4e;
-              margin-top: 1rem;
-              // pointer-events: visible;
-            }
-          }
-        }
-
-        // .card1-mobile {
-        //   margin-left: 1rem;
-        // }
-        // .card1-mobile,
-        // .card2-mobile,
-        // .card3-mobile {
-        // width: 51.2rem;
-        // margin-right: 2rem;
-        // .input-mobile {
-        //   .input_tag-mobile {
-        //     // width: 50rem;
-        //   }
-        // }
-        // }
-      }
-    }
-
-    .slider {
-      display: none;
-    }
-  }// end of signup page media query
-
-  //Tracker Page Media Query
-  .tracker-page {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-
-    .leaf-left {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 30%;
-      z-index: 1;
-    }
-    .leaf-center {
-      position: absolute;
-      top: 0;
-      right: 40%;
-      width: 20%;
-      z-index: 1;
-    }
-    .leaf-right {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 30%;
-      z-index: 1;
-    }
-
-    .morph-icon-left {
-      position: fixed;
-      top: -20rem;
-      left: 0;
-      width: 80%;
-      height: 80%;
-    }
-    .morph-icon-right {
-      position: fixed;
-      top: 30rem;
-      left: auto;
-      width: 120%;
-      height: 100%;
-    }
-    .leaf-bottom {
-      object-fit: contain;
-      margin-bottom: 9rem;
-      object-fit: contain;
-      align-self: center;
-      position: fixed;
-      top: 22rem;
-      width: 200%;
-    }
-
-    .hero-text {
-      &__primary {
-        position: static;
-        width: 100%;
-        // height: 75px;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 0 10%;
-        font-family: Graphik;
-        font-size: 2rem;
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.3;
-        letter-spacing: normal;
-        color: $color-text;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-      }
-    }
-
-    .button {
-      width: 85%;
-      // height: 5.3rem;
-      // opacity: 0.5;
-      border-radius: 5px;
-      background-color: #f47079;
-      text-align: center;
-      color: #ffffff;
-      // opacity: 0.5;
-      font-family: Graphik;
-      font-size: 17.1px;
-      font-weight: 500;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: 0.94;
-      letter-spacing: normal;
-      padding: 2rem 0;
-      align-self: center;
-      margin-bottom: 6rem;
-      cursor: pointer;
-    }
-
-    .card-container {
-      position: relative;
-      width: 100%;
-      display: flex;
-      // flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      padding: 0 2rem;
-      margin: 6rem auto;
-      margin-bottom: 4rem;
-
-      .card-transport,
-      .card-transfer,
-      .card-eating,
-      .card-bills,
-      .card-family,
-      .card-groceries,
-      .card-shopping,
-      .card-care,
-      .card-vacation,
-      .card-payroll,
-      .card-entertainment,
-      .card-investment {
-        width: 28%;
-        height: 50%;
-        padding: 1rem 0rem;
-        padding-bottom: 0.5rem;
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 8px;
-        background-color: #ffffff;
-
-        .radio {
-          align-self: flex-end;
-          margin-right: 1rem;
-        }
-
-        ::placeholder {
-          opacity: 0.48;
-          font-family: Graphik;
-          font-size: 2.5rem;
-          font-weight: 500;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: normal;
-          letter-spacing: -0.58px;
-          text-align: center;
-          color: #252525;
-        }
-
-        :focus {
-          outline: none;
-        }
-
-        .card-img {
-          width: 50%;
-          margin-top: 1rem;
-          margin-bottom: 0.3rem;
-        }
-
-        .error {
-          display: none;
-          color: red;
-        }
-
-        .card-text {
-          width: 100%;
-          margin-top: 0.5rem;
-          font-family: SFProDisplay;
-          font-size: 1.2rem;
-          font-weight: 600;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: normal;
-          letter-spacing: -0.41px;
-          text-align: center;
-          color: #3a3737;
-        }
-
-        .input {
-          width: 85%;
-          height: 3rem;
-          font-size: 2.5rem;
-          text-align: center;
-          margin-top: 2rem;
-          margin-bottom: 0.8rem;
-          border: none;
-          border-radius: 3px;
-          background-color: #f1f1f1;
-        }
-      }
-
-      .card-transport,
-      .card-transfer,
-      .card-eating,
-      .card-family,
-      .card-groceries,
-      .card-shopping,
-      .card-vacation,
-      .card-payroll,
-      .card-entertainment {
-        margin-right: 0rem;
-      }
-
-      .card-transport,
-      .card-family,
-      .card-bills,
-      .card-shopping,
-      .card-care,
-      .card-payroll,
-      .card-entertainment,
-      .card-transfer {
-        margin-right: 2rem;
-      }
-    }
-  }
-
-  //Result Page Media Query
-
-  .result {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-
-    .baller-emoji {
-      position: absolute;
-      top: 0.5rem;
-      // left: auto;
-      // width: 19.7rem;
-      // height: 17.5rem;
-      object-fit: cover;
-      // align-self: center;
-    }
-    .leaf-bottom-right {
-      position: fixed;
-      top: 67rem;
-      left: 32rem;
-      width: 40%;
-      height: 55%;
-      object-fit: contain;
-    }
-    .morph-icon-left {
-      position: fixed;
-      top: -20rem;
-      left: 0;
-      width: 80%;
-      height: 80%;
-    }
-    .morph-icon-right {
-      position: fixed;
-      top: 30rem;
-      left: auto;
-      width: 120%;
-      height: 100%;
-    }
-    .monthly {
-      // position: absolute;
-      // top: 50rem;
-      // left: auto;
-      width: 32%;
-      // height: 5%;
-      margin-top: 1rem;
-      align-self: center;
-    }
-
-    .baller {
-      width: 90%;
-      // height: 8.2rem;
-      margin-top: 18rem;
-      font-family: Graphik;
-      font-size: 3rem;
-      font-weight: 600;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: 1.37;
-      letter-spacing: normal;
-      align-self: center;
-      color: #3f3f3f;
-    }
-
-    .the-money-monk-comment,
-    .the-essentialist-comment,
-    .the-sensible-sage-comment,
-    .the-baby-baller-comment,
-    .the-spontanious-spender-comment,
-    .the-big-spender-comment,
-    .the-generous-sage-comment,
-    .the-money-maestro-comment {
-      width: 100%;
-      padding: 0 3rem;
-      margin-top: 1.8rem;
-      opacity: 0.6;
-      font-family: Graphik;
-      font-size: 2rem;
-      font-weight: normal;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: 1.38;
-      letter-spacing: normal;
-      text-align: justify;
-      color: #3f3f3f;
-    }
-
-    .amount {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      margin-top: 1.8rem;
-      font-family: Graphik;
-      font-size: 5rem;
-      font-weight: bold;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      align-self: center;
-      color: #3f3f3f;
-    }
-
-    .btn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 90%;
-      // height: 5.8rem;
-      margin-top: 5rem;
-      font-family: Graphik;
-      font-size: 1.7rem;
-      font-weight: 500;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: 1.41;
-      letter-spacing: normal;
-      align-self: center;
-      color: #ffffff;
-      background-color: #f47079;
-      border-radius: 16px;
-      z-index: 3;
-      cursor: pointer;
-    }
-
-    .share-icon {
-      display: flex;
-      justify-content: center;
-
-      .icon1,
-      .icon2,
-      .icon3,
-      .icon4 {
-        border-radius: 50%;
-        margin-top: 5rem;
-      }
-    }
-
-    .share {
-      width: 57px;
-      height: 2.4rem;
-      margin-top: 2rem;
-      margin-bottom: 3rem;
-      font-family: Graphik;
-      font-size: 17px;
-      font-weight: 500;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: 1.41;
-      letter-spacing: normal;
-      align-self: center;
-    }
-  }
+  } //End of Home Page Media Query css
 }
 
-// Tab
-@media only screen and (min-device-width: 768px) and (max-device-width: 1023px) and (-webkit-min-device-pixel-ratio: 1) {
+// Phone
+@media only screen and (max-device-width: 425px) {
   .canvas {
     position: absolute;
     height: 100vh;
@@ -1835,827 +1303,123 @@ body {
     );
   }
 
-  //Home page Tab Media Query
-
+  //Home Page Media Query CSS
   .home {
-    width: 100%;
-    position: relative;
-    text-align: center;
-
-    .logo {
-      object-fit: contain;
-      text-align: center;
-      margin-top: 4rem;
-      margin-bottom: 3rem;
-    }
-
     .hero-text {
       &__primary {
-        width: 100%;
-        height: 0rem;
-        margin-top: 3rem;
-        font-family: Graphik;
-        font-size: 4rem;
-        font-weight: 600;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.37;
-        letter-spacing: normal;
-        text-align: center;
-        color: #161616;
+        font-size: 3rem;
       }
-      &__secondary {
+      &__secondary-mobile {
         display: none;
       }
 
-      &__secondary-mobile {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        height: 0rem;
-        opacity: 0.6;
-        // margin-top: 0rem;
-        font-family: Graphik;
-        font-size: 3rem;
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.38;
-        margin: 15rem auto;
-        padding: 0 15rem;
-        letter-spacing: normal;
-        color: #161616;
+      &__secondary {
+        padding: 0 3rem;
+        margin-top: 3.5rem;
+        font-size: 2rem;
+        align-self: center;
       }
     }
 
     .button {
       display: flex;
       flex-direction: column;
-      justify-self: center;
+      justify-content: center;
+      align-items: center;
+      margin-top: 15rem;
     }
 
     .btn {
-      width: 20%;
-      display: inline-block;
+      width: 80%;
+      display: flex;
       text-decoration: none;
+      justify-content: center;
       align-items: center;
-      align-self: center;
-      font-size: 1.7rem;
-      font-weight: 500;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: 1.41;
-      letter-spacing: normal;
-      color: $color-white;
-      padding: 1.5rem 4.5rem;
-      border-radius: 1.2rem;
-      z-index: 2;
-      background-color: $color-btn-bkg;
-      transition: all 0.2s;
-      // margin-top: 0rem;
+      font-size: 2rem;
+
     }
 
     .leaf-left {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
-      width: 20%;
+      width: 22%;
+      z-index: -1;
     }
 
     .leaf-right {
-      position: absolute;
+      position: fixed;
       top: 0;
-      right: 0rem;
-      width: 25%;
+      right: 0;
+      width: 24%;
+      z-index: -1;
     }
 
     .morph-icon-left {
       position: fixed;
-      top: -20rem;
+      top: 0;
       left: 0;
-      width: 60%;
-      height: 80%;
+      width: 55%;
+      z-index: -1;
     }
 
     .morph-icon-right {
       position: fixed;
-      top: 30rem;
-      left: auto;
-      width: 90%;
-      height: 90%;
+      top: 10%;
+      right: 0;
+      width: 70%;
       z-index: -1;
     }
 
     .purple-dot {
-      position: absolute;
-      top: 13rem;
-      left: 45rem;
+      position: relative;
+      bottom: 28rem;
+      left: -20rem;
       z-index: -1;
     }
 
     .pink-dot {
       position: relative;
       bottom: 5rem;
-      right: 25rem;
+      right: 40%;
+      z-index: -1;
     }
 
     .yellow-dot {
       position: relative;
       top: 0rem;
-      left: 20rem;
+      left: 2rem;
+      z-index: -1;
     }
 
     .pie-chart {
       position: relative;
-      top: 20rem;
-      left: 30rem;
-      width: 12%;
+      top: 19rem;
+      left: 18rem;
+      width: 70%;
+      z-index: -1;
     }
 
     .green-dot {
       position: relative;
-      bottom: 6rem;
-      right: 35rem;
-      width: 3%;
+      bottom: 12rem;
+      right: 19rem;
+      z-index: -1;
     }
 
     .home-triangle {
       position: relative;
-      bottom: 8rem;
-      right: 25rem;
-      width: 25%;
+      bottom: 14rem;
+      right: 12rem;
+      z-index: -1;
     }
 
     .star {
       position: relative;
-      bottom: 14rem;
-      left: 48rem;
-      width: 7%;
-    }
-  }
-  //end of home page media query
-
-  //signup page media query
-
-  .signup-page {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-
-    .logo {
-      object-fit: contain;
-      text-align: center;
-      margin-top: 9rem;
-      margin-bottom: 3rem;
-    }
-
-    .leaf-left {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 25%;
-      z-index: 1;
-    }
-    .leaf-center {
-      position: absolute;
-      top: 0;
-      right: 43%;
-      width: 15%;
-      z-index: 1;
-    }
-    .leaf-right {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 25%;
-      z-index: 1;
-    }
-
-    .morph-icon-left {
-      position: fixed;
-      top: -20rem;
-      left: 0;
-      width: 80%;
-      height: 80%;
+      bottom: 15rem;
+      left: 10%;
+      width: 10%;
       z-index: -1;
     }
-    .morph-icon-right {
-      position: fixed;
-      top: 30rem;
-      left: auto;
-      width: 100%;
-      height: 100%;
-    }
-
-    .pie-chart {
-      position: relative;
-      top: 10rem;
-      left: 16rem;
-      width: 16%;
-    }
-
-    .hero-text {
-      &__primary {
-        max-width: 100%;
-        font-size: 2.5rem;
-        font-weight: 500;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.25;
-        letter-spacing: normal;
-        align-self: center;
-        color: $color-text;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-      }
-      &__secondary {
-        width: 31.2rem;
-        opacity: 0.5;
-        font-size: 2.1rem;
-        font-weight: 500;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.79;
-        letter-spacing: normal;
-        color: $color-text;
-        align-self: center;
-        margin-top: 1rem;
-      }
-    }
-
-    .header2-text {
-      max-width: 100%;
-      font-size: 2.5rem;
-      font-weight: 500;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: 1.25;
-      letter-spacing: normal;
-      align-self: center;
-      margin-bottom: 2rem;
-      margin-top: 2rem;
-      color: $color-text;
-
-      .display-none {
-        display: none;
-      }
-
-      .margin-bottom {
-        margin-bottom: 0rem;
-      }
-
-      .name-color {
-        color: #15777c;
-      }
-    }
-
-    .slider-mobile {
-      // position: absolute;
-      width: 100vw;
-      display: flex;
-      overflow-x: hidden;
-
-      .btn1-mobile,
-      .btn2-mobile {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 38rem;
-        width: 10vw;
-        height: 5vh;
-        border-radius: 50%;
-        z-index: 2;
-        // background-color: #15777c;
-        cursor: pointer;
-      }
-
-      .btn1-mobile {
-        border-bottom-right-radius: 0.8rem;
-        border-top-right-radius: 0.8rem;
-        left: -1rem;
-      }
-
-      .btn2-mobile {
-        border-bottom-left-radius: 0.8rem;
-        border-top-left-radius: 0.8rem;
-        right: 1rem;
-      }
-
-      .oval1-mobile {
-        width: 5rem;
-        height: 5rem;
-        border-radius: 50%;
-        border-bottom-right-radius: 0.8rem;
-        border-top-right-radius: 0.8rem;
-        // opacity: 0.24;
-        text-align: start;
-        // background-color: #000000;
-
-        .arrow-mobile {
-          color: #15777c;
-          font-size: 3.5rem;
-          margin-left: 2rem;
-          margin-top: 1rem;
-          font-weight: 900;
-          cursor: pointer;
-        }
-      }
-
-      .oval2-mobile {
-        width: 5rem;
-        height: 5rem;
-        border-radius: 50%;
-        border-bottom-left-radius: 0.8rem;
-        border-top-left-radius: 0.8rem;
-        // opacity: 0.24;
-        // background-color: #000000;
-
-        .arrow-mobile {
-          color: #15777c;
-          font-size: 3.5rem;
-          margin-left: 2rem;
-          margin-top: 1rem;
-          font-weight: 900;
-          cursor: pointer;
-        }
-      }
-
-      &__slide-mobile {
-        display: flex;
-        // width: 100%;
-        box-shadow: 0 40px 56px 0 rgba(11, 16, 51, 0.06);
-        background-color: #ffffff;
-
-        .card1-mobile,
-        .card2-mobile,
-        .card3-mobile {
-          position: relative;
-          width: 100vw;
-          left: 0;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          border-radius: 8px;
-          padding: 4rem 0;
-
-          .header-mobile {
-            font-family: Graphik;
-            font-size: 2.8rem;
-            font-weight: 500;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: 1.31;
-            letter-spacing: normal;
-            color: #000000;
-          }
-
-          .required-mobile {
-            font-family: Graphik;
-            font-size: 2rem;
-            font-weight: 500;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: 1.81;
-            letter-spacing: normal;
-            color: #f47079;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-          }
-
-          .input-mobile {
-            ::placeholder {
-              opacity: 0.1;
-              text-align: center;
-            }
-
-            :focus {
-              outline: none;
-              text-align: center;
-            }
-
-            .input_tag-mobile {
-              border: none;
-              width: 90vw;
-              font-family: Graphik;
-              text-align: center;
-              padding: 1rem;
-              font-size: 3.5rem;
-              font-weight: 500;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: 0.71;
-              letter-spacing: normal;
-              color: #4e4e4e;
-              margin-top: 1rem;
-              // pointer-events: visible;
-            }
-          }
-        }
-
-        // .card1-mobile {
-        //   margin-left: 1rem;
-        // }
-        // .card1-mobile,
-        // .card2-mobile,
-        // .card3-mobile {
-        // width: 51.2rem;
-        // margin-right: 2rem;
-        // .input-mobile {
-        //   .input_tag-mobile {
-        //     // width: 50rem;
-        //   }
-        // }
-        // }
-      }
-    }
-
-    .slider {
-      display: none;
-    }
-  }
-  // end of signup page media query
-
-  //Tracker Page Media Query
-
-  .tracker-page {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-
-    .leaf-left {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 20%;
-      z-index: 1;
-    }
-    .leaf-center {
-      position: absolute;
-      top: 0;
-      right: 43%;
-      width: 15%;
-      z-index: 1;
-    }
-    .leaf-right {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 20%;
-      z-index: 1;
-    }
-
-    .morph-icon-left {
-      position: fixed;
-      top: -20rem;
-      left: 0;
-      width: 80%;
-      height: 80%;
-    }
-    .morph-icon-right {
-      position: fixed;
-      top: 30rem;
-      left: auto;
-      width: 120%;
-      height: 100%;
-    }
-    .leaf-bottom {
-      object-fit: contain;
-      margin-bottom: 9rem;
-      object-fit: contain;
-      align-self: center;
-      position: fixed;
-      top: 22rem;
-      width: 200%;
-    }
-
-    .hero-text {
-      &__primary {
-        position: static;
-        width: 100%;
-        // height: 75px;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 0 15%;
-        font-family: Graphik;
-        font-size: 3rem;
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.3;
-        letter-spacing: normal;
-        color: $color-text;
-        margin-top: 8rem;
-        margin-bottom: 0rem;
-      }
-    }
-
-    .button {
-      width: 75%;
-      // height: 5.3rem;
-      // opacity: 0.5;
-      border-radius: 5px;
-      background-color: #f47079;
-      text-align: center;
-      color: #ffffff;
-      // opacity: 0.5;
-      font-family: Graphik;
-      font-size: 17.1px;
-      font-weight: 500;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: 0.94;
-      letter-spacing: normal;
-      padding: 2rem 0;
-      align-self: center;
-      margin-bottom: 6rem;
-      cursor: pointer;
-    }
-
-    .card-container {
-      position: relative;
-      width: 100%;
-      display: flex;
-      // flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      padding: 0 2rem;
-      margin: 10rem auto;
-      margin-bottom:2rem;
-
-      .card-transport,
-      .card-transfer,
-      .card-eating,
-      .card-bills,
-      .card-family,
-      .card-groceries,
-      .card-shopping,
-      .card-care,
-      .card-vacation,
-      .card-payroll,
-      .card-entertainment,
-      .card-investment {
-        width: 23%;
-        height: 50%;
-        padding: 1rem 0rem;
-        padding-bottom: 0.5rem;
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 8px;
-        background-color: #ffffff;
-
-        .radio {
-          align-self: flex-end;
-          margin-right: 1rem;
-        }
-
-        ::placeholder {
-          opacity: 0.48;
-          font-family: Graphik;
-          font-size: 2.4rem;
-          font-weight: 500;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: normal;
-          letter-spacing: -0.58px;
-          text-align: center;
-          color: #252525;
-        }
-
-        :focus {
-          outline: none;
-        }
-
-        .card-img {
-          width: 40%;
-          margin-top: 1rem;
-          margin-bottom: 0.5rem;
-        }
-
-        .error {
-          display: none;
-          color: red;
-        }
-
-        .card-text {
-          width: 100%;
-          margin-top: 1rem;
-          font-family: SFProDisplay;
-          font-size: 2rem;
-          font-weight: 600;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: normal;
-          letter-spacing: -0.41px;
-          text-align: center;
-          color: #3a3737;
-        }
-
-        .input {
-          width: 85%;
-          height: 3rem;
-          font-size: 2.4rem;
-          text-align: center;
-          margin-top: 2.8rem;
-          margin-bottom: 0.8rem;
-          border: none;
-          border-radius: 3px;
-          background-color: #f1f1f1;
-        }
-      }
-
-      .card-transport,
-      .card-transfer,
-      .card-eating,
-      .card-family,
-      .card-groceries,
-      .card-shopping,
-      .card-vacation,
-      .card-payroll,
-      .card-entertainment {
-        margin-right: 0rem;
-      }
-
-      .card-transport,
-      .card-family,
-      .card-bills,
-      .card-shopping,
-      .card-care,
-      .card-payroll,
-      .card-entertainment,
-      .card-transfer {
-        margin-right: 4rem;
-      }
-    }
-  }
-
-  //Result Page Media Query
-
-  .result {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-
-    .baller-emoji {
-      position: absolute;
-      top: 0.5rem;
-      // left: auto;
-      // width: 19.7rem;
-      // height: 17.5rem;
-      object-fit: cover;
-      // align-self: center;
-    }
-    .leaf-bottom-right {
-      position: fixed;
-      top: 67rem;
-      left: 32rem;
-      width: 40%;
-      height: 55%;
-      object-fit: contain;
-    }
-    .morph-icon-left {
-      position: fixed;
-      top: -20rem;
-      left: 0;
-      width: 80%;
-      height: 80%;
-    }
-    .morph-icon-right {
-      position: fixed;
-      top: 30rem;
-      left: auto;
-      width: 120%;
-      height: 100%;
-    }
-    .monthly {
-      // position: absolute;
-      // top: 50rem;
-      // left: auto;
-      width: 28%;
-      // height: 5%;
-      margin-top: 1rem;
-      align-self: center;
-    }
-
-    .baller {
-      width: 90%;
-      // height: 8.2rem;
-      margin-top: 18rem;
-      font-family: Graphik;
-      font-size: 6rem;
-      font-weight: 600;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: 1.37;
-      letter-spacing: normal;
-      align-self: center;
-      color: #3f3f3f;
-    }
-
-    .the-money-monk-comment,
-    .the-essentialist-comment,
-    .the-sensible-sage-comment,
-    .the-baby-baller-comment,
-    .the-spontanious-spender-comment,
-    .the-big-spender-comment,
-    .the-generous-sage-comment,
-    .the-money-maestro-comment {
-      width: 100%;
-      padding: 0 3rem;
-      margin-top: 1.8rem;
-      opacity: 0.6;
-      font-family: Graphik;
-      font-size: 2.8rem;
-      font-weight: normal;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: 1.38;
-      letter-spacing: normal;
-      text-align: justify;
-      color: #3f3f3f;
-    }
-
-    .amount {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      margin-top: 1.8rem;
-      font-family: Graphik;
-      font-size: 7rem;
-      font-weight: bold;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      align-self: center;
-      color: #3f3f3f;
-    }
-
-    .btn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 50%;
-      // height: 5.8rem;
-      margin-top: 5rem;
-      font-family: Graphik;
-      font-size: 2rem;
-      font-weight: 500;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: 1.41;
-      letter-spacing: normal;
-      align-self: center;
-      color: #ffffff;
-      background-color: #f47079;
-      border-radius: 16px;
-      z-index: 3;
-      cursor: pointer;
-    }
-
-    .share-icon {
-      display: flex;
-      justify-content: center;
-
-      .icon1,
-      .icon2,
-      .icon3,
-      .icon4 {
-        border-radius: 50%;
-        margin-top: 5rem;
-      }
-    }
-
-    .share {
-      width: 57px;
-      height: 2.4rem;
-      margin-top: 2rem;
-      margin-bottom: 3rem;
-      font-family: Graphik;
-      font-size: 17px;
-      font-weight: 500;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: 1.41;
-      letter-spacing: normal;
-      align-self: center;
-    }
-  }
-}
-
-@media only screen 
-  and (min-device-width: 1024px) 
-  and (max-device-width: 1439px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+  } //End of Home Page Media Query css
 }
