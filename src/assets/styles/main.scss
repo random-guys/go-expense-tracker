@@ -2556,11 +2556,9 @@ body {
       }
     }
 
-    // .button {
-    //   display: flex;
-    //   flex-direction: column;
-    //   justify-self: center;
-    // }
+    .button {
+      margin-top: 0rem;
+    }
 
     .btn {
       width: 33%;
@@ -2583,7 +2581,7 @@ body {
       right: 0rem;
       width: 45%;
       transform: rotate(28deg);
-      transform-origin: 10% 108%;
+      transform-origin: 10% 110%;
       overflow: hidden;
     }
 
@@ -2614,14 +2612,14 @@ body {
       position: relative;
       bottom: 10rem;
       right: 34rem;
-      width: 2rem;
+      width: 1.5rem;
     }
 
     .yellow-dot {
       position: relative;
       top: 0rem;
       left: -20rem;
-      width: 2rem;
+      width: 1.5rem;
     }
 
     .pie-chart {
@@ -2649,6 +2647,7 @@ body {
       bottom: 24rem;
       left: 30rem;
       width: 12%;
+      margin-bottom: 0rem;
     }
   } //end of home page media query
 
