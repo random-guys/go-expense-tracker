@@ -2626,14 +2626,14 @@ body {
     }
 
     .leaf-left {
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       width: 25%;
     }
 
     .leaf-right {
-      position: fixed;
+      position: absolute;
       top: 0;
       right: 0rem;
       width: 30%;
@@ -2702,21 +2702,21 @@ body {
     text-align: center;
 
     .leaf-left {
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       width: 30%;
       z-index: -1;
     }
     .leaf-center {
-      position: fixed;
+      position: absolute;
       top: 0;
       right: 40%;
       width: 20%;
       z-index: -1;
     }
     .leaf-right {
-      position: fixed;
+      position: absolute;
       top: 0;
       right: 0;
       width: 30%;
