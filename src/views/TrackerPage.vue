@@ -325,7 +325,7 @@ export default {
     TweenMax.fromTo(
       ".leafRight",
       5,
-      { x: -3, y: 0, rotation: "0" },
+      { x: -3, y: -2, rotation: "0" },
       {
         repeat: -1,
         yoyo: true,
@@ -340,7 +340,7 @@ export default {
     TweenMax.fromTo(
       ".leafLeft",
       7,
-      { x: 0, y: 0 },
+      { x: -3, y: -2 },
       {
         repeat: -1,
         yoyo: true,
@@ -354,7 +354,7 @@ export default {
     TweenMax.fromTo(
       ".leafCenter",
       2,
-      { x: 0, y: 0 },
+      { x: 0, y: -1 },
       {
         repeat: -1,
         yoyo: true,
