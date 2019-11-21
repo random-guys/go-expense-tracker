@@ -1286,6 +1286,13 @@ body {
       transform: rotate(5deg);
       transform-origin: 20% 150%;
     }
+
+    @media screen and (max-width: 600px) {
+      bottom: 0rem;
+      right: 0rem;
+      transform: rotate(5deg);
+      transform-origin: 20% 80%;
+    }
   }
   .morph-icon-left {
     position: fixed;
@@ -1315,6 +1322,14 @@ body {
       width: 90%;
       transform: rotate(10deg);
       transform-origin: -170% 230%;
+    }
+
+    @media screen and (max-width: 600px) {
+      bottom: 0rem;
+      right: 0rem;
+      width: 100%;
+      transform: rotate(5deg);
+      transform-origin: -290% 300%;
     }
   }
 

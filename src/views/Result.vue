@@ -266,6 +266,7 @@
         <div class="icon3">
           <a href="https://twitter.com" class="link" target="_blank">
             <img
+              @click="shareToTwitter()"
               src="../assets/images/twitter.svg"
               alt="Twitter Icon"
               class="icon"
@@ -701,6 +702,17 @@ export default {
           amount.value = this.yearly;
         });
       }
+    },
+
+    shareToTwitter() {
+      const text =
+        "I just used @gomoneyng Expense Tracker! Ready for a smooth financial experience? Use my unique link!";
+      const url = `https://go-expense-tracker.netlify.com`;
+      window.location.href =
+        "http://twitter.com/intent/tweet?url=" +
+        encodeURIComponent(url) +
+        "&text=" +
+        encodeURIComponent(text);
     }
   }
 };
