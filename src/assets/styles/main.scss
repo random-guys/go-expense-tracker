@@ -41,15 +41,15 @@ html {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   font-size: 65.5%; // 1rem = 10px, 10px/16px = 62.5%
-  @include respond(tab-land) {
-    font-size: 56.25%; // 9px;
-  }
-  @include respond(tab-port) {
-    font-size: 50%; // 8px;
-  }
-  @include respond(big-desktop) {
-    font-size: 75%; // 12px;
-  }
+  // @include respond(tab-land) {
+  //   font-size: 56.25%; // 9px;
+  // }
+  // @include respond(tab-port) {
+  //   font-size: 50%; // 8px;
+  // }
+  // @include respond(big-desktop) {
+  //   font-size: 75%; // 12px;
+  // }
 }
 
 // Colors
@@ -160,26 +160,27 @@ body {
       letter-spacing: normal;
       text-align: center;
       color: #161616;
-  
-      @media screen and (max-width: 425px) {
+
+
+
+      @media screen and (max-width: 600px) {
         width: 100%;
         padding: 0 15%;
-        font-size: 4rem;
-      };
-
+        font-size: 2.8rem;
+      }
     }
     &__secondary-mobile {
       display: none;
 
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: 600px) {
         opacity: 0.6;
         display: flex;
         width: 100%;
         margin: 1.5rem auto;
         margin-bottom: 1rem;
         padding: 0 10%;
-        font-size: 2rem; 
-      };
+        font-size: 1.8rem;
+      }
     }
 
     &__secondary {
@@ -195,20 +196,21 @@ body {
       text-align: center;
       color: #161616;
 
-      @media screen and (max-width: 425px) {
-        display: none;  
-      };
+      @media screen and (max-width: 600px) {
+        display: none;
+      }
     }
   }
 
   .button {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin-top: 3.2rem;
 
-    @media screen and (max-width: 425px) {
-      margin-top: 0;  
-    };
+    @media screen and (max-width: 600px) {
+      margin-top: 0;
+    }
   }
 
   .btn {
@@ -231,9 +233,13 @@ body {
     transition: all 0.4s;
     transition: all 0.2s ease-in-out;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 900px) {
+      width: 25%;
+    }
+
+    @media screen and (max-width: 600px) {
       width: 33%;
-    };
+    }
   }
 
   .leaf-left {
@@ -243,13 +249,21 @@ body {
     width: 20%;
     z-index: -1;
 
-    @media screen and (max-width: 425px) {
-      top: 5rem;
-      left: -7rem;
+    @media screen and (max-width: 900px) {
+      top: 0rem;
+      left: 0rem;
+      width: 30%;
+      transform: rotate(-10deg);
+      transform-origin: 100% 225%;
+    }
+
+    @media screen and (max-width: 600px) {
+      top: 0rem;
+      left: 0rem;
       width: 45%;
       transform: rotate(-10deg);
-      transform-origin: 20% 145%;
-    };
+      transform-origin: 100% 225%;
+    }
   }
 
   .leaf-right {
@@ -259,14 +273,23 @@ body {
     width: 20%;
     z-index: -1;
 
-    @media screen and (max-width: 425px) {
-      top: -17rem;
+    @media screen and (max-width: 900px) {
+      top: 0rem;
+      right: 0rem;
+      width: 30%;
+      transform: rotate(28deg);
+      transform-origin: 150% 95%;
+      // overflow: hidden;
+    }
+
+    @media screen and (max-width: 600px) {
+      top: 0rem;
       right: 0rem;
       width: 45%;
       transform: rotate(28deg);
-      transform-origin: 10% 110%;
-      overflow: hidden;
-    };
+      transform-origin: 150% 95%;
+      // overflow: hidden;
+    }
   }
 
   .morph-icon-left {
@@ -276,11 +299,41 @@ body {
     width: 55%;
     z-index: -1;
 
-    @media screen and (max-width: 425px) {
-      top: -8rem;
-      left: -42rem;
-      width: 120%;
-    };
+    @media screen and (max-width: 1800px) {
+      top: -10rem;
+      left: 0rem;
+      width: 105%;
+      transform: rotate(5deg);
+      transform-origin: 20% -1005%;
+      // overflow: hidden;
+    }
+
+    @media screen and (max-width: 1200px) {
+      top: -10rem;
+      left: 0rem;
+      width: 75%;
+      transform: rotate(5deg);
+      transform-origin: 210% -525%;
+      // overflow: hidden;
+    }
+
+    @media screen and (max-width: 900px) {
+      top: -10rem;
+      left: 0rem;
+      width: 75%;
+      transform: rotate(5deg);
+      transform-origin: 210% -525%;
+      // overflow: hidden;
+    }
+
+    @media screen and (max-width: 600px) {
+      top: -10rem;
+      left: 0rem;
+      width: 75%;
+      transform: rotate(5deg);
+      transform-origin: 380% -295%;
+      // overflow: hidden;
+    }
   }
 
   .morph-icon-right {
@@ -290,12 +343,33 @@ body {
     width: 55%;
     z-index: -1;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 1800px) {
+      top: 20rem;
+      left: -25rem;
+      width: 200%;
+      z-index: -1;
+    }
+
+    @media screen and (max-width: 1200px) {
+      top: 10rem;
+      left: 15rem;
+      width: 150%;
+      z-index: -1;
+    }
+
+    @media screen and (max-width: 900px) {
       top: 10rem;
       left: 20rem;
       width: 150%;
       z-index: -1;
-    };
+    }
+
+    @media screen and (max-width: 600px) {
+      top: 10rem;
+      left: 20rem;
+      width: 150%;
+      z-index: -1;
+    }
   }
 
   .purple-dot {
@@ -304,7 +378,7 @@ body {
     left: 20rem;
     z-index: -1;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 600px) {
       position: absolute;
       top: 5rem;
       left: 5rem;
@@ -319,10 +393,17 @@ body {
     right: 14rem;
     z-index: -1;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 600px) {
       position: relative;
       bottom: 10rem;
       right: 34rem;
+      width: 1.5rem;
+    }
+
+    @media screen and (max-width: 426px) {
+      position: relative;
+      bottom: 10rem;
+      right: 18rem;
       width: 1.5rem;
     }
   }
@@ -333,10 +414,17 @@ body {
     left: 32rem;
     z-index: -1;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 600px) {
       position: relative;
       top: 0rem;
       left: -20rem;
+      width: 1.5rem;
+    }
+
+    @media screen and (max-width: 426px) {
+      position: relative;
+      top: 0rem;
+      left: -10rem;
       width: 1.5rem;
     }
   }
@@ -347,11 +435,32 @@ body {
     left: 25rem;
     z-index: -1;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 1200px) {
       position: relative;
-      top: 15rem;
+      top: 10rem;
+      left: 26rem;
+      width: 8%;
+    }
+
+    @media screen and (max-width: 900px) {
+      position: relative;
+      top: 10rem;
+      left: 16rem;
+      width: 10%;
+    }
+
+    @media screen and (max-width: 600px) {
+      position: relative;
+      top: 10rem;
       left: 18rem;
-      width: 20%;
+      width: 15%;
+    }
+
+    @media screen and (max-width: 426px) {
+      position: relative;
+      top: 10rem;
+      left: 12rem;
+      width: 15%;
     }
   }
 
@@ -361,10 +470,31 @@ body {
     right: 23rem;
     z-index: -1;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 1200px) {
       position: relative;
       bottom: 7rem;
-      right: 22.2rem;
+      right: 31rem;
+      width: 2rem;
+    }
+
+    @media screen and (max-width: 900px) {
+      position: relative;
+      bottom: 7rem;
+      right: 31rem;
+      width: 2rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      position: relative;
+      bottom: 7rem;
+      right: 21rem;
+      width: 1.5rem;
+    }
+
+    @media screen and (max-width: 426px) {
+      position: relative;
+      bottom: 7rem;
+      right: 15rem;
       width: 1.5rem;
     }
   }
@@ -375,10 +505,28 @@ body {
     right: 17.5rem;
     z-index: -1;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 1200px) {
       position: relative;
-      bottom: 8rem;
+      bottom: 8.5rem;
+      right: 24rem;
+    }
+
+    @media screen and (max-width: 900px) {
+      position: relative;
+      bottom: 8.5rem;
+      right: 24rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      position: relative;
+      bottom: 8.5rem;
       right: 14rem;
+    }
+
+    @media screen and (max-width: 426px) {
+      position: relative;
+      bottom: 8.5rem;
+      right: 8rem;
     }
   }
 
@@ -389,11 +537,35 @@ body {
     width: 3%;
     z-index: -1;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 1200px) {
+      position: relative;
+      bottom: 24rem;
+      left: 75rem;
+      width: 4%;
+      margin-bottom: 0rem;
+    }
+
+    @media screen and (max-width: 900px) {
+      position: relative;
+      bottom: 24rem;
+      left: 55rem;
+      width: 6%;
+      margin-bottom: 0rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      position: relative;
+      bottom: 24rem;
+      left: 40rem;
+      width: 8%;
+      margin-bottom: 0rem;
+    }
+
+    @media screen and (max-width: 426px) {
       position: relative;
       bottom: 24rem;
       left: 30rem;
-      width: 12%;
+      width: 8%;
       margin-bottom: 0rem;
     }
   }
@@ -416,12 +588,34 @@ body {
     left: 0;
     width: 20%;
     z-index: -1;
+
+    @media screen and (max-width: 900px) {
+      top: 0rem;
+      right: 0rem;
+      width: 20%;
+      transform: rotate(130deg);
+      transform-origin: 275% 175%;
+      overflow: hidden;
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 25%;
+      transform: rotate(130deg);
+      transform-origin: 224% 150%;
+      overflow: hidden;
+    }
+
   }
   .leaf-center {
     position: fixed;
     top: 0;
-    right: 45%;
+    align-self: center;
+    width: 15%;
     z-index: -1;
+
+    @media screen and (max-width: 600px) {
+      width: 20%;
+    }
   }
   .leaf-right {
     position: fixed;
@@ -429,20 +623,84 @@ body {
     right: 0;
     width: 20%;
     z-index: -1;
+
+    @media screen and (max-width: 900px) {
+      top: 0rem;
+      left: 0rem;
+      width: 20%;
+      transform: rotate(-130deg);
+      transform-origin: 25% 70%;
+    }
+
+    @media screen and (max-width: 600px) {
+      top: 0rem;
+      left: 0rem;
+      width: 25%;
+      transform: rotate(-130deg);
+      transform-origin: 25% 70%;
+    }
   }
   .morph-icon-left {
     position: fixed;
-    bottom: 0rem;
-    left: 0;
-    width: 40%;
+    top: 0rem;
+    left: 0rem;
+    width: 60%;
+    transform: rotate(10deg);
+    transform-origin: 100% -210%;
     z-index: -1;
+
+    @media screen and (max-width: 1200px) {
+      top: 0rem;
+      left: 0rem;
+      width: 60%;
+      transform: rotate(10deg);
+      transform-origin: 100% -210%;
+    }
+
+    @media screen and (max-width: 900px) {
+      top: 0rem;
+      left: 0rem;
+      width: 60%;
+      transform: rotate(10deg);
+      transform-origin: 100% -210%;
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 80%;
+      transform: rotate(5deg);
+      transform-origin: 400% -600%;
+    }
   }
   .morph-icon-right {
     position: fixed;
-    bottom: 10rem;
+    bottom: 0rem;
     right: 0rem;
-    width: 55%;
+    width: 90%;
+    transform: rotate(10deg);
+    transform-origin: -190% 230%;
     z-index: -1;
+
+    @media screen and (max-width: 1200px) {
+      bottom: 0rem;
+      right: 0rem;
+      width: 90%;
+      transform: rotate(10deg);
+      transform-origin: -190% 230%;
+    }
+
+    @media screen and (max-width: 900px) {
+      bottom: 0rem;
+      right: 0rem;
+      width: 90%;
+      transform: rotate(10deg);
+      transform-origin: -170% 230%;
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 150%;
+      transform: rotate(5deg);
+      transform-origin: -400% 500%;
+    }
   }
 
   .hero-text {
@@ -472,7 +730,7 @@ body {
       letter-spacing: normal;
       color: $color-text;
       align-self: center;
-      margin-top: 1rem;
+      margin-top: 15rem;
     }
   }
 
@@ -509,53 +767,64 @@ body {
     }
   }
 
+  .btn1,
+  .btn2 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 39.5rem;
+    width: 5vw;
+    height: 17vh;
+    z-index: 2;
+    background-color: #15777c;
+    cursor: pointer;
+
+    @media screen and (max-width: 1600px) {
+      top: 40.5rem;
+    }
+
+    @media screen and (max-width: 1440px) {
+      top: 38.5rem;
+    }
+  }
+
+  .btn1 {
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  .btn2 {
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+    right: 0;
+  }
+
+  .oval {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: #115b5f;
+
+    .arrow {
+      color: #ffffff;
+      font-size: 3.5rem;
+      font-weight: 900;
+      cursor: pointer;
+    }
+  }
+
   .slider {
+    position: absolute;
+    top: 33rem;
     width: 100vw;
     display: flex;
     overflow-x: hidden;
-
-    .btn1,
-    .btn2 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      top: 40.1rem;
-      width: 5vw;
-      height: 17vh;
-      z-index: 2;
-      background-color: #15777c;
-      cursor: pointer;
-    }
-
-    .btn1 {
-      border-bottom-right-radius: 12px;
-      border-top-right-radius: 12px;
-    }
-
-    .btn2 {
-      border-bottom-left-radius: 12px;
-      border-top-left-radius: 12px;
-      right: 0;
-    }
-
-    .oval {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      z-index: -1;
-      background-color: #115b5f;
-
-      .arrow {
-        color: #ffffff;
-        font-size: 3.5rem;
-        font-weight: 900;
-        cursor: pointer;
-      }
-    }
 
     &__slide {
       display: flex;
@@ -575,6 +844,12 @@ body {
         padding: 4rem 0;
         padding-left: 3rem;
         background-color: #ffffff;
+        z-index: 1;
+
+        @media screen and (max-width: 1440px) {
+          padding: 3rem 0;
+          padding-left: 3rem;
+        }
 
         .header {
           font-family: Graphik;
@@ -585,6 +860,10 @@ body {
           line-height: 1.31;
           letter-spacing: normal;
           color: #000000;
+
+          @media screen and (max-width: 1440px) {
+            font-size: 2rem;
+          }
         }
 
         .required {
@@ -597,6 +876,11 @@ body {
           letter-spacing: normal;
           color: #f47079;
           margin-top: 1rem;
+
+          @media screen and (max-width: 1440px) {
+            font-size: 1.6rem;
+            margin-top: 1.2rem;
+          }
         }
 
         .input {
@@ -620,6 +904,11 @@ body {
             letter-spacing: normal;
             color: #4e4e4e;
             margin-top: 1rem;
+
+            @media screen and (max-width: 1440px) {
+              font-size: 4rem;
+              margin-top: 1.8rem;
+            }
           }
         }
       }
@@ -635,16 +924,36 @@ body {
         }
       }
     }
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
   }
 
   .slider-mobile {
     display: none;
+
+    @media screen and (max-width: 600px) {
+      display: flex;
+    }
   }
 
   .pie-chart {
     position: relative;
-    top: 8rem;
-    left: 26rem;
+    top: 28rem;
+    left: 20rem;
+    width: 26%;
+
+    @media screen and (max-width: 1200px) {
+      width: 8%;
+    }
+
+    @media screen and (max-width: 900px) {
+      width: 10%;
+    }
+
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
   }
 } //end of signup page css
 
@@ -664,8 +973,9 @@ body {
   }
   .leaf-center {
     position: fixed;
+    align-self: center;
     top: 0;
-    right: 45%;
+    width: 15%;
     z-index: -1;
   }
   .leaf-right {
@@ -758,7 +1068,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 0 10rem;
+    padding: 0 28rem;
     margin-top: 3rem;
 
     .card-transport,
@@ -773,7 +1083,7 @@ body {
     .card-payroll,
     .card-entertainment,
     .card-investment {
-      width: 13%;
+      width: 23%;
       padding: 1rem 0;
       padding-bottom: 0.5rem;
       display: flex;
@@ -842,15 +1152,18 @@ body {
         border-radius: 3px;
         background-color: #f1f1f1;
       }
+
+      @media screen and (max-width: 1600px) {
+      width: 20%;
+      }
     }
 
     .card-transport,
     .card-transfer,
     .card-eating,
-    .card-bills,
     .card-family,
+    .card-groceries,
     .card-shopping,
-    .card-care,
     .card-vacation,
     .card-payroll,
     .card-entertainment {
@@ -2739,119 +3052,119 @@ body {
 // @media only screen and (min-device-width: 320px) and (max-device-width: 425px) and (-webkit-min-device-pixel-ratio: 2) {
 //   //Home page Media Query
 //   .home {
-    // .hero-text {
-      // &__primary {
-        // width: 100%;
-        // padding: 0 15%;
-        // font-size: 4rem;
-    //   }
-    //   &__secondary {
-    //     display: none;
-    //   }
+// .hero-text {
+// &__primary {
+// width: 100%;
+// padding: 0 15%;
+// font-size: 4rem;
+//   }
+//   &__secondary {
+//     display: none;
+//   }
 
-    //   &__secondary-mobile {
-        // opacity: 0.6;
-        // display: flex;
-        // width: 100%;
-        // margin: 1.5rem auto;
-        // margin-bottom: 1rem;
-        // padding: 0 6%;
-        // font-size: 2rem;
-    //   }
-    // }
+//   &__secondary-mobile {
+// opacity: 0.6;
+// display: flex;
+// width: 100%;
+// margin: 1.5rem auto;
+// margin-bottom: 1rem;
+// padding: 0 6%;
+// font-size: 2rem;
+//   }
+// }
 
 //     .button {
 //       margin-top: 0rem;
 //     }
 
 //     .btn {
-      // width: 33%;
-      // z-index: 2;
-      // transition: all 0.2s;
+// width: 33%;
+// z-index: 2;
+// transition: all 0.2s;
 //     }
 
 //     .leaf-left {
-      // position: fixed;
-      // top: 5rem;
-      // left: -7rem;
-      // width: 45%;
-      // transform: rotate(-10deg);
-      // transform-origin: 20% 145%;
+// position: fixed;
+// top: 5rem;
+// left: -7rem;
+// width: 45%;
+// transform: rotate(-10deg);
+// transform-origin: 20% 145%;
 //     }
 
 //     .leaf-right {
-      // position: fixed;
-      // top: -17rem;
-      // right: 0rem;
-      // width: 45%;
-      // transform: rotate(28deg);
-      // transform-origin: 10% 110%;
-      // overflow: hidden;
+// position: fixed;
+// top: -17rem;
+// right: 0rem;
+// width: 45%;
+// transform: rotate(28deg);
+// transform-origin: 10% 110%;
+// overflow: hidden;
 //     }
 
 //     .morph-icon-left {
-      // position: fixed;
-      // top: -8rem;
-      // left: -42rem;
-      // width: 120%;
+// position: fixed;
+// top: -8rem;
+// left: -42rem;
+// width: 120%;
 //     }
 
 //     .morph-icon-right {
-      // position: fixed;
-      // top: 10rem;
-      // left: 20rem;
-      // width: 150%;
-      // z-index: -1;
+// position: fixed;
+// top: 10rem;
+// left: 20rem;
+// width: 150%;
+// z-index: -1;
 //     }
 
 //     .purple-dot {
-      // position: absolute;
-      // top: 5rem;
-      // left: 5rem;
-      // z-index: -1;
-      // width: 1rem;
+// position: absolute;
+// top: 5rem;
+// left: 5rem;
+// z-index: -1;
+// width: 1rem;
 //     }
 
 //     .pink-dot {
-      // position: relative;
-      // bottom: 10rem;
-      // right: 34rem;
-      // width: 1.5rem;
+// position: relative;
+// bottom: 10rem;
+// right: 34rem;
+// width: 1.5rem;
 //     }
 
 //     .yellow-dot {
-      // position: relative;
-      // top: 0rem;
-      // left: -20rem;
-      // width: 1.5rem;
+// position: relative;
+// top: 0rem;
+// left: -20rem;
+// width: 1.5rem;
 //     }
 
 //     .pie-chart {
-      // position: relative;
-      // top: 15rem;
-      // left: 18rem;
-      // width: 20%;
+// position: relative;
+// top: 15rem;
+// left: 18rem;
+// width: 20%;
 //     }
 
 //     .green-dot {
-      // position: relative;
-      // bottom: 7rem;
-      // right: 22.2rem;
-      // width: 1.5rem;
+// position: relative;
+// bottom: 7rem;
+// right: 22.2rem;
+// width: 1.5rem;
 //     }
 
 //     .home-triangle {
-      // position: relative;
-      // bottom: 8rem;
-      // right: 14rem;
+// position: relative;
+// bottom: 8rem;
+// right: 14rem;
 //     }
 
 //     .star {
-      // position: relative;
-      // bottom: 24rem;
-      // left: 30rem;
-      // width: 12%;
-      // margin-bottom: 0rem;
+// position: relative;
+// bottom: 24rem;
+// left: 30rem;
+// width: 12%;
+// margin-bottom: 0rem;
 //     }
 //   } //end of home page media query
 

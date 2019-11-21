@@ -43,13 +43,20 @@
       </h2>
 
       <!-- Desktop Slider -->
+      <!-- <div class="slider-desktop">
 
-      <div class="slider">
+      </div> -->
         <div class="btn1 button1" @click="toggleBack()">
           <div class="oval">
             <p class="arrow foward">&#60;</p>
           </div>
         </div>
+      <div class="slider">
+        <!-- <div class="btn1 button1" @click="toggleBack()">
+          <div class="oval">
+            <p class="arrow foward">&#60;</p>
+          </div>
+        </div> -->
         <div class="slider__slide">
           <div class="card1 cardOne">
             <p class="header">So, what's your First Name?</p>
@@ -98,18 +105,23 @@
             </form>
           </div>
         </div>
-        <div class="btn2 button2" @click="toggleFront()">
+        <!-- <div class="btn2 button2" @click="toggleFront()">
+          <div class="oval">
+            <p class="arrow">&#62;</p>
+          </div>
+        </div> -->
+      </div>
+              <div class="btn2 button2" @click="toggleFront()">
           <div class="oval">
             <p class="arrow">&#62;</p>
           </div>
         </div>
-      </div>
 
       <!-- End of desktop slider -->
 
       <!-- Mobile Slider -->
 
-      <div class="slider-mobile">
+      <!-- <div class="slider-mobile">
         <div class="btn1-mobile button1Mobile" @click="toggleBack()">
           <div class="oval1-mobile">
             <p class="arrow-mobile fowardMobile">&#60;</p>
@@ -164,14 +176,14 @@
             <p class="arrow-mobile">&#62;</p>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- end of mobile slider -->
       <div class="hero-text__secondary">
         <p class="hero-text__secondary">Press the Enter key when done.</p>
       </div>
-      <div>
+      <!-- <div>
         <img src="../assets/images/pie-chart.svg" alt="Pie Chart Shape" class="pie-chart pieChart" />
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -215,82 +227,82 @@ export default {
       { opacity: 1, ease: Power2.easeInOut }
     );
 
-    TweenMax.fromTo(
-      ".morphIconRight",
-      60,
-      { scale: "0.8" },
-      {
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 0.4,
-        ease: Linear.easeNone,
-        scale: "1",
-        rotation: "-180"
-      },
-      -3
-    );
-    TweenMax.fromTo(
-      ".morphIconLeft",
-      120,
-      { scale: "1" },
-      {
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 0.4,
-        ease: Linear.easeNone,
-        scale: "1.5",
-        rotation: "360"
-      },
-      -3
-    );
-    TweenMax.fromTo(
-      ".leafRight",
-      5,
-      { x: 0, y: 0 },
-      {
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 0.4,
-        ease: Linear.easeNone,
-        x: 10,
-        y: -30
-      },
-      -3
-    );
-    TweenMax.fromTo(
-      ".leafLeft",
-      2,
-      { x: 0, y: 0 },
-      {
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 0.4,
-        ease: Linear.easeNone,
-        x: -10,
-        y: -10
-      },
-      -3
-    );
-    TweenMax.fromTo(
-      ".leafCenter",
-      2,
-      { x: 0, y: 0 },
-      {
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 0.4,
-        ease: Linear.easeNone,
-        x: -3,
-        y: -10,
-        rotation: "5"
-      },
-      -3
-    );
-    TweenMax.to(".pieChart", 50, {
-      rotation: "360",
-      ease: Linear.easeNone,
-      repeat: -1
-    });
+    // TweenMax.fromTo(
+    //   ".morphIconRight",
+    //   60,
+    //   { scale: "0.8" },
+    //   {
+    //     repeat: -1,
+    //     yoyo: true,
+    //     repeatDelay: 0.4,
+    //     ease: Linear.easeNone,
+    //     scale: "1",
+    //     rotation: "-180"
+    //   },
+    //   -3
+    // );
+    // TweenMax.fromTo(
+    //   ".morphIconLeft",
+    //   120,
+    //   { scale: "1" },
+    //   {
+    //     repeat: -1,
+    //     yoyo: true,
+    //     repeatDelay: 0.4,
+    //     ease: Linear.easeNone,
+    //     scale: "1.5",
+    //     rotation: "360"
+    //   },
+    //   -3
+    // );
+    // TweenMax.fromTo(
+    //   ".leafRight",
+    //   5,
+    //   { x: 0, y: 0 },
+    //   {
+    //     repeat: -1,
+    //     yoyo: true,
+    //     repeatDelay: 0.4,
+    //     ease: Linear.easeNone,
+    //     x: 10,
+    //     y: -30
+    //   },
+    //   -3
+    // );
+    // TweenMax.fromTo(
+    //   ".leafLeft",
+    //   2,
+    //   { x: 0, y: 0 },
+    //   {
+    //     repeat: -1,
+    //     yoyo: true,
+    //     repeatDelay: 0.4,
+    //     ease: Linear.easeNone,
+    //     x: -10,
+    //     y: -10
+    //   },
+    //   -3
+    // );
+    // TweenMax.fromTo(
+    //   ".leafCenter",
+    //   2,
+    //   { x: 0, y: 0 },
+    //   {
+    //     repeat: -1,
+    //     yoyo: true,
+    //     repeatDelay: 0.4,
+    //     ease: Linear.easeNone,
+    //     x: -3,
+    //     y: -10,
+    //     rotation: "5"
+    //   },
+    //   -3
+    // );
+    // TweenMax.to(".pieChart", 50, {
+    //   rotation: "360",
+    //   ease: Linear.easeNone,
+    //   repeat: -1
+    // });
   },
   methods: {
     initialUserDetails() {

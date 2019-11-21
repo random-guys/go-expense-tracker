@@ -116,69 +116,69 @@ export default {
       { opacity: 1, ease: Power2.easeInOut }
     );
 
-    tl.fromTo(
-      ".greenDot",
-      10,
-      { x: 0, y: 0 },
-      {
-        x: 130,
-        y: 130,
-        ease: Linear.easeNone,
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 0.4
-      }
-    )
-      .fromTo(
-        ".yellowDot",
-        2,
-        { x: 0, y: 0 },
-        {
-          x: 200,
-          y: 200,
-          ease: Bounce.easeInOut,
-          repeat: -1,
-          yoyo: true,
-          repeatDelay: 1
-        },
-        0.1
-      )
-      .fromTo(
-        ".purpleDot",
-        30,
-        { x: 0, y: 0 },
-        {
-          x: 350,
-          y: 450,
-          ease: SteppedEase.config(10),
-          repeat: -1,
-          yoyo: true,
-          repeatDelay: 0.4
-        },
-        0.1
-      )
-      .fromTo(
-        ".pinkDot",
-        3,
-        { x: 0, y: 0 },
-        {
-          x: 350,
-          y: 350,
-          ease: Back.easeInOut.config(1.7),
-          repeat: -1,
-          yoyo: true,
-          repeatDelay: 1
-        },
-        0.1
-      );
+    // tl.fromTo(
+    //   ".greenDot",
+    //   10,
+    //   { x: 0, y: 0 },
+    //   {
+    //     x: 130,
+    //     y: 130,
+    //     ease: Linear.easeNone,
+    //     repeat: -1,
+    //     yoyo: true,
+    //     repeatDelay: 0.4
+    //   }
+    // )
+      // .fromTo(
+      //   ".yellowDot",
+      //   2,
+      //   { x: 0, y: 0 },
+      //   {
+      //     x: 200,
+      //     y: 200,
+      //     ease: Bounce.easeInOut,
+      //     repeat: -1,
+      //     yoyo: true,
+      //     repeatDelay: 1
+      //   },
+      //   0.1
+      // )
+      // .fromTo(
+      //   ".purpleDot",
+      //   30,
+      //   { x: 0, y: 0 },
+      //   {
+      //     x: 350,
+      //     y: 450,
+      //     ease: SteppedEase.config(10),
+      //     repeat: -1,
+      //     yoyo: true,
+      //     repeatDelay: 0.4
+      //   },
+      //   0.1
+      // )
+      // .fromTo(
+      //   ".pinkDot",
+      //   3,
+      //   { x: 0, y: 0 },
+      //   {
+      //     x: 350,
+      //     y: 350,
+      //     ease: Back.easeInOut.config(1.7),
+      //     repeat: -1,
+      //     yoyo: true,
+      //     repeatDelay: 1
+      //   },
+      //   0.1
+      // );
 
     // tl.to(".btnGo", 2.5, {repeat: -1, yoyo: true, repeatDelay: 0, ease:Linear.easeNone, scale: "1.5"}, 1)
 
-    TweenMax.to(".pieChart", 50, {
-      rotation: "360",
-      ease: Linear.easeNone,
-      repeat: -1
-    });
+    // TweenMax.to(".pieChart", 50, {
+    //   rotation: "360",
+    //   ease: Linear.easeNone,
+    //   repeat: -1
+    // });
     // TweenMax.fromTo(
     //   ".leafLeft",
     //   2,
@@ -207,11 +207,11 @@ export default {
     //   },
     //   -3
     // );
-    TweenMax.to(".starIcon", 300, {
-      rotation: "360",
-      ease: SteppedEase.config(250),
-      repeat: -1
-    });
+    // TweenMax.to(".starIcon", 300, {
+    //   rotation: "360",
+    //   ease: SteppedEase.config(250),
+    //   repeat: -1
+    // });
     // TweenMax.fromTo(
     //   ".morphIconLeft",
     //   120,
