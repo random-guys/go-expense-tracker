@@ -1266,6 +1266,10 @@ body {
     object-fit: contain;
     align-self: center;
     z-index: 1;
+
+    @media screen and (max-width: 600px) {
+      width: 12rem;
+    }
   }
 
   .leaf-bottom-right {
@@ -1361,7 +1365,7 @@ body {
 
     @media screen and (max-width: 600px) {
       font-size: 3rem;
-  }
+    }
   }
 
   .the-money-monk-comment,
@@ -1396,8 +1400,8 @@ body {
 
     @media screen and (max-width: 600px) {
       font-size: 1.6rem;
-    width: 85%;
-  }
+      width: 85%;
+    }
   }
 
   .amount {
