@@ -1128,6 +1128,22 @@ body {
     padding: 0 28rem;
     margin-top: 3rem;
 
+    @media screen and (max-width: 1200px) {
+      padding: 0 18rem;
+    }
+
+    @media screen and (max-width: 1024px) {
+      padding: 0 13rem;
+    }
+
+    @media screen and (max-width: 900px) {
+      padding: 0 8rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
+
     .card-transport,
     .card-transfer,
     .card-eating,
@@ -1140,7 +1156,7 @@ body {
     .card-payroll,
     .card-entertainment,
     .card-investment {
-      width: 23%;
+      width: 20%;
       padding: 1rem 0;
       padding-bottom: 0.5rem;
       display: flex;
@@ -1148,7 +1164,7 @@ body {
       justify-content: center;
       align-items: center;
       border-radius: 8px;
-      margin: 1.5rem 0;
+      margin: 2rem 0;
       background-color: #ffffff;
 
       .radio {
@@ -1213,6 +1229,10 @@ body {
       @media screen and (max-width: 1600px) {
         width: 20%;
       }
+
+      @media screen and (max-width: 1200px) {
+        width: 20%;
+      }
     }
 
     .card-transport,
@@ -1224,7 +1244,7 @@ body {
     .card-vacation,
     .card-payroll,
     .card-entertainment {
-      margin-right: 2.5rem;
+      margin-right: 3rem;
     }
   }
 } //End of Tracker Page CSS
@@ -1247,14 +1267,21 @@ body {
     align-self: center;
     z-index: 1;
   }
+
   .leaf-bottom-right {
     position: fixed;
-    top: 40rem;
+    bottom: 0rem;
     right: 0;
-    width: 46rem;
-    height: 55.4rem;
+    width: 30%;
     object-fit: contain;
     z-index: -1;
+
+    @media screen and (max-width: 1024px) {
+      bottom: 0rem;
+      right: 0rem;
+      transform: rotate(5deg);
+      transform-origin: 20% 150%;
+    }
   }
   .morph-icon-left {
     position: fixed;
@@ -1262,6 +1289,14 @@ body {
     left: 0;
     width: 40%;
     z-index: -1;
+
+    @media screen and (max-width: 1024px) {
+      top: 0rem;
+      left: 0rem;
+      width: 60%;
+      transform: rotate(10deg);
+      transform-origin: 100% -210%;
+    }
   }
   .morph-icon-right {
     position: fixed;
@@ -1269,10 +1304,25 @@ body {
     right: 5rem;
     width: 57%;
     z-index: -1;
+
+    @media screen and (max-width: 1024px) {
+      bottom: 0rem;
+      right: 0rem;
+      width: 90%;
+      transform: rotate(10deg);
+      transform-origin: -170% 230%;
+    }
   }
+
+  .duration {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+  }
+
   .monthly {
     position: relative;
-    width: 19.7rem;
     align-self: center;
     z-index: 1;
     margin-top: 0.5rem;
@@ -1300,6 +1350,18 @@ body {
     letter-spacing: normal;
     align-self: center;
     color: #3f3f3f;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 4.6rem;
+    }
+
+    @media screen and (max-width: 900px) {
+      font-size: 4rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 3rem;
+  }
   }
 
   .the-money-monk-comment,
@@ -1323,6 +1385,19 @@ body {
     letter-spacing: normal;
     align-self: center;
     color: #3f3f3f;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 2.2rem;
+    }
+
+    @media screen and (max-width: 900px) {
+      font-size: 2rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 1.6rem;
+    width: 85%;
+  }
   }
 
   .amount {
@@ -1339,6 +1414,18 @@ body {
     letter-spacing: normal;
     align-self: center;
     color: #3f3f3f;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 6rem;
+    }
+
+    @media screen and (max-width: 900px) {
+      font-size: 5rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 4.4rem;
+    }
   }
 
   .btn {
@@ -1363,6 +1450,18 @@ body {
     z-index: 3;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
+
+    @media screen and (max-width: 1024px) {
+      width: 30%;
+    }
+
+    @media screen and (max-width: 900px) {
+      width: 30%;
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 50%;
+    }
   }
 
   .btn:hover {

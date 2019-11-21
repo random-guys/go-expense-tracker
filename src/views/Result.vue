@@ -234,11 +234,13 @@
           <p>₦{{ detail.value.toLocaleString() }}</p>
         </div>
       </div>
-      <select v-model="selected" class="monthly" @change="calcAmount($event)">
-        <option>Weekly</option>
-        <option>Monthly</option>
-        <option>Yearly</option>
-      </select>
+      <div class="duration">
+        <select v-model="selected" class="monthly" @change="calcAmount($event)">
+          <option>Weekly</option>
+          <option>Monthly</option>
+          <option>Yearly</option>
+        </select>
+      </div>
       <a href="https://gomoney.global/join" class="btn" target="_blank"
         >JOIN THE WAITLIST</a
       >
@@ -343,73 +345,73 @@ export default {
       { opacity: 1, ease: Power2.easeInOut }
     );
 
-    TweenMax.fromTo(
-      ".morphIconRight",
-      60,
-      { scale: "0.8" },
-      {
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 0.4,
-        ease: Linear.easeNone,
-        scale: "1",
-        rotation: "-180"
-      },
-      -3
-    );
-    TweenMax.fromTo(
-      ".morphIconLeft",
-      120,
-      { scale: "1" },
-      {
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 0.4,
-        ease: Linear.easeNone,
-        scale: "1.5",
-        rotation: "360"
-      },
-      -3
-    );
-    TweenMax.fromTo(
-      ".leafBottomRight",
-      5,
-      { x: 0, y: 0, scale: "1" },
-      {
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 0.4,
-        ease: Linear.easeNone,
-        x: 10,
-        y: -30,
-        scale: "1.1"
-      }
-    );
-    TweenMax.fromTo(
-      "#sunShade",
-      0.3,
-      { y: "0" },
-      {
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 0.5,
-        ease: Linear.easeNone,
-        y: "-60"
-      }
-    );
-    TweenMax.fromTo(
-      "#sunShadeHand",
-      0.3,
-      { y: "0" },
-      {
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 0.5,
-        ease: Linear.easeNone,
-        y: "-50",
-        rotation: "40"
-      }
-    );
+    // TweenMax.fromTo(
+    //   ".morphIconRight",
+    //   60,
+    //   { scale: "0.8" },
+    //   {
+    //     repeat: -1,
+    //     yoyo: true,
+    //     repeatDelay: 0.4,
+    //     ease: Linear.easeNone,
+    //     scale: "1",
+    //     rotation: "-180"
+    //   },
+    //   -3
+    // );
+    // TweenMax.fromTo(
+    //   ".morphIconLeft",
+    //   120,
+    //   { scale: "1" },
+    //   {
+    //     repeat: -1,
+    //     yoyo: true,
+    //     repeatDelay: 0.4,
+    //     ease: Linear.easeNone,
+    //     scale: "1.5",
+    //     rotation: "360"
+    //   },
+    //   -3
+    // );
+    // TweenMax.fromTo(
+    //   ".leafBottomRight",
+    //   5,
+    //   { x: 0, y: 0, scale: "1" },
+    //   {
+    //     repeat: -1,
+    //     yoyo: true,
+    //     repeatDelay: 0.4,
+    //     ease: Linear.easeNone,
+    //     x: 10,
+    //     y: -30,
+    //     scale: "1.1"
+    //   }
+    // );
+    // TweenMax.fromTo(
+    //   "#sunShade",
+    //   0.3,
+    //   { y: "0" },
+    //   {
+    //     repeat: -1,
+    //     yoyo: true,
+    //     repeatDelay: 0.5,
+    //     ease: Linear.easeNone,
+    //     y: "-60"
+    //   }
+    // );
+    // TweenMax.fromTo(
+    //   "#sunShadeHand",
+    //   0.3,
+    //   { y: "0" },
+    //   {
+    //     repeat: -1,
+    //     yoyo: true,
+    //     repeatDelay: 0.5,
+    //     ease: Linear.easeNone,
+    //     y: "-50",
+    //     rotation: "40"
+    //   }
+    // );
     if (this.monthly <= 20000) {
       TweenMax.fromTo(
         ".the-money-monk",

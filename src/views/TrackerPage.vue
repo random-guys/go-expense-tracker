@@ -294,92 +294,92 @@ export default {
     this.userDetails = JSON.parse(localStorage.getItem("user_details"));
     const tl = new TimelineMax();
 
-    TweenMax.fromTo(
-      ".morphIconRight",
-      60,
-      { scale: "0.8" },
-      {
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 0.4,
-        ease: Linear.easeNone,
-        scale: "1",
-        rotation: "-180"
-      },
-      -3
-    );
-    TweenMax.fromTo(
-      ".morphIconLeft",
-      120,
-      { scale: "1" },
-      {
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 0.4,
-        ease: Linear.easeNone,
-        scale: "1.5",
-        rotation: "360"
-      },
-      -3
-    );
-    TweenMax.fromTo(
-      ".leafRight",
-      5,
-      { x: -3, y: -2, rotation: "0" },
-      {
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 0.4,
-        ease: Linear.easeNone,
-        x: -1,
-        y: -30,
-        rotation: "5"
-      },
-      -3
-    );
-    TweenMax.fromTo(
-      ".leafLeft",
-      7,
-      { x: -3, y: -2 },
-      {
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 0.4,
-        ease: Linear.easeNone,
-        x: -10,
-        y: -30
-      },
-      -3
-    );
-    TweenMax.fromTo(
-      ".leafCenter",
-      2,
-      { x: 0, y: -1 },
-      {
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 0.4,
-        ease: Linear.easeNone,
-        x: -3,
-        y: -10,
-        rotation: "5"
-      },
-      -3
-    );
-    TweenMax.fromTo(
-      ".leafBottom",
-      5,
-      {  scale: "0.8" },
-      {
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 0,
-        ease: Elastic.easeInOut.config(2, 2),
-        rotation: "5",
-        scale: "1"
-      },
-      -3
-    );
+    // TweenMax.fromTo(
+    //   ".morphIconRight",
+    //   60,
+    //   { scale: "0.8" },
+    //   {
+    //     repeat: -1,
+    //     yoyo: true,
+    //     repeatDelay: 0.4,
+    //     ease: Linear.easeNone,
+    //     scale: "1",
+    //     rotation: "-180"
+    //   },
+    //   -3
+    // );
+    // TweenMax.fromTo(
+    //   ".morphIconLeft",
+    //   120,
+    //   { scale: "1" },
+    //   {
+    //     repeat: -1,
+    //     yoyo: true,
+    //     repeatDelay: 0.4,
+    //     ease: Linear.easeNone,
+    //     scale: "1.5",
+    //     rotation: "360"
+    //   },
+    //   -3
+    // );
+    // TweenMax.fromTo(
+    //   ".leafRight",
+    //   5,
+    //   { x: -3, y: -2, rotation: "0" },
+    //   {
+    //     repeat: -1,
+    //     yoyo: true,
+    //     repeatDelay: 0.4,
+    //     ease: Linear.easeNone,
+    //     x: -1,
+    //     y: -30,
+    //     rotation: "5"
+    //   },
+    //   -3
+    // );
+    // TweenMax.fromTo(
+    //   ".leafLeft",
+    //   7,
+    //   { x: -3, y: -2 },
+    //   {
+    //     repeat: -1,
+    //     yoyo: true,
+    //     repeatDelay: 0.4,
+    //     ease: Linear.easeNone,
+    //     x: -10,
+    //     y: -30
+    //   },
+    //   -3
+    // );
+    // TweenMax.fromTo(
+    //   ".leafCenter",
+    //   2,
+    //   { x: 0, y: -1 },
+    //   {
+    //     repeat: -1,
+    //     yoyo: true,
+    //     repeatDelay: 0.4,
+    //     ease: Linear.easeNone,
+    //     x: -3,
+    //     y: -10,
+    //     rotation: "5"
+    //   },
+    //   -3
+    // );
+    // TweenMax.fromTo(
+    //   ".leafBottom",
+    //   5,
+    //   {  scale: "0.8" },
+    //   {
+    //     repeat: -1,
+    //     yoyo: true,
+    //     repeatDelay: 0,
+    //     ease: Elastic.easeInOut.config(2, 2),
+    //     rotation: "5",
+    //     scale: "1"
+    //   },
+    //   -3
+    // );
 
     tl.fromTo(
       ".trackerPage",
