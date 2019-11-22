@@ -1556,14 +1556,18 @@ body {
 //Result Page CSS
 .result {
   width: 100%;
+  padding: 0 10%;
   display: flex;
   flex-direction: column;
-  text-align: center;
   justify-content: center;
+
+  @media screen and (max-width: 320px) {
+    padding: 0 5%;
+  }
 
   .baller-emoji {
     position: absolute;
-    top: 2rem;
+    top: 1rem;
     left: auto;
     width: 18rem;
     height: 18rem;
@@ -1683,7 +1687,7 @@ body {
   }
 
   .baller {
-    width: 90%;
+    width: 100%;
     margin-top: 20rem;
     font-family: Graphik;
     font-size: 6rem;
@@ -1692,7 +1696,7 @@ body {
     font-style: normal;
     line-height: 1.37;
     letter-spacing: normal;
-    align-self: center;
+    text-align: center;
     color: #3f3f3f;
 
     @media screen and (max-width: 1440px) {
@@ -1731,7 +1735,7 @@ body {
   .the-generous-sage-comment,
   .the-money-maestro-comment {
     display: none;
-    width: 80%;
+    width: 100%;
     margin-top: 1.5rem;
     opacity: 0.6;
     font-family: Graphik;
@@ -1741,12 +1745,11 @@ body {
     font-style: normal;
     line-height: 1.38;
     letter-spacing: normal;
-    align-self: center;
+  text-align: center;
     color: #3f3f3f;
 
     @media screen and (max-width: 1200px) {
       font-size: 2.4rem;
-      // margin-top: 14rem;
     }
 
     @media screen and (max-width: 1024px) {
@@ -1759,7 +1762,6 @@ body {
 
     @media screen and (max-width: 600px) {
       font-size: 1.6rem;
-      width: 85%;
     }
 
     @media screen and (max-width: 425px) {
@@ -1785,13 +1787,13 @@ body {
 
     @media screen and (max-width: 1440px) {
       font-size: 7rem;
-    margin-top: 3rem;
-  }
+      margin-top: 3rem;
+    }
 
-  @media screen and (max-width: 1200px) {
-    font-size: 5rem;
-    margin-top: 2rem;
-  }
+    @media screen and (max-width: 1200px) {
+      font-size: 5rem;
+      margin-top: 2rem;
+    }
 
     @media screen and (max-width: 1024px) {
       font-size: 6rem;
@@ -1831,9 +1833,9 @@ body {
     transition: all 0.2s ease-in-out;
     cursor: pointer;
 
-  @media screen and (max-width: 1440px) {
-    margin-top: 3rem;
-  }
+    @media screen and (max-width: 1440px) {
+      margin-top: 3rem;
+    }
 
     @media screen and (max-width: 1024px) {
       font-size: 1.5rem;
@@ -1877,12 +1879,12 @@ body {
   }
 
   .share {
-    width: 57px;
-    height: 24px;
+    width: 100%;
     margin-top: 0.2rem;
     margin-bottom: 0.5rem;
     font-family: Graphik;
     font-size: 17px;
+    text-align: center;
     font-weight: 500;
     font-stretch: normal;
     font-style: normal;
