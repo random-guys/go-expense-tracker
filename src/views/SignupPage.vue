@@ -190,7 +190,7 @@
         <p class="hero-text__secondary">Press the Enter key when done.</p>
       </div>
       <div class="button">
-        <router-link to="/sign-up-page" class="btn btnGo">Proceed</router-link>
+        <div class="btn btnGo" @click="emailInput()">Proceed</div>
       </div>
       <!-- <div>
         <img src="../assets/images/pie-chart.svg" alt="Pie Chart Shape" class="pie-chart pieChart" />
@@ -544,7 +544,7 @@ export default {
       ) {
         this.$swal.fire({
           type: "info",
-          html: `Invalid email`
+          html: `Incomplete Details`
         });
         return;
       } else {
