@@ -11,11 +11,11 @@
         alt="Morph Icon Right"
         class="morph-icon-right morphIconRight"
       /> -->
-      <!-- <img
+      <img
         src="../assets/images/result-page-leaf.svg"
         alt="Morph Icon Right"
         class="leaf-bottom-right leafBottomRight"
-      /> -->
+      />
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
