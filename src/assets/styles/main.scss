@@ -171,6 +171,14 @@ body {
         padding: 0 15%;
         font-size: 2.8rem;
       }
+
+      @media screen and (max-width: 600px) {
+        margin-top: 4rem;
+      }
+
+      @media screen and (max-width: 375px) {
+        font-size: 2.4rem;
+      }
     }
     &__secondary-mobile {
       display: none;
@@ -183,6 +191,14 @@ body {
         margin-bottom: 1rem;
         padding: 0 10%;
         font-size: 1.8rem;
+      }
+
+      @media screen and (max-width: 375px) {
+        font-size: 1.6rem;
+      }
+
+      @media screen and (max-width: 320px) {
+        font-size: 1.4rem;
       }
     }
 
@@ -242,6 +258,10 @@ body {
 
     @media screen and (max-width: 600px) {
       width: 33%;
+    }
+
+    @media screen and (max-width: 320px) {
+      width: 40%;
     }
   }
 
@@ -330,18 +350,45 @@ body {
     }
 
     @media screen and (max-width: 600px) {
-      top: -10rem;
+      top: 0rem;
       left: 0rem;
-      width: 75%;
+      width: 155%;
       transform: rotate(5deg);
-      transform-origin: 380% -295%;
+      transform-origin: 120% -1000%;
+      // overflow: hidden;
+    }
+
+    @media screen and (max-width: 426px) {
+      top: 0rem;
+      left: 0rem;
+      width: 155%;
+      transform: rotate(5deg);
+      transform-origin: 130% -800%;
+      // overflow: hidden;
+    }
+
+    @media screen and (max-width: 375px) {
+      top: 0rem;
+      left: 0rem;
+      width: 135%;
+      transform: rotate(5deg);
+      transform-origin: 200% -600%;
+      // overflow: hidden;
+    }
+
+    @media screen and (max-width: 375px) {
+      top: 0rem;
+      left: 0rem;
+      width: 135%;
+      transform: rotate(5deg);
+      transform-origin: 350% -500%;
       // overflow: hidden;
     }
   }
 
   .morph-icon-right {
     position: fixed;
-    top: 10rem;
+    top: 0rem;
     right: 0;
     width: 55%;
     z-index: -1;
@@ -368,10 +415,27 @@ body {
     }
 
     @media screen and (max-width: 600px) {
-      top: 10rem;
-      left: 20rem;
+      top: 0;
+      bottom: 0;
       width: 150%;
-      z-index: -1;
+      transform: rotate(5deg);
+      transform-origin: 10% 15%;
+    }
+
+    @media screen and (max-width: 426px) {
+      top: 0;
+      bottom: 0;
+      width: 180%;
+      transform: rotate(5deg);
+      transform-origin: -30% -50%;
+    }
+
+    @media screen and (max-width: 375px) {
+      bottom: 0;
+      right: 0;
+      width: 180%;
+      transform: rotate(5deg);
+      transform-origin: -10% -90%;
     }
   }
 
@@ -430,6 +494,13 @@ body {
       left: -10rem;
       width: 1.5rem;
     }
+
+    @media screen and (max-width: 320px) {
+      position: relative;
+      top: 0rem;
+      left: -6rem;
+      width: 1.5rem;
+    }
   }
 
   .pie-chart {
@@ -455,14 +526,14 @@ body {
     @media screen and (max-width: 600px) {
       position: relative;
       top: 10rem;
-      left: 18rem;
+      left: 12rem;
       width: 15%;
     }
 
     @media screen and (max-width: 426px) {
       position: relative;
-      top: 10rem;
-      left: 12rem;
+      top: 8rem;
+      left: 10rem;
       width: 15%;
     }
   }
@@ -490,14 +561,21 @@ body {
     @media screen and (max-width: 600px) {
       position: relative;
       bottom: 7rem;
-      right: 21rem;
+      right: 19.5rem;
       width: 1.5rem;
     }
 
     @media screen and (max-width: 426px) {
       position: relative;
       bottom: 7rem;
-      right: 15rem;
+      right: 13.5rem;
+      width: 1.5rem;
+    }
+
+    @media screen and (max-width: 320px) {
+      position: relative;
+      bottom: 7rem;
+      right: 11.5rem;
       width: 1.5rem;
     }
   }
@@ -531,6 +609,12 @@ body {
       bottom: 8.5rem;
       right: 8rem;
     }
+
+    @media screen and (max-width: 320px) {
+      position: relative;
+      bottom: 8.5rem;
+      right: 6rem;
+    }
   }
 
   .star {
@@ -559,15 +643,23 @@ body {
     @media screen and (max-width: 600px) {
       position: relative;
       bottom: 24rem;
-      left: 40rem;
+      left: 30rem;
       width: 8%;
       margin-bottom: 0rem;
     }
 
     @media screen and (max-width: 426px) {
       position: relative;
-      bottom: 24rem;
-      left: 30rem;
+      bottom: 22rem;
+      left: 23rem;
+      width: 8%;
+      margin-bottom: 0rem;
+    }
+
+    @media screen and (max-width: 320px) {
+      position: relative;
+      bottom: 22rem;
+      left: 18rem;
       width: 8%;
       margin-bottom: 0rem;
     }
