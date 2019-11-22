@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <div class="result resultPage">
-      <img
+      <!-- <img
         src="../assets/images/vector-shapes-1.svg"
         alt="Morph Icon Left"
         class="morph-icon-left morphIconLeft"
@@ -10,12 +10,12 @@
         src="../assets/images/vector-shapes-2.svg"
         alt="Morph Icon Right"
         class="morph-icon-right morphIconRight"
-      />
-      <img
+      /> -->
+      <!-- <img
         src="../assets/images/result-page-leaf.svg"
         alt="Morph Icon Right"
         class="leaf-bottom-right leafBottomRight"
-      />
+      /> -->
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -388,31 +388,31 @@ export default {
     //     scale: "1.1"
     //   }
     // );
-    // TweenMax.fromTo(
-    //   "#sunShade",
-    //   0.3,
-    //   { y: "0" },
-    //   {
-    //     repeat: -1,
-    //     yoyo: true,
-    //     repeatDelay: 0.5,
-    //     ease: Linear.easeNone,
-    //     y: "-60"
-    //   }
-    // );
-    // TweenMax.fromTo(
-    //   "#sunShadeHand",
-    //   0.3,
-    //   { y: "0" },
-    //   {
-    //     repeat: -1,
-    //     yoyo: true,
-    //     repeatDelay: 0.5,
-    //     ease: Linear.easeNone,
-    //     y: "-50",
-    //     rotation: "40"
-    //   }
-    // );
+    TweenMax.fromTo(
+      "#sunShade",
+      0.3,
+      { y: "0" },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.5,
+        ease: Linear.easeNone,
+        y: "-60"
+      }
+    );
+    TweenMax.fromTo(
+      "#sunShadeHand",
+      0.3,
+      { y: "0" },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.5,
+        ease: Linear.easeNone,
+        y: "-50",
+        rotation: "40"
+      }
+    );
     if (this.monthly <= 20000) {
       TweenMax.fromTo(
         ".the-money-monk",
@@ -706,7 +706,7 @@ export default {
 
     shareToTwitter() {
       const text =
-        "I just used @gomoneyng Expense Tracker! Ready for a smooth financial experience? Use my unique link!";
+        "I just used @gomoneyng Expense Tracker! Ready for a smooth financial experience.";
       const url = `https://go-expense-tracker.netlify.com`;
       window.location.href =
         "http://twitter.com/intent/tweet?url=" +
