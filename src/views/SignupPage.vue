@@ -1,7 +1,11 @@
 <template>
   <div id="app" class="main">
     <div class="signup-page signupPage">
-      <img src="../assets/images/group-copy-12.svg" alt="Leaf Icon Left" class="leaf-left leafLeft" />
+      <img
+        src="../assets/images/group-copy-12.svg"
+        alt="Leaf Icon Left"
+        class="leaf-left leafLeft"
+      />
       <img
         src="../assets/images/group-copy-11.svg"
         alt="Leaf Icon Left"
@@ -25,12 +29,18 @@
       <img src="../assets/images/logo.svg" alt="Gomoney Logo" class="logo" />
 
       <!-- <h2 class="header2-text margin-top header2">One more thing</h2> -->
-      <div class="header2-div" v-for="(detail, index) in userDetails" :key="index">
+      <div
+        class="header2-div"
+        v-for="(detail, index) in userDetails"
+        :key="index"
+      >
         <h2 class="header2-text margin-bottom display-none header2">
           <b>
             One more thing
             <br />
-            <span class="name-color capitalize">{{ detail.first_name }} {{ detail.last_name }}</span>
+            <span class="name-color capitalize"
+              >{{ detail.first_name }} {{ detail.last_name }}</span
+            >
           </b>
         </h2>
       </div>
@@ -43,21 +53,14 @@
       </h2>
 
       <!-- Desktop Slider -->
-      <!-- <div class="slider-desktop">
 
-      </div> -->
-        <div class="btn1 button1" @click="toggleBack()">
-          <div class="oval">
-            <p class="arrow foward">&#60;</p>
-          </div>
-        </div>
       <div class="slider">
-        <!-- <div class="btn1 button1" @click="toggleBack()">
-          <div class="oval">
-            <p class="arrow foward">&#60;</p>
-          </div>
-        </div> -->
         <div class="slider__slide">
+          <div class="btn1 button1" @click="toggleBack()">
+            <div class="oval">
+              <p class="arrow foward">&#60;</p>
+            </div>
+          </div>
           <div class="card1 cardOne">
             <p class="header">So, what's your First Name?</p>
             <p class="required">(Required)</p>
@@ -104,30 +107,30 @@
               />
             </form>
           </div>
-        </div>
-        <!-- <div class="btn2 button2" @click="toggleFront()">
-          <div class="oval">
-            <p class="arrow">&#62;</p>
+          <div class="btn2 button2" @click="toggleFront()">
+            <div class="oval">
+              <p class="arrow">&#62;</p>
+            </div>
           </div>
-        </div> -->
+        </div>
       </div>
-              <div class="btn2 button2" @click="toggleFront()">
-          <div class="oval">
-            <p class="arrow">&#62;</p>
-          </div>
-        </div>
 
       <!-- End of desktop slider -->
 
       <!-- Mobile Slider -->
 
-      <!-- <div class="slider-mobile">
-        <div class="btn1-mobile button1Mobile" @click="toggleBack()">
+      <div class="slider-mobile">
+        <!-- <div class="btn1-mobile button1Mobile" @click="toggleBack()">
           <div class="oval1-mobile">
             <p class="arrow-mobile fowardMobile">&#60;</p>
           </div>
-        </div>
+        </div> -->
         <div class="slider-mobile__slide-mobile">
+          <div class="btn1-mobile button1Mobile" @click="toggleBack()">
+            <div class="oval1-mobile">
+              <p class="arrow-mobile fowardMobile">&#60;</p>
+            </div>
+          </div>
           <div class="card1-mobile cardOneMobile">
             <p class="header-mobile">So, what's your...?</p>
             <p class="required-mobile">(Required)</p>
@@ -170,16 +173,24 @@
               />
             </form>
           </div>
+          <div class="btn2-mobile button2Mobile" @click="toggleFront()">
+            <div class="oval2-mobile">
+              <p class="arrow-mobile">&#62;</p>
+            </div>
+          </div>
         </div>
-        <div class="btn2-mobile button2Mobile" @click="toggleFront()">
+        <!-- <div class="btn2-mobile button2Mobile" @click="toggleFront()">
           <div class="oval2-mobile">
             <p class="arrow-mobile">&#62;</p>
           </div>
-        </div>
-      </div> -->
+        </div> -->
+      </div>
       <!-- end of mobile slider -->
       <div class="hero-text__secondary">
         <p class="hero-text__secondary">Press the Enter key when done.</p>
+      </div>
+      <div class="button">
+        <router-link to="/sign-up-page" class="btn btnGo">Proceed</router-link>
       </div>
       <!-- <div>
         <img src="../assets/images/pie-chart.svg" alt="Pie Chart Shape" class="pie-chart pieChart" />
@@ -327,7 +338,7 @@ export default {
           details.first_name = this.first_name;
         });
         localStorage.setItem("user_details", JSON.stringify(this.userDetails));
-        this.$refs.lastName.focus()
+        this.$refs.lastName.focus();
       } else {
         this.$swal.fire({
           type: "info",
@@ -430,7 +441,7 @@ export default {
           details.last_name = this.last_name;
         });
         localStorage.setItem("user_details", JSON.stringify(this.userDetails));
-        this.$refs.emailAddress.focus()
+        this.$refs.emailAddress.focus();
       } else {
         this.$swal.fire({
           type: "info",
@@ -835,10 +846,10 @@ export default {
             JSON.stringify(this.userDetails)
           );
         } else {
-        this.$swal.fire({
-          type: "info",
-          html: `Please enter last name`
-        });
+          this.$swal.fire({
+            type: "info",
+            html: `Please enter last name`
+          });
           return;
         }
         const tl = new TimelineMax();
