@@ -727,8 +727,8 @@ export default {
       sliderEl.style.transform = "translateX( " + transformPercentage + "% )";
       if (e.isFinal) {
         // NEW: this only runs on event end
-        if (percentage < 0) goToSlide(activeSlide + 1);
-        else if (percentage > 0) goToSlide(activeSlide - 1);
+        if (percentage < 40) goToSlide(activeSlide + 1);
+        else if (percentage > 40) goToSlide(activeSlide - 1);
         else goToSlide(activeSlide);
       }
     });
