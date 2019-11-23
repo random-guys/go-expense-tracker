@@ -316,8 +316,8 @@ export default {
     });
     const headerCanvasSettings = {
       target: "confetti",
-      max: "100",
-      size: "3",
+      max: "60",
+      size: "2",
       animate: true,
       props: ["circle", "square", "triangle", "rectangle"],
       colors: [
@@ -332,8 +332,8 @@ export default {
         [0, 255, 255],
         [237, 30, 121]
       ],
-      clock: "60",
-      rotate: true
+      clock: "80"
+      // rotate: true
     };
     const canvas = new ConfettiGenerator(headerCanvasSettings);
     canvas.render();
