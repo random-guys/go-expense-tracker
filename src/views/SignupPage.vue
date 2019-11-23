@@ -63,7 +63,7 @@
           </div>
           <div class="card1 cardOne">
             <p class="header">So, what's your First Name?</p>
-            <p class="required display-hidden">(Required)</p>
+            <p class="required">(Required)</p>
             <form class="input" v-on:submit.prevent="firstNameInput()">
               <input
                 ref="firstName"
@@ -79,7 +79,7 @@
           </div>
           <div class="card2 cardTwo">
             <p class="header">And, what's your Last Name?</p>
-            <p class="required display-hidden">(Required)</p>
+            <p class="required">(Required)</p>
             <form class="input" v-on:submit.prevent="lastNameInput()">
               <input
                 ref="lastName"
@@ -132,46 +132,52 @@
             </div>
           </div>
           <div class="card1-mobile cardOneMobile">
-            <p class="header-mobile">So, what's your...?</p>
-            <p class="required-mobile display-hidden">(Required)</p>
-            <form class="input-mobile" v-on:submit.prevent="firstNameInput()">
-              <input
-                tabindex="-1"
-                type="text"
-                name="first_name"
-                placeholder="First Name"
-                class="input_tag-mobile"
-                v-model="first_name"
-              />
-            </form>
+            <div class="card1-mobile-inner">
+              <p class="header-mobile">So, what's your...?</p>
+              <p class="required-mobile">(Required)</p>
+              <form class="input-mobile" v-on:submit.prevent="firstNameInput()">
+                <input
+                  tabindex="-1"
+                  type="text"
+                  name="first_name"
+                  placeholder="First Name"
+                  class="input_tag-mobile"
+                  v-model="first_name"
+                />
+              </form>
+            </div>
           </div>
           <div class="card2-mobile cardTwoMobile">
-            <p class="header-mobile">And, what's your...?</p>
-            <p class="required-mobile display-hidden">(Required)</p>
-            <form class="input-mobile" v-on:submit.prevent="lastNameInput()">
-              <input
-                tabindex="-1"
-                type="text"
-                name="last_name"
-                placeholder="Last Name"
-                class="input_tag-mobile"
-                v-model="last_name"
-              />
-            </form>
+            <div class="card2-mobile-inner">
+              <p class="header-mobile">And, what's your...?</p>
+              <p class="required-mobile">(Required)</p>
+              <form class="input-mobile" v-on:submit.prevent="lastNameInput()">
+                <input
+                  tabindex="-1"
+                  type="text"
+                  name="last_name"
+                  placeholder="Last Name"
+                  class="input_tag-mobile"
+                  v-model="last_name"
+                />
+              </form>
+            </div>
           </div>
           <div class="card3-mobile cardThreeMobile">
-            <p class="header-mobile">What's your email address?</p>
-            <p class="required-mobile">(Required)</p>
-            <form class="input-mobile" v-on:submit.prevent="emailInput()">
-              <input
-                tabindex="-1"
-                type="email"
-                name="email"
-                placeholder="email@gmail.com"
-                class="input_tag-mobile"
-                v-model="email"
-              />
-            </form>
+            <div class="card3-mobile-inner">
+              <p class="header-mobile">What's your email address?</p>
+              <p class="required-mobile">(Required)</p>
+              <form class="input-mobile" v-on:submit.prevent="emailInput()">
+                <input
+                  tabindex="-1"
+                  type="email"
+                  name="email"
+                  placeholder="email@gmail.com"
+                  class="input_tag-mobile"
+                  v-model="email"
+                />
+              </form>
+            </div>
           </div>
           <div class="btn2-mobile button2Mobile" @click="toggleFront()">
             <div class="oval2-mobile">
@@ -193,7 +199,11 @@
         <div class="btn btnGo" @click="emailInput()">Proceed</div>
       </div>
       <div>
-        <img src="../assets/images/pie-chart.svg" alt="Pie Chart Shape" class="pie-chart pieChart" />
+        <img
+          src="../assets/images/pie-chart.svg"
+          alt="Pie Chart Shape"
+          class="pie-chart pieChart"
+        />
       </div>
     </div>
   </div>
