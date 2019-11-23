@@ -1,5 +1,7 @@
 <template>
   <div class="main">
+    <canvas id="confetti" class="canvas"></canvas>
+
     <div class="result resultPage">
       <!-- <img
         src="../assets/images/vector-shapes-1.svg"
@@ -277,7 +279,6 @@
       </div>
       <div class="share">SHARE</div>
     </div>
-    <!-- <canvas id="confetti" class="canvas"></canvas> -->
   </div>
 </template>
 
@@ -313,29 +314,29 @@ export default {
     this.amountSum.map(amount => {
       amount.value = this.monthly;
     });
-    // const headerCanvasSettings = {
-    //   target: "confetti",
-    //   max: "100",
-    //   size: "3",
-    //   animate: true,
-    //   props: ["circle", "square", "triangle", "rectangle"],
-    //   colors: [
-    //     [165, 104, 246],
-    //     [230, 61, 135],
-    //     [0, 199, 228],
-    //     [253, 214, 126],
-    //     [57, 181, 74],
-    //     [237, 28, 36],
-    //     [252, 238, 33],
-    //     [251, 176, 59],
-    //     [0, 255, 255],
-    //     [237, 30, 121]
-    //   ],
-    //   clock: "60",
-    //   rotate: true
-    // };
-    // const canvas = new ConfettiGenerator(headerCanvasSettings);
-    // canvas.render();
+    const headerCanvasSettings = {
+      target: "confetti",
+      max: "100",
+      size: "3",
+      animate: true,
+      props: ["circle", "square", "triangle", "rectangle"],
+      colors: [
+        [165, 104, 246],
+        [230, 61, 135],
+        [0, 199, 228],
+        [253, 214, 126],
+        [57, 181, 74],
+        [237, 28, 36],
+        [252, 238, 33],
+        [251, 176, 59],
+        [0, 255, 255],
+        [237, 30, 121]
+      ],
+      clock: "60",
+      rotate: true
+    };
+    const canvas = new ConfettiGenerator(headerCanvasSettings);
+    canvas.render();
 
     const tl = new TimelineMax();
 
