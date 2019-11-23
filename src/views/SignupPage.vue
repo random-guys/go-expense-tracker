@@ -63,7 +63,7 @@
           </div>
           <div class="card1 cardOne">
             <p class="header">So, what's your First Name?</p>
-            <p class="required">(Required)</p>
+            <p class="required display-hidden">(Required)</p>
             <form class="input" v-on:submit.prevent="firstNameInput()">
               <input
                 ref="firstName"
@@ -79,7 +79,7 @@
           </div>
           <div class="card2 cardTwo">
             <p class="header">And, what's your Last Name?</p>
-            <p class="required">(Required)</p>
+            <p class="required display-hidden">(Required)</p>
             <form class="input" v-on:submit.prevent="lastNameInput()">
               <input
                 ref="lastName"
@@ -133,7 +133,7 @@
           </div>
           <div class="card1-mobile cardOneMobile">
             <p class="header-mobile">So, what's your...?</p>
-            <p class="required-mobile">(Required)</p>
+            <p class="required-mobile display-hidden">(Required)</p>
             <form class="input-mobile" v-on:submit.prevent="firstNameInput()">
               <input
                 tabindex="-1"
@@ -147,7 +147,7 @@
           </div>
           <div class="card2-mobile cardTwoMobile">
             <p class="header-mobile">And, what's your...?</p>
-            <p class="required-mobile">(Required)</p>
+            <p class="required-mobile display-hidden">(Required)</p>
             <form class="input-mobile" v-on:submit.prevent="lastNameInput()">
               <input
                 tabindex="-1"
@@ -192,9 +192,9 @@
       <div class="button">
         <div class="btn btnGo" @click="emailInput()">Proceed</div>
       </div>
-      <!-- <div>
+      <div>
         <img src="../assets/images/pie-chart.svg" alt="Pie Chart Shape" class="pie-chart pieChart" />
-      </div> -->
+      </div>
     </div>
   </div>
 </template>
@@ -238,82 +238,82 @@ export default {
       { opacity: 1, ease: Power2.easeInOut }
     );
 
-    // TweenMax.fromTo(
-    //   ".morphIconRight",
-    //   60,
-    //   { scale: "0.8" },
-    //   {
-    //     repeat: -1,
-    //     yoyo: true,
-    //     repeatDelay: 0.4,
-    //     ease: Linear.easeNone,
-    //     scale: "1",
-    //     rotation: "-180"
-    //   },
-    //   -3
-    // );
-    // TweenMax.fromTo(
-    //   ".morphIconLeft",
-    //   120,
-    //   { scale: "1" },
-    //   {
-    //     repeat: -1,
-    //     yoyo: true,
-    //     repeatDelay: 0.4,
-    //     ease: Linear.easeNone,
-    //     scale: "1.5",
-    //     rotation: "360"
-    //   },
-    //   -3
-    // );
-    // TweenMax.fromTo(
-    //   ".leafRight",
-    //   5,
-    //   { x: 0, y: 0 },
-    //   {
-    //     repeat: -1,
-    //     yoyo: true,
-    //     repeatDelay: 0.4,
-    //     ease: Linear.easeNone,
-    //     x: 10,
-    //     y: -30
-    //   },
-    //   -3
-    // );
-    // TweenMax.fromTo(
-    //   ".leafLeft",
-    //   2,
-    //   { x: 0, y: 0 },
-    //   {
-    //     repeat: -1,
-    //     yoyo: true,
-    //     repeatDelay: 0.4,
-    //     ease: Linear.easeNone,
-    //     x: -10,
-    //     y: -10
-    //   },
-    //   -3
-    // );
-    // TweenMax.fromTo(
-    //   ".leafCenter",
-    //   2,
-    //   { x: 0, y: 0 },
-    //   {
-    //     repeat: -1,
-    //     yoyo: true,
-    //     repeatDelay: 0.4,
-    //     ease: Linear.easeNone,
-    //     x: -3,
-    //     y: -10,
-    //     rotation: "5"
-    //   },
-    //   -3
-    // );
-    // TweenMax.to(".pieChart", 50, {
-    //   rotation: "360",
-    //   ease: Linear.easeNone,
-    //   repeat: -1
-    // });
+    TweenMax.fromTo(
+      ".morphIconRight",
+      60,
+      { scale: "1" },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        scale: "1.1",
+        rotation: "-180"
+      },
+      -3
+    );
+    TweenMax.fromTo(
+      ".morphIconLeft",
+      120,
+      { scale: "1" },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        scale: "1.1",
+        rotation: "360"
+      },
+      -3
+    );
+    TweenMax.fromTo(
+      ".leafRight",
+      5,
+      { x: 0, y: 0 },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        x: 10,
+        y: -30
+      },
+      -3
+    );
+    TweenMax.fromTo(
+      ".leafLeft",
+      2,
+      { x: 0, y: 0 },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        x: -10,
+        y: -10
+      },
+      -3
+    );
+    TweenMax.fromTo(
+      ".leafCenter",
+      2,
+      { x: 0, y: 0 },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        x: -3,
+        y: -10,
+        rotation: "5"
+      },
+      -3
+    );
+    TweenMax.to(".pieChart", 50, {
+      rotation: "360",
+      ease: Linear.easeNone,
+      repeat: -1
+    });
   },
   methods: {
     initialUserDetails() {
