@@ -276,54 +276,54 @@ export default {
     //   },
     //   -3
     // );
-    // TweenMax.fromTo(
-    //   ".leafRight",
-    //   5,
-    //   { x: 0, y: 0 },
-    //   {
-    //     repeat: -1,
-    //     yoyo: true,
-    //     repeatDelay: 0.4,
-    //     ease: Linear.easeNone,
-    //     x: 10,
-    //     y: -30
-    //   },
-    //   -3
-    // );
-    // TweenMax.fromTo(
-    //   ".leafLeft",
-    //   2,
-    //   { x: 0, y: 0 },
-    //   {
-    //     repeat: -1,
-    //     yoyo: true,
-    //     repeatDelay: 0.4,
-    //     ease: Linear.easeNone,
-    //     x: -10,
-    //     y: -10
-    //   },
-    //   -3
-    // );
-    // TweenMax.fromTo(
-    //   ".leafCenter",
-    //   2,
-    //   { x: 0, y: 0 },
-    //   {
-    //     repeat: -1,
-    //     yoyo: true,
-    //     repeatDelay: 0.4,
-    //     ease: Linear.easeNone,
-    //     x: -3,
-    //     y: -10,
-    //     rotation: "5"
-    //   },
-    //   -3
-    // );
-    // TweenMax.to(".pieChart", 50, {
-    //   rotation: "360",
-    //   ease: Linear.easeNone,
-    //   repeat: -1
-    // });
+    TweenMax.fromTo(
+      ".leafRight",
+      5,
+      { x: 0, y: 0 },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        x: 10,
+        y: -30
+      },
+      -3
+    );
+    TweenMax.fromTo(
+      ".leafLeft",
+      2,
+      { x: 0, y: 0 },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        x: -10,
+        y: -10
+      },
+      -3
+    );
+    TweenMax.fromTo(
+      ".leafCenter",
+      2,
+      { x: 0, y: 0 },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        x: -3,
+        y: -10,
+        rotation: "5"
+      },
+      -3
+    );
+    TweenMax.to(".pieChart", 50, {
+      rotation: "360",
+      ease: Linear.easeNone,
+      repeat: -1
+    });
   },
   methods: {
     initialUserDetails() {

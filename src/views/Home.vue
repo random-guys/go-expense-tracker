@@ -203,7 +203,7 @@ export default {
     )
     .fromTo(
       ".yellowDot",
-      2,
+      5,
       { x: 0, y: 0 },
       {
         x: 200,
@@ -217,7 +217,7 @@ export default {
     )
     .fromTo(
       ".purpleDot",
-      3,
+      60,
       { x: 0, y: 0 },
       {
         x: 350,
@@ -231,7 +231,7 @@ export default {
     )
     .fromTo(
       ".pinkDot",
-      3,
+      30,
       { x: 0, y: 0 },
       {
         x: 260,
@@ -281,34 +281,34 @@ export default {
       ease: SteppedEase.config(250),
       repeat: -1
     });
-    TweenMax.fromTo(
-      ".morphIconLeft",
-      120,
-      { scale: "1", rotation: "0" },
-      {
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 0.4,
-        ease: Linear.easeNone,
-        scale: "1.1",
-        rotation: "-720"
-      },
-      -3
-    );
-    TweenMax.fromTo(
-      ".morphIconRight",
-      20,
-      { scale: "1", rotation: "-50" },
-      {
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 0.4,
-        ease: Linear.easeNone,
-        scale: "1.1",
-        rotation: "70"
-      },
-      -3
-    );
+    // TweenMax.fromTo(
+    //   ".morphIconLeft",
+    //   120,
+    //   { scale: "1", rotation: "0" },
+    //   {
+    //     repeat: -1,
+    //     yoyo: true,
+    //     repeatDelay: 0.4,
+    //     ease: Linear.easeNone,
+    //     scale: "1.1",
+    //     rotation: "-720"
+    //   },
+    //   -3
+    // );
+    // TweenMax.fromTo(
+    //   ".morphIconRight",
+    //   120,
+    //   { scale: "1", rotation: "-50" },
+    //   {
+    //     repeat: -1,
+    //     yoyo: true,
+    //     repeatDelay: 0.4,
+    //     ease: Linear.easeNone,
+    //     scale: "1.1",
+    //     rotation: "70"
+    //   },
+    //   -3
+    // );
   }
 };
 </script>
