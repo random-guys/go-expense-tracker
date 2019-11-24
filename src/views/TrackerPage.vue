@@ -40,7 +40,6 @@
       </div>
       <!-- <div class="break"></div> -->
       <div class="card-container">
-        <!-- <div class="card-container__card-row"> -->
         <div class="card-transport transport">
           <span
             class="radio opacity-zero transportRadio"
@@ -95,7 +94,6 @@
             @click="resetEatingCard()"
             >&#215;</span
           >
-          <!-- <input type="radio" name="" value="" class="radio"> -->
           <img
             src="../assets/images/eating.svg"
             alt="Leaf Icon Left"
@@ -118,7 +116,6 @@
           <span class="radio opacity-zero billsRadio" @click="resetBillsCard()"
             >&#215;</span
           >
-          <!-- <input type="radio" name="" value="" class="radio"> -->
           <img
             src="../assets/images/bills.svg"
             alt="Leaf Icon Left"
@@ -137,15 +134,12 @@
           />
           <p class="error errorMsgBills">!!!</p>
         </div>
-        <!-- </div> -->
-        <!-- <div class="card-container__card-row"> -->
         <div class="card-family family">
           <span
             class="radio opacity-zero familyRadio"
             @click="resetFamilyCard()"
             >&#215;</span
           >
-          <!-- <input type="radio" name="" value="" class="radio"> -->
           <img
             src="../assets/images/family.svg"
             alt="Leaf Icon Left"
@@ -170,7 +164,6 @@
             @click="resetGroceriesCard()"
             >&#215;</span
           >
-          <!-- <input type="radio" name="" value="" class="radio"> -->
           <img
             src="../assets/images/Groceries.svg"
             alt="Leaf Icon Left"
@@ -195,7 +188,6 @@
             @click="resetShoppingCard()"
             >&#215;</span
           >
-          <!-- <input type="radio" name="" value="" class="radio"> -->
           <img
             src="../assets/images/shopping.svg"
             alt="Leaf Icon Left"
@@ -218,7 +210,6 @@
           <span class="radio opacity-zero careRadio" @click="resetCareCard()"
             >&#215;</span
           >
-          <!-- <input type="radio" name="" value="" class="radio"> -->
           <img
             src="../assets/images/personal-care.svg"
             alt="Leaf Icon Left"
@@ -237,15 +228,12 @@
           />
           <p class="error errorMsgCare">!!!</p>
         </div>
-        <!-- </div> -->
-        <!-- <div class="card-container__card-row"> -->
         <div class="card-vacation vacation">
           <span
             class="radio opacity-zero vacationRadio"
             @click="resetVacationCard()"
             >&#215;</span
           >
-          <!-- <input type="radio" name="" value="" class="radio"> -->
           <img
             src="../assets/images/vercation.svg"
             alt="Leaf Icon Left"
@@ -270,7 +258,6 @@
             @click="resetPayrollCard()"
             >&#215;</span
           >
-          <!-- <input type="radio" name="" value="" class="radio"> -->
           <img
             src="../assets/images/payroll.svg"
             alt="Leaf Icon Left"
@@ -295,7 +282,6 @@
             @click="resetEntertainmentCard()"
             >&#215;</span
           >
-          <!-- <input type="radio" name="" value="" class="radio"> -->
           <img
             src="../assets/images/entertainment.svg"
             alt="Leaf Icon Left"
@@ -320,7 +306,6 @@
             @click="resetInvestmentCard()"
             >&#215;</span
           >
-          <!-- <input type="radio" name="" value="" class="radio"> -->
           <img
             src="../assets/images/investment.svg"
             alt="Leaf Icon Left"
@@ -339,7 +324,6 @@
           />
           <p class="error errorMsgInvestment">!!!</p>
         </div>
-        <!-- </div> -->
       </div>
 
       <div class="has-slider">
@@ -744,7 +728,6 @@ export default {
 
         // 4h. Snap to slide when done
         if (e.isFinal) {
-          // console.log(e.velocityX);
           if (e.velocityX > 1) {
             slider.goTo(slider.activeSlide - 1);
           } else if (e.velocityX < -1) {
@@ -791,9 +774,6 @@ export default {
     // Initialize
     slider.init("#slider");
 
-
-    // this.handleScroll()
-
     this.userDetails = JSON.parse(localStorage.getItem("user_details"));
     const tl = new TimelineMax();
 
@@ -825,50 +805,50 @@ export default {
     //   },
     //   -3
     // );
-    // TweenMax.fromTo(
-    //   ".leafRight",
-    //   5,
-    //   { x: -3, y: -2, rotation: "0" },
-    //   {
-    //     repeat: -1,
-    //     yoyo: true,
-    //     repeatDelay: 0.4,
-    //     ease: Linear.easeNone,
-    //     x: -1,
-    //     y: -30,
-    //     rotation: "5"
-    //   },
-    //   -3
-    // );
-    // TweenMax.fromTo(
-    //   ".leafLeft",
-    //   7,
-    //   { x: -3, y: -2 },
-    //   {
-    //     repeat: -1,
-    //     yoyo: true,
-    //     repeatDelay: 0.4,
-    //     ease: Linear.easeNone,
-    //     x: -10,
-    //     y: -30
-    //   },
-    //   -3
-    // );
-    // TweenMax.fromTo(
-    //   ".leafCenter",
-    //   2,
-    //   { x: 0, y: -1 },
-    //   {
-    //     repeat: -1,
-    //     yoyo: true,
-    //     repeatDelay: 0.4,
-    //     ease: Linear.easeNone,
-    //     x: -3,
-    //     y: -10,
-    //     rotation: "5"
-    //   },
-    //   -3
-    // );
+    TweenMax.fromTo(
+      ".leafRight",
+      5,
+      { x: -3, y: -2, rotation: "0" },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        x: -1,
+        y: -30,
+        rotation: "5"
+      },
+      -3
+    );
+    TweenMax.fromTo(
+      ".leafLeft",
+      7,
+      { x: -3, y: -2 },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        x: -10,
+        y: -30
+      },
+      -3
+    );
+    TweenMax.fromTo(
+      ".leafCenter",
+      2,
+      { x: 0, y: -1 },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        x: -3,
+        y: -10,
+        rotation: "5"
+      },
+      -3
+    );
     // TweenMax.fromTo(
     //   ".leafBottom",
     //   5,
@@ -890,152 +870,8 @@ export default {
       { opacity: 0, ease: Power2.easeInOut },
       { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut }
     );
-    // .fromTo(
-    //   ".family",
-    //   0.1,
-    //   { opacity: 0, ease: Power2.easeInOut },
-    //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-    //   0.5
-    // )
-    // .fromTo(
-    //   ".eating",
-    //   0.1,
-    //   { opacity: 0, ease: Power2.easeInOut },
-    //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-    //   0.6
-    // )
-    // .fromTo(
-    //   ".vacation",
-    //   0.1,
-    //   { opacity: 0, ease: Power2.easeInOut },
-    //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-    //   0.7
-    // )
-    // .fromTo(
-    //   ".care",
-    //   0.1,
-    //   { opacity: 0, ease: Power2.easeInOut },
-    //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-    //   0.8
-    // )
-    // .fromTo(
-    //   ".transport",
-    //   0.1,
-    //   { opacity: 0, ease: Power2.easeInOut },
-    //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-    //   0.9
-    // )
-    // .fromTo(
-    //   ".groceries",
-    //   0.1,
-    //   { opacity: 0, ease: Power2.easeInOut },
-    //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-    //   1
-    // )
-    // .fromTo(
-    //   ".investment",
-    //   0.1,
-    //   { opacity: 0, ease: Power2.easeInOut },
-    //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-    //   1.1
-    // )
-    // .fromTo(
-    //   ".bills",
-    //   0.1,
-    //   { opacity: 0, ease: Power2.easeInOut },
-    //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-    //   1.2
-    // )
-    // .fromTo(
-    //   ".transfer",
-    //   0.1,
-    //   { opacity: 0, ease: Power2.easeInOut },
-    //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-    //   1.3
-    // )
-    // .fromTo(
-    //   ".payroll",
-    //   0.1,
-    //   { opacity: 0, ease: Power2.easeInOut },
-    //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-    //   1.4
-    // )
-    // .fromTo(
-    //   ".entertainment",
-    //   0.1,
-    //   { opacity: 0, ease: Power2.easeInOut },
-    //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-    //   1.5
-    // )
-    // .fromTo(
-    //   ".shopping",
-    //   0.1,
-    //   { opacity: 0, ease: Power2.easeInOut },
-    //   { opacity: 1, pointerEvents: "visible", ease: Power2.easeInOut },
-    //   1.6
-    // );
-    // this.btnDisable()
   },
   methods: {
-    handleScroll() {
-      window.scrollTo(0, 0);
-
-      const crlt = new ScrollMagic.Controller();
-      let tml = new TimelineMax();
-      tml
-        .to(
-          ".card-transport",
-          0.1,
-          { opacity: 1, pointerEvents: "visible" },
-          0.1
-        )
-        .to(
-          ".card-transfer",
-          0.1,
-          { opacity: 1, pointerEvents: "visible" },
-          0.1
-        )
-        .to(".card-eating", 0.1, { opacity: 1, pointerEvents: "visible" }, 0.1)
-        .to(".card-bills", 0.1, { opacity: 1, pointerEvents: "visible" }, 0.1);
-
-      const scene = new ScrollMagic.Scene({
-        triggerElement: ".hero-text__primary",
-        // triggerHook: "onEnter",//onEnter
-        // offSet: "5px",
-        duration: "10%"
-      })
-        // .setPin(".hero-text__primary")
-        .setTween(tml)
-        .addTo(crlt);
-
-      const crlt2 = new ScrollMagic.Controller();
-      let tml2 = new TimelineMax();
-      tml2
-        .to(".card-family", 0.1, { opacity: 1, pointerEvents: "visible" }, 0.1)
-        .to(
-          ".card-groceries",
-          0.1,
-          { opacity: 1, pointerEvents: "visible" },
-          0.1
-        )
-        .to(
-          ".card-shopping",
-          0.1,
-          { opacity: 1, pointerEvents: "visible" },
-          0.1
-        )
-        .to(".card-care", 0.1, { opacity: 1, pointerEvents: "visible" }, 0.1);
-
-      const scene2 = new ScrollMagic.Scene({
-        triggerElement: ".hero-text__primary",
-        // triggerHook: "onEnter",//onEnter
-        // offSet: "500px",
-        duration: "45%"
-      })
-        // .setPin(".hero-text__primary")
-        .setTween(tml2)
-        .addTo(crlt2);
-    },
     initialTrackerDetails() {
       this.amountTracker = [];
       let trackerObject = {
@@ -1197,6 +1033,7 @@ export default {
     },
     resetTransportCard() {
       this.transport = "";
+      this.inputTransport = 0;
       const tl = new TimelineMax();
 
       tl.to(
@@ -1219,9 +1056,12 @@ export default {
           0.1
         )
         .to(".errorMsgTransport", 0.5, { display: "none" }, 0.1);
+
+      this.inputAmount();
     },
     resetTransferCard() {
       this.transfer = "";
+      this.inputTransfer = 0;
       const tl = new TimelineMax();
 
       tl.to(
@@ -1239,9 +1079,11 @@ export default {
         )
         .to(".transferRadio", 0.5, { opacity: "0", pointerEvents: "none" }, 0.1)
         .to(".errorMsgTransfer", 0.5, { display: "none" }, 0.1);
+      this.inputAmount();
     },
     resetEatingCard() {
       this.eating = "";
+      this.inputEating = 0;
       const tl = new TimelineMax();
 
       tl.to(
@@ -1259,9 +1101,11 @@ export default {
         )
         .to(".eatingRadio", 0.5, { opacity: "0", pointerEvents: "none" }, 0.1)
         .to(".errorMsgEating", 0.5, { display: "none" }, 0.1);
+      this.inputAmount();
     },
     resetBillsCard() {
       this.bills = "";
+      this.inputBills = 0;
       const tl = new TimelineMax();
 
       tl.to(
@@ -1279,9 +1123,11 @@ export default {
         )
         .to(".billsRadio", 0.5, { opacity: "0", pointerEvents: "none" }, 0.1)
         .to(".errorMsgBills", 0.5, { display: "none" }, 0.1);
+      this.inputAmount();
     },
     resetFamilyCard() {
       this.family = "";
+      this.inputFamily = 0;
       const tl = new TimelineMax();
 
       tl.to(
@@ -1299,9 +1145,11 @@ export default {
         )
         .to(".familyRadio", 0.5, { opacity: "0", pointerEvents: "none" }, 0.1)
         .to(".errorMsgFamily", 0.5, { display: "none" }, 0.1);
+      this.inputAmount();
     },
     resetGroceriesCard() {
       this.groceries = "";
+      this.inputGroceries = 0;
       const tl = new TimelineMax();
 
       tl.to(
@@ -1324,9 +1172,12 @@ export default {
           0.1
         )
         .to(".errorMsgGroceries", 0.5, { display: "none" }, 0.1);
+      this.inputAmount();
     },
     resetShoppingCard() {
       this.shopping = "";
+      this.inputShopping = 0;
+
       const tl = new TimelineMax();
 
       tl.to(
@@ -1344,9 +1195,11 @@ export default {
         )
         .to(".shoppingRadio", 0.5, { opacity: "0", pointerEvents: "none" }, 0.1)
         .to(".errorMsgShopping", 0.5, { display: "none" }, 0.1);
+      this.inputAmount();
     },
     resetCareCard() {
       this.care = "";
+      this.inputCare = 0;
       const tl = new TimelineMax();
 
       tl.to(".care", 0.5, { backgroundColor: "#ffffff", color: "#3a3737" }, 0.1)
@@ -1359,9 +1212,12 @@ export default {
         )
         .to(".careRadio", 0.5, { opacity: "0", pointerEvents: "none" }, 0.1)
         .to(".errorMsgCare", 0.5, { display: "none" }, 0.1);
+      this.inputAmount();
     },
     resetVacationCard() {
       this.vacation = "";
+      this.inputVacation = 0;
+
       const tl = new TimelineMax();
 
       tl.to(
@@ -1379,9 +1235,11 @@ export default {
         )
         .to(".vacationRadio", 0.5, { opacity: "0", pointerEvents: "none" }, 0.1)
         .to(".errorMsgVacation", 0.5, { display: "none" }, 0.1);
+      this.inputAmount();
     },
     resetPayrollCard() {
       this.payroll = "";
+      this.inputPayroll = 0;
       const tl = new TimelineMax();
 
       tl.to(
@@ -1399,9 +1257,11 @@ export default {
         )
         .to(".payrollRadio", 0.5, { opacity: "0", pointerEvents: "none" }, 0.1)
         .to(".errorMsgPayroll", 0.5, { display: "none" }, 0.1);
+      this.inputAmount();
     },
     resetEntertainmentCard() {
       this.entertainment = "";
+      this.inputEntertainment = 0;
       const tl = new TimelineMax();
 
       tl.to(
@@ -1424,9 +1284,11 @@ export default {
           0.1
         )
         .to(".errorMsgEntertainment", 0.5, { display: "none" }, 0.1);
+      this.inputAmount();
     },
     resetInvestmentCard() {
       this.investment = "";
+      this.inputInvestment = 0;
       const tl = new TimelineMax();
 
       tl.to(
@@ -1449,6 +1311,7 @@ export default {
           0.1
         )
         .to(".errorMsgInvestment", 0.5, { display: "none" }, 0.1);
+      this.inputAmount();
     },
     inputTransportationAmount() {
       let regEx = /^[0-9]*$/gm;
@@ -1559,6 +1422,7 @@ export default {
         // this.btnDisable()
         this.inputAmount();
       } else if (this.transport.length === 0) {
+        this.inputTransport = 0;
         this.amountTracker.map(amount => {
           amount.transport = 0;
         });
@@ -1598,8 +1462,13 @@ export default {
             { backgroundColor: "#f1f1f1", color: "#252525" },
             0.1
           )
+          .to(
+            ".transportRadio",
+            0.5,
+            { opacity: "0", pointerEvents: "none" },
+            0.1
+          )
           .to(".errorMsgTransport", 0.5, { display: "none" }, 0.1);
-
         // this.btnDisable()
         this.inputAmount();
       }
@@ -1709,6 +1578,7 @@ export default {
         // this.btnDisable()
         this.inputAmount();
       } else if (this.transfer.length === 0) {
+        this.inputTransfer = 0;
         this.amountTracker.map(amount => {
           amount.transfer = 0;
         });
@@ -1745,6 +1615,12 @@ export default {
             ".transferInput",
             0.5,
             { backgroundColor: "#f1f1f1", color: "#252525" },
+            0.1
+          )
+          .to(
+            ".transferRadio",
+            0.5,
+            { opacity: "0", pointerEvents: "none" },
             0.1
           )
           .to(".errorMsgTransfer", 0.5, { display: "none" }, 0.1);
@@ -1854,6 +1730,8 @@ export default {
         // this.btnDisable()
         this.inputAmount();
       } else {
+        this.inputEating = 0;
+
         this.amountTracker.map(amount => {
           amount.eating = 0;
         });
@@ -1892,6 +1770,7 @@ export default {
             { backgroundColor: "#f1f1f1", color: "#252525" },
             0.1
           )
+          .to(".eatingRadio", 0.5, { opacity: "0", pointerEvents: "none" }, 0.1)
           .to(".errorMsgEating", 0.5, { display: "none" }, 0.1);
         // this.btnDisable()
         this.inputAmount();
@@ -1999,6 +1878,8 @@ export default {
         // this.btnDisable()
         this.inputAmount();
       } else {
+        this.inputBills = 0;
+
         this.amountTracker.map(amount => {
           amount.bills = 0;
         });
@@ -2036,6 +1917,7 @@ export default {
             { backgroundColor: "#f1f1f1", color: "#252525" },
             0.1
           )
+          .to(".billsRadio", 0.5, { opacity: "0", pointerEvents: "none" }, 0.1)
           .to(".errorMsgBills", 0.5, { display: "none" }, 0.1);
         // this.btnDisable()
         this.inputAmount();
@@ -2143,6 +2025,7 @@ export default {
         // this.btnDisable()
         this.inputAmount();
       } else {
+        this.inputFamily = 0;
         this.amountTracker.map(amount => {
           amount.family = 0;
         });
@@ -2181,6 +2064,7 @@ export default {
             { backgroundColor: "#f1f1f1", color: "#252525" },
             0.1
           )
+          .to(".familyRadio", 0.5, { opacity: "0", pointerEvents: "none" }, 0.1)
           .to(".errorMsgFamily", 0.5, { display: "none" }, 0.1);
         // this.btnDisable()
         this.inputAmount();
@@ -2292,6 +2176,7 @@ export default {
         // this.btnDisable()
         this.inputAmount();
       } else {
+        this.inputGroceries = 0;
         this.amountTracker.map(amount => {
           amount.groceries = 0;
         });
@@ -2327,6 +2212,12 @@ export default {
             ".groceriesInput",
             0.5,
             { backgroundColor: "#f1f1f1", color: "#252525" },
+            0.1
+          )
+          .to(
+            ".groceriesRadio",
+            0.5,
+            { opacity: "0", pointerEvents: "none" },
             0.1
           )
           .to(".errorMsgGroceries", 0.5, { display: "none" }, 0.1);
@@ -2440,6 +2331,7 @@ export default {
         // this.btnDisable()
         this.inputAmount();
       } else {
+        this.inputShopping = 0;
         this.amountTracker.map(amount => {
           amount.shopping = 0;
         });
@@ -2476,6 +2368,12 @@ export default {
             ".shoppingInput",
             0.5,
             { backgroundColor: "#f1f1f1", color: "#252525" },
+            0.1
+          )
+          .to(
+            ".shoppingRadio",
+            0.5,
+            { opacity: "0", pointerEvents: "none" },
             0.1
           )
           .to(".errorMsgShopping", 0.5, { display: "none" }, 0.1);
@@ -2585,6 +2483,7 @@ export default {
         // this.btnDisable()
         this.inputAmount();
       } else {
+        this.inputCare = 0;
         this.amountTracker.map(amount => {
           amount.care = 0;
         });
@@ -2622,6 +2521,7 @@ export default {
             { backgroundColor: "#f1f1f1", color: "#252525" },
             0.1
           )
+          .to(".careRadio", 0.5, { opacity: "0", pointerEvents: "none" }, 0.1)
           .to(".errorMsgCare", 0.5, { display: "none" }, 0.1);
         // this.btnDisable()
         this.inputAmount();
@@ -2732,6 +2632,7 @@ export default {
         // this.btnDisable()
         this.inputAmount();
       } else {
+        this.inputVacation = 0;
         this.amountTracker.map(amount => {
           amount.vacation = 0;
         });
@@ -2767,6 +2668,12 @@ export default {
             ".vacationInput",
             0.5,
             { backgroundColor: "#f1f1f1", color: "#252525" },
+            0.1
+          )
+          .to(
+            ".vacationRadio",
+            0.5,
+            { opacity: "0", pointerEvents: "none" },
             0.1
           )
           .to(".errorMsgVacation", 0.5, { display: "none" }, 0.1);
@@ -2880,6 +2787,7 @@ export default {
         // this.btnDisable()
         this.inputAmount();
       } else {
+        this.inputPayroll = 0;
         this.amountTracker.map(amount => {
           amount.payroll = 0;
         });
@@ -2915,6 +2823,12 @@ export default {
             ".payrollInput",
             0.5,
             { backgroundColor: "#f1f1f1", color: "#252525" },
+            0.1
+          )
+          .to(
+            ".payrollRadio",
+            0.5,
+            { opacity: "0", pointerEvents: "none" },
             0.1
           )
           .to(".errorMsgPayroll", 0.5, { display: "none" }, 0.1);
@@ -3030,6 +2944,7 @@ export default {
         // this.btnDisable()
         this.inputAmount();
       } else {
+        this.inputEntertainment = 0;
         this.amountTracker.map(amount => {
           amount.entertainment = 0;
         });
@@ -3065,6 +2980,12 @@ export default {
             ".entertainmentInput",
             0.5,
             { backgroundColor: "#f1f1f1", color: "#252525" },
+            0.1
+          )
+          .to(
+            ".entertainmentRadio",
+            0.5,
+            { opacity: "0", pointerEvents: "none" },
             0.1
           )
           .to(".errorMsgEntertainment", 0.5, { display: "none" }, 0.1);
@@ -3177,6 +3098,7 @@ export default {
         // this.btnDisable()
         this.inputAmount();
       } else {
+        this.inputInvestment = 0;
         this.amountTracker.map(amount => {
           amount.investment = 0;
         });
@@ -3212,6 +3134,12 @@ export default {
             ".investmentInput",
             0.5,
             { backgroundColor: "#f1f1f1", color: "#252525" },
+            0.1
+          )
+          .to(
+            ".investmentRadio",
+            0.5,
+            { opacity: "0", pointerEvents: "none" },
             0.1
           )
           .to(".errorMsgInvestment", 0.5, { display: "none" }, 0.1);
