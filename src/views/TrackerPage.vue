@@ -3259,10 +3259,10 @@ export default {
   width: 100%;
 }
 .slider-pagination > * {
-  border-radius: 25%;
-  box-shadow: 0 0 0 2px rgba(244, 112, 121, 0.07);
+  border-radius: 40%;
+  background-color: rgba(244, 112, 121, 0.2);
   display: inline-block;
-  height: 6px;
+  padding: 0.3rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   transition: background-color 250ms;
