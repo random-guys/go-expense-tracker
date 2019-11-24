@@ -808,36 +808,35 @@ export default {
     TweenMax.fromTo(
       ".leafRight",
       5,
-      { x: -3, y: -2, rotation: "0" },
+      { x: 0, y: 0 },
       {
         repeat: -1,
         yoyo: true,
         repeatDelay: 0.4,
         ease: Linear.easeNone,
-        x: -1,
-        y: -30,
-        rotation: "5"
+        x: 10,
+        y: -30
       },
       -3
     );
     TweenMax.fromTo(
       ".leafLeft",
-      7,
-      { x: -3, y: -2 },
+      2,
+      { x: 0, y: 0 },
       {
         repeat: -1,
         yoyo: true,
         repeatDelay: 0.4,
         ease: Linear.easeNone,
         x: -10,
-        y: -30
+        y: -10
       },
       -3
     );
     TweenMax.fromTo(
       ".leafCenter",
       2,
-      { x: 0, y: -1 },
+      { x: 0, y: 0 },
       {
         repeat: -1,
         yoyo: true,
