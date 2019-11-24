@@ -744,7 +744,7 @@ export default {
 
         // 4h. Snap to slide when done
         if (e.isFinal) {
-          console.log(e.velocityX);
+          // console.log(e.velocityX);
           if (e.velocityX > 1) {
             slider.goTo(slider.activeSlide - 1);
           } else if (e.velocityX < -1) {
@@ -790,6 +790,8 @@ export default {
 
     // Initialize
     slider.init("#slider");
+
+    
     // this.handleScroll()
 
     this.userDetails = JSON.parse(localStorage.getItem("user_details"));
