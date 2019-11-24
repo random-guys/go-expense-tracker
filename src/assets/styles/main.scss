@@ -706,7 +706,7 @@ body {
     @media screen and (max-width: 1024px) {
       position: relative;
       bottom: 7rem;
-      right: 29.5rem;
+      right: 25rem;
       width: 2rem;
     }
 
@@ -743,6 +743,12 @@ body {
       position: relative;
       bottom: 9rem;
       right: 21rem;
+    }
+
+    @media screen and (max-width: 1024px) {
+      position: relative;
+      bottom: 8.5rem;
+      right: 16rem;
     }
 
     @media screen and (max-width: 900px) {
