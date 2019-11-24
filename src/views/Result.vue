@@ -296,7 +296,8 @@ export default {
       monthly: "",
       yearly: "",
       key: "",
-      highestExpense: ""
+      highestExpense: "",
+      twitterComment: ""
     };
   },
   mounted() {
@@ -415,6 +416,7 @@ export default {
       }
     );
     if (this.monthly <= 20000) {
+      this.twitterComment = "a Money Monk";
       TweenMax.fromTo(
         ".the-money-monk",
         1,
@@ -448,6 +450,7 @@ export default {
       );
     }
     if (this.monthly > 20000 && this.monthly <= 30000) {
+      this.twitterComment = "an Essentialist";
       TweenMax.fromTo(
         ".the-essentialist",
         1,
@@ -481,6 +484,7 @@ export default {
       );
     }
     if (this.monthly > 30000 && this.monthly <= 50000) {
+      this.twitterComment = "a Sensible Sage";
       TweenMax.fromTo(
         ".the-sensible-sage",
         1,
@@ -514,6 +518,7 @@ export default {
       );
     }
     if (this.monthly > 50000 && this.monthly <= 60000) {
+      this.twitterComment = "a Baby Baller";
       TweenMax.fromTo(
         ".the-baby-baller",
         1,
@@ -547,6 +552,7 @@ export default {
       );
     }
     if (this.monthly > 60000 && this.monthly <= 70000) {
+      this.twitterComment = "a Spontanious Spender";
       TweenMax.fromTo(
         ".the-spontanious-spender",
         1,
@@ -580,6 +586,7 @@ export default {
       );
     }
     if (this.monthly > 70000 && this.monthly <= 85000) {
+      this.twitterComment = "a Big Spender";
       TweenMax.fromTo(
         ".the-big-spender",
         1,
@@ -613,6 +620,7 @@ export default {
       );
     }
     if (this.monthly > 85000 && this.monthly <= 100000) {
+      this.twitterComment = "a Generous Sage";
       TweenMax.fromTo(
         ".the-generous-sage",
         1,
@@ -646,6 +654,7 @@ export default {
       );
     }
     if (this.monthly > 100000) {
+      this.twitterComment = "Money Maestro";
       TweenMax.fromTo(
         ".the-money-maestro",
         1,
@@ -706,8 +715,9 @@ export default {
     },
 
     shareToTwitter() {
-      const text =
-        "I just used @gomoneyng Expense Tracker! Ready for a smooth financial experience.";
+      const text = `I just used @gomoneyng Expense Tracker! I am ${
+        this.twitterComment
+      } i spend ₦${this.highestExpense.toLocaleString()} on ${this.key}.`;
       const url = `https://go-expense-tracker.netlify.com`;
       window.location.href =
         "http://twitter.com/intent/tweet?url=" +

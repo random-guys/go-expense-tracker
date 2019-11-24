@@ -791,7 +791,7 @@ export default {
     // Initialize
     slider.init("#slider");
 
-    
+
     // this.handleScroll()
 
     this.userDetails = JSON.parse(localStorage.getItem("user_details"));
@@ -3253,10 +3253,7 @@ export default {
 }
 
 .slider-pagination {
-  // bottom: 6.25%;
-  // left: 0;
   pointer-events: none;
-  // position: absolute;
   text-align: center;
   width: 100%;
 }
