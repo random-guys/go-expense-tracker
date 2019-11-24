@@ -342,26 +342,8 @@
         <!-- </div> -->
       </div>
 
-      <!-- <div class="has-slider">
-        <div class="slider" id="slider">
-          <div
-            class="slider-panel"
-            style="background-color: #faaf34; background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/40288/65d721_4dfa47a05152487fb3bc45ca2ec8fd1e.png)"
-          ></div>
-          <div
-            class="slider-panel"
-            style="background-color: #aca680; background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/40288/65d721_761db9a0c113407f924a824ed173ed26.png)"
-          ></div>
-          <div
-            class="slider-panel"
-            style="background-color: #d8daa6; background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/40288/tumblr_njkn6kp0kE1qgsw73o1_500.png)"
-          ></div>
-        </div>
-        <div class="slider-pagination"></div>
-      </div> -->
-
       <div class="has-slider">
-        <div class="slider">
+        <div class="slider" id="slider">
           <div class="slider-panel">
             <div class="card-transport transport">
               <span
@@ -417,7 +399,6 @@
                 @click="resetEatingCard()"
                 >&#215;</span
               >
-              <!-- <input type="radio" name="" value="" class="radio"> -->
               <img
                 src="../assets/images/eating.svg"
                 alt="Leaf Icon Left"
@@ -442,7 +423,6 @@
                 @click="resetBillsCard()"
                 >&#215;</span
               >
-              <!-- <input type="radio" name="" value="" class="radio"> -->
               <img
                 src="../assets/images/bills.svg"
                 alt="Leaf Icon Left"
@@ -469,7 +449,6 @@
                 @click="resetFamilyCard()"
                 >&#215;</span
               >
-              <!-- <input type="radio" name="" value="" class="radio"> -->
               <img
                 src="../assets/images/family.svg"
                 alt="Leaf Icon Left"
@@ -494,7 +473,6 @@
                 @click="resetGroceriesCard()"
                 >&#215;</span
               >
-              <!-- <input type="radio" name="" value="" class="radio"> -->
               <img
                 src="../assets/images/Groceries.svg"
                 alt="Leaf Icon Left"
@@ -519,7 +497,6 @@
                 @click="resetShoppingCard()"
                 >&#215;</span
               >
-              <!-- <input type="radio" name="" value="" class="radio"> -->
               <img
                 src="../assets/images/shopping.svg"
                 alt="Leaf Icon Left"
@@ -544,7 +521,6 @@
                 @click="resetCareCard()"
                 >&#215;</span
               >
-              <!-- <input type="radio" name="" value="" class="radio"> -->
               <img
                 src="../assets/images/personal-care.svg"
                 alt="Leaf Icon Left"
@@ -571,7 +547,6 @@
                 @click="resetVacationCard()"
                 >&#215;</span
               >
-              <!-- <input type="radio" name="" value="" class="radio"> -->
               <img
                 src="../assets/images/vercation.svg"
                 alt="Leaf Icon Left"
@@ -596,7 +571,6 @@
                 @click="resetPayrollCard()"
                 >&#215;</span
               >
-              <!-- <input type="radio" name="" value="" class="radio"> -->
               <img
                 src="../assets/images/payroll.svg"
                 alt="Leaf Icon Left"
@@ -621,7 +595,6 @@
                 @click="resetEntertainmentCard()"
                 >&#215;</span
               >
-              <!-- <input type="radio" name="" value="" class="radio"> -->
               <img
                 src="../assets/images/entertainment.svg"
                 alt="Leaf Icon Left"
@@ -646,7 +619,6 @@
                 @click="resetInvestmentCard()"
                 >&#215;</span
               >
-              <!-- <input type="radio" name="" value="" class="radio"> -->
               <img
                 src="../assets/images/investment.svg"
                 alt="Leaf Icon Left"
@@ -666,6 +638,11 @@
               <p class="error errorMsgInvestment">!!!</p>
             </div>
           </div>
+        </div>
+        <div class="slider-pagination">
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
       </div>
 
@@ -716,32 +693,103 @@ export default {
   mounted() {
     this.initialTrackerDetails();
 
-    let sliderEl = document.querySelector(".slider");
-    let slideCount = 3;
-    let activeSlide = 0; // NEW: the current slide # (0 = first)
-    let sliderManager = new Hammer.Manager(sliderEl);
-    sliderManager.add(new Hammer.Pan({ threshold: 40, pointers: 0 }));
-    sliderManager.on("pan", function(e) {
-      let percentage = ((100 / slideCount) * e.deltaX) / window.innerWidth;
-      let transformPercentage = percentage - (100 / slideCount) * activeSlide; // NEW
-      sliderEl.style.transform = "translateX( " + transformPercentage + "% )";
-      if (e.isFinal) {
-        // NEW: this only runs on event end
-        if (percentage < 0) goToSlide(activeSlide + 1);
-        else if (percentage > 0) goToSlide(activeSlide - 1);
-        else goToSlide(activeSlide);
+    // 1. Basic object for our stuff
+    window.slider = {};
+
+    // 2. Settings
+    slider.sliderPanelSelector = ".slider-panel";
+    slider.sliderPaginationSelector = ".slider-pagination";
+    slider.sensitivity = 25; // horizontal % needed to trigger swipe
+
+    // 2. Placeholder to remember which slide we’re on
+    slider.activeSlide = 0;
+
+    // 3. Slide counter
+    slider.slideCount = 0;
+
+    // 4. Initialization + event listener
+    slider.init = function(selector) {
+      // 4a. Find the container
+      slider.sliderEl = document.querySelector(selector);
+
+      // 4b. Count stuff
+      slider.slideCount = slider.sliderEl.querySelectorAll(
+        slider.sliderPanelSelector
+      ).length;
+
+      // 4c. Populate pagination
+      var n = 0;
+      for (n; n < slider.slideCount; n++) {
+        var activeStatus = n == slider.activeSlide ? ' class="is-active"' : "";
+        slider.sliderEl.parentElement.querySelector(
+          slider.sliderPaginationSelector
+        ).innerHTML += "<div " + activeStatus + "></div>";
       }
-    });
 
-    // NEW: function that changes the slide
-    let goToSlide = function(number) {
-      if (number < 0) activeSlide = 0;
-      else if (number > slideCount - 1) activeSlide = slideCount - 1;
-      else activeSlide = number;
+      // 4d. Set up HammerJS
+      var sliderManager = new Hammer.Manager(slider.sliderEl);
+      sliderManager.add(new Hammer.Pan({ threshold: 0, pointers: 0 }));
+      sliderManager.on("pan", function(e) {
+        // 4e. Calculate pixel movements into 1:1 screen percents so gestures track with motion
+        var percentage =
+          ((100 / slider.slideCount) * e.deltaX) / window.innerWidth;
 
-      let percentage = -(100 / slideCount) * activeSlide;
-      sliderEl.style.transform = "translateX( " + percentage + "% )";
+        // 4f. Multiply percent by # of slide we’re on
+        var percentageCalculated =
+          percentage - (100 / slider.slideCount) * slider.activeSlide;
+
+        // 4g. Apply transformation
+        slider.sliderEl.style.transform =
+          "translateX( " + percentageCalculated + "% )";
+
+        // 4h. Snap to slide when done
+        if (e.isFinal) {
+          console.log(e.velocityX);
+          if (e.velocityX > 1) {
+            slider.goTo(slider.activeSlide - 1);
+          } else if (e.velocityX < -1) {
+            slider.goTo(slider.activeSlide + 1);
+          } else {
+            if (percentage <= -(slider.sensitivity / slider.slideCount))
+              slider.goTo(slider.activeSlide + 1);
+            else if (percentage >= slider.sensitivity / slider.slideCount)
+              slider.goTo(slider.activeSlide - 1);
+            else slider.goTo(slider.activeSlide);
+          }
+        }
+      });
     };
+
+    // 5. Update current slide
+    slider.goTo = function(number) {
+      // 5a. Stop it from doing weird things like moving to slides that don’t exist
+      if (number < 0) slider.activeSlide = 0;
+      else if (number > slider.slideCount - 1)
+        slider.activeSlide = slider.slideCount - 1;
+      else slider.activeSlide = number;
+
+      // 5b. Apply transformation & smoothly animate via .is-animating CSS
+      slider.sliderEl.classList.add("is-animating");
+      var percentage = -(100 / slider.slideCount) * slider.activeSlide;
+      slider.sliderEl.style.transform = "translateX( " + percentage + "% )";
+      clearTimeout(slider.timer);
+      slider.timer = setTimeout(function() {
+        slider.sliderEl.classList.remove("is-animating");
+      }, 400);
+
+      // 5c. Update the counters
+      var pagination = slider.sliderEl.parentElement.querySelectorAll(
+        slider.sliderPaginationSelector + " > *"
+      );
+      var n = 0;
+      for (n; n < pagination.length; n++) {
+        var className = n == slider.activeSlide ? "is-active" : "";
+        pagination[n].className = className;
+      }
+    };
+
+    // Initialize
+    slider.init("#slider");
     // this.handleScroll()
 
     this.userDetails = JSON.parse(localStorage.getItem("user_details"));
@@ -3191,25 +3239,46 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/styles/main";
 
-.has-slider {
-  display: none;
-  width: 100%;
-  overflow: hidden;
-
-  @media screen and (max-width: 600px) {
-    display: block;
-  }
-}
 .slider {
   display: flex;
-  width: 300%; // 100% * 3 slides
+  width: 300%;
 }
+.slider.is-animating {
+  transition: -webkit-transform 400ms cubic-bezier(0.5, 0, 0.5, 1);
+  transition: transform 400ms cubic-bezier(0.5, 0, 0.5, 1);
+  transition: transform 400ms cubic-bezier(0.5, 0, 0.5, 1),
+    -webkit-transform 400ms cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.slider-pagination {
+  // bottom: 6.25%;
+  // left: 0;
+  pointer-events: none;
+  // position: absolute;
+  text-align: center;
+  width: 100%;
+}
+.slider-pagination > * {
+  border-radius: 25%;
+  box-shadow: 0 0 0 2px rgba(244, 112, 121, 0.07);
+  display: inline-block;
+  height: 6px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  transition: background-color 250ms;
+  width: 2rem;
+}
+.slider-pagination > *.is-active {
+  background-color: $color-btn-bkg;
+}
+
 .slider-panel {
+  width: 100%;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 100%;
   padding: 0 5rem;
 
   @media screen and (max-width: 451px) {
@@ -3292,9 +3361,9 @@ export default {
       text-align: center;
       color: #3a3737;
 
-          @media screen and (max-width: 320px) {
-      font-size: 1rem;
-    }
+      @media screen and (max-width: 320px) {
+        font-size: 1rem;
+      }
     }
 
     .input {
@@ -3317,6 +3386,17 @@ export default {
   .card-vacation,
   .card-entertainment {
     margin-right: 3rem;
+  }
+}
+
+.has-slider {
+  display: none;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  @media screen and (max-width: 600px) {
+    display: block;
   }
 }
 </style>
