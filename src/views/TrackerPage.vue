@@ -720,15 +720,15 @@ export default {
     let slideCount = 3;
     let activeSlide = 0; // NEW: the current slide # (0 = first)
     let sliderManager = new Hammer.Manager(sliderEl);
-    sliderManager.add(new Hammer.Pan({ threshold: 0, pointers: 0 }));
+    sliderManager.add(new Hammer.Pan({ threshold: 40, pointers: 0 }));
     sliderManager.on("pan", function(e) {
       let percentage = ((100 / slideCount) * e.deltaX) / window.innerWidth;
       let transformPercentage = percentage - (100 / slideCount) * activeSlide; // NEW
       sliderEl.style.transform = "translateX( " + transformPercentage + "% )";
       if (e.isFinal) {
         // NEW: this only runs on event end
-        if (percentage < 40) goToSlide(activeSlide + 1);
-        else if (percentage > 40) goToSlide(activeSlide - 1);
+        if (percentage < 0) goToSlide(activeSlide + 1);
+        else if (percentage > 0) goToSlide(activeSlide - 1);
         else goToSlide(activeSlide);
       }
     });
