@@ -812,6 +812,14 @@ body {
       margin-bottom: 0rem;
     }
 
+    @media screen and (max-width: 768px) {
+      position: relative;
+      bottom: 33rem;
+      left: 42rem;
+      width: 6%;
+      margin-bottom: 0rem;
+    }
+
     @media screen and (max-width: 600px) {
       position: relative;
       bottom: 32rem;
