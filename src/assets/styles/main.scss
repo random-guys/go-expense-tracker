@@ -70,11 +70,31 @@ body {
 }
 
 .logo {
-  width: 7rem;
+  width: 7.8rem;
   object-fit: contain;
-  margin-top: 10rem;
+  margin-top: 13rem;
   object-fit: contain;
   align-self: center;
+
+  @media screen and (max-width: 1440px) {
+    margin-top: 8.5rem;
+  }
+
+  @media screen and (max-width: 1200px) {
+    margin-top: 4.5rem;
+  }
+
+  @media screen and (max-width: 1200px) {
+    margin-top: 3.5rem;
+  }
+
+  @media screen and (max-width: 900px) {
+    margin-top: 3rem;
+  }
+
+  @media screen and (max-width: 600px) {
+  margin-top: 6rem;
+  }
 }
 
 .capitalize {
@@ -1526,7 +1546,7 @@ body {
         justify-content: center;
         align-items: center;
         position: absolute;
-        top: 24.9rem;
+        top: 27.5rem;
         width: 10vw;
         height: 10vh;
         border-radius: 50%;
@@ -1653,7 +1673,7 @@ body {
 
             .input_tag-mobile {
               border: none;
-              width: 80vw;
+              width: 75vw;
               font-family: Graphik;
               align-self: flex-start;
               text-align: start;
@@ -1685,7 +1705,7 @@ body {
     display: none;
     flex-direction: column;
     justify-content: center;
-    margin-top: 15rem;
+    margin-top: 10rem;
 
     @media screen and (max-width: 600px) {
       display: flex;
