@@ -213,7 +213,22 @@ export default {
         repeat: -1,
         yoyo: true,
         repeatDelay: 0.4
-      }
+      },
+      0.1
+    );
+    tl.fromTo(
+      ".greenDotMobile",
+      10,
+      { x: 0, y: 0 },
+      {
+        x: 140,
+        y: 140,
+        ease: Linear.easeNone,
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4
+      },
+      0.1
     )
       .fromTo(
         ".yellowDot",
