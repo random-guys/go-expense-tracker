@@ -379,6 +379,7 @@ body {
   }
 
   .morph-icon-left {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -405,6 +406,162 @@ body {
 
     @media screen and (max-width: 900px) {
       display: block;
+      top: -6rem;
+      left: -22rem;
+      width: 55%;
+      transform: rotate(5deg);
+      // transform-origin: 210% -525%;
+      // overflow: hidden;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: block;
+      top: -10rem;
+      left: -22rem;
+      width: 55%;
+      transform: rotate(5deg);
+      // transform-origin: 210% -525%;
+      // overflow: hidden;
+    }
+
+    @media screen and (max-width: 600px) {
+      top: -12rem;
+      left: -23rem;
+      width: 65%;
+      transform: rotate(5deg);
+      // transform-origin: 120% -1000%;
+      // overflow: hidden;
+    }
+
+    @media screen and (max-width: 426px) {
+      top: -16rem;
+      left: -20rem;
+      width: 75%;
+      transform: rotate(5deg);
+      // transform-origin: 130% -800%;
+      // overflow: hidden;
+    }
+
+    @media screen and (max-width: 375px) {
+      top: -16rem;
+      left: -15rem;
+      width: 75%;
+      transform: rotate(5deg);
+      // transform-origin: 200% -600%;
+      // overflow: hidden;
+    }
+
+    @media screen and (max-width: 320px) {
+      top: -19rem;
+      left: -15rem;
+      width: 75%;
+      transform: rotate(5deg);
+      // transform-origin: 350% -500%;
+      // overflow: hidden;
+    }
+  }
+
+  .morph-icon-right {
+    display: none;
+    position: fixed;
+    top: 0rem;
+    right: 0;
+    width: 55%;
+    z-index: -1;
+
+    @media screen and (max-width: 1800px) {
+      top: 30rem;
+      right: -5rem;
+      width: 55%;
+      transform: rotate(5deg);
+      // transform-origin: -400% 50%;
+    }
+
+    @media screen and (max-width: 1200px) {
+      top: 1rem;
+      right: 0rem;
+      width: 50%;
+      transform: rotate(5deg);
+      // transform-origin: -100% 50%;
+    }
+
+    @media screen and (max-width: 900px) {
+      display: block;
+      top: 10rem;
+      left: 20rem;
+      width: 150%;
+      z-index: -1;
+    }
+
+    @media screen and (max-width: 600px) {
+      top: 10rem;
+      left: 20rem;
+      width: 150%;
+      transform: rotate(5deg);
+      // transform-origin: 10% 15%;
+    }
+
+    @media screen and (max-width: 426px) {
+      top: 0;
+      left: 10rem;
+      width: 180%;
+      transform: rotate(5deg);
+      // transform-origin: -30% -50%;
+    }
+
+    @media screen and (max-width: 375px) {
+      bottom: 0;
+      right: 0;
+      width: 180%;
+      transform: rotate(5deg);
+      // transform-origin: -10% -90%;
+    }
+  }
+
+  .morph-icon-left-desktop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 55%;
+    z-index: -1;
+
+    @media screen and (max-width: 1800px) {
+      top: 0rem;
+      left: -70rem;
+      width: 125%;
+      transform: rotate(5deg);
+      // transform-origin: -30% -805%;
+      // overflow: hidden;
+    }
+
+    @media screen and (max-width: 1440px) {
+      top: 0rem;
+      left: -50rem;
+      width: 105%;
+      transform: rotate(5deg);
+      // transform-origin: -30% -805%;
+      // overflow: hidden;
+    }
+
+    @media screen and (max-width: 1200px) {
+      top: -10rem;
+      left: 0rem;
+      width: 40%;
+      transform: rotate(5deg);
+      // transform-origin: 40% -15%;
+      // overflow: hidden;
+    }
+
+    @media screen and (max-width: 1024px) {
+      top: -10rem;
+      left: 0rem;
+      transform: rotate(5deg);
+      // transform-origin: 40% -15%;
+      // overflow: hidden;
+    }
+
+    @media screen and (max-width: 900px) {
+      display: none;
       top: -6rem;
       left: -22rem;
       width: 55%;
@@ -450,7 +607,7 @@ body {
     }
   }
 
-  .morph-icon-right {
+  .morph-icon-right-desktop {
     position: fixed;
     top: 0rem;
     right: 0;
@@ -466,15 +623,15 @@ body {
     }
 
     @media screen and (max-width: 1200px) {
-      top: 1rem;
+      top: 15rem;
       right: 0rem;
-      width: 50%;
+      width: 55%;
       transform: rotate(5deg);
       // transform-origin: -100% 50%;
     }
 
     @media screen and (max-width: 900px) {
-      display: block;
+      display: none;
       top: 10rem;
       left: 20rem;
       width: 150%;
