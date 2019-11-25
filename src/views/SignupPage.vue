@@ -16,7 +16,8 @@
         alt="Leaf Icon Left"
         class="leaf-right leafRight"
       />
-      <img
+
+            <img
         src="../assets/images/vector-shapes-1.svg"
         alt="Morph Icon Left"
         class="morph-icon-left morphIconLeft"
@@ -25,6 +26,17 @@
         src="../assets/images/vector-shapes-2.svg"
         alt="Morph Icon Right"
         class="morph-icon-right morphIconRight"
+      />
+
+      <img
+        src="../assets/images/vector-shapes-1.svg"
+        alt="Morph Icon Left"
+        class="morph-icon-left-desktop morphIconLeft"
+      />
+      <img
+        src="../assets/images/vector-shapes-2.svg"
+        alt="Morph Icon Right"
+        class="morph-icon-right-desktop morphIconRight"
       />
       <img src="../assets/images/logo.svg" alt="Gomoney Logo" class="logo" />
 
@@ -236,35 +248,63 @@ export default {
       { opacity: 0, ease: Power2.easeInOut },
       { opacity: 1, ease: Power2.easeInOut }
     );
+    TweenMax.fromTo(
+      ".morphIconLeftDesktop",
+      120,
+      { scale: "1", rotation: "0" },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        scale: "1.1",
+        rotation: "-720"
+      },
+      -3
+    );
+    TweenMax.fromTo(
+      ".morphIconRightDesktop",
+      120,
+      { scale: "1", rotation: "-50" },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        scale: "1.1",
+        rotation: "70"
+      },
+      -3
+    );
 
-    // TweenMax.fromTo(
-    //   ".morphIconRight",
-    //   60,
-    //   { scale: "1" },
-    //   {
-    //     repeat: -1,
-    //     yoyo: true,
-    //     repeatDelay: 0.4,
-    //     ease: Linear.easeNone,
-    //     scale: "1.1",
-    //     rotation: "-180"
-    //   },
-    //   -3
-    // );
-    // TweenMax.fromTo(
-    //   ".morphIconLeft",
-    //   120,
-    //   { scale: "1" },
-    //   {
-    //     repeat: -1,
-    //     yoyo: true,
-    //     repeatDelay: 0.4,
-    //     ease: Linear.easeNone,
-    //     scale: "1.1",
-    //     rotation: "360"
-    //   },
-    //   -3
-    // );
+        TweenMax.fromTo(
+      ".morphIconLeft",
+      20,
+      { scale: "1", rotation: "0" },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        scale: "1.1",
+        rotation: "-60"
+      },
+      -3
+    );
+    TweenMax.fromTo(
+      ".morphIconRight",
+      20,
+      { scale: "1", rotation: "-10" },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        scale: "1.2",
+        rotation: "30"
+      },
+      -3
+    );
     TweenMax.fromTo(
       ".leafRight",
       5,

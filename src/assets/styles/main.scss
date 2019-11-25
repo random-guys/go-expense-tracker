@@ -1085,6 +1085,7 @@ body {
     }
   }
   .morph-icon-left {
+    display: none;
     position: fixed;
     bottom: 0rem;
     left: 0rem;
@@ -1094,14 +1095,40 @@ body {
     z-index: -1;
 
     @media screen and (max-width: 600px) {
+      display: block;
       top: -5rem;
+      left: -20rem;
+      width: 60%;
+      transform: rotate(5deg);
+      // transform-origin: 400% -600%;
+    }
+
+    @media screen and (max-width: 426px) {
+      top: 0rem;
+      left: -15rem;
+      width: 60%;
+      transform: rotate(5deg);
+      // transform-origin: 400% -600%;
+    }
+
+    @media screen and (max-width: 375px) {
+      top: 0rem;
       left: -10rem;
-      width: 70%;
+      width: 60%;
+      transform: rotate(5deg);
+      // transform-origin: 400% -600%;
+    }
+
+    @media screen and (max-width: 320px) {
+      top: 0rem;
+      left: -10rem;
+      width: 65%;
       transform: rotate(5deg);
       // transform-origin: 400% -600%;
     }
   }
   .morph-icon-right {
+    display: none;
     position: fixed;
     top: 0rem;
     right: 0rem;
@@ -1111,34 +1138,75 @@ body {
     z-index: -1;
 
     @media screen and (max-width: 600px) {
+      display: block;
       top: 8rem;
-      right: -35rem;
-      width: 150%;
+      right: -40rem;
+      width: 140%;
       transform: rotate(5deg);
       // transform-origin: -400% 500%;
     }
 
-    @media screen and (max-width: 425px) {
-      top: 8rem;
+    @media screen and (max-width: 426px) {
+      top: 10rem;
       right: -33rem;
-      width: 170%;
+      width: 155%;
       transform: rotate(5deg);
       // transform-origin: -250% 630%;
     }
 
     @media screen and (max-width: 375px) {
-      top: 8rem;
+      top: 10rem;
       right: -28rem;
       transform: rotate(5deg);
       // transform-origin: -150% 630%;
     }
 
     @media screen and (max-width: 320px) {
-      top: 8rem;
-      right: -35rem;
+      top: 10rem;
+      right: -40rem;
       width: 200%;
       transform: rotate(5deg);
       // transform-origin: -150% 630%;
+    }
+  }
+
+  .morph-icon-left-desktop {
+    position: fixed;
+    bottom: 0rem;
+    left: 0rem;
+    width: 40%;
+    transform: rotate(10deg);
+    // transform-origin: 100% -210%;
+    z-index: -1;
+
+    @media screen and (max-width: 1600px) {
+      bottom: 0rem;
+      left: 0rem;
+      width: 35%;
+      transform: rotate(10deg);
+    }
+
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+  .morph-icon-right-desktop {
+    position: fixed;
+    top: 0rem;
+    right: 0rem;
+    width: 50%;
+    transform: rotate(10deg);
+    z-index: -1;
+
+    @media screen and (max-width: 1600px) {
+      top: 0rem;
+      right: 0rem;
+      width: 45%;
+      transform: rotate(10deg);
+    }
+
+    @media screen and (max-width: 600px) {
+      display: none;
     }
   }
 
