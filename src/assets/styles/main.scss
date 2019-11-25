@@ -200,7 +200,7 @@ body {
       }
 
       @media screen and (max-width: 426px) {
-        font-size: 3rem;
+        font-size: 2.2rem;
         margin-top: 2rem;
       }
 
@@ -222,8 +222,10 @@ body {
         font-size: 1.8rem;
       }
 
-      @media screen and (max-width: 425px) {
-        font-size: 1.8rem;
+      @media screen and (max-width: 426px) {
+        padding: 0 18%;
+        margin-top: 2rem;
+        font-size: 1.4rem;
       }
 
       @media screen and (max-width: 375px) {
