@@ -28,7 +28,6 @@
       />
       <img src="../assets/images/logo.svg" alt="Gomoney Logo" class="logo" />
 
-      <!-- <h2 class="header2-text margin-top header2">One more thing</h2> -->
       <div
         class="header2-div"
         v-for="(detail, index) in userDetails"
@@ -120,11 +119,6 @@
       <!-- Mobile Slider -->
 
       <div class="slider-mobile">
-        <!-- <div class="btn1-mobile button1Mobile" @click="toggleBack()">
-          <div class="oval1-mobile">
-            <p class="arrow-mobile fowardMobile">&#60;</p>
-          </div>
-        </div> -->
         <div class="slider-mobile__slide-mobile">
           <div class="btn1-mobile button1Mobile" @click="toggleBack()">
             <div class="oval1-mobile">
@@ -185,11 +179,6 @@
             </div>
           </div>
         </div>
-        <!-- <div class="btn2-mobile button2Mobile" @click="toggleFront()">
-          <div class="oval2-mobile">
-            <p class="arrow-mobile">&#62;</p>
-          </div>
-        </div> -->
       </div>
       <!-- end of mobile slider -->
       <div class="hero-text__secondary">
