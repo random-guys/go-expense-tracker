@@ -93,7 +93,7 @@ body {
   }
 
   @media screen and (max-width: 600px) {
-  margin-top: 6rem;
+    margin-top: 6rem;
   }
 }
 
@@ -686,6 +686,13 @@ body {
       width: 1.2rem;
     }
 
+    
+    @media screen and (max-width: 768px) {
+      bottom: 18rem;
+      left: -10rem;
+      width: 1.2rem;
+    }
+
     @media screen and (max-width: 600px) {
       bottom: 35rem;
       left: -30rem;
@@ -708,7 +715,7 @@ body {
     position: relative;
     bottom: 5rem;
     right: 34rem;
-    width: 3rem;
+    width: 2.4rem;
     z-index: -1;
 
     @media screen and (max-width: 1440px) {
@@ -726,6 +733,11 @@ body {
       width: 1.6rem;
     }
 
+    @media screen and (max-width: 768px) {
+      bottom: 15rem;
+      right: 32rem;
+    }
+
     @media screen and (max-width: 600px) {
       bottom: 15rem;
       right: 25rem;
@@ -734,15 +746,15 @@ body {
 
     @media screen and (max-width: 426px) {
       position: relative;
-      bottom: 25rem;
-      right: 18rem;
+      bottom: 15rem;
+      right: 26rem;
       width: 1.5rem;
     }
 
     @media screen and (max-width: 375px) {
       position: relative;
-      bottom: 20rem;
-      right: 14rem;
+      bottom: 10rem;
+      right: 20rem;
       width: 1.5rem;
     }
   }
@@ -751,7 +763,7 @@ body {
     position: relative;
     top: -5rem;
     left: 26rem;
-    width: 3rem;
+    width: 2.5rem;
     z-index: -1;
 
     @media screen and (max-width: 1200px) {
@@ -763,6 +775,12 @@ body {
     @media screen and (max-width: 900px) {
       top: 0rem;
       left: 10rem;
+      width: 1.6rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      top: -10rem;
+      left: 0rem;
       width: 1.6rem;
     }
 
@@ -781,7 +799,7 @@ body {
 
     @media screen and (max-width: 320px) {
       position: relative;
-      top: 0rem;
+      top: -15rem;
       left: -6rem;
       width: 1rem;
     }
@@ -818,6 +836,12 @@ body {
       width: 8%;
     }
 
+    @media screen and (max-width: 768px) {
+      top: 48rem;
+      left: 46rem;
+      width: 8%;
+    }
+
     @media screen and (max-width: 600px) {
       top: 50rem;
       left: 38rem;
@@ -848,9 +872,15 @@ body {
       z-index: -1;
     }
 
-    @media screen and (max-width: 600px) {
-      top: 48rem;
-      left: 13rem;
+    @media screen and (max-width: 900px) {
+      top: 50rem;
+      left: 19rem;
+      width: 1.5rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      top: 40rem;
+      left: 15rem;
       width: 1.5rem;
       z-index: -1;
     }
@@ -873,6 +903,12 @@ body {
       left: 14rem;
       width: 14rem;
       z-index: -1;
+    }
+
+    @media screen and (max-width: 900px) {
+      top: 40rem;
+      left: 14rem;
+      width: 14rem;
     }
 
     @media screen and (max-width: 600px) {
@@ -967,8 +1003,8 @@ body {
 
     @media screen and (max-width: 1600px) {
       top: -3rem;
-      left: 78rem;
-      width: 3%;
+      left: 80rem;
+      width: 4%;
       margin-bottom: 0rem;
     }
 
@@ -992,13 +1028,9 @@ body {
       left: 48rem;
     }
 
-    // @media screen and (max-width: 768px) {
-    //   position: relative;
-    //   bottom: 33rem;
-    //   left: 42rem;
-    //   width: 6%;
-    //   margin-bottom: 0rem;
-    // }
+    @media screen and (max-width: 768px) {
+      left: 42rem;
+    }
 
     @media screen and (max-width: 600px) {
       left: 34rem;
