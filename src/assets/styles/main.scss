@@ -297,7 +297,7 @@ body {
     line-height: 1.41;
     letter-spacing: normal;
     color: $color-white;
-    padding: 1.8rem 8rem;
+    padding: 1.8rem 6rem;
     border-radius: 0.8rem;
     z-index: 2;
     background-color: $color-btn-bkg;
@@ -306,7 +306,7 @@ body {
 
     @media screen and (max-width: 1600px) {
       font-size: 1.8rem;
-      padding: 1.6rem 6rem;
+      padding: 1.4rem 4rem;
     }
 
     @media screen and (max-width: 1200px) {
@@ -318,16 +318,15 @@ body {
     }
 
     @media screen and (max-width: 900px) {
-      padding: 1.6rem 6rem;
+      // padding: 1.6rem 6rem;
     }
 
     @media screen and (max-width: 600px) {
       font-size: 1.2rem;
-      padding: 1.4rem 4.5rem;
     }
 
     @media screen and (max-width: 320px) {
-      width: 40%;
+      // width: 40%;
     }
   }
 
@@ -851,7 +850,7 @@ body {
     }
 
     @media screen and (max-width: 426px) {
-      top: 50rem;
+      top: 48rem;
       left: 25rem;
       width: 15%;
     }
