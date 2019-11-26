@@ -363,7 +363,7 @@ export default {
         repeatDelay: 0.4,
         ease: Linear.easeNone,
         scale: "1.1",
-        rotation: "30"
+        rotation: "20"
       },
       -3
     );
