@@ -479,7 +479,8 @@ export default {
           );
         // .to(".header2", 0, { display: "none" }, 0.1)
         this.slide1 = true;
-        this.toggleBackward = false;
+        this.toggleFoward = true;
+        // this.toggleBackward = false;
       }
     },
     lastNameInput() {
@@ -578,7 +579,6 @@ export default {
           .to(".header2", 0, { display: "flex" }, 0.1)
           .to(".header1", 0, { display: "none" }, 0.1);
 
-        this.toggleBackward = true;
         this.slide2 = true;
       }
     },
@@ -588,15 +588,13 @@ export default {
       if (this.email.length === 0) {
         this.$swal.fire({
           type: "info",
-          html: `Please enter email`
+          html: "Please enter email"
         });
-        return;
       } else if (test === false) {
         this.$swal.fire({
           type: "info",
           html: `Incorrect email`
         });
-        return;
       } else {
         this.userDetails.map(details => {
           details.email = this.email;
@@ -606,7 +604,7 @@ export default {
       }
     },
     toggleBack() {
-      if (this.toggleBackward === false) {
+      if (this.slide2 === false) {
         const tl = new TimelineMax();
 
         tl.fromTo(
@@ -690,9 +688,8 @@ export default {
           .to(".header1", 0, { display: "flex" }, 0.1);
 
         this.slide1 = false;
-        this.toggleFoward = false;
-        this.toggleBackward = true;
-      } else if (this.toggleBackward === true) {
+        this.slide2 = false;
+      } else if (this.slide2 === true) {
         const tl = new TimelineMax();
 
         tl.fromTo(
@@ -785,217 +782,15 @@ export default {
           .to(".header1", 0, { display: "flex" }, 0.1);
 
         this.slide2 = false;
-        this.toggleBackward = false;
       }
     },
     toggleFront() {
-      this.userDetails = JSON.parse(localStorage.getItem("user_details"));
-      if (this.first_name.length > 0) {
-        this.userDetails.map(details => {
-          details.first_name = this.first_name;
-        });
-        localStorage.setItem("user_details", JSON.stringify(this.userDetails));
+      if(this.slide1 === false) {
+        this.firstNameInput()
       } else {
-        this.$swal.fire({
-          type: "info",
-          html: `Please enter first name`
-        });
-        return;
+        this.lastNameInput()
       }
-      if (this.toggleFoward === false) {
-        const tl = new TimelineMax();
-
-        tl.fromTo(
-          ".button1",
-          0.5,
-          { opacity: "0" },
-          {
-            opacity: "1",
-            display: "flex",
-            ease: Power3.easeInOut,
-            pointerEvents: "visible"
-          },
-          0.1
-        )
-          .to(
-            ".cardOne",
-            0.5,
-            { left: "-5vw", ease: Power3.easeInOut, pointerEvents: "none" },
-            0.1
-          )
-          .to(
-            ".cardTwo",
-            0.5,
-            { left: "-5vw", ease: Power3.easeInOut, pointerEvents: "visible" },
-            0.1
-          )
-          .to(
-            ".cardThree",
-            0.5,
-            { left: "-5vw", ease: Power3.easeInOut, pointerEvents: "none" },
-            0.1
-          )
-          .to(".cardTwo", 0.5, { opacity: "1", ease: Power3.easeInOut }, 0.1)
-          .to(".cardOne", 0.5, { opacity: "0.3", ease: Power3.easeInOut }, 0.1);
-
-        tl.fromTo(
-          ".button1Mobile",
-          0.5,
-          { opacity: "0" },
-          {
-            opacity: "1",
-            ease: Power3.easeInOut,
-            display: "flex",
-            pointerEvents: "visible"
-          },
-          0.1
-        )
-          .to(
-            ".cardOneMobile",
-            1.5,
-            { left: "-100vw", ease: Power3.easeInOut, pointerEvents: "none" },
-            0.1
-          )
-          .to(
-            ".cardTwoMobile",
-            1.5,
-            {
-              left: "-100vw",
-              ease: Power3.easeInOut,
-              pointerEvents: "visible"
-            },
-            0.1
-          )
-          .to(
-            ".cardThreeMobile",
-            1.5,
-            { left: "-100vw", ease: Power3.easeInOut, pointerEvents: "none" },
-            0.1
-          )
-          .to(
-            ".cardTwoMobile",
-            1.5,
-            { opacity: "1", ease: Power3.easeInOut },
-            0.1
-          )
-          .to(
-            ".cardOneMobile",
-            1.5,
-            { opacity: "0.3", ease: Power3.easeInOut },
-            0.1
-          );
-
-        this.toggleFoward = true;
-      } else if (this.toggleFoward === true) {
-        if (this.last_name.length > 0) {
-          this.userDetails.map(details => {
-            details.last_name = this.last_name;
-          });
-          localStorage.setItem(
-            "user_details",
-            JSON.stringify(this.userDetails)
-          );
-        } else {
-          this.$swal.fire({
-            type: "info",
-            html: `Please enter last name`
-          });
-          return;
-        }
-        const tl = new TimelineMax();
-
-        tl.fromTo(
-          ".button2",
-          0.5,
-          { opacity: "1" },
-          {
-            opacity: "0",
-            display: "none",
-            ease: Power3.easeInOut,
-            pointerEvents: "none"
-          },
-          0.1
-        )
-          .to(
-            ".cardOne",
-            0.5,
-            { left: "-48vw", ease: Power3.easeInOut, pointerEvents: "none" },
-            0.1
-          )
-          .to(
-            ".cardTwo",
-            0.5,
-            { left: "-48vw", ease: Power3.easeInOut, pointerEvents: "none" },
-            0.1
-          )
-          .to(
-            ".cardThree",
-            0.5,
-            {
-              left: "-48vw",
-              ease: Power3.easeInOut,
-              pointerEvents: "visible"
-            },
-            0.1
-          )
-          .to(".cardThree", 0.5, { ease: Power3.easeInOut, opacity: "1" }, 0.1)
-          .to(".cardTwo", 0.5, { ease: Power3.easeInOut, opacity: "0.3" }, 0.1)
-          .to(".header2", 0, { display: "flex" }, 0.1)
-          .to(".header1", 0, { display: "none" }, 0.1);
-
-        tl.fromTo(
-          ".button2Mobile",
-          0.5,
-          { opacity: "1" },
-          {
-            opacity: "0",
-            ease: Power3.easeInOut,
-            display: "none",
-            pointerEvents: "none"
-          },
-          0.1
-        )
-          .to(
-            ".cardOneMobile",
-            1.5,
-            { left: "-200vw", ease: Power3.easeInOut, pointerEvents: "none" },
-            0.1
-          )
-          .to(
-            ".cardTwoMobile",
-            1.5,
-            { left: "-200vw", ease: Power3.easeInOut, pointerEvents: "none" },
-            0.1
-          )
-          .to(
-            ".cardThreeMobile",
-            1.5,
-            {
-              left: "-200vw",
-              ease: Power3.easeInOut,
-              pointerEvents: "visible"
-            },
-            0.1
-          )
-          .to(
-            ".cardThreeMobile",
-            1.5,
-            { opacity: "1", ease: Power3.easeInOut },
-            0.1
-          )
-          .to(
-            ".cardTwoMobile",
-            1.5,
-            { opacity: "0.3", ease: Power3.easeInOut },
-            0.1
-          )
-          .to(".header2", 0, { display: "flex" }, 0.1)
-          .to(".header1", 0, { display: "none" }, 0.1);
-
-        this.toggleFoward = false;
-        this.toggleBackward = true;
-      }
-    }
+    },
   }
 };
 </script>
