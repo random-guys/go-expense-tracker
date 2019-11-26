@@ -1,8 +1,7 @@
 <template>
   <div class="main">
-    <canvas id="confetti" class="canvas"></canvas>
-
     <div class="result resultPage">
+    <canvas id="confetti" class="canvas"></canvas>
       <img
         src="../assets/images/vector-shapes-1.svg"
         alt="Morph Icon Left"
@@ -376,20 +375,19 @@ export default {
       },
       -3
     );
-    // TweenMax.fromTo(
-    //   ".leafBottomRight",
-    //   5,
-    //   { x: 0, y: 0, scale: "1" },
-    //   {
-    //     repeat: -1,
-    //     yoyo: true,
-    //     repeatDelay: 0.4,
-    //     ease: Linear.easeNone,
-    //     x: 10,
-    //     y: -30,
-    //     scale: "1.1"
-    //   }
-    // );
+    TweenMax.fromTo(
+      ".leafBottomRight",
+      5,
+      { x: 0, y: 0 },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        x: 10,
+        y: -30
+      }
+    );
     TweenMax.fromTo(
       "#sunShade",
       0.3,

@@ -75,26 +75,6 @@ body {
   margin-top: 6rem;
   object-fit: contain;
   align-self: center;
-
-  // @media screen and (max-width: 1600px) {
-  //   margin-top: 8.5rem;
-  // }
-
-  // @media screen and (max-width: 1440px) {
-  //   margin-top: 4.5rem;
-  // }
-
-  // @media screen and (max-width: 1200px) {
-  //   margin-top: 3.5rem;
-  // }
-
-  // @media screen and (max-width: 900px) {
-  //   margin-top: 3rem;
-  // }
-
-  // @media screen and (max-width: 600px) {
-  //   margin-top: 6rem;
-  // }
 }
 
 .capitalize {
@@ -127,7 +107,7 @@ body {
 }
 
 .canvas {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   // height: 100vh;
@@ -2416,25 +2396,24 @@ body {
 //Result Page CSS
 .result {
   width: 100%;
-  padding: 0 10%;
+  padding: 0 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  @media screen and (max-width: 320px) {
-    padding: 0 5%;
-  }
-
   .baller-emoji {
     position: absolute;
-    top: 1rem;
+    top: 0rem;
     left: auto;
     width: 18rem;
     height: 18rem;
-    // margin-top: 15rem;
     object-fit: contain;
     align-self: center;
     z-index: 1;
+
+    @media screen and (max-width: 1600px) {
+      width: 15rem;
+    }
 
     @media screen and (max-width: 1440px) {
       width: 15rem;
@@ -2639,7 +2618,7 @@ body {
 
   .baller {
     width: 100%;
-    margin-top: 20rem;
+    margin-top: 18rem;
     font-family: Graphik;
     font-size: 6rem;
     font-weight: 600;
@@ -2649,6 +2628,11 @@ body {
     letter-spacing: normal;
     text-align: center;
     color: #3f3f3f;
+
+    @media screen and (max-width: 1600px) {
+      font-size: 5.8rem;
+      margin-top: 16rem;
+    }
 
     @media screen and (max-width: 1440px) {
       font-size: 4rem;
@@ -2668,7 +2652,8 @@ body {
     }
 
     @media screen and (max-width: 600px) {
-      font-size: 3rem;
+      font-size: 2.8rem;
+      margin-top: 10rem;
     }
 
     @media screen and (max-width: 425px) {
@@ -2687,7 +2672,7 @@ body {
   .the-money-maestro-comment {
     display: none;
     width: 100%;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     opacity: 0.6;
     font-family: Graphik;
     font-size: 2.6rem;
@@ -2700,24 +2685,24 @@ body {
     color: #3f3f3f;
 
     @media screen and (max-width: 1200px) {
-      font-size: 2.4rem;
-    }
-
-    @media screen and (max-width: 1024px) {
       font-size: 2.2rem;
     }
 
+    @media screen and (max-width: 1024px) {
+      font-size: 1.8rem;
+    }
+
     @media screen and (max-width: 900px) {
-      font-size: 2rem;
+      font-size: 1.6rem;
     }
 
     @media screen and (max-width: 600px) {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
+      margin-top: 0rem;
     }
 
     @media screen and (max-width: 425px) {
       font-size: 1.4rem;
-      margin-top: 1rem;
     }
   }
 
@@ -2725,7 +2710,7 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 5rem;
+    margin-top: 2rem;
     font-family: Graphik;
     font-size: 8.8rem;
     font-weight: bold;
@@ -2768,7 +2753,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 1.5rem 6rem;
-    margin-top: 6rem;
+    margin-top: 3rem;
     font-family: Graphik;
     text-decoration: none;
     font-size: 1.7rem;
@@ -2819,7 +2804,7 @@ body {
       width: 5rem;
       padding: 1rem;
       border-radius: 50%;
-      margin-top: 2rem;
+      margin-top: 0.5rem;
     }
 
     .link {
@@ -2831,8 +2816,6 @@ body {
 
   .share {
     width: 100%;
-    margin-top: 0.2rem;
-    margin-bottom: 0.5rem;
     font-family: Graphik;
     font-size: 17px;
     text-align: center;
