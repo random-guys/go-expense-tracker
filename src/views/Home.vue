@@ -310,63 +310,63 @@ export default {
       ease: SteppedEase.config(250),
       repeat: -1
     });
-    TweenMax.fromTo(
-      ".morphIconLeftDesktop",
-      120,
-      { scale: "1", rotation: "0" },
-      {
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 0.4,
-        ease: Linear.easeNone,
-        scale: "1.1",
-        rotation: "-720"
-      },
-      -3
-    );
-    TweenMax.fromTo(
-      ".morphIconRightDesktop",
-      120,
-      { scale: "1", rotation: "-50" },
-      {
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 0.4,
-        ease: Linear.easeNone,
-        scale: "1.1",
-        rotation: "70"
-      },
-      -3
-    );
+    // TweenMax.fromTo(
+    //   ".morphIconLeftDesktop",
+    //   120,
+    //   { scale: "1", rotation: "0" },
+    //   {
+    //     repeat: -1,
+    //     yoyo: true,
+    //     repeatDelay: 0.4,
+    //     ease: Linear.easeNone,
+    //     scale: "1.1",
+    //     rotation: "-720"
+    //   },
+    //   -3
+    // );
+    // TweenMax.fromTo(
+    //   ".morphIconRightDesktop",
+    //   120,
+    //   { scale: "1", rotation: "-50" },
+    //   {
+    //     repeat: -1,
+    //     yoyo: true,
+    //     repeatDelay: 0.4,
+    //     ease: Linear.easeNone,
+    //     scale: "1.1",
+    //     rotation: "70"
+    //   },
+    //   -3
+    // );
 
-    TweenMax.fromTo(
-      ".morphIconLeft",
-      20,
-      { scale: "1", rotation: "0" },
-      {
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 0.4,
-        ease: Linear.easeNone,
-        scale: "1.1",
-        rotation: "-60"
-      },
-      -3
-    );
-    TweenMax.fromTo(
-      ".morphIconRight",
-      20,
-      { scale: "1", rotation: "-10" },
-      {
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 0.4,
-        ease: Linear.easeNone,
-        scale: "1.1",
-        rotation: "30"
-      },
-      -3
-    );
+    // TweenMax.fromTo(
+    //   ".morphIconLeft",
+    //   20,
+    //   { scale: "1", rotation: "0" },
+    //   {
+    //     repeat: -1,
+    //     yoyo: true,
+    //     repeatDelay: 0.4,
+    //     ease: Linear.easeNone,
+    //     scale: "1.1",
+    //     rotation: "-60"
+    //   },
+    //   -3
+    // );
+    // TweenMax.fromTo(
+    //   ".morphIconRight",
+    //   20,
+    //   { scale: "1", rotation: "-10" },
+    //   {
+    //     repeat: -1,
+    //     yoyo: true,
+    //     repeatDelay: 0.4,
+    //     ease: Linear.easeNone,
+    //     scale: "1.1",
+    //     rotation: "30"
+    //   },
+    //   -3
+    // );
   }
 };
 </script>
