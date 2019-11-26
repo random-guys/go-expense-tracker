@@ -43,6 +43,11 @@
         alt="Leaf Icon Bottom"
         class="leaf-bottom leafBottom"
       />
+            <img
+        src="../assets/images/big-leaf.svg"
+        alt="Leaf Icon Bottom"
+        class="leaf-bottom-desktop leafBottomDesktop"
+      />
       <div v-for="(detail, index) in userDetails" :key="index">
         <h2 class="hero-text__primary">
           Hi <b class="capitalize">{{ detail.first_name }}</b
@@ -787,35 +792,62 @@ export default {
 
     this.userDetails = JSON.parse(localStorage.getItem("user_details"));
     const tl = new TimelineMax();
-
-    // TweenMax.fromTo(
-    //   ".morphIconRight",
-    //   60,
-    //   { scale: "0.8" },
-    //   {
-    //     repeat: -1,
-    //     yoyo: true,
-    //     repeatDelay: 0.4,
-    //     ease: Linear.easeNone,
-    //     scale: "1",
-    //     rotation: "-180"
-    //   },
-    //   -3
-    // );
-    // TweenMax.fromTo(
-    //   ".morphIconLeft",
-    //   120,
-    //   { scale: "1" },
-    //   {
-    //     repeat: -1,
-    //     yoyo: true,
-    //     repeatDelay: 0.4,
-    //     ease: Linear.easeNone,
-    //     scale: "1.5",
-    //     rotation: "360"
-    //   },
-    //   -3
-    // );
+        TweenMax.fromTo(
+      ".morphIconLeft",
+      20,
+      { scale: "1", rotation: "0" },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        scale: "1.1",
+        rotation: "-60"
+      },
+      -3
+    );
+    TweenMax.fromTo(
+      ".morphIconRight",
+      20,
+      { scale: "1", rotation: "-10" },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        scale: "1.2",
+        rotation: "30"
+      },
+      -3
+    );
+    TweenMax.fromTo(
+      ".morphIconLeftDesktop",
+      120,
+      { scale: "1", rotation: "0" },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        scale: "1.1",
+        rotation: "-720"
+      },
+      -3
+    );
+    TweenMax.fromTo(
+      ".morphIconRightDesktop",
+      120,
+      { scale: "1", rotation: "-50" },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        scale: "1.1",
+        rotation: "70"
+      },
+      -3
+    );
     TweenMax.fromTo(
       ".leafRight",
       5,
@@ -859,20 +891,21 @@ export default {
       },
       -3
     );
-    // TweenMax.fromTo(
-    //   ".leafBottom",
-    //   5,
-    //   {  scale: "0.8" },
-    //   {
-    //     repeat: -1,
-    //     yoyo: true,
-    //     repeatDelay: 0,
-    //     ease: Elastic.easeInOut.config(2, 2),
-    //     rotation: "5",
-    //     scale: "1"
-    //   },
-    //   -3
-    // );
+    TweenMax.fromTo(
+      ".leafBottomDesktop",
+      5,
+      { x: 0, y: 0 },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0,
+        ease: Linear.easeNone,
+        x: -3,
+        y: -10,
+        rotation: "5"
+      },
+      -3
+    );
 
     tl.fromTo(
       ".trackerPage",

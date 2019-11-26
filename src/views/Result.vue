@@ -3,16 +3,16 @@
     <canvas id="confetti" class="canvas"></canvas>
 
     <div class="result resultPage">
-      <!-- <img
+      <img
         src="../assets/images/vector-shapes-1.svg"
         alt="Morph Icon Left"
-        class="morph-icon-left morphIconLeft"
+        class="morph-icon-left-desktop morphIconLeftDesktop"
       />
       <img
         src="../assets/images/vector-shapes-2.svg"
         alt="Morph Icon Right"
-        class="morph-icon-right morphIconRight"
-      /> -->
+        class="morph-icon-right-desktop morphIconRightDesktop"
+      />
       <img
         src="../assets/images/result-page-leaf.svg"
         alt="Morph Icon Right"
@@ -348,34 +348,34 @@ export default {
       { opacity: 1, ease: Power2.easeInOut }
     );
 
-    // TweenMax.fromTo(
-    //   ".morphIconRight",
-    //   60,
-    //   { scale: "0.8" },
-    //   {
-    //     repeat: -1,
-    //     yoyo: true,
-    //     repeatDelay: 0.4,
-    //     ease: Linear.easeNone,
-    //     scale: "1",
-    //     rotation: "-180"
-    //   },
-    //   -3
-    // );
-    // TweenMax.fromTo(
-    //   ".morphIconLeft",
-    //   120,
-    //   { scale: "1" },
-    //   {
-    //     repeat: -1,
-    //     yoyo: true,
-    //     repeatDelay: 0.4,
-    //     ease: Linear.easeNone,
-    //     scale: "1.5",
-    //     rotation: "360"
-    //   },
-    //   -3
-    // );
+    TweenMax.fromTo(
+      ".morphIconLeftDesktop",
+      120,
+      { scale: "1", rotation: "0" },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        scale: "1.1",
+        rotation: "-720"
+      },
+      -3
+    );
+    TweenMax.fromTo(
+      ".morphIconRightDesktop",
+      120,
+      { scale: "1", rotation: "-50" },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        scale: "1.1",
+        rotation: "70"
+      },
+      -3
+    );
     // TweenMax.fromTo(
     //   ".leafBottomRight",
     //   5,
