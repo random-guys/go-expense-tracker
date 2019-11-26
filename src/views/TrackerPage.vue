@@ -27,6 +27,17 @@
         alt="Morph Icon Right"
         class="morph-icon-right morphIconRight"
       />
+
+      <img
+        src="../assets/images/vector-shapes-1.svg"
+        alt="Morph Icon Left"
+        class="morph-icon-left-desktop morphIconLeftDesktop"
+      />
+      <img
+        src="../assets/images/vector-shapes-2.svg"
+        alt="Morph Icon Right"
+        class="morph-icon-right-desktop morphIconRightDesktop"
+      />
       <img
         src="../assets/images/big-leaf.svg"
         alt="Leaf Icon Bottom"
@@ -3223,7 +3234,7 @@ export default {
   .card-payroll,
   .card-entertainment,
   .card-investment {
-    width: 15rem;
+    width: 18rem;
     padding: 0rem 0;
     padding-bottom: 0.5rem;
     display: flex;
@@ -3233,6 +3244,10 @@ export default {
     border-radius: 8px;
     margin: 1rem 0;
     background-color: #ffffff;
+
+    @media screen and (max-width: 600px) {
+      width: 15rem;
+    }
 
     @media screen and (max-width: 425px) {
       width: 12rem;
@@ -3321,7 +3336,7 @@ export default {
   position: relative;
   width: 100%;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     display: block;
   }
 }
