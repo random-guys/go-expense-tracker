@@ -17,7 +17,7 @@
         class="leaf-right leafRight"
       />
 
-            <img
+      <img
         src="../assets/images/vector-shapes-1.svg"
         alt="Morph Icon Left"
         class="morph-icon-left morphIconLeft"
@@ -197,7 +197,7 @@
         <p class="hero-text__secondary">Press the Enter key when done.</p>
       </div>
       <div class="button">
-        <div class="btn btnGo" @click="emailInput()">Proceed</div>
+        <div class="btn btnGo" @click="proceed()">Proceed</div>
       </div>
       <div>
         <img
@@ -277,7 +277,7 @@ export default {
       -3
     );
 
-        TweenMax.fromTo(
+    TweenMax.fromTo(
       ".morphIconLeft",
       20,
       { scale: "1", rotation: "0" },
@@ -368,6 +368,15 @@ export default {
         };
         this.userDetails.push(userObject);
         localStorage.setItem("user_details", JSON.stringify(this.userDetails));
+      }
+    },
+    proceed() {
+      if (this.slide1 === false) {
+        this.firstNameInput();
+      } else if (this.slide2 === false) {
+        this.lastNameInput();
+      } else {
+        this.emailInput();
       }
     },
     firstNameInput() {
@@ -576,14 +585,16 @@ export default {
     emailInput() {
       let emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(\.[cn]([o]{0,61}[mgo]))*$/gim;
       let test = emailRegex.test(this.email);
-      if (
-        this.first_name.length === 0 ||
-        this.last_name.length === 0 ||
-        test === false
-      ) {
+      if (this.email.length === 0) {
         this.$swal.fire({
           type: "info",
-          html: `Incomplete Details`
+          html: `Please enter email`
+        });
+        return;
+      } else if (test === false) {
+        this.$swal.fire({
+          type: "info",
+          html: `Incorrect email`
         });
         return;
       } else {
