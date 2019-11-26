@@ -221,8 +221,8 @@ export default {
       10,
       { x: 0, y: 0 },
       {
-        x: 140,
-        y: 140,
+        x: 135,
+        y: 135,
         ease: Linear.easeNone,
         repeat: -1,
         yoyo: true,
@@ -362,7 +362,7 @@ export default {
         yoyo: true,
         repeatDelay: 0.4,
         ease: Linear.easeNone,
-        scale: "1.2",
+        scale: "1.1",
         rotation: "30"
       },
       -3

@@ -167,7 +167,7 @@ body {
     &__primary {
       margin-top: 4rem;
       font-family: Graphik;
-      font-size: 6rem;
+      font-size: 6.4rem;
       font-weight: 600;
       font-stretch: normal;
       font-style: normal;
@@ -179,7 +179,7 @@ body {
       @media screen and (max-width: 1600px) {
         width: 100%;
         padding: 0 15%;
-        font-size: 4.8rem;
+        font-size: 6rem;
       }
 
       @media screen and (max-width: 1200px) {
@@ -225,7 +225,7 @@ body {
       @media screen and (max-width: 426px) {
         padding: 0 15%;
         margin-top: 2rem;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
       }
 
       @media screen and (max-width: 375px) {
@@ -251,7 +251,7 @@ body {
 
       @media screen and (max-width: 1600px) {
         padding: 0 15%;
-        font-size: 2.4rem;
+        font-size: 2.6rem;
       }
 
       @media screen and (max-width: 1440px) {
@@ -277,7 +277,15 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // margin-top: 3.2rem;
+    margin-top: 3.2rem;
+
+    @media screen and (max-width: 1024px) {
+      margin-top: 1.8rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin-top: 1.2rem;
+    }
 
     @media screen and (max-width: 600px) {
       margin-top: 0;
@@ -304,16 +312,16 @@ body {
     transition: all 0.4s;
     transition: all 0.2s ease-in-out;
 
-    @media screen and (max-width: 1600px) {
-      font-size: 1.8rem;
-      padding: 1.4rem 4rem;
-    }
+    // @media screen and (max-width: 1600px) {
+    //   font-size: 1.7rem;
+    //   padding: 1.4rem 4rem;
+    // }
 
     @media screen and (max-width: 1200px) {
       font-size: 1.6rem;
     }
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1024px) {
       font-size: 1.4rem;
     }
 
@@ -360,7 +368,7 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    width: 18%;
+    width: 20%;
     z-index: -1;
 
     @media screen and (max-width: 900px) {
@@ -524,15 +532,15 @@ body {
 
   .morph-icon-left-desktop {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 55%;
+    top: 0rem;
+    left: -80rem;
+    width: 125%;
     z-index: -1;
 
-    @media screen and (max-width: 1800px) {
-      top: 0rem;
-      left: -70rem;
-      width: 125%;
+    @media screen and (max-width: 1600px) {
+      top: -5rem;
+      left: 0rem;
+      width: 35%;
       transform: rotate(5deg);
       // transform-origin: -30% -805%;
       // overflow: hidden;
@@ -540,15 +548,15 @@ body {
 
     @media screen and (max-width: 1440px) {
       top: 0rem;
-      left: -50rem;
-      width: 105%;
+      left: -15rem;
+      width: 60%;
       transform: rotate(5deg);
       // transform-origin: -30% -805%;
       // overflow: hidden;
     }
 
     @media screen and (max-width: 1200px) {
-      top: -10rem;
+      top: -5rem;
       left: 0rem;
       width: 40%;
       transform: rotate(5deg);
@@ -874,8 +882,8 @@ body {
     }
 
     @media screen and (max-width: 768px) {
-      top: 40rem;
-      left: 15rem;
+      top: 39rem;
+      left: 14rem;
       width: 1.5rem;
       z-index: -1;
     }
@@ -1004,14 +1012,13 @@ body {
     @media screen and (max-width: 1600px) {
       top: -3rem;
       left: 80rem;
-      width: 3%;
+      width: 4%;
       margin-bottom: 0rem;
     }
 
     @media screen and (max-width: 1440px) {
       top: -3rem;
       left: 74rem;
-      width: 3%;
     }
 
     @media screen and (max-width: 1200px) {
@@ -1022,6 +1029,7 @@ body {
 
     @media screen and (max-width: 1024px) {
       left: 52rem;
+      width: 5%;
     }
 
     @media screen and (max-width: 900px) {
@@ -1029,17 +1037,19 @@ body {
     }
 
     @media screen and (max-width: 768px) {
-      left: 42rem;
+      left: 39rem;
+      width: 5.5%;
     }
 
     @media screen and (max-width: 600px) {
-      left: 34rem;
+      left: 30rem;
+      width: 7%;
     }
 
     @media screen and (max-width: 426px) {
       top: -1rem;
       left: 24rem;
-      width: 7.5%;
+      width: 9%;
     }
 
     @media screen and (max-width: 375px) {
