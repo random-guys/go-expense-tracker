@@ -1164,7 +1164,7 @@ body {
     position: fixed;
     bottom: 0rem;
     left: 0rem;
-    width: 40%;
+    width: 70rem;
     transform: rotate(10deg);
     // transform-origin: 100% -210%;
     z-index: -1;
@@ -1172,7 +1172,35 @@ body {
     @media screen and (max-width: 1600px) {
       bottom: 0rem;
       left: 0rem;
-      width: 35%;
+      width: 50rem;
+      transform: rotate(10deg);
+    }
+
+    @media screen and (max-width: 1440px) {
+      bottom: 0rem;
+      left: 0rem;
+      width: 55rem;
+      transform: rotate(10deg);
+    }
+
+    @media screen and (max-width: 1200px) {
+      bottom: 0rem;
+      left: 0rem;
+      width: 45rem;
+      transform: rotate(10deg);
+    }
+
+    @media screen and (max-width: 1024px) {
+      bottom: 0rem;
+      left: 0rem;
+      width: 40rem;
+      transform: rotate(10deg);
+    }
+
+    @media screen and (max-width: 900px) {
+      bottom: 0rem;
+      left: 0rem;
+      width: 40rem;
       transform: rotate(10deg);
     }
 
@@ -1182,16 +1210,44 @@ body {
   }
   .morph-icon-right-desktop {
     position: fixed;
-    top: 0rem;
+    top: -30rem;
     right: 0rem;
-    width: 50%;
+    width: 95rem;
     transform: rotate(10deg);
     z-index: -1;
 
     @media screen and (max-width: 1600px) {
-      top: 0rem;
+      top: -25rem;
       right: 0rem;
-      width: 45%;
+      width: 80rem;
+      transform: rotate(10deg);
+    }
+
+    @media screen and (max-width: 1440px) {
+      top: -20rem;
+      right: 0rem;
+      width: 70rem;
+      transform: rotate(10deg);
+    }
+
+    @media screen and (max-width: 1200px) {
+      top: -20rem;
+      right: 0rem;
+      width: 60rem;
+      transform: rotate(10deg);
+    }
+
+    @media screen and (max-width: 1024px) {
+      top: -15rem;
+      right: 0rem;
+      width: 50rem;
+      transform: rotate(10deg);
+    }
+
+    @media screen and (max-width: 900px) {
+      top: -13rem;
+      right: 0rem;
+      width: 40rem;
       transform: rotate(10deg);
     }
 

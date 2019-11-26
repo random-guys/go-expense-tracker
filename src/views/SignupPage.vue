@@ -31,12 +31,12 @@
       <img
         src="../assets/images/vector-shapes-1.svg"
         alt="Morph Icon Left"
-        class="morph-icon-left-desktop morphIconLeft"
+        class="morph-icon-left-desktop morphIconLeftDesktop"
       />
       <img
         src="../assets/images/vector-shapes-2.svg"
         alt="Morph Icon Right"
-        class="morph-icon-right-desktop morphIconRight"
+        class="morph-icon-right-desktop morphIconRightDesktop"
       />
       <img src="../assets/images/logo.svg" alt="Gomoney Logo" class="logo" />
 
