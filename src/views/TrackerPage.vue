@@ -3251,7 +3251,11 @@ export default {
   align-items: center;
   padding: 0 5rem;
 
-  @media screen and (max-width: 451px) {
+  @media screen and (max-width: 475px) {
+    padding: 0 3rem;
+  }
+
+    @media screen and (max-width: 375px) {
     padding: 0 1rem;
   }
 
@@ -3268,14 +3272,15 @@ export default {
   .card-entertainment,
   .card-investment {
     width: 18rem;
-    padding: 0rem 0;
+    // padding: 0rem 0;
     padding-bottom: 0.5rem;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
-    margin: 1rem 0;
+    margin: 2rem 0;
+    margin-top: 0;
     background-color: #ffffff;
 
     @media screen and (max-width: 600px) {
