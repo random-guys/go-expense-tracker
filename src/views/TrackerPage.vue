@@ -263,7 +263,7 @@
             alt="Leaf Icon Left"
             class="card-img"
           />
-          <p class="card-text vacationText">vacation</p>
+          <p class="card-text vacationText">Vacation</p>
           <input
             ref="refVacation"
             type="text"
@@ -572,7 +572,7 @@
                 alt="Leaf Icon Left"
                 class="card-img"
               />
-              <p class="card-text vacationText">vacation</p>
+              <p class="card-text vacationText">Vacation</p>
               <input
                 ref="refVacation"
                 type="text"
