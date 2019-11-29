@@ -43,7 +43,7 @@
         alt="Leaf Icon Bottom"
         class="leaf-bottom leafBottom"
       />
-            <img
+      <img
         src="../assets/images/big-leaf.svg"
         alt="Leaf Icon Bottom"
         class="leaf-bottom-desktop leafBottomDesktop"
@@ -76,6 +76,7 @@
             onblur="this.placeholder='N.00'"
             class="input transportInput"
             v-model="transport"
+            @keypress="isNumberKey()"
             @change="inputTransportationAmount()"
           />
           <p class="error errorMsgTransport">!!!</p>
@@ -100,6 +101,7 @@
             onblur="this.placeholder='N.00'"
             class="input transferInput"
             v-model="transfer"
+            @keypress="isNumberKey()"
             @change="inputTransferAmount()"
           />
           <p class="error errorMsgTransfer">!!!</p>
@@ -124,6 +126,7 @@
             onblur="this.placeholder='N.00'"
             class="input eatingInput"
             v-model="eating"
+            @keypress="isNumberKey()"
             @change="inputEatingAmount()"
           />
           <p class="error errorMsgEating">!!!</p>
@@ -146,6 +149,7 @@
             onblur="this.placeholder='N.00'"
             class="input billsInput"
             v-model="bills"
+            @keypress="isNumberKey()"
             @change="inputBillsAmount()"
           />
           <p class="error errorMsgBills">!!!</p>
@@ -170,6 +174,7 @@
             onblur="this.placeholder='N.00'"
             class="input familyInput"
             v-model="family"
+            @keypress="isNumberKey()"
             @change="inputFamilyAmount()"
           />
           <p class="error errorMsgFamily">!!!</p>
@@ -194,6 +199,7 @@
             onblur="this.placeholder='N.00'"
             class="input groceriesInput"
             v-model="groceries"
+            @keypress="isNumberKey()"
             @change="inputGroceriesAmount()"
           />
           <p class="error errorMsgGroceries">!!!</p>
@@ -218,6 +224,7 @@
             onblur="this.placeholder='N.00'"
             class="input shoppingInput"
             v-model="shopping"
+            @keypress="isNumberKey()"
             @change="inputShoppingAmount()"
           />
           <p class="error errorMsgShopping">!!!</p>
@@ -240,6 +247,7 @@
             onblur="this.placeholder='N.00'"
             class="input careInput"
             v-model="care"
+            @keypress="isNumberKey()"
             @change="inputCareAmount()"
           />
           <p class="error errorMsgCare">!!!</p>
@@ -264,6 +272,7 @@
             onblur="this.placeholder='N.00'"
             class="input vacationInput"
             v-model="vacation"
+            @keypress="isNumberKey()"
             @change="inputVacationAmount()"
           />
           <p class="error errorMsgVacation">!!!</p>
@@ -288,6 +297,7 @@
             onblur="this.placeholder='N.00'"
             class="input payrollInput"
             v-model="payroll"
+            @keypress="isNumberKey()"
             @change="inputPayrollAmount()"
           />
           <p class="error errorMsgPayroll">!!!</p>
@@ -312,6 +322,7 @@
             onblur="this.placeholder='N.00'"
             class="input entertainmentInput"
             v-model="entertainment"
+            @keypress="isNumberKey()"
             @change="inputEntertainmentAmount()"
           />
           <p class="error errorMsgEntertainment">!!!</p>
@@ -336,6 +347,7 @@
             onblur="this.placeholder='N.00'"
             class="input investmentInput"
             v-model="investment"
+            @keypress="isNumberKey()"
             @change="inputInvestmentAmount()"
           />
           <p class="error errorMsgInvestment">!!!</p>
@@ -365,6 +377,7 @@
                 onblur="this.placeholder='N.00'"
                 class="input transportInput"
                 v-model="transport"
+                @keypress="isNumberKey()"
                 @change="inputTransportationAmount()"
               />
               <p class="error errorMsgTransport">!!!</p>
@@ -389,6 +402,7 @@
                 onblur="this.placeholder='N.00'"
                 class="input transferInput"
                 v-model="transfer"
+                @keypress="isNumberKey()"
                 @change="inputTransferAmount()"
               />
               <p class="error errorMsgTransfer">!!!</p>
@@ -413,6 +427,7 @@
                 onblur="this.placeholder='N.00'"
                 class="input eatingInput"
                 v-model="eating"
+                @keypress="isNumberKey()"
                 @change="inputEatingAmount()"
               />
               <p class="error errorMsgEating">!!!</p>
@@ -437,6 +452,7 @@
                 onblur="this.placeholder='N.00'"
                 class="input billsInput"
                 v-model="bills"
+                @keypress="isNumberKey()"
                 @change="inputBillsAmount()"
               />
               <p class="error errorMsgBills">!!!</p>
@@ -463,6 +479,7 @@
                 onblur="this.placeholder='N.00'"
                 class="input familyInput"
                 v-model="family"
+                @keypress="isNumberKey()"
                 @change="inputFamilyAmount()"
               />
               <p class="error errorMsgFamily">!!!</p>
@@ -487,6 +504,7 @@
                 onblur="this.placeholder='N.00'"
                 class="input groceriesInput"
                 v-model="groceries"
+                @keypress="isNumberKey()"
                 @change="inputGroceriesAmount()"
               />
               <p class="error errorMsgGroceries">!!!</p>
@@ -511,6 +529,7 @@
                 onblur="this.placeholder='N.00'"
                 class="input shoppingInput"
                 v-model="shopping"
+                @keypress="isNumberKey()"
                 @change="inputShoppingAmount()"
               />
               <p class="error errorMsgShopping">!!!</p>
@@ -535,6 +554,7 @@
                 onblur="this.placeholder='N.00'"
                 class="input careInput"
                 v-model="care"
+                @keypress="isNumberKey()"
                 @change="inputCareAmount()"
               />
               <p class="error errorMsgCare">!!!</p>
@@ -561,6 +581,7 @@
                 onblur="this.placeholder='N.00'"
                 class="input vacationInput"
                 v-model="vacation"
+                @keypress="isNumberKey()"
                 @change="inputVacationAmount()"
               />
               <p class="error errorMsgVacation">!!!</p>
@@ -585,6 +606,7 @@
                 onblur="this.placeholder='N.00'"
                 class="input payrollInput"
                 v-model="payroll"
+                @keypress="isNumberKey()"
                 @change="inputPayrollAmount()"
               />
               <p class="error errorMsgPayroll">!!!</p>
@@ -609,6 +631,7 @@
                 onblur="this.placeholder='N.00'"
                 class="input entertainmentInput"
                 v-model="entertainment"
+                @keypress="isNumberKey()"
                 @change="inputEntertainmentAmount()"
               />
               <p class="error errorMsgEntertainment">!!!</p>
@@ -633,6 +656,7 @@
                 onblur="this.placeholder='N.00'"
                 class="input investmentInput"
                 v-model="investment"
+                @keypress="isNumberKey()"
                 @change="inputInvestmentAmount()"
               />
               <p class="error errorMsgInvestment">!!!</p>
@@ -792,7 +816,7 @@ export default {
 
     this.userDetails = JSON.parse(localStorage.getItem("user_details"));
     const tl = new TimelineMax();
-        TweenMax.fromTo(
+    TweenMax.fromTo(
       ".morphIconLeft",
       20,
       { scale: "1", rotation: "0" },
@@ -915,6 +939,11 @@ export default {
     );
   },
   methods: {
+    isNumberKey() {
+      if ((event.which < 48 || event.which > 57) && event.which !== 13) {
+        event.preventDefault();
+      }
+    },
     initialTrackerDetails() {
       this.amountTracker = [];
       let trackerObject = {
@@ -3255,7 +3284,7 @@ export default {
     padding: 0 3rem;
   }
 
-    @media screen and (max-width: 375px) {
+  @media screen and (max-width: 375px) {
     padding: 0 1rem;
   }
 
