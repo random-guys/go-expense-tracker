@@ -110,7 +110,7 @@ body {
   position: fixed;
   left: 0;
   top: 0;
-  // height: 100vh;
+  height: 100vh;
   width: 100vw;
   z-index: -1;
   opacity: 0.5;
@@ -2804,7 +2804,7 @@ body {
 
   .share-icon {
     width: 100%;
-    padding: 0 42%;
+    padding: 0 50%;
     display: flex;
     justify-content: space-around;
     align-items: center;
