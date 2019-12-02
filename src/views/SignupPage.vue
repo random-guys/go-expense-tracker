@@ -3,42 +3,42 @@
     <div class="signup-page signupPage">
       <img
         src="../assets/images/group-copy-12.svg"
-        alt="Leaf Icon Left"
+        alt="Expense tracker Leaf Icon For GoMoney Nigeria"
         class="leaf-left leafLeft"
       />
       <img
         src="../assets/images/group-copy-11.svg"
-        alt="Leaf Icon Left"
+        alt="Expense tracker Leaf Icon For GoMoney Nigeria"
         class="leaf-center leafCenter"
       />
       <img
         src="../assets/images/group-copy-10.svg"
-        alt="Leaf Icon Left"
+        alt="Expense tracker Leaf Icon For GoMoney Nigeria"
         class="leaf-right leafRight"
       />
 
       <img
         src="../assets/images/vector-shapes-1.svg"
-        alt="Morph Icon Left"
+        alt="Expense tracker Morhp Icon For GoMoney Nigeria"
         class="morph-icon-left morphIconLeft"
       />
       <img
         src="../assets/images/vector-shapes-2.svg"
-        alt="Morph Icon Right"
+        alt="Expense tracker Morph Icon For GoMoney Nigeria"
         class="morph-icon-right morphIconRight"
       />
 
       <img
         src="../assets/images/vector-shapes-1.svg"
-        alt="Morph Icon Left"
+        alt="Expense tracker Morph Icon For GoMoney Nigeria"
         class="morph-icon-left-desktop morphIconLeftDesktop"
       />
       <img
         src="../assets/images/vector-shapes-2.svg"
-        alt="Morph Icon Right"
+        alt="Expense tracker Morph Icon For GoMoney Nigeria"
         class="morph-icon-right-desktop morphIconRightDesktop"
       />
-      <img src="../assets/images/logo.svg" alt="Gomoney Logo" class="logo" />
+      <img src="../assets/images/logo.svg" alt="Expense Tracker Gomoney Logo" class="logo" />
 
       <div
         class="header2-div"
@@ -202,7 +202,7 @@
       <div>
         <img
           src="../assets/images/pie-chart.svg"
-          alt="Pie Chart Shape"
+          alt="Expense tracker Pie Chart Icon For GoMoney Nigeria"
           class="pie-chart pieChart"
         />
       </div>

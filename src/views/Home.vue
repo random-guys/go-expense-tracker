@@ -3,12 +3,12 @@
     <div class="home homePage">
       <img
         src="../assets/images/group-copy-8.svg"
-        alt="Leaf Icon Left"
+        alt="Expense tracker Leaf Icon For GoMoney Nigeria"
         class="leaf-left leafLeft"
       />
       <img
         src="../assets/images/group-copy-9.svg"
-        alt="Leaf Icon Right"
+        alt="Expense tracker Leaf Icon For GoMoney Nigeria"
         class="leaf-right leafRight"
       />
       <svg
@@ -103,7 +103,7 @@
         </g>
       </svg>
 
-      <img src="../assets/images/logo.svg" alt="Gomoney Logo" class="logo" />
+      <img src="../assets/images/logo.svg" alt="Logo For GoMoney Nigeria" class="logo" />
       <div>
         <h1 class="hero-text__primary">
           Discover your
@@ -111,7 +111,7 @@
         </h1>
         <img
           src="../assets/images/purple-dot.svg"
-          alt="Gomoney Logo"
+          alt="Expense tracker Purple Dot Image For GoMoney Nigeria"
           class="purple-dot purpleDot"
         />
       </div>
@@ -125,7 +125,7 @@
         </p>
         <img
           src="../assets/images/pink-dot.svg"
-          alt="Gomoney Logo"
+          alt="Expense tracker Pink Dot Image For GoMoney Nigeria"
           class="pink-dot pinkDot"
         />
       </div>
@@ -134,47 +134,47 @@
         <div>
           <img
             src="../assets/images/yellow-dot.svg"
-            alt="Gomoney Logo"
+            alt="Expense tracker Yellow Dot Image For GoMoney Nigeria"
             class="yellow-dot yellowDot"
           />
         </div>
         <div>
           <img
             src="../assets/images/green-dot.svg"
-            alt="Gomoney Logo"
+            alt="Expense tracker Green Dot Image For GoMoney Nigeria"
             class="green-dot greenDot"
           />
         </div>
         <div>
           <img
             src="../assets/images/home-triangle.svg"
-            alt="Gomoney Logo"
+            alt="Expense tracker Triangle Image For GoMoney Nigeria"
             class="home-triangle triangleDot"
           />
         </div>
         <div>
           <img
             src="../assets/images/green-dot.svg"
-            alt="Gomoney Logo"
+            alt="Expense tracker Green Dot Image For GoMoney Nigeria"
             class="green-dot-mobile greenDotMobile"
           />
         </div>
         <div>
           <img
             src="../assets/images/home-triangle.svg"
-            alt="Gomoney Logo"
+            alt="Expense tracker Triangle Image For GoMoney Nigeria"
             class="home-triangle-mobile triangleDot"
           />
         </div>
         <img
           src="../assets/images/star.svg"
-          alt="Gomoney Logo"
+          alt="Expense tracker Star Image For GoMoney Nigeria"
           class="star starIcon"
         />
         <div>
           <img
             src="../assets/images/pie-chart.svg"
-            alt="Gomoney Logo"
+            alt="Expense tracker Pie Chat Image For GoMoney Nigeria"
             class="pie-chart pieChart"
           />
         </div>

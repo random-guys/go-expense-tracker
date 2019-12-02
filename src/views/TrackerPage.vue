@@ -3,49 +3,49 @@
     <div class="tracker-page trackerPage">
       <img
         src="../assets/images/group-copy-12.svg"
-        alt="Leaf Icon Left"
+        alt="Expense tracker Leaf Icon For GoMoney Nigeria"
         class="leaf-left leafLeft"
       />
       <img
         src="../assets/images/group-copy-11.svg"
-        alt="Leaf Icon Left"
+        alt="Expense tracker Leaf Icon For GoMoney Nigeria"
         class="leaf-center leafCenter"
       />
       <img
         src="../assets/images/group-copy-10.svg"
-        alt="Leaf Icon Left"
+        alt="Expense tracker Leaf Icon For GoMoney Nigeria"
         class="leaf-right leafRight"
       />
       <img src="../assets/images/logo.svg" alt="Gomoney Logo" class="logo" />
       <img
         src="../assets/images/vector-shapes-1.svg"
-        alt="Morph Icon Left"
+        alt="Expense tracker Morph Icon For GoMoney Nigeria"
         class="morph-icon-left morphIconLeft"
       />
       <img
         src="../assets/images/vector-shapes-2.svg"
-        alt="Morph Icon Right"
+        alt="Expense tracker Morph Icon For GoMoney Nigeria"
         class="morph-icon-right morphIconRight"
       />
 
       <img
         src="../assets/images/vector-shapes-1.svg"
-        alt="Morph Icon Left"
+        alt="Expense tracker Morph Icon For GoMoney Nigeria"
         class="morph-icon-left-desktop morphIconLeftDesktop"
       />
       <img
         src="../assets/images/vector-shapes-2.svg"
-        alt="Morph Icon Right"
+        alt="Expense tracker Morph Icon For GoMoney Nigeria"
         class="morph-icon-right-desktop morphIconRightDesktop"
       />
       <img
         src="../assets/images/big-leaf.svg"
-        alt="Leaf Icon Bottom"
+        alt="Expense tracker Leaf Icon For GoMoney Nigeria"
         class="leaf-bottom leafBottom"
       />
       <img
         src="../assets/images/big-leaf.svg"
-        alt="Leaf Icon Bottom"
+        alt="Expense tracker Leaf Icon For GoMoney Nigeria"
         class="leaf-bottom-desktop leafBottomDesktop"
       />
       <div v-for="(detail, index) in userDetails" :key="index">
@@ -64,7 +64,7 @@
           >
           <img
             src="../assets/images/transportation-icon.svg"
-            alt="Leaf Icon Left"
+            alt="Expense tracker Transportation Icon For GoMoney Nigeria"
             class="card-img"
           />
           <p class="card-text transportText">Transport</p>
@@ -89,7 +89,7 @@
           >
           <img
             src="../assets/images/transfer.svg"
-            alt="Leaf Icon Left"
+            alt="Expense tracker Transfer Icon For GoMoney Nigeria"
             class="card-img"
           />
           <p class="card-text transferText">Transfer</p>
@@ -114,7 +114,7 @@
           >
           <img
             src="../assets/images/eating.svg"
-            alt="Leaf Icon Left"
+            alt="Expense tracker Eating Icon For GoMoney Nigeria"
             class="card-img"
           />
           <p class="card-text eatingText">Eating Out</p>
@@ -137,7 +137,7 @@
           >
           <img
             src="../assets/images/bills.svg"
-            alt="Leaf Icon Left"
+            alt="Expense tracker Bills Icon For GoMoney Nigeria"
             class="card-img"
           />
           <p class="card-text billsText">Bills</p>
@@ -162,7 +162,7 @@
           >
           <img
             src="../assets/images/family.svg"
-            alt="Leaf Icon Left"
+            alt="Expense tracker Family Icon For GoMoney Nigeria"
             class="card-img"
           />
           <p class="card-text familyText">Family</p>
@@ -187,7 +187,7 @@
           >
           <img
             src="../assets/images/Groceries.svg"
-            alt="Leaf Icon Left"
+            alt="Expense tracker Groceries Icon For GoMoney Nigeria"
             class="card-img"
           />
           <p class="card-text groceriesText">Groceries</p>
@@ -212,7 +212,7 @@
           >
           <img
             src="../assets/images/shopping.svg"
-            alt="Leaf Icon Left"
+            alt="Expense tracker Shopping Icon For GoMoney Nigeria"
             class="card-img"
           />
           <p class="card-text shoppingText">Shopping</p>
@@ -235,7 +235,7 @@
           >
           <img
             src="../assets/images/personal-care.svg"
-            alt="Leaf Icon Left"
+            alt="Expense tracker Parsonal Care Icon For GoMoney Nigeria"
             class="card-img"
           />
           <p class="card-text careText">Personal Care</p>
@@ -260,7 +260,7 @@
           >
           <img
             src="../assets/images/vercation.svg"
-            alt="Leaf Icon Left"
+            alt="Expense tracker Vercation Icon For GoMoney Nigeria"
             class="card-img"
           />
           <p class="card-text vacationText">Vacation</p>
@@ -285,7 +285,7 @@
           >
           <img
             src="../assets/images/payroll.svg"
-            alt="Leaf Icon Left"
+            alt="Expense tracker Payroll Icon For GoMoney Nigeria"
             class="card-img"
           />
           <p class="card-text payrollText">Payroll</p>
@@ -310,7 +310,7 @@
           >
           <img
             src="../assets/images/entertainment.svg"
-            alt="Leaf Icon Left"
+            alt="Expense tracker Entertainment Icon For GoMoney Nigeria"
             class="card-img"
           />
           <p class="card-text entertainmentText">Entertainment</p>
@@ -335,7 +335,7 @@
           >
           <img
             src="../assets/images/investment.svg"
-            alt="Leaf Icon Left"
+            alt="Expense tracker Investment Icon For GoMoney Nigeria"
             class="card-img"
           />
           <p class="card-text investmentText">Investment</p>
@@ -365,7 +365,7 @@
               >
               <img
                 src="../assets/images/transportation-icon.svg"
-                alt="Leaf Icon Left"
+                alt="Expense tracker Transportation Icon For GoMoney Nigeria"
                 class="card-img"
               />
               <p class="card-text transportText">Transport</p>
@@ -390,7 +390,7 @@
               >
               <img
                 src="../assets/images/transfer.svg"
-                alt="Leaf Icon Left"
+                alt="Expense tracker Transfer Icon For GoMoney Nigeria"
                 class="card-img"
               />
               <p class="card-text transferText">Transfer</p>
@@ -415,7 +415,7 @@
               >
               <img
                 src="../assets/images/eating.svg"
-                alt="Leaf Icon Left"
+                alt="Expense tracker Eating Icon For GoMoney Nigeria"
                 class="card-img"
               />
               <p class="card-text eatingText">Eating Out</p>
@@ -440,7 +440,7 @@
               >
               <img
                 src="../assets/images/bills.svg"
-                alt="Leaf Icon Left"
+                alt="Expense tracker Bills Icon For GoMoney Nigeria"
                 class="card-img"
               />
               <p class="card-text billsText">Bills</p>
@@ -467,7 +467,7 @@
               >
               <img
                 src="../assets/images/family.svg"
-                alt="Leaf Icon Left"
+                alt="Expense tracker Family Icon For GoMoney Nigeria"
                 class="card-img"
               />
               <p class="card-text familyText">Family</p>
@@ -492,7 +492,7 @@
               >
               <img
                 src="../assets/images/Groceries.svg"
-                alt="Leaf Icon Left"
+                alt="Expense tracker Groceries Icon For GoMoney Nigeria"
                 class="card-img"
               />
               <p class="card-text groceriesText">Groceries</p>
@@ -517,7 +517,7 @@
               >
               <img
                 src="../assets/images/shopping.svg"
-                alt="Leaf Icon Left"
+                alt="Expense tracker Shopping Icon For GoMoney Nigeria"
                 class="card-img"
               />
               <p class="card-text shoppingText">Shopping</p>
@@ -542,7 +542,7 @@
               >
               <img
                 src="../assets/images/personal-care.svg"
-                alt="Leaf Icon Left"
+                alt="Expense tracker Personal Care Icon For GoMoney Nigeria"
                 class="card-img"
               />
               <p class="card-text careText">Personal Care</p>
@@ -569,7 +569,7 @@
               >
               <img
                 src="../assets/images/vercation.svg"
-                alt="Leaf Icon Left"
+                alt="Expense tracker Vercation Icon For GoMoney Nigeria"
                 class="card-img"
               />
               <p class="card-text vacationText">Vacation</p>
@@ -594,7 +594,7 @@
               >
               <img
                 src="../assets/images/payroll.svg"
-                alt="Leaf Icon Left"
+                alt="Expense tracker Payroll Icon For GoMoney Nigeria"
                 class="card-img"
               />
               <p class="card-text payrollText">Payroll</p>
@@ -619,7 +619,7 @@
               >
               <img
                 src="../assets/images/entertainment.svg"
-                alt="Leaf Icon Left"
+                alt="Expense tracker Entertainment Icon For GoMoney Nigeria"
                 class="card-img"
               />
               <p class="card-text entertainmentText">Entertainment</p>
@@ -644,7 +644,7 @@
               >
               <img
                 src="../assets/images/investment.svg"
-                alt="Leaf Icon Left"
+                alt="Expense tracker Investment Icon For GoMoney Nigeria"
                 class="card-img"
               />
               <p class="card-text investmentText">Investment</p>
