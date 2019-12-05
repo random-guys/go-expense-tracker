@@ -3,34 +3,50 @@
     <div class="tracker-page trackerPage">
       <img
         src="../assets/images/group-copy-12.svg"
-        alt="Leaf Icon Left"
+        alt="Expense tracker Leaf Icon For GoMoney Nigeria"
         class="leaf-left leafLeft"
       />
       <img
         src="../assets/images/group-copy-11.svg"
-        alt="Leaf Icon Left"
+        alt="Expense tracker Leaf Icon For GoMoney Nigeria"
         class="leaf-center leafCenter"
       />
       <img
         src="../assets/images/group-copy-10.svg"
-        alt="Leaf Icon Left"
+        alt="Expense tracker Leaf Icon For GoMoney Nigeria"
         class="leaf-right leafRight"
       />
       <img src="../assets/images/logo.svg" alt="Gomoney Logo" class="logo" />
       <img
         src="../assets/images/vector-shapes-1.svg"
-        alt="Morph Icon Left"
+        alt="Expense tracker Morph Icon For GoMoney Nigeria"
         class="morph-icon-left morphIconLeft"
       />
       <img
         src="../assets/images/vector-shapes-2.svg"
-        alt="Morph Icon Right"
+        alt="Expense tracker Morph Icon For GoMoney Nigeria"
         class="morph-icon-right morphIconRight"
+      />
+
+      <img
+        src="../assets/images/vector-shapes-1.svg"
+        alt="Expense tracker Morph Icon For GoMoney Nigeria"
+        class="morph-icon-left-desktop morphIconLeftDesktop"
+      />
+      <img
+        src="../assets/images/vector-shapes-2.svg"
+        alt="Expense tracker Morph Icon For GoMoney Nigeria"
+        class="morph-icon-right-desktop morphIconRightDesktop"
       />
       <img
         src="../assets/images/big-leaf.svg"
-        alt="Leaf Icon Bottom"
+        alt="Expense tracker Leaf Icon For GoMoney Nigeria"
         class="leaf-bottom leafBottom"
+      />
+      <img
+        src="../assets/images/big-leaf.svg"
+        alt="Expense tracker Leaf Icon For GoMoney Nigeria"
+        class="leaf-bottom-desktop leafBottomDesktop"
       />
       <div v-for="(detail, index) in userDetails" :key="index">
         <h2 class="hero-text__primary">
@@ -48,7 +64,7 @@
           >
           <img
             src="../assets/images/transportation-icon.svg"
-            alt="Leaf Icon Left"
+            alt="Expense tracker Transportation Icon For GoMoney Nigeria"
             class="card-img"
           />
           <p class="card-text transportText">Transport</p>
@@ -60,6 +76,7 @@
             onblur="this.placeholder='N.00'"
             class="input transportInput"
             v-model="transport"
+            @keypress="isNumberKey()"
             @change="inputTransportationAmount()"
           />
           <p class="error errorMsgTransport">!!!</p>
@@ -72,7 +89,7 @@
           >
           <img
             src="../assets/images/transfer.svg"
-            alt="Leaf Icon Left"
+            alt="Expense tracker Transfer Icon For GoMoney Nigeria"
             class="card-img"
           />
           <p class="card-text transferText">Transfer</p>
@@ -84,6 +101,7 @@
             onblur="this.placeholder='N.00'"
             class="input transferInput"
             v-model="transfer"
+            @keypress="isNumberKey()"
             @change="inputTransferAmount()"
           />
           <p class="error errorMsgTransfer">!!!</p>
@@ -96,7 +114,7 @@
           >
           <img
             src="../assets/images/eating.svg"
-            alt="Leaf Icon Left"
+            alt="Expense tracker Eating Icon For GoMoney Nigeria"
             class="card-img"
           />
           <p class="card-text eatingText">Eating Out</p>
@@ -108,6 +126,7 @@
             onblur="this.placeholder='N.00'"
             class="input eatingInput"
             v-model="eating"
+            @keypress="isNumberKey()"
             @change="inputEatingAmount()"
           />
           <p class="error errorMsgEating">!!!</p>
@@ -118,7 +137,7 @@
           >
           <img
             src="../assets/images/bills.svg"
-            alt="Leaf Icon Left"
+            alt="Expense tracker Bills Icon For GoMoney Nigeria"
             class="card-img"
           />
           <p class="card-text billsText">Bills</p>
@@ -130,6 +149,7 @@
             onblur="this.placeholder='N.00'"
             class="input billsInput"
             v-model="bills"
+            @keypress="isNumberKey()"
             @change="inputBillsAmount()"
           />
           <p class="error errorMsgBills">!!!</p>
@@ -142,7 +162,7 @@
           >
           <img
             src="../assets/images/family.svg"
-            alt="Leaf Icon Left"
+            alt="Expense tracker Family Icon For GoMoney Nigeria"
             class="card-img"
           />
           <p class="card-text familyText">Family</p>
@@ -154,6 +174,7 @@
             onblur="this.placeholder='N.00'"
             class="input familyInput"
             v-model="family"
+            @keypress="isNumberKey()"
             @change="inputFamilyAmount()"
           />
           <p class="error errorMsgFamily">!!!</p>
@@ -166,7 +187,7 @@
           >
           <img
             src="../assets/images/Groceries.svg"
-            alt="Leaf Icon Left"
+            alt="Expense tracker Groceries Icon For GoMoney Nigeria"
             class="card-img"
           />
           <p class="card-text groceriesText">Groceries</p>
@@ -178,6 +199,7 @@
             onblur="this.placeholder='N.00'"
             class="input groceriesInput"
             v-model="groceries"
+            @keypress="isNumberKey()"
             @change="inputGroceriesAmount()"
           />
           <p class="error errorMsgGroceries">!!!</p>
@@ -190,7 +212,7 @@
           >
           <img
             src="../assets/images/shopping.svg"
-            alt="Leaf Icon Left"
+            alt="Expense tracker Shopping Icon For GoMoney Nigeria"
             class="card-img"
           />
           <p class="card-text shoppingText">Shopping</p>
@@ -202,6 +224,7 @@
             onblur="this.placeholder='N.00'"
             class="input shoppingInput"
             v-model="shopping"
+            @keypress="isNumberKey()"
             @change="inputShoppingAmount()"
           />
           <p class="error errorMsgShopping">!!!</p>
@@ -212,7 +235,7 @@
           >
           <img
             src="../assets/images/personal-care.svg"
-            alt="Leaf Icon Left"
+            alt="Expense tracker Parsonal Care Icon For GoMoney Nigeria"
             class="card-img"
           />
           <p class="card-text careText">Personal Care</p>
@@ -224,6 +247,7 @@
             onblur="this.placeholder='N.00'"
             class="input careInput"
             v-model="care"
+            @keypress="isNumberKey()"
             @change="inputCareAmount()"
           />
           <p class="error errorMsgCare">!!!</p>
@@ -236,10 +260,10 @@
           >
           <img
             src="../assets/images/vercation.svg"
-            alt="Leaf Icon Left"
+            alt="Expense tracker Vercation Icon For GoMoney Nigeria"
             class="card-img"
           />
-          <p class="card-text vacationText">vacation</p>
+          <p class="card-text vacationText">Vacation</p>
           <input
             ref="refVacation"
             type="text"
@@ -248,6 +272,7 @@
             onblur="this.placeholder='N.00'"
             class="input vacationInput"
             v-model="vacation"
+            @keypress="isNumberKey()"
             @change="inputVacationAmount()"
           />
           <p class="error errorMsgVacation">!!!</p>
@@ -260,7 +285,7 @@
           >
           <img
             src="../assets/images/payroll.svg"
-            alt="Leaf Icon Left"
+            alt="Expense tracker Payroll Icon For GoMoney Nigeria"
             class="card-img"
           />
           <p class="card-text payrollText">Payroll</p>
@@ -272,6 +297,7 @@
             onblur="this.placeholder='N.00'"
             class="input payrollInput"
             v-model="payroll"
+            @keypress="isNumberKey()"
             @change="inputPayrollAmount()"
           />
           <p class="error errorMsgPayroll">!!!</p>
@@ -284,7 +310,7 @@
           >
           <img
             src="../assets/images/entertainment.svg"
-            alt="Leaf Icon Left"
+            alt="Expense tracker Entertainment Icon For GoMoney Nigeria"
             class="card-img"
           />
           <p class="card-text entertainmentText">Entertainment</p>
@@ -296,6 +322,7 @@
             onblur="this.placeholder='N.00'"
             class="input entertainmentInput"
             v-model="entertainment"
+            @keypress="isNumberKey()"
             @change="inputEntertainmentAmount()"
           />
           <p class="error errorMsgEntertainment">!!!</p>
@@ -308,7 +335,7 @@
           >
           <img
             src="../assets/images/investment.svg"
-            alt="Leaf Icon Left"
+            alt="Expense tracker Investment Icon For GoMoney Nigeria"
             class="card-img"
           />
           <p class="card-text investmentText">Investment</p>
@@ -320,6 +347,7 @@
             onblur="this.placeholder='N.00'"
             class="input investmentInput"
             v-model="investment"
+            @keypress="isNumberKey()"
             @change="inputInvestmentAmount()"
           />
           <p class="error errorMsgInvestment">!!!</p>
@@ -337,7 +365,7 @@
               >
               <img
                 src="../assets/images/transportation-icon.svg"
-                alt="Leaf Icon Left"
+                alt="Expense tracker Transportation Icon For GoMoney Nigeria"
                 class="card-img"
               />
               <p class="card-text transportText">Transport</p>
@@ -349,6 +377,7 @@
                 onblur="this.placeholder='N.00'"
                 class="input transportInput"
                 v-model="transport"
+                @keypress="isNumberKey()"
                 @change="inputTransportationAmount()"
               />
               <p class="error errorMsgTransport">!!!</p>
@@ -361,7 +390,7 @@
               >
               <img
                 src="../assets/images/transfer.svg"
-                alt="Leaf Icon Left"
+                alt="Expense tracker Transfer Icon For GoMoney Nigeria"
                 class="card-img"
               />
               <p class="card-text transferText">Transfer</p>
@@ -373,6 +402,7 @@
                 onblur="this.placeholder='N.00'"
                 class="input transferInput"
                 v-model="transfer"
+                @keypress="isNumberKey()"
                 @change="inputTransferAmount()"
               />
               <p class="error errorMsgTransfer">!!!</p>
@@ -385,7 +415,7 @@
               >
               <img
                 src="../assets/images/eating.svg"
-                alt="Leaf Icon Left"
+                alt="Expense tracker Eating Icon For GoMoney Nigeria"
                 class="card-img"
               />
               <p class="card-text eatingText">Eating Out</p>
@@ -397,6 +427,7 @@
                 onblur="this.placeholder='N.00'"
                 class="input eatingInput"
                 v-model="eating"
+                @keypress="isNumberKey()"
                 @change="inputEatingAmount()"
               />
               <p class="error errorMsgEating">!!!</p>
@@ -409,7 +440,7 @@
               >
               <img
                 src="../assets/images/bills.svg"
-                alt="Leaf Icon Left"
+                alt="Expense tracker Bills Icon For GoMoney Nigeria"
                 class="card-img"
               />
               <p class="card-text billsText">Bills</p>
@@ -421,6 +452,7 @@
                 onblur="this.placeholder='N.00'"
                 class="input billsInput"
                 v-model="bills"
+                @keypress="isNumberKey()"
                 @change="inputBillsAmount()"
               />
               <p class="error errorMsgBills">!!!</p>
@@ -435,7 +467,7 @@
               >
               <img
                 src="../assets/images/family.svg"
-                alt="Leaf Icon Left"
+                alt="Expense tracker Family Icon For GoMoney Nigeria"
                 class="card-img"
               />
               <p class="card-text familyText">Family</p>
@@ -447,6 +479,7 @@
                 onblur="this.placeholder='N.00'"
                 class="input familyInput"
                 v-model="family"
+                @keypress="isNumberKey()"
                 @change="inputFamilyAmount()"
               />
               <p class="error errorMsgFamily">!!!</p>
@@ -459,7 +492,7 @@
               >
               <img
                 src="../assets/images/Groceries.svg"
-                alt="Leaf Icon Left"
+                alt="Expense tracker Groceries Icon For GoMoney Nigeria"
                 class="card-img"
               />
               <p class="card-text groceriesText">Groceries</p>
@@ -471,6 +504,7 @@
                 onblur="this.placeholder='N.00'"
                 class="input groceriesInput"
                 v-model="groceries"
+                @keypress="isNumberKey()"
                 @change="inputGroceriesAmount()"
               />
               <p class="error errorMsgGroceries">!!!</p>
@@ -483,7 +517,7 @@
               >
               <img
                 src="../assets/images/shopping.svg"
-                alt="Leaf Icon Left"
+                alt="Expense tracker Shopping Icon For GoMoney Nigeria"
                 class="card-img"
               />
               <p class="card-text shoppingText">Shopping</p>
@@ -495,6 +529,7 @@
                 onblur="this.placeholder='N.00'"
                 class="input shoppingInput"
                 v-model="shopping"
+                @keypress="isNumberKey()"
                 @change="inputShoppingAmount()"
               />
               <p class="error errorMsgShopping">!!!</p>
@@ -507,7 +542,7 @@
               >
               <img
                 src="../assets/images/personal-care.svg"
-                alt="Leaf Icon Left"
+                alt="Expense tracker Personal Care Icon For GoMoney Nigeria"
                 class="card-img"
               />
               <p class="card-text careText">Personal Care</p>
@@ -519,6 +554,7 @@
                 onblur="this.placeholder='N.00'"
                 class="input careInput"
                 v-model="care"
+                @keypress="isNumberKey()"
                 @change="inputCareAmount()"
               />
               <p class="error errorMsgCare">!!!</p>
@@ -533,10 +569,10 @@
               >
               <img
                 src="../assets/images/vercation.svg"
-                alt="Leaf Icon Left"
+                alt="Expense tracker Vercation Icon For GoMoney Nigeria"
                 class="card-img"
               />
-              <p class="card-text vacationText">vacation</p>
+              <p class="card-text vacationText">Vacation</p>
               <input
                 ref="refVacation"
                 type="text"
@@ -545,6 +581,7 @@
                 onblur="this.placeholder='N.00'"
                 class="input vacationInput"
                 v-model="vacation"
+                @keypress="isNumberKey()"
                 @change="inputVacationAmount()"
               />
               <p class="error errorMsgVacation">!!!</p>
@@ -557,7 +594,7 @@
               >
               <img
                 src="../assets/images/payroll.svg"
-                alt="Leaf Icon Left"
+                alt="Expense tracker Payroll Icon For GoMoney Nigeria"
                 class="card-img"
               />
               <p class="card-text payrollText">Payroll</p>
@@ -569,6 +606,7 @@
                 onblur="this.placeholder='N.00'"
                 class="input payrollInput"
                 v-model="payroll"
+                @keypress="isNumberKey()"
                 @change="inputPayrollAmount()"
               />
               <p class="error errorMsgPayroll">!!!</p>
@@ -581,7 +619,7 @@
               >
               <img
                 src="../assets/images/entertainment.svg"
-                alt="Leaf Icon Left"
+                alt="Expense tracker Entertainment Icon For GoMoney Nigeria"
                 class="card-img"
               />
               <p class="card-text entertainmentText">Entertainment</p>
@@ -593,6 +631,7 @@
                 onblur="this.placeholder='N.00'"
                 class="input entertainmentInput"
                 v-model="entertainment"
+                @keypress="isNumberKey()"
                 @change="inputEntertainmentAmount()"
               />
               <p class="error errorMsgEntertainment">!!!</p>
@@ -605,7 +644,7 @@
               >
               <img
                 src="../assets/images/investment.svg"
-                alt="Leaf Icon Left"
+                alt="Expense tracker Investment Icon For GoMoney Nigeria"
                 class="card-img"
               />
               <p class="card-text investmentText">Investment</p>
@@ -617,6 +656,7 @@
                 onblur="this.placeholder='N.00'"
                 class="input investmentInput"
                 v-model="investment"
+                @keypress="isNumberKey()"
                 @change="inputInvestmentAmount()"
               />
               <p class="error errorMsgInvestment">!!!</p>
@@ -776,35 +816,62 @@ export default {
 
     this.userDetails = JSON.parse(localStorage.getItem("user_details"));
     const tl = new TimelineMax();
-
-    // TweenMax.fromTo(
-    //   ".morphIconRight",
-    //   60,
-    //   { scale: "0.8" },
-    //   {
-    //     repeat: -1,
-    //     yoyo: true,
-    //     repeatDelay: 0.4,
-    //     ease: Linear.easeNone,
-    //     scale: "1",
-    //     rotation: "-180"
-    //   },
-    //   -3
-    // );
-    // TweenMax.fromTo(
-    //   ".morphIconLeft",
-    //   120,
-    //   { scale: "1" },
-    //   {
-    //     repeat: -1,
-    //     yoyo: true,
-    //     repeatDelay: 0.4,
-    //     ease: Linear.easeNone,
-    //     scale: "1.5",
-    //     rotation: "360"
-    //   },
-    //   -3
-    // );
+    TweenMax.fromTo(
+      ".morphIconLeft",
+      20,
+      { scale: "1", rotation: "0" },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        scale: "1.1",
+        rotation: "-60"
+      },
+      -3
+    );
+    TweenMax.fromTo(
+      ".morphIconRight",
+      20,
+      { scale: "1", rotation: "-10" },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        scale: "1.2",
+        rotation: "30"
+      },
+      -3
+    );
+    TweenMax.fromTo(
+      ".morphIconLeftDesktop",
+      120,
+      { scale: "1", rotation: "0" },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        scale: "1.1",
+        rotation: "-720"
+      },
+      -3
+    );
+    TweenMax.fromTo(
+      ".morphIconRightDesktop",
+      120,
+      { scale: "1", rotation: "-50" },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        scale: "1.1",
+        rotation: "70"
+      },
+      -3
+    );
     TweenMax.fromTo(
       ".leafRight",
       5,
@@ -848,20 +915,21 @@ export default {
       },
       -3
     );
-    // TweenMax.fromTo(
-    //   ".leafBottom",
-    //   5,
-    //   {  scale: "0.8" },
-    //   {
-    //     repeat: -1,
-    //     yoyo: true,
-    //     repeatDelay: 0,
-    //     ease: Elastic.easeInOut.config(2, 2),
-    //     rotation: "5",
-    //     scale: "1"
-    //   },
-    //   -3
-    // );
+    TweenMax.fromTo(
+      ".leafBottomDesktop",
+      5,
+      { x: 0, y: 0 },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0,
+        ease: Linear.easeNone,
+        x: -3,
+        y: -10,
+        rotation: "5"
+      },
+      -3
+    );
 
     tl.fromTo(
       ".trackerPage",
@@ -871,6 +939,11 @@ export default {
     );
   },
   methods: {
+    isNumberKey() {
+      if ((event.which < 48 || event.which > 57) && event.which !== 13) {
+        event.preventDefault();
+      }
+    },
     initialTrackerDetails() {
       this.amountTracker = [];
       let trackerObject = {
@@ -3207,7 +3280,11 @@ export default {
   align-items: center;
   padding: 0 5rem;
 
-  @media screen and (max-width: 451px) {
+  @media screen and (max-width: 475px) {
+    padding: 0 3rem;
+  }
+
+  @media screen and (max-width: 375px) {
     padding: 0 1rem;
   }
 
@@ -3223,16 +3300,21 @@ export default {
   .card-payroll,
   .card-entertainment,
   .card-investment {
-    width: 15rem;
-    padding: 0rem 0;
+    width: 18rem;
+    // padding: 0rem 0;
     padding-bottom: 0.5rem;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
-    margin: 1rem 0;
+    margin: 2rem 0;
+    margin-top: 0;
     background-color: #ffffff;
+
+    @media screen and (max-width: 600px) {
+      width: 15rem;
+    }
 
     @media screen and (max-width: 425px) {
       width: 12rem;
@@ -3321,7 +3403,7 @@ export default {
   position: relative;
   width: 100%;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     display: block;
   }
 }

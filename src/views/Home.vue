@@ -3,12 +3,12 @@
     <div class="home homePage">
       <img
         src="../assets/images/group-copy-8.svg"
-        alt="Leaf Icon Left"
+        alt="Expense tracker Leaf Icon For GoMoney Nigeria"
         class="leaf-left leafLeft"
       />
       <img
         src="../assets/images/group-copy-9.svg"
-        alt="Leaf Icon Right"
+        alt="Expense tracker Leaf Icon For GoMoney Nigeria"
         class="leaf-right leafRight"
       />
       <svg
@@ -31,7 +31,7 @@
         </g>
       </svg>
 
-      <!-- <svg
+      <svg
         xmlns="http://www.w3.org/2000/svg"
         width="637"
         height="639"
@@ -49,7 +49,7 @@
             d="M316.194 638.5c54.31 0 100.605-6.53 135.707-21.23 42.524-17.806 66.736-46.9 69.222-88.964 1.356-22.951 8.042-43.243 19.646-62.355 9.24-15.22 20.609-28.561 37.92-45.805-2.224 2.215 21.579-21.102 27.37-27.198 11.936-12.56 19.705-22.945 24.571-33.723 5.692-12.606 7.12-25.471 3.897-39.614-19.86-87.138-56.857-165.068-107.4-221.544C470.667 34.98 399.416.5 316.194.5c-45.11 0-77.877 13.463-103.417 40.11-11.14 11.621-20.98 25.774-30.481 43.286-7.733 14.252-14.728 29.546-24.443 52.693-1.815 4.322-9.883 23.743-12.103 29.025-4.81 11.442-8.839 20.723-12.92 29.654-25.089 54.918-51.494 93.524-89.914 124.62-32.994 26.705-46.086 59.86-40.428 96.884 5.18 33.902 26.083 70.139 59.154 104.286C127.975 589.548 231.458 638.5 316.194 638.5z"
           />
         </g>
-      </svg> -->
+      </svg>
 
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +77,7 @@
         </g>
       </svg>
 
-      <!-- <svg
+      <svg
         xmlns="http://www.w3.org/2000/svg"
         width="871"
         height="959"
@@ -101,9 +101,9 @@
             d="M475.41 958.5c129.47 0 264.101-55.666 360.141-146.54 99.97-94.59 145.932-214.909 119.095-332.349-29.893-130.813-85.58-247.808-161.661-332.6C707.985 52.278 600.707.5 475.41.5c-67.945 0-117.314 20.232-155.793 60.273-16.778 17.46-31.597 38.718-45.903 65.018-11.64 21.398-22.17 44.358-36.79 79.102-2.73 6.488-14.87 35.635-18.211 43.561-7.236 17.17-13.298 31.096-19.436 44.498-17.512 38.232-34.698 69.833-54.49 98.696-23.299 33.977-49.71 63.197-80.733 88.241-49.714 40.133-69.448 89.98-60.921 145.632 7.804 50.938 39.28 105.366 89.076 156.648C192.064 885.003 347.837 958.5 475.41 958.5z"
           />
         </g>
-      </svg> -->
+      </svg>
 
-      <img src="../assets/images/logo.svg" alt="Gomoney Logo" class="logo" />
+      <img src="../assets/images/logo.svg" alt="Logo For GoMoney Nigeria" class="logo" />
       <div>
         <h1 class="hero-text__primary">
           Discover your
@@ -111,7 +111,7 @@
         </h1>
         <img
           src="../assets/images/purple-dot.svg"
-          alt="Gomoney Logo"
+          alt="Expense tracker Purple Dot Image For GoMoney Nigeria"
           class="purple-dot purpleDot"
         />
       </div>
@@ -125,7 +125,7 @@
         </p>
         <img
           src="../assets/images/pink-dot.svg"
-          alt="Gomoney Logo"
+          alt="Expense tracker Pink Dot Image For GoMoney Nigeria"
           class="pink-dot pinkDot"
         />
       </div>
@@ -134,36 +134,50 @@
         <div>
           <img
             src="../assets/images/yellow-dot.svg"
-            alt="Gomoney Logo"
+            alt="Expense tracker Yellow Dot Image For GoMoney Nigeria"
             class="yellow-dot yellowDot"
           />
         </div>
         <div>
           <img
-            src="../assets/images/pie-chart.svg"
-            alt="Gomoney Logo"
-            class="pie-chart pieChart"
-          />
-        </div>
-        <div>
-          <img
             src="../assets/images/green-dot.svg"
-            alt="Gomoney Logo"
+            alt="Expense tracker Green Dot Image For GoMoney Nigeria"
             class="green-dot greenDot"
           />
         </div>
         <div>
           <img
             src="../assets/images/home-triangle.svg"
-            alt="Gomoney Logo"
+            alt="Expense tracker Triangle Image For GoMoney Nigeria"
             class="home-triangle triangleDot"
+          />
+        </div>
+        <div>
+          <img
+            src="../assets/images/green-dot.svg"
+            alt="Expense tracker Green Dot Image For GoMoney Nigeria"
+            class="green-dot-mobile greenDotMobile"
+          />
+        </div>
+        <div>
+          <img
+            src="../assets/images/home-triangle.svg"
+            alt="Expense tracker Triangle Image For GoMoney Nigeria"
+            class="home-triangle-mobile triangleDot"
           />
         </div>
         <img
           src="../assets/images/star.svg"
-          alt="Gomoney Logo"
+          alt="Expense tracker Star Image For GoMoney Nigeria"
           class="star starIcon"
         />
+        <div>
+          <img
+            src="../assets/images/pie-chart.svg"
+            alt="Expense tracker Pie Chat Image For GoMoney Nigeria"
+            class="pie-chart pieChart"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -199,50 +213,65 @@ export default {
         repeat: -1,
         yoyo: true,
         repeatDelay: 0.4
-      }
-    )
-    .fromTo(
-      ".yellowDot",
-      5,
-      { x: 0, y: 0 },
-      {
-        x: 200,
-        y: 200,
-        ease: Bounce.easeInOut,
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 1
       },
       0.1
-    )
-    .fromTo(
-      ".purpleDot",
-      60,
+    );
+    tl.fromTo(
+      ".greenDotMobile",
+      10,
       { x: 0, y: 0 },
       {
-        x: 350,
-        y: 350,
-        ease: SteppedEase.config(10),
+        x: 135,
+        y: 135,
+        ease: Linear.easeNone,
         repeat: -1,
         yoyo: true,
         repeatDelay: 0.4
       },
       0.1
     )
-    .fromTo(
-      ".pinkDot",
-      30,
-      { x: 0, y: 0 },
-      {
-        x: 260,
-        y: 300,
-        ease: Back.easeInOut.config(1.7),
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 1
-      },
-      0.1
-    );
+      .fromTo(
+        ".yellowDot",
+        5,
+        { x: 0, y: 0 },
+        {
+          x: 200,
+          y: 200,
+          ease: Bounce.easeInOut,
+          repeat: -1,
+          yoyo: true,
+          repeatDelay: 1
+        },
+        0.1
+      )
+      .fromTo(
+        ".purpleDot",
+        60,
+        { x: 0, y: 0 },
+        {
+          x: 350,
+          y: 350,
+          ease: SteppedEase.config(10),
+          repeat: -1,
+          yoyo: true,
+          repeatDelay: 0.4
+        },
+        0.1
+      )
+      .fromTo(
+        ".pinkDot",
+        30,
+        { x: 0, y: 0 },
+        {
+          x: 260,
+          y: 300,
+          ease: Back.easeInOut.config(1.7),
+          repeat: -1,
+          yoyo: true,
+          repeatDelay: 1
+        },
+        0.1
+      );
     TweenMax.to(".pieChart", 50, {
       rotation: "360",
       ease: Linear.easeNone,
@@ -281,34 +310,63 @@ export default {
       ease: SteppedEase.config(250),
       repeat: -1
     });
-    // TweenMax.fromTo(
-    //   ".morphIconLeft",
-    //   120,
-    //   { scale: "1", rotation: "0" },
-    //   {
-    //     repeat: -1,
-    //     yoyo: true,
-    //     repeatDelay: 0.4,
-    //     ease: Linear.easeNone,
-    //     scale: "1.1",
-    //     rotation: "-720"
-    //   },
-    //   -3
-    // );
-    // TweenMax.fromTo(
-    //   ".morphIconRight",
-    //   120,
-    //   { scale: "1", rotation: "-50" },
-    //   {
-    //     repeat: -1,
-    //     yoyo: true,
-    //     repeatDelay: 0.4,
-    //     ease: Linear.easeNone,
-    //     scale: "1.1",
-    //     rotation: "70"
-    //   },
-    //   -3
-    // );
+    TweenMax.fromTo(
+      ".morphIconLeftDesktop",
+      120,
+      { scale: "1", rotation: "0" },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        scale: "1.1",
+        rotation: "-720"
+      },
+      -3
+    );
+    TweenMax.fromTo(
+      ".morphIconRightDesktop",
+      120,
+      { scale: "1", rotation: "-50" },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        scale: "1.1",
+        rotation: "70"
+      },
+      -3
+    );
+
+    TweenMax.fromTo(
+      ".morphIconLeft",
+      20,
+      { scale: "1", rotation: "0" },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        scale: "1.1",
+        rotation: "-60"
+      },
+      -3
+    );
+    TweenMax.fromTo(
+      ".morphIconRight",
+      20,
+      { scale: "1", rotation: "-10" },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        scale: "1.1",
+        rotation: "20"
+      },
+      -3
+    );
   }
 };
 </script>

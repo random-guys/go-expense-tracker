@@ -1,21 +1,20 @@
 <template>
   <div class="main">
-    <canvas id="confetti" class="canvas"></canvas>
-
     <div class="result resultPage">
-      <!-- <img
+      <canvas id="confetti" class="canvas"></canvas>
+      <img
         src="../assets/images/vector-shapes-1.svg"
-        alt="Morph Icon Left"
-        class="morph-icon-left morphIconLeft"
+        alt="Expense tracker Morph Icon For GoMoney Nigeria"
+        class="morph-icon-left-desktop morphIconLeftDesktop"
       />
       <img
         src="../assets/images/vector-shapes-2.svg"
-        alt="Morph Icon Right"
-        class="morph-icon-right morphIconRight"
-      /> -->
+        alt="Expense tracker Morph Icon For GoMoney Nigeria"
+        class="morph-icon-right-desktop morphIconRightDesktop"
+      />
       <img
         src="../assets/images/result-page-leaf.svg"
-        alt="Morph Icon Right"
+        alt="Expense tracker Leaf Icon For GoMoney Nigeria"
         class="leaf-bottom-right leafBottomRight"
       />
       <svg
@@ -247,7 +246,7 @@
         >JOIN THE WAITLIST</a
       >
       <div class="share-icon">
-        <div class="icon1">
+        <!-- <div class="icon1">
           <a href="https://www.instagram.com" class="link" target="_blank">
             <img
               src="../assets/images/instagram.svg"
@@ -255,22 +254,26 @@
               class="icon"
             />
           </a>
-        </div>
-        <div class="icon2">
-          <a href="https://www.facebook.com" class="link" target="_blank">
+        </div> -->
+        <div class="icon3">
+          <a href="" class="link" target="_blank">
             <img
-              src="../assets/images/facebook.svg"
-              alt="Facebook Icon"
+              @click="shareToTwitter()"
+              src="../assets/images/twitter.svg"
+              alt="Expense tracker Twitter Icon For GoMoney Nigeria"
               class="icon"
             />
           </a>
         </div>
-        <div class="icon3">
-          <a href="https://twitter.com" class="link" target="_blank">
+        <div class="icon2">
+          <a
+            href="https://www.facebook.com/sharer/sharer.php?u=https://expensetrackerdev.netlify.com&quote=I just used @gomoneyng Expense Tracker! you should try it out."
+            target="_blank"
+            title="Share on Facebook"
+          >
             <img
-              @click="shareToTwitter()"
-              src="../assets/images/twitter.svg"
-              alt="Twitter Icon"
+              src="../assets/images/facebook.svg"
+              alt="Expense tracker Facebook Icon For GoMoney Nigeria"
               class="icon"
             />
           </a>
@@ -348,48 +351,47 @@ export default {
       { opacity: 1, ease: Power2.easeInOut }
     );
 
-    // TweenMax.fromTo(
-    //   ".morphIconRight",
-    //   60,
-    //   { scale: "0.8" },
-    //   {
-    //     repeat: -1,
-    //     yoyo: true,
-    //     repeatDelay: 0.4,
-    //     ease: Linear.easeNone,
-    //     scale: "1",
-    //     rotation: "-180"
-    //   },
-    //   -3
-    // );
-    // TweenMax.fromTo(
-    //   ".morphIconLeft",
-    //   120,
-    //   { scale: "1" },
-    //   {
-    //     repeat: -1,
-    //     yoyo: true,
-    //     repeatDelay: 0.4,
-    //     ease: Linear.easeNone,
-    //     scale: "1.5",
-    //     rotation: "360"
-    //   },
-    //   -3
-    // );
-    // TweenMax.fromTo(
-    //   ".leafBottomRight",
-    //   5,
-    //   { x: 0, y: 0, scale: "1" },
-    //   {
-    //     repeat: -1,
-    //     yoyo: true,
-    //     repeatDelay: 0.4,
-    //     ease: Linear.easeNone,
-    //     x: 10,
-    //     y: -30,
-    //     scale: "1.1"
-    //   }
-    // );
+    TweenMax.fromTo(
+      ".morphIconLeftDesktop",
+      120,
+      { scale: "1", rotation: "0" },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        scale: "1.1",
+        rotation: "-720"
+      },
+      -3
+    );
+    TweenMax.fromTo(
+      ".morphIconRightDesktop",
+      120,
+      { scale: "1", rotation: "-50" },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        scale: "1.1",
+        rotation: "70"
+      },
+      -3
+    );
+    TweenMax.fromTo(
+      ".leafBottomRight",
+      5,
+      { x: 0, y: 0 },
+      {
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.4,
+        ease: Linear.easeNone,
+        x: 10,
+        y: -30
+      }
+    );
     TweenMax.fromTo(
       "#sunShade",
       0.3,
@@ -713,18 +715,26 @@ export default {
         });
       }
     },
-
     shareToTwitter() {
       const text = `I just used @gomoneyng Expense Tracker! I am ${
         this.twitterComment
       } i spend ₦${this.highestExpense.toLocaleString()} on ${this.key}.`;
-      const url = `https://go-expense-tracker.netlify.com`;
+      const url = `https://expensetrackerdev.netlify.com`;
       window.location.href =
         "http://twitter.com/intent/tweet?url=" +
         encodeURIComponent(url) +
         "&text=" +
         encodeURIComponent(text);
     }
+    // shareToFacebook() {
+    //   FB.ui(
+    //     {
+    //       method: "share",
+    //       href: "https://developers.facebook.com/docs/"
+    //     },
+    //     function(response) {}
+    //   );
+    // }
   }
 };
 </script>
