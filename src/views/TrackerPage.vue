@@ -3240,6 +3240,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/styles/main";
+@import "@/assets/styles/trackerPage";
 
 .slider {
   display: flex;
