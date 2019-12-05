@@ -1,0 +1,435 @@
+//Result Page CSS
+.result {
+  width: 100%;
+  padding: 0 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .baller-emoji {
+    position: absolute;
+    top: 0rem;
+    left: auto;
+    width: 18rem;
+    height: 18rem;
+    object-fit: contain;
+    align-self: center;
+    z-index: 1;
+
+    @media screen and (max-width: 1600px) {
+      width: 15rem;
+    }
+
+    @media screen and (max-width: 1440px) {
+      width: 15rem;
+    }
+
+    @media screen and (max-width: 1200px) {
+      width: 13rem;
+      height: 13rem;
+    }
+
+    @media screen and (max-width: 1024px) {
+      width: 11rem;
+      height: 11rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 12rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+
+  .leaf-bottom-right {
+    position: fixed;
+    bottom: 0rem;
+    right: 0;
+    width: 40%;
+    object-fit: contain;
+    z-index: -1;
+
+    @media screen and (max-width: 1600px) {
+      bottom: 0rem;
+      right: 0rem;
+      width: 40%;
+      transform: rotate(5deg);
+      transform-origin: 20% 150%;
+    }
+
+    @media screen and (max-width: 1440px) {
+      bottom: 0rem;
+      right: 0rem;
+      width: 40%;
+      transform: rotate(5deg);
+      transform-origin: 20% 150%;
+    }
+
+    @media screen and (max-width: 1200px) {
+      bottom: 0rem;
+      right: 0rem;
+      width: 40%;
+      transform: rotate(5deg);
+      transform-origin: 20% 150%;
+    }
+
+    @media screen and (max-width: 1024px) {
+      bottom: 0rem;
+      right: 0rem;
+      width: 60%;
+      transform: rotate(5deg);
+      transform-origin: 20% 150%;
+    }
+
+    @media screen and (max-width: 900px) {
+      bottom: 0rem;
+      right: 0rem;
+      width: 60%;
+      transform: rotate(5deg);
+      transform-origin: 20% 80%;
+    }
+
+    @media screen and (max-width: 600px) {
+      bottom: 0rem;
+      right: 0rem;
+      width: 80%;
+      transform: rotate(5deg);
+      transform-origin: 20% 80%;
+    }
+  }
+  .morph-icon-left-desktop {
+    position: fixed;
+    bottom: 0rem;
+    left: 0rem;
+    width: 70rem;
+    transform: rotate(10deg);
+    // transform-origin: 100% -210%;
+    z-index: -1;
+
+    @media screen and (max-width: 1600px) {
+      bottom: 0rem;
+      left: 0rem;
+      width: 50rem;
+      transform: rotate(10deg);
+    }
+
+    @media screen and (max-width: 1440px) {
+      bottom: 0rem;
+      left: 0rem;
+      width: 55rem;
+      transform: rotate(10deg);
+    }
+
+    @media screen and (max-width: 1200px) {
+      bottom: 0rem;
+      left: 0rem;
+      width: 45rem;
+      transform: rotate(10deg);
+    }
+
+    @media screen and (max-width: 1024px) {
+      bottom: 0rem;
+      left: 0rem;
+      width: 40rem;
+      transform: rotate(10deg);
+    }
+
+    @media screen and (max-width: 900px) {
+      bottom: 0rem;
+      left: 0rem;
+      width: 40rem;
+      transform: rotate(10deg);
+    }
+
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  .morph-icon-right-desktop {
+    position: fixed;
+    top: -30rem;
+    right: 0rem;
+    width: 95rem;
+    transform: rotate(10deg);
+    z-index: -1;
+
+    @media screen and (max-width: 1600px) {
+      top: -25rem;
+      right: 0rem;
+      width: 80rem;
+      transform: rotate(10deg);
+    }
+
+    @media screen and (max-width: 1440px) {
+      top: -20rem;
+      right: 0rem;
+      width: 70rem;
+      transform: rotate(10deg);
+    }
+
+    @media screen and (max-width: 1200px) {
+      top: -20rem;
+      right: 0rem;
+      width: 60rem;
+      transform: rotate(10deg);
+    }
+
+    @media screen and (max-width: 1024px) {
+      top: -15rem;
+      right: 0rem;
+      width: 50rem;
+      transform: rotate(10deg);
+    }
+
+    @media screen and (max-width: 900px) {
+      top: -13rem;
+      right: 0rem;
+      width: 40rem;
+      transform: rotate(10deg);
+    }
+
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  .duration {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+  }
+
+  .monthly {
+    position: relative;
+    align-self: center;
+    z-index: 1;
+    margin-top: 0.5rem;
+    color: #3f3f3f;
+    font-weight: 600;
+    font-size: 2.5rem;
+    opacity: 0.6;
+    background-color: #fef2f1;
+    cursor: pointer;
+  }
+
+  select:focus {
+    outline: none;
+  }
+
+  .baller {
+    width: 100%;
+    margin-top: 18rem;
+    font-family: Graphik;
+    font-size: 6rem;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.37;
+    letter-spacing: normal;
+    text-align: center;
+    color: #3f3f3f;
+
+    @media screen and (max-width: 1600px) {
+      font-size: 5.8rem;
+      margin-top: 16rem;
+    }
+
+    @media screen and (max-width: 1440px) {
+      font-size: 4rem;
+    }
+
+    @media screen and (max-width: 1200px) {
+      font-size: 3.6rem;
+      margin-top: 14rem;
+    }
+
+    @media screen and (max-width: 1024px) {
+      font-size: 3.2rem;
+    }
+
+    @media screen and (max-width: 900px) {
+      font-size: 3rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 2.8rem;
+      margin-top: 10rem;
+    }
+
+    @media screen and (max-width: 425px) {
+      font-size: 2.6rem;
+      margin-top: 11.5rem;
+    }
+  }
+
+  .the-money-monk-comment,
+  .the-essentialist-comment,
+  .the-sensible-sage-comment,
+  .the-baby-baller-comment,
+  .the-spontanious-spender-comment,
+  .the-big-spender-comment,
+  .the-generous-sage-comment,
+  .the-money-maestro-comment {
+    display: none;
+    width: 100%;
+    margin-top: 1rem;
+    opacity: 0.6;
+    font-family: Graphik;
+    font-size: 2.6rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    text-align: center;
+    color: #3f3f3f;
+
+    @media screen and (max-width: 1200px) {
+      font-size: 2.2rem;
+    }
+
+    @media screen and (max-width: 1024px) {
+      font-size: 1.8rem;
+    }
+
+    @media screen and (max-width: 900px) {
+      font-size: 1.6rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 1.4rem;
+      margin-top: 0rem;
+    }
+
+    @media screen and (max-width: 425px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  .amount {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+    font-family: Graphik;
+    font-size: 8.8rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    align-self: center;
+    color: #3f3f3f;
+
+    @media screen and (max-width: 1440px) {
+      font-size: 7rem;
+      margin-top: 3rem;
+    }
+
+    @media screen and (max-width: 1200px) {
+      font-size: 5rem;
+      margin-top: 2rem;
+    }
+
+    @media screen and (max-width: 1024px) {
+      font-size: 6rem;
+    }
+
+    @media screen and (max-width: 900px) {
+      font-size: 5rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 4.4rem;
+    }
+
+    @media screen and (max-width: 425px) {
+      font-size: 4rem;
+    }
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 6rem;
+    margin-top: 3rem;
+    font-family: Graphik;
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    align-self: center;
+    color: #ffffff;
+    background-color: #f47079;
+    border-radius: 16px;
+    z-index: 3;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+
+    @media screen and (max-width: 1440px) {
+      margin-top: 3rem;
+    }
+
+    @media screen and (max-width: 1024px) {
+      font-size: 1.5rem;
+    }
+
+    @media screen and (max-width: 425px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  .btn:hover {
+    transform: scale(1.1);
+  }
+
+  .share-icon {
+    width: 100%;
+    padding: 0 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .icon1,
+    .icon2,
+    .icon3,
+    .icon4 {
+      position: static;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      width: 5rem;
+      padding: 1rem;
+      border-radius: 50%;
+      margin-top: 0.5rem;
+    }
+
+    .link {
+      .icon {
+        width: 3rem;
+      }
+    }
+  }
+
+  .share {
+    width: 100%;
+    font-family: Graphik;
+    font-size: 17px;
+    text-align: center;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.41;
+    letter-spacing: normal;
+    align-self: center;
+    color: #15777c;
+  }
+}
