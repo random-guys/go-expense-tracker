@@ -134,7 +134,7 @@
         <div class="slider-mobile__slide-mobile">
           <div class="btn1-mobile button1Mobile" @click="toggleBack()">
             <div class="oval1-mobile">
-              <p class="arrow-mobile fowardMobile">&#60;</p>
+              <p class="arrow-mobile fowardMobile">	&#8249;</p>
             </div>
           </div>
           <div class="card1-mobile cardOneMobile">
@@ -187,7 +187,7 @@
           </div>
           <div class="btn2-mobile button2Mobile" @click="toggleFront()">
             <div class="oval2-mobile">
-              <p class="arrow-mobile">&#62;</p>
+              <p class="arrow-mobile">&#8250;</p>
             </div>
           </div>
         </div>
@@ -797,4 +797,5 @@ export default {
 
 <style scoped lang="scss">
 @import "@/assets/styles/main";
+@import "@/assets/styles/signupPage";
 </style>
