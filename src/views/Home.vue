@@ -192,7 +192,7 @@ export default {
     return {};
   },
   mounted() {
-    localStorage.clear();
+    // localStorage.clear();
     const tl = new TimelineMax();
 
     tl.fromTo(
@@ -373,4 +373,5 @@ export default {
 
 <style scoped lang="scss">
 @import "@/assets/styles/main";
+@import "@/assets/styles/home";
 </style>
