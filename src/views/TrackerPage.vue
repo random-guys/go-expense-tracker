@@ -969,14 +969,26 @@ export default {
     checkHabit() {
       if (isNaN(this.amount) === true) {
         this.$swal.fire({
-          type: "info",
-          html: `Input error(Numbers only)`
+          position: "top-end",
+          padding: "1.5rem",
+          background: "#fef2f1",
+          width: 300,
+          text: "Input error(Numbers only)",
+          showConfirmButton: false,
+          timer: 2000,
+          toast: true
         });
         return;
       } else if (this.amount === 0) {
         this.$swal.fire({
-          type: "info",
-          html: `Please enter amount(Numbers only)`
+          position: "top-end",
+          padding: "1.5rem",
+          background: "#fef2f1",
+          width: 300,
+          text: "Please enter amount(Numbers only)",
+          showConfirmButton: false,
+          timer: 2000,
+          toast: true
         });
       } else {
         this.max = Math.max.apply(
