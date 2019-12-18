@@ -394,8 +394,8 @@ export default {
           position: "top-end",
           padding: "1.5rem",
           background: "#fef2f1",
-          width: 220,
-          text: "Please enter first name",
+          width: 250,
+          title: "Please enter first name",
           showConfirmButton: false,
           timer: 2000,
           toast: true
@@ -504,8 +504,8 @@ export default {
           position: "top-end",
           padding: "1.5rem",
           background: "#fef2f1",
-          width: 220,
-          text: "Please enter last name",
+          width: 250,
+          title: "Please enter last name",
           showConfirmButton: false,
           timer: 2000,
           toast: true
@@ -605,7 +605,7 @@ export default {
           padding: "1.5rem",
           background: "#fef2f1",
           width: 220,
-          text: "Please enter email",
+          title: "Please enter email",
           showConfirmButton: false,
           timer: 2000,
           toast: true
@@ -616,7 +616,7 @@ export default {
           padding: "1.5rem",
           background: "#fef2f1",
           width: 220,
-          text: "Incorrect email",
+          title: "Incorrect email",
           showConfirmButton: false,
           timer: 2000,
           toast: true
