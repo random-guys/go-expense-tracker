@@ -717,10 +717,8 @@ export default {
   mounted() {
     this.initialTrackerDetails();
 
-    // 1. Basic object for our stuff
     window.slider = {};
 
-    // 2. Settings
     slider.sliderPanelSelector = ".slider-panel";
     slider.sliderPaginationSelector = ".slider-pagination";
     slider.sensitivity = 25; // horizontal % needed to trigger swipe
@@ -742,24 +740,24 @@ export default {
       ).length;
 
       // 4c. Populate pagination
-      var n = 0;
+      let n = 0;
       for (n; n < slider.slideCount; n++) {
-        var activeStatus = n == slider.activeSlide ? ' class="is-active"' : "";
+        let activeStatus = n == slider.activeSlide ? ' class="is-active"' : "";
         slider.sliderEl.parentElement.querySelector(
           slider.sliderPaginationSelector
         ).innerHTML += "<div " + activeStatus + "></div>";
       }
 
       // 4d. Set up HammerJS
-      var sliderManager = new Hammer.Manager(slider.sliderEl);
+      let sliderManager = new Hammer.Manager(slider.sliderEl);
       sliderManager.add(new Hammer.Pan({ threshold: 0, pointers: 0 }));
       sliderManager.on("pan", function(e) {
         // 4e. Calculate pixel movements into 1:1 screen percents so gestures track with motion
-        var percentage =
+        let percentage =
           ((100 / slider.slideCount) * e.deltaX) / window.innerWidth;
 
         // 4f. Multiply percent by # of slide we’re on
-        var percentageCalculated =
+        let percentageCalculated =
           percentage - (100 / slider.slideCount) * slider.activeSlide;
 
         // 4g. Apply transformation
@@ -793,7 +791,7 @@ export default {
 
       // 5b. Apply transformation & smoothly animate via .is-animating CSS
       slider.sliderEl.classList.add("is-animating");
-      var percentage = -(100 / slider.slideCount) * slider.activeSlide;
+      let percentage = -(100 / slider.slideCount) * slider.activeSlide;
       slider.sliderEl.style.transform = "translateX( " + percentage + "% )";
       clearTimeout(slider.timer);
       slider.timer = setTimeout(function() {
@@ -801,12 +799,12 @@ export default {
       }, 400);
 
       // 5c. Update the counters
-      var pagination = slider.sliderEl.parentElement.querySelectorAll(
+      let pagination = slider.sliderEl.parentElement.querySelectorAll(
         slider.sliderPaginationSelector + " > *"
       );
-      var n = 0;
+      let n = 0;
       for (n; n < pagination.length; n++) {
-        var className = n == slider.activeSlide ? "is-active" : "";
+        let className = n == slider.activeSlide ? "is-active" : "";
         pagination[n].className = className;
       }
     };
@@ -969,14 +967,26 @@ export default {
     checkHabit() {
       if (isNaN(this.amount) === true) {
         this.$swal.fire({
-          type: "info",
-          html: `Input error(Numbers only)`
+          position: "top-end",
+          padding: "1.5rem",
+          background: "#fef2f1",
+          width: 350,
+          title: "Input error(Numbers only)",
+          showConfirmButton: false,
+          timer: 2000,
+          toast: true
         });
         return;
       } else if (this.amount === 0) {
         this.$swal.fire({
-          type: "info",
-          html: `Please enter amount(Numbers only)`
+          position: "top-end",
+          padding: "1.5rem",
+          background: "#fef2f1",
+          width: 350,
+          title: "Please enter amount(Numbers only)",
+          showConfirmButton: false,
+          timer: 2000,
+          toast: true
         });
       } else {
         this.max = Math.max.apply(
@@ -3240,6 +3250,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/styles/main";
+@import "@/assets/styles/trackerPage";
 
 .slider {
   display: flex;

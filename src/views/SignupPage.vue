@@ -38,7 +38,11 @@
         alt="Expense tracker Morph Icon For GoMoney Nigeria"
         class="morph-icon-right-desktop morphIconRightDesktop"
       />
-      <img src="../assets/images/logo.svg" alt="Expense Tracker Gomoney Logo" class="logo" />
+      <img
+        src="../assets/images/logo.svg"
+        alt="Expense Tracker Gomoney Logo"
+        class="logo"
+      />
 
       <div
         class="header2-div"
@@ -64,7 +68,6 @@
       </h2>
 
       <!-- Desktop Slider -->
-
       <div class="slider">
         <div class="slider__slide">
           <div class="btn1 button1" @click="toggleBack()">
@@ -125,16 +128,14 @@
           </div>
         </div>
       </div>
-
       <!-- End of desktop slider -->
 
       <!-- Mobile Slider -->
-
       <div class="slider-mobile">
         <div class="slider-mobile__slide-mobile">
           <div class="btn1-mobile button1Mobile" @click="toggleBack()">
             <div class="oval1-mobile">
-              <p class="arrow-mobile fowardMobile">&#60;</p>
+              <p class="arrow-mobile fowardMobile">&#8249;</p>
             </div>
           </div>
           <div class="card1-mobile cardOneMobile">
@@ -187,12 +188,13 @@
           </div>
           <div class="btn2-mobile button2Mobile" @click="toggleFront()">
             <div class="oval2-mobile">
-              <p class="arrow-mobile">&#62;</p>
+              <p class="arrow-mobile">&#8250;</p>
             </div>
           </div>
         </div>
       </div>
       <!-- end of mobile slider -->
+
       <div class="hero-text__secondary">
         <p class="hero-text__secondary">Press the Enter key when done.</p>
       </div>
@@ -389,8 +391,14 @@ export default {
         this.$refs.lastName.focus();
       } else {
         this.$swal.fire({
-          type: "info",
-          html: `please enter first name`
+          position: "top-end",
+          padding: "1.5rem",
+          background: "#fef2f1",
+          width: 250,
+          title: "Please enter first name",
+          showConfirmButton: false,
+          timer: 2000,
+          toast: true
         });
         return;
       }
@@ -493,8 +501,14 @@ export default {
         this.$refs.emailAddress.focus();
       } else {
         this.$swal.fire({
-          type: "info",
-          html: `please enter last name`
+          position: "top-end",
+          padding: "1.5rem",
+          background: "#fef2f1",
+          width: 250,
+          title: "Please enter last name",
+          showConfirmButton: false,
+          timer: 2000,
+          toast: true
         });
         return;
       }
@@ -587,13 +601,25 @@ export default {
       let test = emailRegex.test(this.email);
       if (this.email.length === 0) {
         this.$swal.fire({
-          type: "info",
-          html: "Please enter email"
+          position: "top-end",
+          padding: "1.5rem",
+          background: "#fef2f1",
+          width: 220,
+          title: "Please enter email",
+          showConfirmButton: false,
+          timer: 2000,
+          toast: true
         });
       } else if (test === false) {
         this.$swal.fire({
-          type: "info",
-          html: `Incorrect email`
+          position: "top-end",
+          padding: "1.5rem",
+          background: "#fef2f1",
+          width: 220,
+          title: "Incorrect email",
+          showConfirmButton: false,
+          timer: 2000,
+          toast: true
         });
       } else {
         this.userDetails.map(details => {
@@ -785,16 +811,17 @@ export default {
       }
     },
     toggleFront() {
-      if(this.slide1 === false) {
-        this.firstNameInput()
+      if (this.slide1 === false) {
+        this.firstNameInput();
       } else {
-        this.lastNameInput()
+        this.lastNameInput();
       }
-    },
+    }
   }
 };
 </script>
 
 <style scoped lang="scss">
 @import "@/assets/styles/main";
+@import "@/assets/styles/signupPage";
 </style>

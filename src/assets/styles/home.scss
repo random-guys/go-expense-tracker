@@ -1,0 +1,848 @@
+//Home Page CSS
+.home {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  .hero-text {
+    &__primary {
+      margin-top: 4rem;
+      font-family: Graphik;
+      font-size: 6.2rem;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.37;
+      letter-spacing: normal;
+      text-align: center;
+      color: #161616;
+
+      @media screen and (max-width: 1600px) {
+        width: 100%;
+        padding: 0 15%;
+        font-size: 5.6rem;
+      }
+
+      @media screen and (max-width: 1200px) {
+        // width: 100%;
+        // margin-top: 4rem;
+        // padding: 0 15%;
+        // font-size: 5rem;
+      }
+
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+        padding: 0 15%;
+        font-size: 3.6rem;
+      }
+
+      @media screen and (max-width: 600px) {
+        // margin-top: 4rem;
+      }
+
+      @media screen and (max-width: 426px) {
+        font-size: 2.4rem;
+        margin-top: 2rem;
+      }
+
+      @media screen and (max-width: 375px) {
+        font-size: 2.4rem;
+        margin-top: 2rem;
+      }
+    }
+    &__secondary-mobile {
+      display: none;
+
+      @media screen and (max-width: 768px) {
+        opacity: 0.6;
+        display: flex;
+        width: 100%;
+        // margin: 1rem auto;
+        margin-bottom: 1rem;
+        padding: 0 20%;
+        font-size: 1.8rem;
+      }
+
+      @media screen and (max-width: 426px) {
+        padding: 0 15%;
+        margin-top: 2rem;
+        font-size: 1.6rem;
+      }
+
+      @media screen and (max-width: 375px) {
+        font-size: 1.6rem;
+      }
+
+      @media screen and (max-width: 320px) {
+        font-size: 1.4rem;
+      }
+    }
+
+    &__secondary {
+      opacity: 0.6;
+      font-family: Graphik;
+      font-size: 2.8rem;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.38;
+      letter-spacing: normal;
+      text-align: center;
+      color: #161616;
+
+      @media screen and (max-width: 1600px) {
+        padding: 0 15%;
+        font-size: 2.4rem;
+      }
+
+      @media screen and (max-width: 1440px) {
+        // font-size: 3.2rem;
+      }
+
+      @media screen and (max-width: 1200px) {
+        font-size: 2.4rem;
+      }
+
+      @media screen and (max-width: 1024px) {
+        // margin-top: 0rem;
+        font-size: 2rem;
+      }
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  .button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 3rem;
+
+    @media screen and (max-width: 1024px) {
+      margin-top: 1.8rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin-top: 1.2rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      margin-top: 0;
+    }
+  }
+
+  .btn {
+    // width: 15%;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    align-self: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.41;
+    letter-spacing: normal;
+    color: $color-white;
+    padding: 1.2rem 4rem;
+    border-radius: 0.8rem;
+    z-index: 2;
+    background-color: $color-btn-bkg;
+    transition: all 0.4s;
+    transition: all 0.2s ease-in-out;
+
+    // @media screen and (max-width: 1600px) {
+    //   font-size: 1.7rem;
+    //   padding: 1.4rem 4rem;
+    // }
+
+    @media screen and (max-width: 1200px) {
+      font-size: 1.6rem;
+    }
+
+    @media screen and (max-width: 1024px) {
+      font-size: 1.4rem;
+    }
+
+    @media screen and (max-width: 900px) {
+      // padding: 1.6rem 6rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 1.2rem;
+    }
+
+    @media screen and (max-width: 320px) {
+      // width: 40%;
+    }
+  }
+
+  .leaf-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 18%;
+    transform: rotate(0deg);
+    transform-origin: 100% 100%;
+    z-index: -1;
+
+    @media screen and (max-width: 900px) {
+      top: 0rem;
+      left: 0rem;
+      width: 30%;
+      transform: rotate(-10deg);
+      transform-origin: 100% 225%;
+    }
+
+    @media screen and (max-width: 600px) {
+      top: 0rem;
+      left: 0rem;
+      width: 45%;
+      transform: rotate(-10deg);
+      transform-origin: 100% 225%;
+    }
+  }
+
+  .leaf-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20%;
+    z-index: -1;
+
+    @media screen and (max-width: 900px) {
+      top: 0rem;
+      right: 0rem;
+      width: 30%;
+      transform: rotate(28deg);
+      transform-origin: 150% 95%;
+      // overflow: hidden;
+    }
+
+    @media screen and (max-width: 600px) {
+      top: 0rem;
+      right: 0rem;
+      width: 45%;
+      transform: rotate(28deg);
+      transform-origin: 150% 95%;
+      // overflow: hidden;
+    }
+  }
+
+  .morph-icon-left {
+    display: none;
+
+    @media screen and (max-width: 900px) {
+      display: block;
+      position: fixed;
+      top: -6rem;
+      left: -22rem;
+      width: 55%;
+      transform: rotate(5deg);
+      // transform-origin: 210% -525%;
+      // overflow: hidden;
+    }
+
+    @media screen and (max-width: 768px) {
+      top: -10rem;
+      left: -25rem;
+      width: 40rem;
+      transform: rotate(0deg);
+      // transform-origin: 210% -525%;
+      // overflow: hidden;
+    }
+
+    @media screen and (max-width: 600px) {
+      top: -8rem;
+      left: -26rem;
+      width: 45rem;
+      transform: rotate(5deg);
+      // transform-origin: 120% -1000%;
+      // overflow: hidden;
+    }
+
+    @media screen and (max-width: 426px) {
+      top: -10rem;
+      left: -24rem;
+      width: 40rem;
+      transform: rotate(5deg);
+      // transform-origin: 130% -800%;
+      // overflow: hidden;
+    }
+
+    @media screen and (max-width: 375px) {
+      top: -11rem;
+      left: -25rem;
+      width: 40rem;
+      transform: rotate(5deg);
+      // transform-origin: 200% -600%;
+      // overflow: hidden;
+    }
+
+    @media screen and (max-width: 320px) {
+      top: -11rem;
+      left: -25rem;
+      width: 40rem;
+      transform: rotate(5deg);
+      // transform-origin: 350% -500%;
+      // overflow: hidden;
+    }
+  }
+
+  .morph-icon-right {
+    display: none;
+
+    @media screen and (max-width: 900px) {
+      display: block;
+      position: fixed;
+      top: 10rem;
+      left: 10rem;
+      width: 150rem;
+      transform: rotate(15deg);
+      z-index: -1;
+    }
+
+    @media screen and (max-width: 768px) {
+      top: 10rem;
+      left: 20rem;
+      width: 100rem;
+      transform: rotate(15deg);
+    }
+
+    @media screen and (max-width: 600px) {
+      top: 10rem;
+      left: 20rem;
+      width: 90rem;
+      transform: rotate(5deg);
+      // transform-origin: 10% 15%;
+    }
+
+    @media screen and (max-width: 426px) {
+      top: 6rem;
+      left: 6rem;
+      width: 90rem;
+      transform: rotate(10deg);
+      // transform-origin: -30% -50%;
+    }
+
+    @media screen and (max-width: 375px) {
+      top: 10rem;
+      left: 6rem;
+      width: 80rem;
+      transform: rotate(5deg);
+      // transform-origin: -10% -90%;
+    }
+
+    @media screen and (max-width: 320px) {
+      top: 5rem;
+      left: 6rem;
+      width: 80rem;
+      transform: rotate(5deg);
+      // transform-origin: -10% -90%;
+    }
+  }
+
+  .morph-icon-left-desktop {
+    position: fixed;
+    top: 0rem;
+    left: -15rem;
+    width: 90rem;
+    z-index: -1;
+
+    @media screen and (max-width: 1600px) {
+      top: 0rem;
+      left: -20rem;
+      width: 60rem;
+      transform: rotate(5deg);
+      // transform-origin: -30% -805%;
+      // overflow: hidden;
+    }
+
+    @media screen and (max-width: 1440px) {
+      top: -5rem;
+      left: -5rem;
+      width: 50rem;
+      transform: rotate(5deg);
+      // transform-origin: -30% -805%;
+      // overflow: hidden;
+    }
+
+    @media screen and (max-width: 1200px) {
+      top: -8rem;
+      left: -5rem;
+      width: 45rem;
+      transform: rotate(5deg);
+      // transform-origin: 40% -15%;
+      // overflow: hidden;
+    }
+
+    @media screen and (max-width: 1024px) {
+      top: -10rem;
+      left: 0rem;
+      width: 40rem;
+      transform: rotate(5deg);
+      // transform-origin: 40% -15%;
+      // overflow: hidden;
+    }
+
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
+  }
+
+  .morph-icon-right-desktop {
+    position: fixed;
+    top: 30rem;
+    right: -5rem;
+    width: 110rem;
+    transform: rotate(5deg);
+    z-index: -1;
+
+    @media screen and (max-width: 1600px) {
+      top: 10rem;
+      right: 0rem;
+      width: 90rem;
+      transform: rotate(5deg);
+      // transform-origin: -400% 50%;
+    }
+
+    @media screen and (max-width: 1440px) {
+      top: 10rem;
+      right: 0rem;
+      width: 80rem;
+      transform: rotate(5deg);
+      // transform-origin: -400% 50%;
+    }
+
+    @media screen and (max-width: 1200px) {
+      top: 15rem;
+      right: 0rem;
+      width: 70rem;
+      transform: rotate(5deg);
+      // transform-origin: -100% 50%;
+    }
+
+    @media screen and (max-width: 1024px) {
+      top: 5rem;
+      right: 0rem;
+      width: 60rem;
+      transform: rotate(5deg);
+      // transform-origin: -100% 50%;
+    }
+
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
+  }
+
+  .purple-dot {
+    position: relative;
+    bottom: 12rem;
+    left: 20rem;
+    width: 2.4rem;
+    z-index: -1;
+
+    @media screen and (max-width: 1200px) {
+      bottom: 18rem;
+      left: 5rem;
+      width: 1.5rem;
+    }
+
+    @media screen and (max-width: 900px) {
+      bottom: 18rem;
+      left: -5rem;
+      width: 1.2rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      bottom: 18rem;
+      left: -10rem;
+      width: 1.2rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      bottom: 35rem;
+      left: -30rem;
+    }
+
+    @media screen and (max-width: 426px) {
+      position: absolute;
+      top: 0rem;
+      left: 0rem;
+      z-index: -1;
+      width: 1.2rem;
+    }
+
+    @media screen and (max-width: 364px) {
+      display: none;
+    }
+  }
+
+  .pink-dot {
+    position: relative;
+    bottom: 5rem;
+    right: 34rem;
+    width: 2.4rem;
+    z-index: -1;
+
+    @media screen and (max-width: 1440px) {
+      bottom: 5rem;
+      right: 22rem;
+      width: 2.2rem;
+      z-index: -1;
+    }
+
+    @media screen and (max-width: 1200px) {
+      width: 2rem;
+    }
+
+    @media screen and (max-width: 900px) {
+      width: 1.6rem;
+      bottom: 10rem;
+      right: 25rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      bottom: 15rem;
+      right: 32rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      bottom: 15rem;
+      right: 25rem;
+      width: 1.5rem;
+    }
+
+    @media screen and (max-width: 426px) {
+      position: relative;
+      bottom: 15rem;
+      right: 26rem;
+      width: 1.5rem;
+    }
+
+    @media screen and (max-width: 375px) {
+      position: relative;
+      bottom: 12rem;
+      right: 20rem;
+      width: 1.5rem;
+    }
+  }
+
+  .yellow-dot {
+    position: relative;
+    top: -5rem;
+    left: 26rem;
+    width: 2.5rem;
+    z-index: -1;
+
+    @media screen and (max-width: 1200px) {
+      top: 0rem;
+      left: 22rem;
+      width: 1.6rem;
+    }
+
+    @media screen and (max-width: 900px) {
+      top: -10rem;
+      left: 10rem;
+      width: 1.6rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      top: -10rem;
+      left: 0rem;
+      width: 1.6rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      top: -15rem;
+      left: 1rem;
+      width: 1.4rem;
+    }
+
+    @media screen and (max-width: 426px) {
+      position: relative;
+      top: -20rem;
+      left: -8rem;
+      width: 1.2rem;
+    }
+
+    @media screen and (max-width: 320px) {
+      position: relative;
+      top: -15rem;
+      left: -6rem;
+      width: 1rem;
+    }
+  }
+
+  .pie-chart {
+    position: absolute;
+    top: 74rem;
+    left: 110rem;
+    width: 8%;
+    z-index: -1;
+
+    @media screen and (max-width: 1600px) {
+      top: 62rem;
+      left: 96rem;
+      width: 7%;
+    }
+
+    @media screen and (max-width: 1200px) {
+      top: 62rem;
+      left: 76rem;
+      width: 8%;
+    }
+
+    @media screen and (max-width: 1024px) {
+      top: 54rem;
+      left: 70rem;
+      width: 9%;
+    }
+
+    @media screen and (max-width: 900px) {
+      top: 46rem;
+      left: 56rem;
+      width: 8%;
+    }
+
+    @media screen and (max-width: 768px) {
+      top: 46rem;
+      left: 45rem;
+      width: 8%;
+    }
+
+    @media screen and (max-width: 600px) {
+      top: 50rem;
+      left: 38rem;
+      width: 10%;
+    }
+
+    @media screen and (max-width: 426px) {
+      top: 48rem;
+      left: 25rem;
+      width: 15%;
+    }
+    @media screen and (max-width: 320px) {
+      top: 46rem;
+      left: 20rem;
+      width: 15%;
+    }
+  }
+
+  .green-dot-mobile {
+    display: none;
+
+    @media screen and (max-width: 900px) {
+      display: block;
+      position: absolute;
+      top: 39rem;
+      left: 14rem;
+      width: 1.5rem;
+      z-index: -1;
+    }
+
+    @media screen and (max-width: 768px) {
+      top: 38rem;
+      left: 14rem;
+      width: 1.5rem;
+      z-index: -1;
+    }
+
+    @media screen and (max-width: 600px) {
+      top: 43rem;
+      left: 8rem;
+      width: 1.5rem;
+    }
+
+    @media screen and (max-width: 426px) {
+      top: 40rem;
+      left: 4rem;
+      width: 1.5rem;
+    }
+
+    @media screen and (max-width: 320px) {
+      top: 38rem;
+      left: 4rem;
+      width: 1.5rem;
+    }
+  }
+
+  .home-triangle-mobile {
+    display: none;
+
+    @media screen and (max-width: 900px) {
+      display: block;
+      position: absolute;
+      top: 40rem;
+      left: 14rem;
+      width: 14rem;
+      z-index: -1;
+    }
+
+    @media screen and (max-width: 768px) {
+      top: 39rem;
+      left: 14rem;
+      width: 14rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      top: 44rem;
+      left: 8rem;
+      width: 14rem;
+      z-index: -1;
+    }
+
+    @media screen and (max-width: 426px) {
+      top: 41rem;
+      left: 4rem;
+      width: 14rem;
+      z-index: -1;
+    }
+
+    @media screen and (max-width: 320px) {
+      top: 39rem;
+      left: 4rem;
+      width: 14rem;
+      z-index: -1;
+    }
+  }
+
+  .green-dot {
+    position: absolute;
+    top: 66.5rem;
+    left: 42rem;
+    width: 2rem;
+    z-index: -1;
+
+    @media screen and (max-width: 1600px) {
+      top: 50.5rem;
+      left: 34rem;
+      width: 2rem;
+    }
+
+    @media screen and (max-width: 1440px) {
+      top: 50.5rem;
+      left: 34rem;
+      width: 2rem;
+    }
+
+    @media screen and (max-width: 1200px) {
+      left: 28rem;
+    }
+
+    @media screen and (max-width: 1024px) {
+      top: 42rem;
+      left: 21rem;
+      width: 1.5rem;
+    }
+
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
+  }
+
+  .home-triangle {
+    position: absolute;
+    top: 68rem;
+    left: 42rem;
+    width: 21rem;
+    z-index: -1;
+
+    @media screen and (max-width: 1600px) {
+      top: 52rem;
+      left: 34rem;
+      width: 21rem;
+    }
+
+    @media screen and (max-width: 1440px) {
+      top: 52rem;
+      left: 34rem;
+      width: 21rem;
+    }
+
+    @media screen and (max-width: 1200px) {
+      top: 52rem;
+      left: 28rem;
+    }
+
+    @media screen and (max-width: 1024px) {
+      top: 42rem;
+      left: 20rem;
+    }
+
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
+  }
+
+  .star {
+    position: relative;
+    top: 0rem;
+    left: 90rem;
+    width: 4%;
+    z-index: -1;
+
+    @media screen and (max-width: 1600px) {
+      top: -3rem;
+      left: 80rem;
+      width: 4%;
+      margin-bottom: 0rem;
+    }
+
+    @media screen and (max-width: 1440px) {
+      top: -3rem;
+      left: 74rem;
+    }
+
+    @media screen and (max-width: 1200px) {
+      top: -1rem;
+      left: 62rem;
+      width: 4%;
+    }
+
+    @media screen and (max-width: 1024px) {
+      left: 52rem;
+      width: 5%;
+    }
+
+    @media screen and (max-width: 900px) {
+      left: 48rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      left: 39rem;
+      width: 5.5%;
+    }
+
+    @media screen and (max-width: 600px) {
+      left: 30rem;
+      width: 7%;
+    }
+
+    @media screen and (max-width: 426px) {
+      top: -1rem;
+      left: 24rem;
+      width: 9%;
+    }
+
+    @media screen and (max-width: 375px) {
+      top: -1rem;
+      left: 20rem;
+    }
+
+    // @media screen and (max-width: 320px) {
+    //   position: relative;
+    //   bottom: 29rem;
+    //   left: 18rem;
+    //   width: 8%;
+    //   margin-bottom: 0rem;
+    // }
+  }
+
+  .btn:hover {
+    transform: scale(1.1);
+  }
+} //End of home page css
