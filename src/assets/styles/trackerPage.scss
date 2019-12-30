@@ -1,0 +1,638 @@
+//Tracker Page CSS
+.tracker-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  .leaf-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20%;
+    z-index: -1;
+
+    @media screen and (max-width: 900px) {
+      top: 0rem;
+      right: 0rem;
+      width: 20%;
+      transform: rotate(130deg);
+      transform-origin: 275% 175%;
+      overflow: hidden;
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 25%;
+      transform: rotate(130deg);
+      transform-origin: 224% 150%;
+      overflow: hidden;
+    }
+  }
+  .leaf-center {
+    position: fixed;
+    top: -3rem;
+    align-self: center;
+    width: 20rem;
+    z-index: -1;
+
+    @media screen and (max-width: 600px) {
+      width: 20rem;
+    }
+  }
+  .leaf-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20%;
+    z-index: -1;
+
+    @media screen and (max-width: 900px) {
+      top: 0rem;
+      left: 0rem;
+      width: 20%;
+      transform: rotate(-130deg);
+      transform-origin: 25% 70%;
+    }
+
+    @media screen and (max-width: 600px) {
+      top: 0rem;
+      left: 0rem;
+      width: 25%;
+      transform: rotate(-130deg);
+      transform-origin: 25% 70%;
+    }
+  }
+  .morph-icon-left {
+    display: none;
+    position: fixed;
+    bottom: 0rem;
+    left: 0rem;
+    width: 40%;
+    transform: rotate(10deg);
+    // transform-origin: 100% -210%;
+    z-index: -1;
+
+    @media screen and (max-width: 600px) {
+      display: block;
+      top: -5rem;
+      left: -20rem;
+      width: 60%;
+      transform: rotate(5deg);
+      // transform-origin: 400% -600%;
+    }
+
+    @media screen and (max-width: 426px) {
+      top: 0rem;
+      left: -15rem;
+      width: 60%;
+      transform: rotate(5deg);
+      // transform-origin: 400% -600%;
+    }
+
+    @media screen and (max-width: 375px) {
+      top: 0rem;
+      left: -10rem;
+      width: 60%;
+      transform: rotate(5deg);
+      // transform-origin: 400% -600%;
+    }
+
+    @media screen and (max-width: 320px) {
+      top: 0rem;
+      left: -10rem;
+      width: 65%;
+      transform: rotate(5deg);
+      // transform-origin: 400% -600%;
+    }
+  }
+  .morph-icon-right {
+    display: none;
+    position: fixed;
+    top: 0rem;
+    right: 0rem;
+    width: 50%;
+    transform: rotate(10deg);
+    // transform-origin: -190% 230%;
+    z-index: -1;
+
+    @media screen and (max-width: 600px) {
+      display: block;
+      top: 8rem;
+      right: -40rem;
+      width: 140%;
+      transform: rotate(5deg);
+      // transform-origin: -400% 500%;
+    }
+
+    @media screen and (max-width: 426px) {
+      top: 10rem;
+      right: -33rem;
+      width: 155%;
+      transform: rotate(5deg);
+      // transform-origin: -250% 630%;
+    }
+
+    @media screen and (max-width: 375px) {
+      top: 10rem;
+      right: -28rem;
+      transform: rotate(5deg);
+      // transform-origin: -150% 630%;
+    }
+
+    @media screen and (max-width: 320px) {
+      top: 10rem;
+      right: -40rem;
+      width: 200%;
+      transform: rotate(5deg);
+      // transform-origin: -150% 630%;
+    }
+  }
+
+  .morph-icon-left-desktop {
+    position: fixed;
+    bottom: -8rem;
+    left: 0rem;
+    width: 70rem;
+    transform: rotate(10deg);
+    // transform-origin: 100% -210%;
+    z-index: -1;
+
+    @media screen and (max-width: 1600px) {
+      bottom: -10rem;
+      left: 0rem;
+      width: 50rem;
+      transform: rotate(10deg);
+    }
+
+    @media screen and (max-width: 1440px) {
+      bottom: -10rem;
+      left: 0rem;
+      width: 55rem;
+      transform: rotate(10deg);
+    }
+
+    @media screen and (max-width: 1200px) {
+      bottom: -15rem;
+      left: 0rem;
+      width: 45rem;
+      transform: rotate(10deg);
+    }
+
+    @media screen and (max-width: 1024px) {
+      bottom: -15rem;
+      left: 0rem;
+      width: 40rem;
+      transform: rotate(10deg);
+    }
+
+    @media screen and (max-width: 900px) {
+      bottom: -10rem;
+      left: 0rem;
+      width: 40rem;
+      transform: rotate(10deg);
+    }
+
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+  .morph-icon-right-desktop {
+    position: fixed;
+    top: 0rem;
+    right: 0rem;
+    width: 80rem;
+    transform: rotate(10deg);
+    z-index: -1;
+
+    @media screen and (max-width: 1600px) {
+      top: 0rem;
+      right: 0rem;
+      width: 60rem;
+      transform: rotate(10deg);
+    }
+
+    @media screen and (max-width: 1440px) {
+      top: 0rem;
+      right: 0rem;
+      width: 70rem;
+      transform: rotate(10deg);
+    }
+
+    @media screen and (max-width: 1200px) {
+      top: 0rem;
+      right: 0rem;
+      width: 60rem;
+      transform: rotate(10deg);
+    }
+
+    @media screen and (max-width: 1024px) {
+      top: 0rem;
+      right: 0rem;
+      width: 50rem;
+      transform: rotate(10deg);
+    }
+
+    @media screen and (max-width: 900px) {
+      top: 0rem;
+      right: 0rem;
+      width: 45rem;
+      transform: rotate(10deg);
+    }
+
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+  .leaf-bottom {
+    display: none;
+    @media screen and (max-width: 700px) {
+      display: block;
+      width: 50rem;
+      align-self: center;
+      position: fixed;
+      bottom: 10rem;
+      z-index: -1;
+    }
+
+    @media screen and (max-width: 426px) {
+      display: block;
+      width: 45rem;
+      align-self: center;
+      position: fixed;
+      bottom: 8rem;
+      z-index: -1;
+    }
+  }
+
+  .leaf-bottom-desktop {
+    position: fixed;
+    align-self: center;
+    width: 70rem;
+    bottom: 0rem;
+    z-index: -1;
+
+    @media screen and (max-width: 1600px) {
+      width: 60rem;
+    }
+
+    @media screen and (max-width: 1024px) {
+      width: 85rem;
+      bottom: 30rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 82rem;
+      bottom: 0rem;
+    }
+
+    @media screen and (max-width: 700px) {
+      display: none;
+    }
+  }
+
+  .hero-text {
+    &__primary {
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 0 28%;
+      font-family: Graphik;
+      font-size: 3.4rem;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.3;
+      letter-spacing: normal;
+      color: $color-text;
+      margin-top: 3rem;
+
+      @media screen and (max-width: 1600px) {
+        // margin-top: 3rem;
+        font-size: 3.4rem;
+        padding: 0 28%;
+      }
+
+      @media screen and (max-width: 1440px) {
+        padding: 0 28%;
+        font-size: 2.9rem;
+      }
+
+      @media screen and (max-width: 1200px) {
+        padding: 0 28%;
+        font-size: 2.4rem;
+        margin-top: 2.6rem;
+        margin-bottom: 2rem;
+      }
+
+      @media screen and (max-width: 1024px) {
+        padding: 0 20%;
+        font-size: 2.6rem;
+        margin-bottom: 2rem;
+      }
+
+      @media screen and (max-width: 768px) {
+        padding: 0 12%;
+        font-size: 2.2rem;
+      }
+
+      @media screen and (max-width: 700px) {
+        padding: 0 15%;
+        font-size: 2.2rem;
+      }
+
+      @media screen and (max-width: 600px) {
+        padding: 0 12%;
+        font-size: 2rem;
+      }
+
+      @media screen and (max-width: 475px) {
+        font-size: 1.8rem;
+      }
+
+      @media screen and (max-width: 425px) {
+        padding: 0 6%;
+        font-size: 1.8rem;
+      }
+
+      @media screen and (max-width: 375px) {
+        padding: 0 6%;
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .button {
+    // width: 20.5%;
+    border-radius: 5px;
+    background-color: #f47079;
+    text-align: center;
+    color: #ffffff;
+    font-family: Graphik;
+    font-size: 2rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.94;
+    letter-spacing: normal;
+    padding: 2rem 3rem;
+    align-self: center;
+    margin: 4rem 0;
+    // margin-bottom: 4rem;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+
+    // @media screen and (max-width: 1600px) {
+    //   font-size: 2.2rem;
+    // }
+
+    @media screen and (max-width: 1440px) {
+      font-size: 1.7rem;
+    }
+
+    @media screen and (max-width: 1200px) {
+      margin: 4.5rem 0;
+      font-size: 1.8rem;
+    }
+
+    @media screen and (max-width: 900px) {
+      padding: 1.5rem 2rem;
+      margin: 4.5rem 0;
+      font-size: 2.2rem;
+      font-size: 1.6rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      padding: 1.5rem 2rem;
+      margin: 2.6rem 0;
+      font-size: 2.2rem;
+      font-size: 1.4rem;
+    }
+  }
+
+  .button:hover {
+    transform: scale(1.1);
+  }
+
+  .break {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 20vh;
+    background-color: black;
+  }
+
+  .card-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 38rem;
+    margin-top: 2rem;
+
+    @media screen and (max-width: 1600px) {
+      padding: 0 28rem;
+      // margin-top: 0.5rem;
+    }
+
+    @media screen and (max-width: 1440px) {
+      padding: 0 20rem;
+      // margin-top: 4rem;
+    }
+
+    @media screen and (max-width: 1200px) {
+      padding: 0 18rem;
+      margin-top: 0.5rem;
+    }
+
+    @media screen and (max-width: 1024px) {
+      padding: 0 12rem;
+    }
+
+    @media screen and (max-width: 900px) {
+      padding: 0 5rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 0 1rem;
+    }
+
+    @media screen and (max-width: 700px) {
+      display: none;
+    }
+
+    .card-transport,
+    .card-transfer,
+    .card-eating,
+    .card-bills,
+    .card-family,
+    .card-groceries,
+    .card-shopping,
+    .card-care,
+    .card-vacation,
+    .card-payroll,
+    .card-entertainment,
+    .card-investment {
+      width: 16rem;
+      // padding: 1rem 0;
+      padding-bottom: 0.5rem;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      margin: 2.2rem 0;
+      background-color: #ffffff;
+
+      @media screen and (max-width: 1440px) {
+        width: 16rem;
+      }
+
+      @media screen and (max-width: 1200px) {
+        width: 14rem;
+      }
+
+      .radio {
+        align-self: flex-end;
+        margin-right: 1.5rem;
+        font-size: 2rem;
+        font-weight: 900;
+      }
+
+      ::placeholder {
+        opacity: 0.48;
+        font-family: Graphik;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: -0.58px;
+        color: #252525;
+      }
+
+      :focus {
+        outline: none;
+      }
+
+      .card-img {
+        width: 6.5rem;
+        margin-bottom: 0.5rem;
+
+        @media screen and (max-width: 1200px) {
+          width: 6rem;
+        }
+      }
+
+      .error {
+        display: none;
+        color: red;
+      }
+
+      .card-text {
+        width: 100%;
+        margin-top: 0.9rem;
+        font-family: Graphik;
+        font-size: 1.7rem;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: -0.41px;
+        text-align: center;
+        color: #3a3737;
+
+        @media screen and (max-width: 1600px) {
+          font-size: 1.5rem;
+        }
+
+        @media screen and (max-width: 1440px) {
+          font-size: 1.3rem;
+        }
+
+        // @media screen and (max-width: 1200px) {
+        //   font-size: 1.4rem;
+        // }
+
+        // @media screen and (max-width: 1024px) {
+        //   font-size: 1.4rem;
+        // }
+      }
+
+      .input {
+        width: 80%;
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        padding: 0.5rem 0;
+        border: none;
+        border-radius: 3px;
+        background-color: #f1f1f1;
+
+        @media screen and (max-width: 1600px) {
+          font-size: 2rem;
+        }
+
+        @media screen and (max-width: 1440px) {
+          font-size: 2rem;
+          margin-top: 1.5rem;
+        }
+
+        @media screen and (max-width: 1200px) {
+          font-size: 1.8rem;
+        }
+
+        // @media screen and (max-width: 1024px) {
+        //   font-size: 2rem;
+        // }
+      }
+
+      // @media screen and (max-width: 1600px) {
+      //   width: 20%;
+      // }
+
+      // @media screen and (max-width: 1200px) {
+      //   width: 20%;
+      //   margin-top: 0;
+      // }
+    }
+
+    .card-transport,
+    .card-transfer,
+    .card-eating,
+    .card-family,
+    .card-groceries,
+    .card-shopping,
+    .card-vacation,
+    .card-payroll,
+    .card-entertainment {
+      margin-right: 4.4rem;
+
+      // @media screen and (max-width: 1800px) {
+      //   margin-right: 5rem;
+      // }
+
+      // @media screen and (max-width: 1600px) {
+      //   margin-right: 4rem;
+      // }
+
+      @media screen and (max-width: 1440px) {
+        margin-right: 4.4rem;
+      }
+
+      @media screen and (max-width: 1300px) {
+        margin-right: 3.4rem;
+      }
+
+      @media screen and (max-width: 1100px) {
+        margin-right: 1.8rem;
+      }
+
+      // @media screen and (max-width: 900px) {
+      //   margin-right: 2rem;
+      // }
+    }
+  }
+} //End of Tracker Page CSS

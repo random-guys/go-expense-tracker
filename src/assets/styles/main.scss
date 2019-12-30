@@ -1,0 +1,129 @@
+@import "./font";
+
+// Media Query Manager
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } // 600px;
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } // 900px;
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } // 1200px;
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } // 1800px;
+  }
+}
+
+// Default Reset
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-size: 65.5%; // 1rem = 10px, 10px/16px = 62.5%
+}
+
+// Colors
+$color-white: #ffffff;
+$color-text: #161616;
+$color-btn-bkg: #f47079;
+$color-body-bkg: #fef2f1;
+
+// Typography, Layout and Components
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  line-height: 1.5;
+  font-family: "Graphik";
+  font-weight: 400;
+  background-color: #fef2f1;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 7.8rem;
+  object-fit: contain;
+  margin-top: 6rem;
+  object-fit: contain;
+  align-self: center;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.display-none {
+  display: none;
+}
+
+.display-hidden {
+  visibility: hidden;
+}
+
+.position-fixed {
+  position: fixed;
+}
+
+.opacity-zero {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.margin-top {
+  margin-top: 7.7rem;
+}
+
+.canvas {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  opacity: 0.5;
+  mask-image: linear-gradient(
+    to top,
+    from(rgba(255, 255, 255, 1)),
+    to(rgba(255, 255, 255, 0))
+  );
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(255, 255, 255, 1)),
+    to(rgba(255, 255, 255, 0))
+  );
+}
