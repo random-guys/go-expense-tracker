@@ -223,7 +223,7 @@
           <b>{{ this.key }}</b
           >, you're not afraid to spend on the things that matter to you. But
           how do you enjoy your money with all the limitations and security
-          concerns flying around? Try GoMoney.Think of GoMoney is your sidekick,
+          concerns flying around? Try GoMoney. Think of GoMoney as your sidekick,
           deigned to tailor itself to your security and transaction needs.
           You're always in control, so if your goals change, no qualms,
           GoMoney's got you.
@@ -242,8 +242,8 @@
           <option>Yearly</option>
         </select>
       </div>
-      <a href="https://gomoney.global/join" class="btn" target="_blank"
-        >JOIN THE WAITLIST</a
+      <a onclick="location.href='https://tinyurl.com/u4jowlk';" class="btn" target="_blank"
+        >DOWNLOAD APP</a
       >
       <div class="share-icon">
         <!-- <div class="icon1">
@@ -267,7 +267,7 @@
         </div>
         <div class="icon2">
           <a
-            href="https://www.facebook.com/sharer/sharer.php?u=https://expensetrackerdev.netlify.com&quote=I just used @gomoneyng Expense Tracker! you should try it out."
+            href="https://www.facebook.com/sharer/sharer.php?u=https://expense-tracker.gomoney.global&quote=I just used @gomoneyng Expense Tracker! you should try it out."
             target="_blank"
             title="Share on Facebook"
           >
@@ -718,8 +718,8 @@ export default {
     shareToTwitter() {
       const text = `I just used @gomoneyng Expense Tracker! I am ${
         this.twitterComment
-      } i spend ₦${this.highestExpense.toLocaleString()} on ${this.key}.`;
-      const url = `https://expensetrackerdev.netlify.com`;
+      } I spend ₦${this.highestExpense.toLocaleString()} on ${this.key}.`;
+      const url = `https://expense-tracker.gomoney.global`;
       window.location.href =
         "http://twitter.com/intent/tweet?url=" +
         encodeURIComponent(url) +
