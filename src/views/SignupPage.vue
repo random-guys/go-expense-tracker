@@ -107,7 +107,7 @@
             </form>
           </div>
           <div class="card3 cardThree">
-            <p class="header">What's your email address?</p>
+            <p class="header">What's your Email Address?</p>
             <p class="required">(Required)</p>
             <form class="input" v-on:submit.prevent="emailInput()">
               <input
@@ -140,7 +140,7 @@
           </div>
           <div class="card1-mobile cardOneMobile">
             <div class="card1-mobile-inner">
-              <p class="header-mobile">So, what's your...?</p>
+              <p class="header-mobile">So, what's your First Name?</p>
               <p class="required-mobile">(Required)</p>
               <form class="input-mobile" v-on:submit.prevent="firstNameInput()">
                 <input
@@ -156,7 +156,7 @@
           </div>
           <div class="card2-mobile cardTwoMobile">
             <div class="card2-mobile-inner">
-              <p class="header-mobile">And, what's your...?</p>
+              <p class="header-mobile">And, what's your Last Name?</p>
               <p class="required-mobile">(Required)</p>
               <form class="input-mobile" v-on:submit.prevent="lastNameInput()">
                 <input
@@ -172,7 +172,7 @@
           </div>
           <div class="card3-mobile cardThreeMobile">
             <div class="card3-mobile-inner">
-              <p class="header-mobile">What's your email address?</p>
+              <p class="header-mobile">What's your Email Address?</p>
               <p class="required-mobile">(Required)</p>
               <form class="input-mobile" v-on:submit.prevent="emailInput()">
                 <input
