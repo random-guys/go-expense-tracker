@@ -397,7 +397,7 @@ export default {
     },
     firstNameInput() {
       this.userDetails = JSON.parse(localStorage.getItem("user_details"));
-      if (this.first_name.length > 0) {
+      if (this.first_name.replace(/\s/g, "").length) {
         this.userDetails.map(details => {
           details.first_name = this.first_name;
         });
@@ -498,7 +498,7 @@ export default {
     },
     lastNameInput() {
       this.userDetails = JSON.parse(localStorage.getItem("user_details"));
-      if (this.last_name.length > 0) {
+      if (this.last_name.replace(/\s/g, "").length) {
         this.userDetails.map(details => {
           details.last_name = this.last_name;
         });
@@ -595,7 +595,7 @@ export default {
     emailInput() {
       let emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(\.[cn]([o]{0,61}[mgo]))*$/gim;
       let test = emailRegex.test(this.email);
-      if (this.email.length === 0) {
+      if (this.email.replace(/\s/g, "").length) {
         this.notification("Please enter email");
       } else if (test === false) {
         this.notification("Incorrect email");
