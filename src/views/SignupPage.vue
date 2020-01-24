@@ -222,7 +222,7 @@ export default {
       first_name: "",
       last_name: "",
       email: "",
-      userDetails: [],
+      userDetails: JSON.parse(localStorage.getItem("user_details")),
       slide1: false,
       slide2: false,
       slide3: false,
@@ -232,7 +232,7 @@ export default {
   },
   mounted() {
     const tl = new TimelineMax();
-    this.initialUserDetails();
+    this.checkUserDetails();
 
     tl.to(".button1", 0, { display: "none" })
       .to(".cardTwo", 0, { opacity: "0.3", pointerEvents: "none" })
@@ -357,19 +357,9 @@ export default {
     });
   },
   methods: {
-    initialUserDetails() {
+    checkUserDetails() {
       if (!localStorage.getItem("user_details")) {
-        this.userDetails = [];
-        let userObject = {
-          first_name: this.first_name,
-          last_name: this.last_name,
-          email: this.email,
-          amount: "",
-          key: "",
-          highest_expense: ""
-        };
-        this.userDetails.push(userObject);
-        localStorage.setItem("user_details", JSON.stringify(this.userDetails));
+        this.$router.push("/");
       }
     },
     proceed() {
@@ -396,7 +386,6 @@ export default {
       });
     },
     firstNameInput() {
-      this.userDetails = JSON.parse(localStorage.getItem("user_details"));
       if (this.first_name.replace(/\s/g, "").length) {
         this.userDetails.map(details => {
           details.first_name = this.first_name;
@@ -497,7 +486,6 @@ export default {
       }
     },
     lastNameInput() {
-      this.userDetails = JSON.parse(localStorage.getItem("user_details"));
       if (this.last_name.replace(/\s/g, "").length) {
         this.userDetails.map(details => {
           details.last_name = this.last_name;
@@ -595,7 +583,7 @@ export default {
     emailInput() {
       let emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(\.[cn]([o]{0,61}[mgo]))*$/gim;
       let test = emailRegex.test(this.email);
-      if (this.email.replace(/\s/g, "").length) {
+      if (this.email.length === 0) {
         this.notification("Please enter email");
       } else if (test === false) {
         this.notification("Incorrect email");
