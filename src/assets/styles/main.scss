@@ -77,6 +77,18 @@ body {
   align-self: center;
 }
 
+.swal-popup {
+  width: 40rem !important;
+
+  @media screen and (max-width: 426px) {
+    width: 34rem !important;
+  }
+
+  @media screen and (max-width: 320px) {
+    width: 26rem !important;
+  }
+}
+
 .capitalize {
   text-transform: capitalize;
 }
