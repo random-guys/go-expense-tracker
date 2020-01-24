@@ -381,6 +381,20 @@ export default {
         this.emailInput();
       }
     },
+    notification(msg) {
+      this.$swal.fire({
+        position: "top-end",
+        padding: "1rem 1.5rem",
+        background: "#fef2f1",
+        title: `<h2 style='color:lightcoral; font-size: 2.6rem'>${msg}</h2>`,
+        customClass: {
+          popup: "swal-popup"
+        },
+        showConfirmButton: false,
+        timer: 2000,
+        toast: true
+      });
+    },
     firstNameInput() {
       this.userDetails = JSON.parse(localStorage.getItem("user_details"));
       if (this.first_name.length > 0) {
@@ -390,16 +404,7 @@ export default {
         localStorage.setItem("user_details", JSON.stringify(this.userDetails));
         this.$refs.lastName.focus();
       } else {
-        this.$swal.fire({
-          position: "top-end",
-          padding: "1.5rem",
-          background: "#fef2f1",
-          width: 250,
-          title: "Please enter first name",
-          showConfirmButton: false,
-          timer: 2000,
-          toast: true
-        });
+        this.notification("Please enter first name");
         return;
       }
       if (this.slide1 === false) {
@@ -500,16 +505,7 @@ export default {
         localStorage.setItem("user_details", JSON.stringify(this.userDetails));
         this.$refs.emailAddress.focus();
       } else {
-        this.$swal.fire({
-          position: "top-end",
-          padding: "1.5rem",
-          background: "#fef2f1",
-          width: 250,
-          title: "Please enter last name",
-          showConfirmButton: false,
-          timer: 2000,
-          toast: true
-        });
+        this.notification("Please enter last name");
         return;
       }
       if (this.slide2 === false) {
@@ -600,27 +596,9 @@ export default {
       let emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(\.[cn]([o]{0,61}[mgo]))*$/gim;
       let test = emailRegex.test(this.email);
       if (this.email.length === 0) {
-        this.$swal.fire({
-          position: "top-end",
-          padding: "1.5rem",
-          background: "#fef2f1",
-          width: 220,
-          title: "Please enter email",
-          showConfirmButton: false,
-          timer: 2000,
-          toast: true
-        });
+        this.notification("Please enter email");
       } else if (test === false) {
-        this.$swal.fire({
-          position: "top-end",
-          padding: "1.5rem",
-          background: "#fef2f1",
-          width: 220,
-          title: "Incorrect email",
-          showConfirmButton: false,
-          timer: 2000,
-          toast: true
-        });
+        this.notification("Incorrect email");
       } else {
         this.userDetails.map(details => {
           details.email = this.email;
