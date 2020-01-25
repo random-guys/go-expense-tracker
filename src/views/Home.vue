@@ -197,7 +197,6 @@ export default {
   },
   mounted() {
     this.initialUserDetails();
-    // localStorage.clear();
     const tl = new TimelineMax();
 
     tl.fromTo(
