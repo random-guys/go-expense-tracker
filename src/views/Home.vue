@@ -103,7 +103,11 @@
         </g>
       </svg>
 
-      <img src="../assets/images/logo.svg" alt="Logo For GoMoney Nigeria" class="logo" />
+      <img
+        src="../assets/images/logo.svg"
+        alt="Logo For GoMoney Nigeria"
+        class="logo"
+      />
       <div>
         <h1 class="hero-text__primary">
           Discover your
@@ -192,7 +196,7 @@ export default {
     return {};
   },
   mounted() {
-    // localStorage.clear();
+    this.initialUserDetails();
     const tl = new TimelineMax();
 
     tl.fromTo(
@@ -367,6 +371,23 @@ export default {
       },
       -3
     );
+  },
+  methods: {
+    initialUserDetails() {
+      if (!localStorage.getItem("user_details")) {
+        this.userDetails = [];
+        let userObject = {
+          first_name: "",
+          last_name: "",
+          email: "",
+          amount: "",
+          key: "",
+          highest_expense: ""
+        };
+        this.userDetails.push(userObject);
+        localStorage.setItem("user_details", JSON.stringify(this.userDetails));
+      }
+    }
   }
 };
 </script>

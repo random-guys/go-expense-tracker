@@ -59,7 +59,7 @@
         <div class="card-transport transport">
           <span
             class="radio opacity-zero transportRadio"
-            @click="resetTransportCard()"
+            @click="resetCards('transport')"
             >&#215;</span
           >
           <img
@@ -79,12 +79,12 @@
             @keypress="isNumberKey()"
             @change="inputTransportationAmount()"
           />
-          <p class="error errorMsgTransport">!!!</p>
+          <p class="error errorMsgtransport">!!!</p>
         </div>
         <div class="card-transfer transfer">
           <span
             class="radio opacity-zero transferRadio"
-            @click="resetTransferCard()"
+            @click="resetCards('transfer')"
             >&#215;</span
           >
           <img
@@ -104,12 +104,12 @@
             @keypress="isNumberKey()"
             @change="inputTransferAmount()"
           />
-          <p class="error errorMsgTransfer">!!!</p>
+          <p class="error errorMsgtransfer">!!!</p>
         </div>
         <div class="card-eating eating">
           <span
             class="radio opacity-zero eatingRadio"
-            @click="resetEatingCard()"
+            @click="resetCards('eating')"
             >&#215;</span
           >
           <img
@@ -129,10 +129,12 @@
             @keypress="isNumberKey()"
             @change="inputEatingAmount()"
           />
-          <p class="error errorMsgEating">!!!</p>
+          <p class="error errorMsgeating">!!!</p>
         </div>
         <div class="card-bills bills">
-          <span class="radio opacity-zero billsRadio" @click="resetBillsCard()"
+          <span
+            class="radio opacity-zero billsRadio"
+            @click="resetCards('bills')"
             >&#215;</span
           >
           <img
@@ -152,12 +154,12 @@
             @keypress="isNumberKey()"
             @change="inputBillsAmount()"
           />
-          <p class="error errorMsgBills">!!!</p>
+          <p class="error errorMsgbills">!!!</p>
         </div>
         <div class="card-family family">
           <span
             class="radio opacity-zero familyRadio"
-            @click="resetFamilyCard()"
+            @click="resetCards('family')"
             >&#215;</span
           >
           <img
@@ -177,12 +179,12 @@
             @keypress="isNumberKey()"
             @change="inputFamilyAmount()"
           />
-          <p class="error errorMsgFamily">!!!</p>
+          <p class="error errorMsgfamily">!!!</p>
         </div>
         <div class="card-groceries groceries">
           <span
             class="radio opacity-zero groceriesRadio"
-            @click="resetGroceriesCard()"
+            @click="resetCards('groceries')"
             >&#215;</span
           >
           <img
@@ -202,12 +204,12 @@
             @keypress="isNumberKey()"
             @change="inputGroceriesAmount()"
           />
-          <p class="error errorMsgGroceries">!!!</p>
+          <p class="error errorMsggroceries">!!!</p>
         </div>
         <div class="card-shopping shopping">
           <span
             class="radio opacity-zero shoppingRadio"
-            @click="resetShoppingCard()"
+            @click="resetCards('shopping')"
             >&#215;</span
           >
           <img
@@ -227,10 +229,10 @@
             @keypress="isNumberKey()"
             @change="inputShoppingAmount()"
           />
-          <p class="error errorMsgShopping">!!!</p>
+          <p class="error errorMsgshopping">!!!</p>
         </div>
         <div class="card-care care">
-          <span class="radio opacity-zero careRadio" @click="resetCareCard()"
+          <span class="radio opacity-zero careRadio" @click="resetCards('care')"
             >&#215;</span
           >
           <img
@@ -250,12 +252,12 @@
             @keypress="isNumberKey()"
             @change="inputCareAmount()"
           />
-          <p class="error errorMsgCare">!!!</p>
+          <p class="error errorMsgcare">!!!</p>
         </div>
         <div class="card-vacation vacation">
           <span
             class="radio opacity-zero vacationRadio"
-            @click="resetVacationCard()"
+            @click="resetCards('vacation')"
             >&#215;</span
           >
           <img
@@ -275,12 +277,12 @@
             @keypress="isNumberKey()"
             @change="inputVacationAmount()"
           />
-          <p class="error errorMsgVacation">!!!</p>
+          <p class="error errorMsgvacation">!!!</p>
         </div>
         <div class="card-payroll payroll">
           <span
             class="radio opacity-zero payrollRadio"
-            @click="resetPayrollCard()"
+            @click="resetCards('payroll')"
             >&#215;</span
           >
           <img
@@ -300,12 +302,12 @@
             @keypress="isNumberKey()"
             @change="inputPayrollAmount()"
           />
-          <p class="error errorMsgPayroll">!!!</p>
+          <p class="error errorMsgpayroll">!!!</p>
         </div>
         <div class="card-entertainment entertainment">
           <span
             class="radio opacity-zero entertainmentRadio"
-            @click="resetEntertainmentCard()"
+            @click="resetCards('entertainment')"
             >&#215;</span
           >
           <img
@@ -325,12 +327,12 @@
             @keypress="isNumberKey()"
             @change="inputEntertainmentAmount()"
           />
-          <p class="error errorMsgEntertainment">!!!</p>
+          <p class="error errorMsgentertainment">!!!</p>
         </div>
         <div class="card-investment investment">
           <span
             class="radio opacity-zero investmentRadio"
-            @click="resetInvestmentCard()"
+            @click="resetCards('investment')"
             >&#215;</span
           >
           <img
@@ -350,7 +352,7 @@
             @keypress="isNumberKey()"
             @change="inputInvestmentAmount()"
           />
-          <p class="error errorMsgInvestment">!!!</p>
+          <p class="error errorMsginvestment">!!!</p>
         </div>
       </div>
 
@@ -360,7 +362,7 @@
             <div class="card-transport transport">
               <span
                 class="radio opacity-zero transportRadio"
-                @click="resetTransportCard()"
+                @click="resetCards('transport')"
                 >&#215;</span
               >
               <img
@@ -380,12 +382,12 @@
                 @keypress="isNumberKey()"
                 @change="inputTransportationAmount()"
               />
-              <p class="error errorMsgTransport">!!!</p>
+              <p class="error errorMsgtransport">!!!</p>
             </div>
             <div class="card-transfer transfer">
               <span
                 class="radio opacity-zero transferRadio"
-                @click="resetTransferCard()"
+                @click="resetCards('transfer')"
                 >&#215;</span
               >
               <img
@@ -405,12 +407,12 @@
                 @keypress="isNumberKey()"
                 @change="inputTransferAmount()"
               />
-              <p class="error errorMsgTransfer">!!!</p>
+              <p class="error errorMsgtransfer">!!!</p>
             </div>
             <div class="card-eating eating">
               <span
                 class="radio opacity-zero eatingRadio"
-                @click="resetEatingCard()"
+                @click="resetCards('eating')"
                 >&#215;</span
               >
               <img
@@ -430,12 +432,12 @@
                 @keypress="isNumberKey()"
                 @change="inputEatingAmount()"
               />
-              <p class="error errorMsgEating">!!!</p>
+              <p class="error errorMsgeating">!!!</p>
             </div>
             <div class="card-bills bills">
               <span
                 class="radio opacity-zero billsRadio"
-                @click="resetBillsCard()"
+                @click="resetCards('bills')"
                 >&#215;</span
               >
               <img
@@ -455,14 +457,14 @@
                 @keypress="isNumberKey()"
                 @change="inputBillsAmount()"
               />
-              <p class="error errorMsgBills">!!!</p>
+              <p class="error errorMsgbills">!!!</p>
             </div>
           </div>
           <div class="slider-panel">
             <div class="card-family family">
               <span
                 class="radio opacity-zero familyRadio"
-                @click="resetFamilyCard()"
+                @click="resetCards('family')"
                 >&#215;</span
               >
               <img
@@ -482,12 +484,12 @@
                 @keypress="isNumberKey()"
                 @change="inputFamilyAmount()"
               />
-              <p class="error errorMsgFamily">!!!</p>
+              <p class="error errorMsgfamily">!!!</p>
             </div>
             <div class="card-groceries groceries">
               <span
                 class="radio opacity-zero groceriesRadio"
-                @click="resetGroceriesCard()"
+                @click="resetCards('groceries')"
                 >&#215;</span
               >
               <img
@@ -507,12 +509,12 @@
                 @keypress="isNumberKey()"
                 @change="inputGroceriesAmount()"
               />
-              <p class="error errorMsgGroceries">!!!</p>
+              <p class="error errorMsggroceries">!!!</p>
             </div>
             <div class="card-shopping shopping">
               <span
                 class="radio opacity-zero shoppingRadio"
-                @click="resetShoppingCard()"
+                @click="resetCards('shopping')"
                 >&#215;</span
               >
               <img
@@ -532,12 +534,12 @@
                 @keypress="isNumberKey()"
                 @change="inputShoppingAmount()"
               />
-              <p class="error errorMsgShopping">!!!</p>
+              <p class="error errorMsgshopping">!!!</p>
             </div>
             <div class="card-care care">
               <span
                 class="radio opacity-zero careRadio"
-                @click="resetCareCard()"
+                @click="resetCards('care')"
                 >&#215;</span
               >
               <img
@@ -557,14 +559,14 @@
                 @keypress="isNumberKey()"
                 @change="inputCareAmount()"
               />
-              <p class="error errorMsgCare">!!!</p>
+              <p class="error errorMsgcare">!!!</p>
             </div>
           </div>
           <div class="slider-panel">
             <div class="card-vacation vacation">
               <span
                 class="radio opacity-zero vacationRadio"
-                @click="resetVacationCard()"
+                @click="resetCards('vacation')"
                 >&#215;</span
               >
               <img
@@ -584,12 +586,12 @@
                 @keypress="isNumberKey()"
                 @change="inputVacationAmount()"
               />
-              <p class="error errorMsgVacation">!!!</p>
+              <p class="error errorMsgvacation">!!!</p>
             </div>
             <div class="card-payroll payroll">
               <span
                 class="radio opacity-zero payrollRadio"
-                @click="resetPayrollCard()"
+                @click="resetCards('payroll')"
                 >&#215;</span
               >
               <img
@@ -609,12 +611,12 @@
                 @keypress="isNumberKey()"
                 @change="inputPayrollAmount()"
               />
-              <p class="error errorMsgPayroll">!!!</p>
+              <p class="error errorMsgpayroll">!!!</p>
             </div>
             <div class="card-entertainment entertainment">
               <span
                 class="radio opacity-zero entertainmentRadio"
-                @click="resetEntertainmentCard()"
+                @click="resetCards('entertainment')"
                 >&#215;</span
               >
               <img
@@ -634,12 +636,12 @@
                 @keypress="isNumberKey()"
                 @change="inputEntertainmentAmount()"
               />
-              <p class="error errorMsgEntertainment">!!!</p>
+              <p class="error errorMsgentertainment">!!!</p>
             </div>
             <div class="card-investment investment">
               <span
                 class="radio opacity-zero investmentRadio"
-                @click="resetInvestmentCard()"
+                @click="resetCards('investment')"
                 >&#215;</span
               >
               <img
@@ -659,7 +661,7 @@
                 @keypress="isNumberKey()"
                 @change="inputInvestmentAmount()"
               />
-              <p class="error errorMsgInvestment">!!!</p>
+              <p class="error errorMsginvestment">!!!</p>
             </div>
           </div>
         </div>
@@ -684,8 +686,7 @@ export default {
   data() {
     return {
       amount: 0,
-      userDetails: [],
-      amountTracker: [],
+      userDetails: JSON.parse(localStorage.getItem("user_details")),
       maxExpense: [],
       max: 0,
       transport: "",
@@ -715,6 +716,7 @@ export default {
     };
   },
   mounted() {
+    this.checkUserDetails()
     this.initialTrackerDetails();
 
     window.slider = {};
@@ -812,7 +814,6 @@ export default {
     // Initialize
     slider.init("#slider");
 
-    this.userDetails = JSON.parse(localStorage.getItem("user_details"));
     const tl = new TimelineMax();
     TweenMax.fromTo(
       ".morphIconLeft",
@@ -937,627 +938,309 @@ export default {
     );
   },
   methods: {
+    checkUserDetails() {
+      if (!localStorage.getItem("user_details")) {
+        this.$router.push("/");
+        return
+      }
+      let user = JSON.parse(localStorage.getItem("user_details")).map(user => {
+        if(user.email === "") {
+          this.$router.push("/sign-up-page");
+        }
+      })
+    },
     isNumberKey() {
       if ((event.which < 48 || event.which > 57) && event.which !== 13) {
         event.preventDefault();
       }
     },
     initialTrackerDetails() {
-      this.amountTracker = [];
-      let trackerObject = {
-        transport: this.inputTransport,
-        transfer: this.inputTransfer,
-        eating: this.inputEating,
-        bills: this.inputBills,
-        family: this.inputFamily,
-        groceries: this.inputGroceries,
-        shopping: this.inputShopping,
-        care: this.inputCare,
-        vacation: this.inputVacation,
-        payroll: this.inputPayroll,
-        entertainment: this.inputEntertainment,
-        investment: this.inputInvestment
-      };
-      this.amountTracker.push(trackerObject);
-      localStorage.setItem(
-        "amount_tracker",
-        JSON.stringify(this.amountTracker)
-      );
+      this.maxExpense = [];
+      this.maxExpense = [
+        { key: "transport", amount: this.inputTransport },
+        { key: "transfer", amount: this.inputTransfer },
+        { key: "eating", amount: this.inputEating },
+        { key: "bills", amount: this.inputBills },
+        { key: "family", amount: this.inputFamily },
+        { key: "groceries", amount: this.inputGroceries },
+        { key: "shopping", amount: this.inputShopping },
+        { key: "care", amount: this.inputCare },
+        { key: "vacation", amount: this.inputVacation },
+        { key: "payroll", amount: this.inputPayroll },
+        { key: "entertainment", amount: this.inputEntertainment },
+        { key: "investment", amount: this.inputInvestment }
+      ];
+      localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
+    },
+    notification(msg) {
+      this.$swal.fire({
+        position: "top-end",
+        padding: "1rem 1.5rem",
+        background: "#fef2f1",
+        title: `<h2 style='color:lightcoral; font-size: 2.8rem'>${msg}</h2>`,
+        customClass: {
+          popup: "swal-popup"
+        },
+        showConfirmButton: false,
+        timer: 2000,
+        toast: true
+      });
+    },
+    setHighestExpense(key, max) {
+      this.userDetails.map(details => {
+        details.key = key,
+        details.highest_expense = max,
+        details.amount = this.amount;
+      });
+      localStorage.setItem("user_details", JSON.stringify(this.userDetails));
+      this.$router.push("/result");
     },
     checkHabit() {
       if (isNaN(this.amount) === true) {
-        this.$swal.fire({
-          position: "top-end",
-          padding: "1.5rem",
-          background: "#fef2f1",
-          width: 350,
-          title: "Input error(Numbers only)",
-          showConfirmButton: false,
-          timer: 2000,
-          toast: true
-        });
+        this.notification("Input error");
         return;
       } else if (this.amount === 0) {
-        this.$swal.fire({
-          position: "top-end",
-          padding: "1.5rem",
-          background: "#fef2f1",
-          width: 350,
-          title: "Please enter amount(Numbers only)",
-          showConfirmButton: false,
-          timer: 2000,
-          toast: true
-        });
+        this.notification("Please enter amount");
+        return;
       } else {
         this.max = Math.max.apply(
           Math,
-          this.maxExpense.map(function(o) {
-            return o.amount;
+          this.maxExpense.map(object => {
+            return object.amount;
           })
         );
-
         if (this.inputTransport == this.max) {
-          this.userDetails.map(details => {
-            (details.key = "transport"), (details.highest_expense = this.max);
-          });
-          localStorage.setItem(
-            "user_details",
-            JSON.stringify(this.userDetails)
-          );
+          this.setHighestExpense("transport", this.max);
         }
         if (this.inputTransfer == this.max) {
-          this.userDetails.map(details => {
-            (details.key = "transfer"), (details.highest_expense = this.max);
-          });
-          localStorage.setItem(
-            "user_details",
-            JSON.stringify(this.userDetails)
-          );
+          this.setHighestExpense("transfer", this.max);
         }
         if (this.inputEating == this.max) {
-          this.userDetails.map(details => {
-            (details.key = "eating out"), (details.highest_expense = this.max);
-          });
-          localStorage.setItem(
-            "user_details",
-            JSON.stringify(this.userDetails)
-          );
+          this.setHighestExpense("eating", this.max);
         }
         if (this.inputBills == this.max) {
-          this.userDetails.map(details => {
-            (details.key = "bills"), (details.highest_expense = this.max);
-          });
-          localStorage.setItem(
-            "user_details",
-            JSON.stringify(this.userDetails)
-          );
+          this.setHighestExpense("bills", this.max);
         }
         if (this.inputFamily == this.max) {
-          this.userDetails.map(details => {
-            (details.key = "family"), (details.highest_expense = this.max);
-          });
-          localStorage.setItem(
-            "user_details",
-            JSON.stringify(this.userDetails)
-          );
+          this.setHighestExpense("family", this.max);
         }
         if (this.inputGroceries == this.max) {
-          this.userDetails.map(details => {
-            (details.key = "groceries"), (details.highest_expense = this.max);
-          });
-          localStorage.setItem(
-            "user_details",
-            JSON.stringify(this.userDetails)
-          );
+          this.setHighestExpense("groceries", this.max);
         }
         if (this.inputShopping == this.max) {
-          this.userDetails.map(details => {
-            (details.key = "shopping"), (details.highest_expense = this.max);
-          });
-          localStorage.setItem(
-            "user_details",
-            JSON.stringify(this.userDetails)
-          );
+          this.setHighestExpense("shopping", this.max);
         }
         if (this.inputCare == this.max) {
-          this.userDetails.map(details => {
-            (details.key = "personal care"),
-              (details.highest_expense = this.max);
-          });
-          localStorage.setItem(
-            "user_details",
-            JSON.stringify(this.userDetails)
-          );
+          this.setHighestExpense("personal care", this.max);
         }
         if (this.inputVacation == this.max) {
-          this.userDetails.map(details => {
-            (details.key = "vacation"), (details.highest_expense = this.max);
-          });
-          localStorage.setItem(
-            "user_details",
-            JSON.stringify(this.userDetails)
-          );
+          this.setHighestExpense("vacation", this.max);
         }
         if (this.inputPayroll == this.max) {
-          this.userDetails.map(details => {
-            (details.key = "payroll"), (details.highest_expense = this.max);
-          });
-          localStorage.setItem(
-            "user_details",
-            JSON.stringify(this.userDetails)
-          );
+          this.setHighestExpense("payroll", this.max);
         }
         if (this.inputEntertainment == this.max) {
-          this.userDetails.map(details => {
-            (details.key = "entertainment"),
-              (details.highest_expense = this.max);
-          });
-          localStorage.setItem(
-            "user_details",
-            JSON.stringify(this.userDetails)
-          );
+          this.setHighestExpense("entertainment", this.max);
         }
         if (this.inputInvestment == this.max) {
-          this.userDetails.map(details => {
-            (details.key = "investment"), (details.highest_expense = this.max);
-          });
-          localStorage.setItem(
-            "user_details",
-            JSON.stringify(this.userDetails)
-          );
+          this.setHighestExpense("investment", this.max);
         }
-        this.userDetails.map(details => {
-          details.amount = this.amount;
-        });
-        localStorage.setItem("user_details", JSON.stringify(this.userDetails));
-        this.$router.push("/result");
       }
     },
-    resetTransportCard() {
-      this.transport = "";
-      this.inputTransport = 0;
+    resetCards(card) {
+      if (card === "transport") {
+        this.transport = "";
+        this.inputTransport = 0;
+        this.initialTrackerDetails();
+      }
+      if (card === "transfer") {
+        this.transfer = "";
+        this.inputTransfer = 0;
+        this.initialTrackerDetails();
+      }
+      if (card === "eating") {
+        this.eating = "";
+        this.inputEating = 0;
+        this.initialTrackerDetails();
+      }
+      if (card === "bills") {
+        this.bills = "";
+        this.inputBills = 0;
+        this.initialTrackerDetails();
+      }
+      if (card === "family") {
+        this.family = "";
+        this.inputFamily = 0;
+        this.initialTrackerDetails();
+      }
+      if (card === "groceries") {
+        this.groceries = "";
+        this.inputGroceries = 0;
+        this.initialTrackerDetails();
+      }
+      if (card === "shopping") {
+        this.shopping = "";
+        this.inputShopping = 0;
+        this.initialTrackerDetails();
+      }
+      if (card === "care") {
+        this.care = "";
+        this.inputCare = 0;
+        this.initialTrackerDetails();
+      }
+      if (card === "vacation") {
+        this.vacation = "";
+        this.inputVacation = 0;
+        this.initialTrackerDetails();
+      }
+      if (card === "payroll") {
+        this.payroll = "";
+        this.inputPayroll = 0;
+        this.initialTrackerDetails();
+      }
+      if (card === "entertainment") {
+        this.entertainment = "";
+        this.inputEntertainment = 0;
+        this.initialTrackerDetails();
+      }
+      if (card === "investment") {
+        this.investment = "";
+        this.inputInvestment = 0;
+        this.initialTrackerDetails();
+      }
       const tl = new TimelineMax();
 
       tl.to(
-        ".transport",
+        `.${card}`,
         0.5,
         { backgroundColor: "#ffffff", color: "#3a3737" },
         0.1
       )
-        .to(".transportText", 0.5, { color: "#3a3737" }, 0.1)
+        .to(`.${card}Text`, 0.5, { color: "#3a3737" }, 0.1)
         .to(
-          ".transportInput",
+          `.${card}Input`,
+          0.5,
+          { backgroundColor: "#f1f1f1", color: "#252525" },
+          0.1
+        )
+        .to(`.${card}Radio`, 0.5, { opacity: "0", pointerEvents: "none" }, 0.1)
+        .to(`.errorMsg${card}`, 0.5, { display: "none" }, 0.1);
+
+      this.totalAmount();
+    },
+    animateCardOnInput(card, backgroundColor) {
+      const tl = new TimelineMax();
+      tl.to(
+        `.${card}`,
+        0.5,
+        { backgroundColor: `#${backgroundColor}`, color: "#ffffff" },
+        0.1
+      )
+        .to(`.${card}Text`, 0.5, { color: "#ffffff" }, 0.1)
+        .to(
+          `.${card}Input`,
+          0.5,
+          { backgroundColor: `#${backgroundColor}`, color: "#ffffff" },
+          0.1
+        )
+        .to(`.errorMsg${card}`, 0.5, { display: "none" }, 0.1)
+        .to(
+          `.${card}Radio`,
+          0.5,
+          { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
+          0.1
+        );
+    },
+    animateCardOnError(card) {
+      const tl = new TimelineMax();
+      tl.to(
+        `.${card}`,
+        0.5,
+        { backgroundColor: "#ffffff", color: "#3a3737" },
+        0.1
+      )
+        .to(`.${card}Text`, 0.5, { color: "#3a3737" }, 0.1)
+        .to(
+          `.${card}Input`,
           0.5,
           { backgroundColor: "#f1f1f1", color: "#252525" },
           0.1
         )
         .to(
-          ".transportRadio",
+          `.${card}Radio`,
+          0.5,
+          { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
+          0.1
+        );
+      TweenMax.fromTo(
+        `.errorMsg${card}`,
+        0.5,
+        { color: "red" },
+        {
+          color: "white",
+          repeat: -1,
+          yoyo: false,
+          repeatDelay: 0.4,
+          display: "flex"
+        }
+      );
+    },
+    animateCardOnClearInput(card) {
+      const tl = new TimelineMax();
+      tl.to(
+        `.${card}`,
+        0.5,
+        { backgroundColor: "#ffffff", color: "#3a3737" },
+        0.1
+      )
+        .to(`.${card}Text`, 0.5, { color: "#3a3737" }, 0.1)
+        .to(
+          `.${card}Input`,
+          0.5,
+          { backgroundColor: "#f1f1f1", color: "#252525" },
+          0.1
+        )
+        .to(
+          `.${card}Radio`,
           0.5,
           { opacity: "0", pointerEvents: "none" },
           0.1
         )
-        .to(".errorMsgTransport", 0.5, { display: "none" }, 0.1);
-
-      this.inputAmount();
-    },
-    resetTransferCard() {
-      this.transfer = "";
-      this.inputTransfer = 0;
-      const tl = new TimelineMax();
-
-      tl.to(
-        ".transfer",
-        0.5,
-        { backgroundColor: "#ffffff", color: "#3a3737" },
-        0.1
-      )
-        .to(".transferText", 0.5, { color: "#3a3737" }, 0.1)
-        .to(
-          ".transferInput",
-          0.5,
-          { backgroundColor: "#f1f1f1", color: "#252525" },
-          0.1
-        )
-        .to(".transferRadio", 0.5, { opacity: "0", pointerEvents: "none" }, 0.1)
-        .to(".errorMsgTransfer", 0.5, { display: "none" }, 0.1);
-      this.inputAmount();
-    },
-    resetEatingCard() {
-      this.eating = "";
-      this.inputEating = 0;
-      const tl = new TimelineMax();
-
-      tl.to(
-        ".eating",
-        0.5,
-        { backgroundColor: "#ffffff", color: "#3a3737" },
-        0.1
-      )
-        .to(".eatingText", 0.5, { color: "#3a3737" }, 0.1)
-        .to(
-          ".eatingInput",
-          0.5,
-          { backgroundColor: "#f1f1f1", color: "#252525" },
-          0.1
-        )
-        .to(".eatingRadio", 0.5, { opacity: "0", pointerEvents: "none" }, 0.1)
-        .to(".errorMsgEating", 0.5, { display: "none" }, 0.1);
-      this.inputAmount();
-    },
-    resetBillsCard() {
-      this.bills = "";
-      this.inputBills = 0;
-      const tl = new TimelineMax();
-
-      tl.to(
-        ".bills",
-        0.5,
-        { backgroundColor: "#ffffff", color: "#3a3737" },
-        0.1
-      )
-        .to(".billsText", 0.5, { color: "#3a3737" }, 0.1)
-        .to(
-          ".billsInput",
-          0.5,
-          { backgroundColor: "#f1f1f1", color: "#252525" },
-          0.1
-        )
-        .to(".billsRadio", 0.5, { opacity: "0", pointerEvents: "none" }, 0.1)
-        .to(".errorMsgBills", 0.5, { display: "none" }, 0.1);
-      this.inputAmount();
-    },
-    resetFamilyCard() {
-      this.family = "";
-      this.inputFamily = 0;
-      const tl = new TimelineMax();
-
-      tl.to(
-        ".family",
-        0.5,
-        { backgroundColor: "#ffffff", color: "#3a3737" },
-        0.1
-      )
-        .to(".familyText", 0.5, { color: "#3a3737" }, 0.1)
-        .to(
-          ".familyInput",
-          0.5,
-          { backgroundColor: "#f1f1f1", color: "#252525" },
-          0.1
-        )
-        .to(".familyRadio", 0.5, { opacity: "0", pointerEvents: "none" }, 0.1)
-        .to(".errorMsgFamily", 0.5, { display: "none" }, 0.1);
-      this.inputAmount();
-    },
-    resetGroceriesCard() {
-      this.groceries = "";
-      this.inputGroceries = 0;
-      const tl = new TimelineMax();
-
-      tl.to(
-        ".groceries",
-        0.5,
-        { backgroundColor: "#ffffff", color: "#3a3737" },
-        0.1
-      )
-        .to(".groceriesText", 0.5, { color: "#3a3737" }, 0.1)
-        .to(
-          ".groceriesInput",
-          0.5,
-          { backgroundColor: "#f1f1f1", color: "#252525" },
-          0.1
-        )
-        .to(
-          ".groceriesRadio",
-          0.5,
-          { opacity: "0", pointerEvents: "none" },
-          0.1
-        )
-        .to(".errorMsgGroceries", 0.5, { display: "none" }, 0.1);
-      this.inputAmount();
-    },
-    resetShoppingCard() {
-      this.shopping = "";
-      this.inputShopping = 0;
-
-      const tl = new TimelineMax();
-
-      tl.to(
-        ".shopping",
-        0.5,
-        { backgroundColor: "#ffffff", color: "#3a3737" },
-        0.1
-      )
-        .to(".shoppingText", 0.5, { color: "#3a3737" }, 0.1)
-        .to(
-          ".shoppingInput",
-          0.5,
-          { backgroundColor: "#f1f1f1", color: "#252525" },
-          0.1
-        )
-        .to(".shoppingRadio", 0.5, { opacity: "0", pointerEvents: "none" }, 0.1)
-        .to(".errorMsgShopping", 0.5, { display: "none" }, 0.1);
-      this.inputAmount();
-    },
-    resetCareCard() {
-      this.care = "";
-      this.inputCare = 0;
-      const tl = new TimelineMax();
-
-      tl.to(".care", 0.5, { backgroundColor: "#ffffff", color: "#3a3737" }, 0.1)
-        .to(".careText", 0.5, { color: "#3a3737" }, 0.1)
-        .to(
-          ".careInput",
-          0.5,
-          { backgroundColor: "#f1f1f1", color: "#252525" },
-          0.1
-        )
-        .to(".careRadio", 0.5, { opacity: "0", pointerEvents: "none" }, 0.1)
-        .to(".errorMsgCare", 0.5, { display: "none" }, 0.1);
-      this.inputAmount();
-    },
-    resetVacationCard() {
-      this.vacation = "";
-      this.inputVacation = 0;
-
-      const tl = new TimelineMax();
-
-      tl.to(
-        ".vacation",
-        0.5,
-        { backgroundColor: "#ffffff", color: "#3a3737" },
-        0.1
-      )
-        .to(".vacationText", 0.5, { color: "#3a3737" }, 0.1)
-        .to(
-          ".vacationInput",
-          0.5,
-          { backgroundColor: "#f1f1f1", color: "#252525" },
-          0.1
-        )
-        .to(".vacationRadio", 0.5, { opacity: "0", pointerEvents: "none" }, 0.1)
-        .to(".errorMsgVacation", 0.5, { display: "none" }, 0.1);
-      this.inputAmount();
-    },
-    resetPayrollCard() {
-      this.payroll = "";
-      this.inputPayroll = 0;
-      const tl = new TimelineMax();
-
-      tl.to(
-        ".payroll",
-        0.5,
-        { backgroundColor: "#ffffff", color: "#3a3737" },
-        0.1
-      )
-        .to(".payrollText", 0.5, { color: "#3a3737" }, 0.1)
-        .to(
-          ".payrollInput",
-          0.5,
-          { backgroundColor: "#f1f1f1", color: "#252525" },
-          0.1
-        )
-        .to(".payrollRadio", 0.5, { opacity: "0", pointerEvents: "none" }, 0.1)
-        .to(".errorMsgPayroll", 0.5, { display: "none" }, 0.1);
-      this.inputAmount();
-    },
-    resetEntertainmentCard() {
-      this.entertainment = "";
-      this.inputEntertainment = 0;
-      const tl = new TimelineMax();
-
-      tl.to(
-        ".entertainment",
-        0.5,
-        { backgroundColor: "#ffffff", color: "#3a3737" },
-        0.1
-      )
-        .to(".entertainmentText", 0.5, { color: "#3a3737" }, 0.1)
-        .to(
-          ".entertainmentInput",
-          0.5,
-          { backgroundColor: "#f1f1f1", color: "#252525" },
-          0.1
-        )
-        .to(
-          ".entertainmentRadio",
-          0.5,
-          { opacity: "0", pointerEvents: "none" },
-          0.1
-        )
-        .to(".errorMsgEntertainment", 0.5, { display: "none" }, 0.1);
-      this.inputAmount();
-    },
-    resetInvestmentCard() {
-      this.investment = "";
-      this.inputInvestment = 0;
-      const tl = new TimelineMax();
-
-      tl.to(
-        ".investment",
-        0.5,
-        { backgroundColor: "#ffffff", color: "#3a3737" },
-        0.1
-      )
-        .to(".investmentText", 0.5, { color: "#3a3737" }, 0.1)
-        .to(
-          ".investmentInput",
-          0.5,
-          { backgroundColor: "#f1f1f1", color: "#252525" },
-          0.1
-        )
-        .to(
-          ".investmentRadio",
-          0.5,
-          { opacity: "0", pointerEvents: "none" },
-          0.1
-        )
-        .to(".errorMsgInvestment", 0.5, { display: "none" }, 0.1);
-      this.inputAmount();
+        .to(`.errorMsg${card}`, 0.5, { display: "none" }, 0.1);
     },
     inputTransportationAmount() {
       let regEx = /^[0-9]*$/gm;
-      this.initialTrackerDetails();
-      // this.amountTracker = JSON.parse(localStorage.getItem("amount_tracker"));
       if (this.transport.charAt(0) === "N") {
         this.transport = this.transport.substr(1);
       }
-
       if (this.transport.length > 0 && regEx.test(this.transport) === true) {
         this.inputTransport = event.target.value;
         if (this.inputTransport.charAt(0) === "N") {
           this.inputTransport = this.inputTransport.substr(1);
         }
-
         this.transport = `N${this.inputTransport}`;
-        this.amountTracker.map(amount => {
-          amount.transport = this.inputTransport;
-        });
-
-        if (this.maxExpense.length === 0) {
-          let eachExpense = {
-            key: "transport",
-            amount: this.inputTransport
-          };
-          this.maxExpense.push(eachExpense);
-        } else {
-          this.maxExpense.map(obj => {
-            if (obj.key === "transport") {
-              obj.amount = this.inputTransport;
-            } else {
-              let eachExpense = {
-                key: "transport",
-                amount: this.inputTransport
-              };
-              this.maxExpense.push(eachExpense);
-            }
-          });
-        }
-        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        localStorage.setItem(
-          "amount_tracker",
-          JSON.stringify(this.amountTracker)
-        );
-        // this.$refs.refTransfer.focus()
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".transport",
-          0.5,
-          { backgroundColor: "#1b5ece", color: "#ffffff" },
-          0.1
-        )
-          .to(".transportText", 0.5, { color: "#ffffff" }, 0.1)
-          .to(
-            ".transportInput",
-            0.5,
-            { backgroundColor: "#1b5ece", color: "#ffffff" },
-            0.1
-          )
-          .to(".errorMsgTransport", 0.5, { display: "none" }, 0.1)
-          .to(
-            ".transportRadio",
-            0.5,
-            { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
-            0.1
-          );
-        // this.btnEnabled()
-        this.inputAmount();
-      } else if (
+        this.initialTrackerDetails();
+        this.animateCardOnInput("transport", "1b5ece")
+        this.totalAmount();
+      }
+      else if (
         this.transport.length > 0 &&
         regEx.test(this.transport) === false
       ) {
         this.inputTransport = event.target.value;
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".transport",
-          0.5,
-          { backgroundColor: "#ffffff", color: "#3a3737" },
-          0.1
-        )
-          .to(".transportText", 0.5, { color: "#3a3737" }, 0.1)
-          .to(
-            ".transportInput",
-            0.5,
-            { backgroundColor: "#f1f1f1", color: "#252525" },
-            0.1
-          )
-          .to(
-            ".transportRadio",
-            0.5,
-            { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
-            0.1
-          );
-        TweenMax.fromTo(
-          ".errorMsgTransport",
-          0.5,
-          { color: "red" },
-          {
-            color: "white",
-            repeat: -1,
-            yoyo: false,
-            repeatDelay: 0.4,
-            display: "flex"
-          }
-        );
-        // this.btnDisable()
-        this.inputAmount();
-      } else if (this.transport.length === 0) {
+        this.animateCardOnError("transport")
+        this.totalAmount();
+      }
+      else if (this.transport.length === 0) {
         this.inputTransport = 0;
-        this.amountTracker.map(amount => {
-          amount.transport = 0;
-        });
-        if (this.maxExpense.length === 0) {
-          let eachExpense = {
-            key: "transport",
-            amount: 0
-          };
-          this.maxExpense.push(eachExpense);
-        } else {
-          this.maxExpense.map(obj => {
-            if (obj.key === "transport") {
-              obj.amount = 0;
-            }
-          });
-        }
-        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        // this.$refs.refTransfer.focus()
-
-        localStorage.setItem(
-          "amount_tracker",
-          JSON.stringify(this.amountTracker)
-        );
-
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".transport",
-          0.5,
-          { backgroundColor: "#ffffff", color: "#3a3737" },
-          0.1
-        )
-          .to(".transportText", 0.5, { color: "#3a3737" }, 0.1)
-          .to(
-            ".transportInput",
-            0.5,
-            { backgroundColor: "#f1f1f1", color: "#252525" },
-            0.1
-          )
-          .to(
-            ".transportRadio",
-            0.5,
-            { opacity: "0", pointerEvents: "none" },
-            0.1
-          )
-          .to(".errorMsgTransport", 0.5, { display: "none" }, 0.1);
-        // this.btnDisable()
-        this.inputAmount();
+        this.initialTrackerDetails();
+        this.animateCardOnClearInput("transport")
+        this.totalAmount();
       }
     },
     inputTransferAmount() {
       let regEx = /^[0-9]*$/gm;
-      this.initialTrackerDetails();
+      // this.initialTrackerDetails();
       if (this.transfer.charAt(0) === "N") {
         this.transfer = this.transfer.substr(1);
       }
@@ -1567,152 +1250,25 @@ export default {
           this.inputTransfer = this.inputTransfer.substr(1);
         }
         this.transfer = `N${this.inputTransfer}`;
-        this.amountTracker.map(amount => {
-          amount.transfer = this.inputTransfer;
-        });
-        if (this.maxExpense.length === 0) {
-          let eachExpense = {
-            key: "transfer",
-            amount: this.inputTransfer
-          };
-          this.maxExpense.push(eachExpense);
-        } else {
-          this.maxExpense.map(obj => {
-            if (obj.key === "transfer") {
-              obj.amount = this.inputTransfer;
-            } else {
-              let eachExpense = {
-                key: "transfer",
-                amount: this.inputTransfer
-              };
-              this.maxExpense.push(eachExpense);
-            }
-          });
-        }
-        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        localStorage.setItem(
-          "amount_tracker",
-          JSON.stringify(this.amountTracker)
-        );
-        // this.$refs.refEating.focus()
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".transfer",
-          0.5,
-          { backgroundColor: "#D0001B", color: "#ffffff" },
-          0.1
-        )
-          .to(".transferText", 0.5, { color: "#ffffff" }, 0.1)
-          .to(
-            ".transferInput",
-            0.5,
-            { backgroundColor: "#D0001B", color: "#ffffff" },
-            0.1
-          )
-          .to(".errorMsgTransfer", 0.5, { display: "none" }, 0.1)
-          .to(
-            ".transferRadio",
-            0.5,
-            { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
-            0.1
-          );
-        // this.btnEnabled()
-        this.inputAmount();
+        this.initialTrackerDetails();
+        this.animateCardOnInput("transfer", "D0001B")
+        this.totalAmount();
       } else if (
         this.transfer.length > 0 &&
         regEx.test(this.transfer) === false
       ) {
         this.inputTransfer = event.target.value;
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".transfer",
-          0.5,
-          { backgroundColor: "#ffffff", color: "#3a3737" },
-          0.1
-        )
-          .to(".transferText", 0.5, { color: "#3a3737" }, 0.1)
-          .to(
-            ".transferInput",
-            0.5,
-            { backgroundColor: "#f1f1f1", color: "#252525" },
-            0.1
-          )
-          .to(
-            ".transferRadio",
-            0.5,
-            { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
-            0.1
-          );
-        TweenMax.fromTo(
-          ".errorMsgTransfer",
-          0.5,
-          { color: "red" },
-          {
-            color: "white",
-            repeat: -1,
-            yoyo: false,
-            repeatDelay: 0.4,
-            display: "flex"
-          }
-        );
-        // this.btnDisable()
-        this.inputAmount();
+        this.animateCardOnError("transfer")
+        this.totalAmount();
       } else if (this.transfer.length === 0) {
         this.inputTransfer = 0;
-        this.amountTracker.map(amount => {
-          amount.transfer = 0;
-        });
-        if (this.maxExpense.length === 0) {
-          let eachExpense = {
-            key: "transfer",
-            amount: 0
-          };
-          this.maxExpense.push(eachExpense);
-        } else {
-          this.maxExpense.map(obj => {
-            if (obj.key === "transfer") {
-              obj.amount = 0;
-            }
-          });
-        }
-        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        // this.$refs.refTransfer.focus()
-
-        localStorage.setItem(
-          "amount_tracker",
-          JSON.stringify(this.amountTracker)
-        );
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".transfer",
-          0.5,
-          { backgroundColor: "#ffffff", color: "#3a3737" },
-          0.1
-        )
-          .to(".transferText", 0.5, { color: "#3a3737" }, 0.1)
-          .to(
-            ".transferInput",
-            0.5,
-            { backgroundColor: "#f1f1f1", color: "#252525" },
-            0.1
-          )
-          .to(
-            ".transferRadio",
-            0.5,
-            { opacity: "0", pointerEvents: "none" },
-            0.1
-          )
-          .to(".errorMsgTransfer", 0.5, { display: "none" }, 0.1);
-        // this.btnDisable()
-        this.inputAmount();
+        this.initialTrackerDetails();
+        this.animateCardOnClearInput("transfer")
+        this.totalAmount();
       }
     },
     inputEatingAmount() {
       let regEx = /^[0-9]*$/gm;
-      this.initialTrackerDetails();
       if (this.eating.charAt(0) === "N") {
         this.eating = this.eating.substr(1);
       }
@@ -1722,145 +1278,22 @@ export default {
           this.inputEating = this.inputEating.substr(1);
         }
         this.eating = `N${this.inputEating}`;
-        this.amountTracker.map(amount => {
-          amount.eating = this.inputEating;
-        });
-        if (this.maxExpense.length === 0) {
-          let eachExpense = {
-            key: "eating out",
-            amount: this.inputEating
-          };
-          this.maxExpense.push(eachExpense);
-        } else {
-          this.maxExpense.map(obj => {
-            if (obj.key === "eating out") {
-              obj.amount = this.inputEating;
-            } else {
-              let eachExpense = {
-                key: "eating out",
-                amount: this.inputEating
-              };
-              this.maxExpense.push(eachExpense);
-            }
-          });
-        }
-        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        localStorage.setItem(
-          "amount_tracker",
-          JSON.stringify(this.amountTracker)
-        );
-        // this.$refs.refBills.focus()
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".eating",
-          0.5,
-          { backgroundColor: "#14777C", color: "#ffffff" },
-          0.1
-        )
-          .to(".eatingText", 0.5, { color: "#ffffff" }, 0.1)
-          .to(
-            ".eatingInput",
-            0.5,
-            { backgroundColor: "#14777C", color: "#ffffff" },
-            0.1
-          )
-          .to(".errorMsgEating", 0.5, { display: "none" }, 0.1)
-          .to(
-            ".eatingRadio",
-            0.5,
-            { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
-            0.1
-          );
-        // this.btnEnabled()
-        this.inputAmount();
+        this.initialTrackerDetails();
+        this.animateCardOnInput("eating", "14777C")
+        this.totalAmount();
       } else if (this.eating.length > 0 && regEx.test(this.eating) === false) {
         this.inputEating = event.target.value;
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".eating",
-          0.5,
-          { backgroundColor: "#ffffff", color: "#3a3737" },
-          0.1
-        )
-          .to(".eatingText", 0.5, { color: "#3a3737" }, 0.1)
-          .to(
-            ".eatingInput",
-            0.5,
-            { backgroundColor: "#f1f1f1", color: "#252525" },
-            0.1
-          )
-          .to(
-            ".eatingRadio",
-            0.5,
-            { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
-            0.1
-          );
-        TweenMax.fromTo(
-          ".errorMsgEating",
-          0.5,
-          { color: "red" },
-          {
-            color: "white",
-            repeat: -1,
-            yoyo: false,
-            repeatDelay: 0.4,
-            display: "flex"
-          }
-        );
-        // this.btnDisable()
-        this.inputAmount();
-      } else {
+        this.animateCardOnError("eating")
+        this.totalAmount();
+      } else if (this.eating.length === 0) {
         this.inputEating = 0;
-
-        this.amountTracker.map(amount => {
-          amount.eating = 0;
-        });
-        if (this.maxExpense.length === 0) {
-          let eachExpense = {
-            key: "eating out",
-            amount: 0
-          };
-          this.maxExpense.push(eachExpense);
-        } else {
-          this.maxExpense.map(obj => {
-            if (obj.key === "eating out") {
-              obj.amount = 0;
-            }
-          });
-        }
-        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        // this.$refs.refBills.focus()
-
-        localStorage.setItem(
-          "amount_tracker",
-          JSON.stringify(this.amountTracker)
-        );
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".eating",
-          0.5,
-          { backgroundColor: "#ffffff", color: "#3a3737" },
-          0.1
-        )
-          .to(".eatingText", 0.5, { color: "#3a3737" }, 0.1)
-          .to(
-            ".eatingInput",
-            0.5,
-            { backgroundColor: "#f1f1f1", color: "#252525" },
-            0.1
-          )
-          .to(".eatingRadio", 0.5, { opacity: "0", pointerEvents: "none" }, 0.1)
-          .to(".errorMsgEating", 0.5, { display: "none" }, 0.1);
-        // this.btnDisable()
-        this.inputAmount();
+        this.initialTrackerDetails();
+        this.animateCardOnClearInput("eating")
+        this.totalAmount();
       }
     },
     inputBillsAmount() {
       let regEx = /^[0-9]*$/gm;
-      this.initialTrackerDetails();
       if (this.bills.charAt(0) === "N") {
         this.bills = this.bills.substr(1);
       }
@@ -1870,139 +1303,18 @@ export default {
           this.inputBills = this.inputBills.substr(1);
         }
         this.bills = `N${this.inputBills}`;
-        this.amountTracker.map(amount => {
-          amount.bills = this.inputBills;
-        });
-        if (this.maxExpense.length === 0) {
-          let eachExpense = {
-            key: "bills",
-            amount: this.inputBills
-          };
-          this.maxExpense.push(eachExpense);
-        } else {
-          this.maxExpense.map(obj => {
-            if (obj.key === "bills") {
-              obj.amount = this.inputBills;
-            } else {
-              let eachExpense = {
-                key: "bills",
-                amount: this.inputBills
-              };
-              this.maxExpense.push(eachExpense);
-            }
-          });
-        }
-        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        localStorage.setItem(
-          "amount_tracker",
-          JSON.stringify(this.amountTracker)
-        );
-        // this.$refs.refFamily.focus()
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".bills",
-          0.5,
-          { backgroundColor: "#D0001B", color: "#ffffff" },
-          0.1
-        )
-          .to(".billsText", 0.5, { color: "#ffffff" }, 0.1)
-          .to(
-            ".billsInput",
-            0.5,
-            { backgroundColor: "#D0001B", color: "#ffffff" },
-            0.1
-          )
-          .to(".errorMsgBills", 0.5, { display: "none" }, 0.1)
-          .to(
-            ".billsRadio",
-            0.5,
-            { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
-            0.1
-          );
-        // this.btnEnabled()
-        this.inputAmount();
+        this.initialTrackerDetails();
+        this.animateCardOnInput("bills", "D0001B")
+        this.totalAmount();
       } else if (this.bills.length > 0 && regEx.test(this.bills) === false) {
         this.inputBills = event.target.value;
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".bills",
-          0.5,
-          { backgroundColor: "#ffffff", color: "#3a3737" },
-          0.1
-        )
-          .to(".billsText", 0.5, { color: "#3a3737" }, 0.1)
-          .to(
-            ".billsInput",
-            0.5,
-            { backgroundColor: "#f1f1f1", color: "#252525" },
-            0.1
-          )
-          .to(
-            ".billsRadio",
-            0.5,
-            { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
-            0.1
-          );
-        TweenMax.fromTo(
-          ".errorMsgBills",
-          0.5,
-          { color: "red" },
-          {
-            color: "white",
-            repeat: -1,
-            yoyo: false,
-            repeatDelay: 0.4,
-            display: "flex"
-          }
-        );
-        // this.btnDisable()
-        this.inputAmount();
-      } else {
+        this.animateCardOnError("bills")
+        this.totalAmount();
+      } else if (this.bills.length === 0) {
         this.inputBills = 0;
-
-        this.amountTracker.map(amount => {
-          amount.bills = 0;
-        });
-        if (this.maxExpense.length === 0) {
-          let eachExpense = {
-            key: "bills",
-            amount: 0
-          };
-          this.maxExpense.push(eachExpense);
-        } else {
-          this.maxExpense.map(obj => {
-            if (obj.key === "bills") {
-              obj.amount = 0;
-            }
-          });
-        }
-        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        // this.$refs.refFamily.focus()
-        localStorage.setItem(
-          "amount_tracker",
-          JSON.stringify(this.amountTracker)
-        );
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".bills",
-          0.5,
-          { backgroundColor: "#ffffff", color: "#3a3737" },
-          0.1
-        )
-          .to(".billsText", 0.5, { color: "#3a3737" }, 0.1)
-          .to(
-            ".billsInput",
-            0.5,
-            { backgroundColor: "#f1f1f1", color: "#252525" },
-            0.1
-          )
-          .to(".billsRadio", 0.5, { opacity: "0", pointerEvents: "none" }, 0.1)
-          .to(".errorMsgBills", 0.5, { display: "none" }, 0.1);
-        // this.btnDisable()
-        this.inputAmount();
+        this.initialTrackerDetails();
+        this.animateCardOnClearInput("bills")
+        this.totalAmount();
       }
     },
     inputFamilyAmount() {
@@ -2017,139 +1329,18 @@ export default {
           this.inputFamily = this.inputFamily.substr(1);
         }
         this.family = `N${this.inputFamily}`;
-        this.amountTracker.map(amount => {
-          amount.family = this.inputFamily;
-        });
-        if (this.maxExpense.length === 0) {
-          let eachExpense = {
-            key: "family",
-            amount: this.inputFamily
-          };
-          this.maxExpense.push(eachExpense);
-        } else {
-          this.maxExpense.map(obj => {
-            if (obj.key === "family") {
-              obj.amount = this.inputFamily;
-            } else {
-              let eachExpense = {
-                key: "family",
-                amount: this.inputFamily
-              };
-              this.maxExpense.push(eachExpense);
-            }
-          });
-        }
-        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        localStorage.setItem(
-          "amount_tracker",
-          JSON.stringify(this.amountTracker)
-        );
-        // this.$refs.refGroceries.focus()
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".family",
-          0.5,
-          { backgroundColor: "#5D29DE", color: "#ffffff" },
-          0.1
-        )
-          .to(".familyText", 0.5, { color: "#ffffff" }, 0.1)
-          .to(
-            ".familyInput",
-            0.5,
-            { backgroundColor: "#5D29DE", color: "#ffffff" },
-            0.1
-          )
-          .to(".errorMsgFamily", 0.5, { display: "none" }, 0.1)
-          .to(
-            ".familyRadio",
-            0.5,
-            { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
-            0.1
-          );
-        // this.btnEnabled()
-        this.inputAmount();
+        this.initialTrackerDetails();
+        this.animateCardOnInput("family", "5D29DE")
+        this.totalAmount();
       } else if (this.family.length > 0 && regEx.test(this.family) === false) {
         this.inputFamily = event.target.value;
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".family",
-          0.5,
-          { backgroundColor: "#ffffff", color: "#3a3737" },
-          0.1
-        )
-          .to(".familyText", 0.5, { color: "#3a3737" }, 0.1)
-          .to(
-            ".familyInput",
-            0.5,
-            { backgroundColor: "#f1f1f1", color: "#252525" },
-            0.1
-          )
-          .to(
-            ".familyRadio",
-            0.5,
-            { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
-            0.1
-          );
-        TweenMax.fromTo(
-          ".errorMsgFamily",
-          0.5,
-          { color: "red" },
-          {
-            color: "white",
-            repeat: -1,
-            yoyo: false,
-            repeatDelay: 0.4,
-            display: "flex"
-          }
-        );
-        // this.btnDisable()
-        this.inputAmount();
+        this.animateCardOnError("family")
+        this.totalAmount();
       } else {
         this.inputFamily = 0;
-        this.amountTracker.map(amount => {
-          amount.family = 0;
-        });
-        if (this.maxExpense.length === 0) {
-          let eachExpense = {
-            key: "family",
-            amount: 0
-          };
-          this.maxExpense.push(eachExpense);
-        } else {
-          this.maxExpense.map(obj => {
-            if (obj.key === "family") {
-              obj.amount = 0;
-            }
-          });
-        }
-        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        // this.$refs.refGroceries.focus()
-
-        localStorage.setItem(
-          "amount_tracker",
-          JSON.stringify(this.amountTracker)
-        );
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".family",
-          0.5,
-          { backgroundColor: "#ffffff", color: "#3a3737" },
-          0.1
-        )
-          .to(".familyText", 0.5, { color: "#3a3737" }, 0.1)
-          .to(
-            ".familyInput",
-            0.5,
-            { backgroundColor: "#f1f1f1", color: "#252525" },
-            0.1
-          )
-          .to(".familyRadio", 0.5, { opacity: "0", pointerEvents: "none" }, 0.1)
-          .to(".errorMsgFamily", 0.5, { display: "none" }, 0.1);
-        // this.btnDisable()
-        this.inputAmount();
+        this.initialTrackerDetails();
+        this.animateCardOnClearInput("family")
+        this.totalAmount();
       }
     },
     inputGroceriesAmount() {
@@ -2164,147 +1355,21 @@ export default {
           this.inputGroceries = this.inputGroceries.substr(1);
         }
         this.groceries = `N${this.inputGroceries}`;
-        this.amountTracker.map(amount => {
-          amount.groceries = this.inputGroceries;
-        });
-        if (this.maxExpense.length === 0) {
-          let eachExpense = {
-            key: "groceries",
-            amount: this.inputGroceries
-          };
-          this.maxExpense.push(eachExpense);
-        } else {
-          this.maxExpense.map(obj => {
-            if (obj.key === "groceries") {
-              obj.amount = this.inputGroceries;
-            } else {
-              let eachExpense = {
-                key: "groceries",
-                amount: this.inputGroceries
-              };
-              this.maxExpense.push(eachExpense);
-            }
-          });
-        }
-        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        localStorage.setItem(
-          "amount_tracker",
-          JSON.stringify(this.amountTracker)
-        );
-        // this.$refs.refShopping.focus()
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".groceries",
-          0.5,
-          { backgroundColor: "#14777C", color: "#ffffff" },
-          0.1
-        )
-          .to(".groceriesText", 0.5, { color: "#ffffff" }, 0.1)
-          .to(
-            ".groceriesInput",
-            0.5,
-            { backgroundColor: "#14777C", color: "#ffffff" },
-            0.1
-          )
-          .to(".errorMsgGroceries", 0.5, { display: "none" }, 0.1)
-          .to(
-            ".groceriesRadio",
-            0.5,
-            { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
-            0.1
-          );
-        // this.btnEnabled()
-        this.inputAmount();
+        this.initialTrackerDetails();
+        this.animateCardOnInput("groceries", "14777C")
+        this.totalAmount();
       } else if (
         this.groceries.length > 0 &&
         regEx.test(this.groceries) === false
       ) {
         this.inputGroceries = event.target.value;
-
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".groceries",
-          0.5,
-          { backgroundColor: "#ffffff", color: "#3a3737" },
-          0.1
-        )
-          .to(".groceriesText", 0.5, { color: "#3a3737" }, 0.1)
-          .to(
-            ".groceriesInput",
-            0.5,
-            { backgroundColor: "#f1f1f1", color: "#252525" },
-            0.1
-          )
-          .to(
-            ".groceriesRadio",
-            0.5,
-            { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
-            0.1
-          );
-        TweenMax.fromTo(
-          ".errorMsgGroceries",
-          0.5,
-          { color: "red" },
-          {
-            color: "white",
-            repeat: -1,
-            yoyo: false,
-            repeatDelay: 0.4,
-            display: "flex"
-          }
-        );
-        // this.btnDisable()
-        this.inputAmount();
+        this.animateCardOnError("groceries")
+        this.totalAmount();
       } else {
         this.inputGroceries = 0;
-        this.amountTracker.map(amount => {
-          amount.groceries = 0;
-        });
-        if (this.maxExpense.length === 0) {
-          let eachExpense = {
-            key: "groceries",
-            amount: 0
-          };
-          this.maxExpense.push(eachExpense);
-        } else {
-          this.maxExpense.map(obj => {
-            if (obj.key === "groceries") {
-              obj.amount = 0;
-            }
-          });
-        }
-        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        // this.$refs.refShopping.focus()
-        localStorage.setItem(
-          "amount_tracker",
-          JSON.stringify(this.amountTracker)
-        );
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".groceries",
-          0.5,
-          { backgroundColor: "#ffffff", color: "#3a3737" },
-          0.1
-        )
-          .to(".groceriesText", 0.5, { color: "#3a3737" }, 0.1)
-          .to(
-            ".groceriesInput",
-            0.5,
-            { backgroundColor: "#f1f1f1", color: "#252525" },
-            0.1
-          )
-          .to(
-            ".groceriesRadio",
-            0.5,
-            { opacity: "0", pointerEvents: "none" },
-            0.1
-          )
-          .to(".errorMsgGroceries", 0.5, { display: "none" }, 0.1);
-        // this.btnDisable()
-        this.inputAmount();
+        this.initialTrackerDetails();
+        this.animateCardOnClearInput("groceries")
+        this.totalAmount();
       }
     },
     inputShoppingAmount() {
@@ -2319,148 +1384,21 @@ export default {
           this.inputShopping = this.inputShopping.substr(1);
         }
         this.shopping = `N${this.inputShopping}`;
-        this.amountTracker.map(amount => {
-          amount.shopping = this.inputShopping;
-        });
-        if (this.maxExpense.length === 0) {
-          let eachExpense = {
-            key: "shopping",
-            amount: this.inputShopping
-          };
-          this.maxExpense.push(eachExpense);
-        } else {
-          this.maxExpense.map(obj => {
-            if (obj.key === "shopping") {
-              obj.amount = this.inputShopping;
-            } else {
-              let eachExpense = {
-                key: "shopping",
-                amount: this.inputShopping
-              };
-              this.maxExpense.push(eachExpense);
-            }
-          });
-        }
-        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        localStorage.setItem(
-          "amount_tracker",
-          JSON.stringify(this.amountTracker)
-        );
-        // this.$refs.refCare.focus()
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".shopping",
-          0.5,
-          { backgroundColor: "#F1663D", color: "#ffffff" },
-          0.1
-        )
-          .to(".shoppingText", 0.5, { color: "#ffffff" }, 0.1)
-          .to(
-            ".shoppingInput",
-            0.5,
-            { backgroundColor: "#F1663D", color: "#ffffff" },
-            0.1
-          )
-          .to(".errorMsgShopping", 0.5, { display: "none" }, 0.1)
-          .to(
-            ".shoppingRadio",
-            0.5,
-            { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
-            0.1
-          );
-        // this.btnEnabled()
-        this.inputAmount();
+        this.initialTrackerDetails();
+        this.animateCardOnInput("shopping", "F1663D")
+        this.totalAmount();
       } else if (
         this.shopping.length > 0 &&
         regEx.test(this.shopping) === false
       ) {
         this.inputShopping = event.target.value;
-
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".shopping",
-          0.5,
-          { backgroundColor: "#ffffff", color: "#3a3737" },
-          0.1
-        )
-          .to(".shoppingText", 0.5, { color: "#3a3737" }, 0.1)
-          .to(
-            ".shoppingInput",
-            0.5,
-            { backgroundColor: "#f1f1f1", color: "#252525" },
-            0.1
-          )
-          .to(
-            ".shoppingRadio",
-            0.5,
-            { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
-            0.1
-          );
-        TweenMax.fromTo(
-          ".errorMsgShopping",
-          0.5,
-          { color: "red" },
-          {
-            color: "white",
-            repeat: -1,
-            yoyo: false,
-            repeatDelay: 0.4,
-            display: "flex"
-          }
-        );
-        // this.btnDisable()
-        this.inputAmount();
+        this.animateCardOnError("shopping")
+        this.totalAmount();
       } else {
         this.inputShopping = 0;
-        this.amountTracker.map(amount => {
-          amount.shopping = 0;
-        });
-        if (this.maxExpense.length === 0) {
-          let eachExpense = {
-            key: "shopping",
-            amount: 0
-          };
-          this.maxExpense.push(eachExpense);
-        } else {
-          this.maxExpense.map(obj => {
-            if (obj.key === "shopping") {
-              obj.amount = 0;
-            }
-          });
-        }
-        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        // this.$refs.refCare.focus()
-
-        localStorage.setItem(
-          "amount_tracker",
-          JSON.stringify(this.amountTracker)
-        );
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".shopping",
-          0.5,
-          { backgroundColor: "#ffffff", color: "#3a3737" },
-          0.1
-        )
-          .to(".shoppingText", 0.5, { color: "#3a3737" }, 0.1)
-          .to(
-            ".shoppingInput",
-            0.5,
-            { backgroundColor: "#f1f1f1", color: "#252525" },
-            0.1
-          )
-          .to(
-            ".shoppingRadio",
-            0.5,
-            { opacity: "0", pointerEvents: "none" },
-            0.1
-          )
-          .to(".errorMsgShopping", 0.5, { display: "none" }, 0.1);
-        // this.btnDisable()
-        this.inputAmount();
+        this.initialTrackerDetails();
+        this.animateCardOnClearInput("shopping")
+        this.totalAmount();
       }
     },
     inputCareAmount() {
@@ -2475,138 +1413,18 @@ export default {
           this.inputCare = this.inputCare.substr(1);
         }
         this.care = `N${this.inputCare}`;
-        this.amountTracker.map(amount => {
-          amount.care = this.inputCare;
-        });
-        if (this.maxExpense.length === 0) {
-          let eachExpense = {
-            key: "personal care",
-            amount: this.inputCare
-          };
-          this.maxExpense.push(eachExpense);
-        } else {
-          this.maxExpense.map(obj => {
-            if (obj.key === "personal care") {
-              obj.amount = this.inputCare;
-            } else {
-              let eachExpense = {
-                key: "personal care",
-                amount: this.inputCare
-              };
-              this.maxExpense.push(eachExpense);
-            }
-          });
-        }
-        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        localStorage.setItem(
-          "amount_tracker",
-          JSON.stringify(this.amountTracker)
-        );
-        // this.$refs.refVacation.focus()
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".care",
-          0.5,
-          { backgroundColor: "#1b5ece", color: "#ffffff" },
-          0.1
-        )
-          .to(".careText", 0.5, { color: "#ffffff" }, 0.1)
-          .to(
-            ".careInput",
-            0.5,
-            { backgroundColor: "#1b5ece", color: "#ffffff" },
-            0.1
-          )
-          .to(".errorMsgCare", 0.5, { display: "none" }, 0.1)
-          .to(
-            ".careRadio",
-            0.5,
-            { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
-            0.1
-          );
-        // this.btnEnabled()
-        this.inputAmount();
+        this.initialTrackerDetails();
+        this.animateCardOnInput("care", "1b5ece")
+        this.totalAmount();
       } else if (this.care.length > 0 && regEx.test(this.care) === false) {
         this.inputCare = event.target.value;
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".care",
-          0.5,
-          { backgroundColor: "#ffffff", color: "#3a3737" },
-          0.1
-        )
-          .to(".careText", 0.5, { color: "#3a3737" }, 0.1)
-          .to(
-            ".careInput",
-            0.5,
-            { backgroundColor: "#f1f1f1", color: "#252525" },
-            0.1
-          )
-          .to(
-            ".careRadio",
-            0.5,
-            { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
-            0.1
-          );
-        TweenMax.fromTo(
-          ".errorMsgCare",
-          0.5,
-          { color: "red" },
-          {
-            color: "white",
-            repeat: -1,
-            yoyo: false,
-            repeatDelay: 0.4,
-            display: "flex"
-          }
-        );
-        // this.btnDisable()
-        this.inputAmount();
+        this.animateCardOnError("care")
+        this.totalAmount();
       } else {
         this.inputCare = 0;
-        this.amountTracker.map(amount => {
-          amount.care = 0;
-        });
-        if (this.maxExpense.length === 0) {
-          let eachExpense = {
-            key: "personal care",
-            amount: 0
-          };
-          this.maxExpense.push(eachExpense);
-        } else {
-          this.maxExpense.map(obj => {
-            if (obj.key === "personal care") {
-              obj.amount = 0;
-            }
-          });
-        }
-        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        // this.$refs.refVacation.focus()
-        localStorage.setItem(
-          "amount_tracker",
-          JSON.stringify(this.amountTracker)
-        );
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".care",
-          0.5,
-          { backgroundColor: "#ffffff", color: "#3a3737" },
-          0.1
-        )
-          .to(".careText", 0.5, { color: "#3a3737" }, 0.1)
-          .to(
-            ".careInput",
-            0.5,
-            { backgroundColor: "#f1f1f1", color: "#252525" },
-            0.1
-          )
-          .to(".careRadio", 0.5, { opacity: "0", pointerEvents: "none" }, 0.1)
-          .to(".errorMsgCare", 0.5, { display: "none" }, 0.1);
-        // this.btnDisable()
-        this.inputAmount();
+        this.initialTrackerDetails();
+        this.animateCardOnClearInput("care")
+        this.totalAmount();
       }
     },
     inputVacationAmount() {
@@ -2621,146 +1439,21 @@ export default {
           this.inputVacation = this.inputVacation.substr(1);
         }
         this.vacation = `N${this.inputVacation}`;
-        this.amountTracker.map(amount => {
-          amount.vacation = this.inputVacation;
-        });
-        if (this.maxExpense.length === 0) {
-          let eachExpense = {
-            key: "vacation",
-            amount: this.inputVacation
-          };
-          this.maxExpense.push(eachExpense);
-        } else {
-          this.maxExpense.map(obj => {
-            if (obj.key === "vacation") {
-              obj.amount = this.inputVacation;
-            } else {
-              let eachExpense = {
-                key: "vacation",
-                amount: this.inputVacation
-              };
-              this.maxExpense.push(eachExpense);
-            }
-          });
-        }
-        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        localStorage.setItem(
-          "amount_tracker",
-          JSON.stringify(this.amountTracker)
-        );
-        // this.$refs.refPayroll.focus()
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".vacation",
-          0.5,
-          { backgroundColor: "#F1663D", color: "#ffffff" },
-          0.1
-        )
-          .to(".vacationText", 0.5, { color: "#ffffff" }, 0.1)
-          .to(
-            ".vacationInput",
-            0.5,
-            { backgroundColor: "#F1663D", color: "#ffffff" },
-            0.1
-          )
-          .to(".errorMsgVacation", 0.5, { display: "none" }, 0.1)
-          .to(
-            ".vacationRadio",
-            0.5,
-            { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
-            0.1
-          );
-        // this.btnEnabled()
-        this.inputAmount();
+        this.initialTrackerDetails();
+        this.animateCardOnInput("vacation", "F1663D")
+        this.totalAmount();
       } else if (
         this.vacation.length > 0 &&
         regEx.test(this.vacation) === false
       ) {
         this.inputVacation = event.target.value;
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".vacation",
-          0.5,
-          { backgroundColor: "#ffffff", color: "#3a3737" },
-          0.1
-        )
-          .to(".vacationText", 0.5, { color: "#3a3737" }, 0.1)
-          .to(
-            ".vacationInput",
-            0.5,
-            { backgroundColor: "#f1f1f1", color: "#252525" },
-            0.1
-          )
-          .to(
-            ".vacationRadio",
-            0.5,
-            { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
-            0.1
-          );
-        TweenMax.fromTo(
-          ".errorMsgVacation",
-          0.5,
-          { color: "red" },
-          {
-            color: "white",
-            repeat: -1,
-            yoyo: false,
-            repeatDelay: 0.4,
-            display: "flex"
-          }
-        );
-        // this.btnDisable()
-        this.inputAmount();
+        this.animateCardOnError("vacation")
+        this.totalAmount();
       } else {
         this.inputVacation = 0;
-        this.amountTracker.map(amount => {
-          amount.vacation = 0;
-        });
-        if (this.maxExpense.length === 0) {
-          let eachExpense = {
-            key: "vacation",
-            amount: 0
-          };
-          this.maxExpense.push(eachExpense);
-        } else {
-          this.maxExpense.map(obj => {
-            if (obj.key === "vacation") {
-              obj.amount = 0;
-            }
-          });
-        }
-        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        // this.$refs.refPayroll.focus()
-        localStorage.setItem(
-          "amount_tracker",
-          JSON.stringify(this.amountTracker)
-        );
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".vacation",
-          0.5,
-          { backgroundColor: "#ffffff", color: "#3a3737" },
-          0.1
-        )
-          .to(".vacationText", 0.5, { color: "#3a3737" }, 0.1)
-          .to(
-            ".vacationInput",
-            0.5,
-            { backgroundColor: "#f1f1f1", color: "#252525" },
-            0.1
-          )
-          .to(
-            ".vacationRadio",
-            0.5,
-            { opacity: "0", pointerEvents: "none" },
-            0.1
-          )
-          .to(".errorMsgVacation", 0.5, { display: "none" }, 0.1);
-        // this.btnDisable()
-        this.inputAmount();
+        this.initialTrackerDetails();
+        this.animateCardOnClearInput("vacation")
+        this.totalAmount();
       }
     },
     inputPayrollAmount() {
@@ -2775,147 +1468,21 @@ export default {
           this.inputPayroll = this.inputPayroll.substr(1);
         }
         this.payroll = `N${this.inputPayroll}`;
-        this.amountTracker.map(amount => {
-          amount.payroll = this.inputPayroll;
-        });
-        if (this.maxExpense.length === 0) {
-          let eachExpense = {
-            key: "payroll",
-            amount: this.inputPayroll
-          };
-          this.maxExpense.push(eachExpense);
-        } else {
-          this.maxExpense.map(obj => {
-            if (obj.key === "payroll") {
-              obj.amount = this.inputPayroll;
-            } else {
-              let eachExpense = {
-                key: "payroll",
-                amount: this.inputPayroll
-              };
-              this.maxExpense.push(eachExpense);
-            }
-          });
-        }
-        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        localStorage.setItem(
-          "amount_tracker",
-          JSON.stringify(this.amountTracker)
-        );
-        // this.$refs.refEntertainment.focus()
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".payroll",
-          0.5,
-          { backgroundColor: "#1b5ece", color: "#ffffff" },
-          0.1
-        )
-          .to(".payrollText", 0.5, { color: "#ffffff" }, 0.1)
-          .to(
-            ".payrollInput",
-            0.5,
-            { backgroundColor: "#1b5ece", color: "#ffffff" },
-            0.1
-          )
-          .to(".errorMsgPayroll", 0.5, { display: "none" }, 0.1)
-          .to(
-            ".payrollRadio",
-            0.5,
-            { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
-            0.1
-          );
-        // this.btnEnabled()
-        this.inputAmount();
+        this.initialTrackerDetails();
+        this.animateCardOnInput("payroll", "1b5ece")
+        this.totalAmount();
       } else if (
         this.payroll.length > 0 &&
         regEx.test(this.payroll) === false
       ) {
         this.inputPayroll = event.target.value;
-
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".payroll",
-          0.5,
-          { backgroundColor: "#ffffff", color: "#3a3737" },
-          0.1
-        )
-          .to(".payrollText", 0.5, { color: "#3a3737" }, 0.1)
-          .to(
-            ".payrollInput",
-            0.5,
-            { backgroundColor: "#f1f1f1", color: "#252525" },
-            0.1
-          )
-          .to(
-            ".payrollRadio",
-            0.5,
-            { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
-            0.1
-          );
-        TweenMax.fromTo(
-          ".errorMsgPayroll",
-          0.5,
-          { color: "red" },
-          {
-            color: "white",
-            repeat: -1,
-            yoyo: false,
-            repeatDelay: 0.4,
-            display: "flex"
-          }
-        );
-        // this.btnDisable()
-        this.inputAmount();
+        this.animateCardOnError("payroll")
+        this.totalAmount();
       } else {
         this.inputPayroll = 0;
-        this.amountTracker.map(amount => {
-          amount.payroll = 0;
-        });
-        if (this.maxExpense.length === 0) {
-          let eachExpense = {
-            key: "payroll",
-            amount: 0
-          };
-          this.maxExpense.push(eachExpense);
-        } else {
-          this.maxExpense.map(obj => {
-            if (obj.key === "payroll") {
-              obj.amount = 0;
-            }
-          });
-        }
-        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        // this.$refs.refEntertainment.focus()
-        localStorage.setItem(
-          "amount_tracker",
-          JSON.stringify(this.amountTracker)
-        );
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".payroll",
-          0.5,
-          { backgroundColor: "#ffffff", color: "#3a3737" },
-          0.1
-        )
-          .to(".payrollText", 0.5, { color: "#3a3737" }, 0.1)
-          .to(
-            ".payrollInput",
-            0.5,
-            { backgroundColor: "#f1f1f1", color: "#252525" },
-            0.1
-          )
-          .to(
-            ".payrollRadio",
-            0.5,
-            { opacity: "0", pointerEvents: "none" },
-            0.1
-          )
-          .to(".errorMsgPayroll", 0.5, { display: "none" }, 0.1);
-        // this.btnDisable()
-        this.inputAmount();
+        this.initialTrackerDetails();
+        this.animateCardOnClearInput("payroll")
+        this.totalAmount();
       }
     },
     inputEntertainmentAmount() {
@@ -2933,146 +1500,21 @@ export default {
           this.inputEntertainment = this.inputEntertainment.substr(1);
         }
         this.entertainment = `N${this.inputEntertainment}`;
-        this.amountTracker.map(amount => {
-          amount.entertainment = this.inputEntertainment;
-        });
-        if (this.maxExpense.length === 0) {
-          let eachExpense = {
-            key: "entertainment",
-            amount: this.inputEntertainment
-          };
-          this.maxExpense.push(eachExpense);
-        } else {
-          this.maxExpense.map(obj => {
-            if (obj.key === "entertainment") {
-              obj.amount = this.inputEntertainment;
-            } else {
-              let eachExpense = {
-                key: "entertainment",
-                amount: this.inputEntertainment
-              };
-              this.maxExpense.push(eachExpense);
-            }
-          });
-        }
-        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        localStorage.setItem(
-          "amount_tracker",
-          JSON.stringify(this.amountTracker)
-        );
-        // this.$refs.refInvestment.focus()
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".entertainment",
-          0.5,
-          { backgroundColor: "#5D29DE", color: "#ffffff" },
-          0.1
-        )
-          .to(".entertainmentText", 0.5, { color: "#ffffff" }, 0.1)
-          .to(
-            ".entertainmentInput",
-            0.5,
-            { backgroundColor: "#5D29DE", color: "#ffffff" },
-            0.1
-          )
-          .to(".errorMsgEntertainment", 0.5, { display: "none" }, 0.1)
-          .to(
-            ".entertainmentRadio",
-            0.5,
-            { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
-            0.1
-          );
-        // this.btnEnabled()
-        this.inputAmount();
+        this.initialTrackerDetails();
+        this.animateCardOnInput("entertainment", "5D29DE")
+        this.totalAmount();
       } else if (
         this.entertainment.length > 0 &&
         regEx.test(this.entertainment) === false
       ) {
         this.inputEntertainment = event.target.value;
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".entertainment",
-          0.5,
-          { backgroundColor: "#ffffff", color: "#3a3737" },
-          0.1
-        )
-          .to(".entertainmentText", 0.5, { color: "#3a3737" }, 0.1)
-          .to(
-            ".entertainmentInput",
-            0.5,
-            { backgroundColor: "#f1f1f1", color: "#252525" },
-            0.1
-          )
-          .to(
-            ".entertainmentRadio",
-            0.5,
-            { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
-            0.1
-          );
-        TweenMax.fromTo(
-          ".errorMsgEntertainment",
-          0.5,
-          { color: "red" },
-          {
-            color: "white",
-            repeat: -1,
-            yoyo: false,
-            repeatDelay: 0.4,
-            display: "flex"
-          }
-        );
-        // this.btnDisable()
-        this.inputAmount();
+        this.animateCardOnError("entertainment")
+        this.totalAmount();
       } else {
         this.inputEntertainment = 0;
-        this.amountTracker.map(amount => {
-          amount.entertainment = 0;
-        });
-        if (this.maxExpense.length === 0) {
-          let eachExpense = {
-            key: "entertainment",
-            amount: 0
-          };
-          this.maxExpense.push(eachExpense);
-        } else {
-          this.maxExpense.map(obj => {
-            if (obj.key === "entertainment") {
-              obj.amount = 0;
-            }
-          });
-        }
-        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        localStorage.setItem(
-          "amount_tracker",
-          JSON.stringify(this.amountTracker)
-        );
-        // this.$refs.refInvestment.focus()
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".entertainment",
-          0.5,
-          { backgroundColor: "#ffffff", color: "#3a3737" },
-          0.1
-        )
-          .to(".entertainmentText", 0.5, { color: "#3a3737" }, 0.1)
-          .to(
-            ".entertainmentInput",
-            0.5,
-            { backgroundColor: "#f1f1f1", color: "#252525" },
-            0.1
-          )
-          .to(
-            ".entertainmentRadio",
-            0.5,
-            { opacity: "0", pointerEvents: "none" },
-            0.1
-          )
-          .to(".errorMsgEntertainment", 0.5, { display: "none" }, 0.1);
-        // this.btnDisable()
-        this.inputAmount();
+        this.initialTrackerDetails();
+        this.animateCardOnClearInput("entertainment")
+        this.totalAmount();
       }
     },
     inputInvestmentAmount() {
@@ -3087,162 +1529,27 @@ export default {
           this.inputInvestment = this.inputInvestment.substr(1);
         }
         this.investment = `N${this.inputInvestment}`;
-        this.amountTracker.map(amount => {
-          amount.investment = this.inputInvestment;
-        });
-        if (this.maxExpense.length === 0) {
-          let eachExpense = {
-            key: "investment",
-            amount: this.inputInvestment
-          };
-          this.maxExpense.push(eachExpense);
-        } else {
-          this.maxExpense.map(obj => {
-            if (obj.key === "investment") {
-              obj.amount = this.inputInvestment;
-            } else {
-              let eachExpense = {
-                key: "investment",
-                amount: this.inputInvestment
-              };
-              this.maxExpense.push(eachExpense);
-            }
-          });
-        }
-        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        localStorage.setItem(
-          "amount_tracker",
-          JSON.stringify(this.amountTracker)
-        );
-        // this.$refs.refButton.focus()
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".investment",
-          0.5,
-          { backgroundColor: "#14777C", color: "#ffffff" },
-          0.1
-        )
-          .to(".investmentText", 0.5, { color: "#ffffff" }, 0.1)
-          .to(
-            ".investmentInput",
-            0.5,
-            { backgroundColor: "#14777C", color: "#ffffff" },
-            0.1
-          )
-          .to(".errorMsgInvestment", 0.5, { display: "none" }, 0.1)
-          .to(
-            ".investmentRadio",
-            0.5,
-            { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
-            0.1
-          );
-        // this.btnEnabled()
-        this.inputAmount();
+        this.initialTrackerDetails();
+        this.animateCardOnInput("investment", "14777C")
+        this.totalAmount();
       } else if (
         this.investment.length > 0 &&
         regEx.test(this.investment) === false
       ) {
         this.inputInvestment = event.target.value;
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".investment",
-          0.5,
-          { backgroundColor: "#ffffff", color: "#3a3737" },
-          0.1
-        )
-          .to(".investmentText", 0.5, { color: "#3a3737" }, 0.1)
-          .to(
-            ".investmentInput",
-            0.5,
-            { backgroundColor: "#f1f1f1", color: "#252525" },
-            0.1
-          )
-          .to(
-            ".investmentRadio",
-            0.5,
-            { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
-            0.1
-          );
-        TweenMax.fromTo(
-          ".errorMsgInvestment",
-          0.5,
-          { color: "red" },
-          {
-            color: "white",
-            repeat: -1,
-            yoyo: false,
-            repeatDelay: 0.4,
-            display: "flex"
-          }
-        );
-        // this.btnDisable()
-        this.inputAmount();
+        this.animateCardOnError("investment")
+        this.totalAmount();
       } else {
         this.inputInvestment = 0;
-        this.amountTracker.map(amount => {
-          amount.investment = 0;
-        });
-        if (this.maxExpense.length === 0) {
-          let eachExpense = {
-            key: "investment",
-            amount: 0
-          };
-          this.maxExpense.push(eachExpense);
-        } else {
-          this.maxExpense.map(obj => {
-            if (obj.key === "investment") {
-              obj.amount = 0;
-            }
-          });
-        }
-        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
-        // this.$refs.refButton.focus()
-        localStorage.setItem(
-          "amount_tracker",
-          JSON.stringify(this.amountTracker)
-        );
-        const tl = new TimelineMax();
-
-        tl.to(
-          ".investment",
-          0.5,
-          { backgroundColor: "#ffffff", color: "#3a3737" },
-          0.1
-        )
-          .to(".investmentText", 0.5, { color: "#3a3737" }, 0.1)
-          .to(
-            ".investmentInput",
-            0.5,
-            { backgroundColor: "#f1f1f1", color: "#252525" },
-            0.1
-          )
-          .to(
-            ".investmentRadio",
-            0.5,
-            { opacity: "0", pointerEvents: "none" },
-            0.1
-          )
-          .to(".errorMsgInvestment", 0.5, { display: "none" }, 0.1);
-        // this.btnDisable()
-        this.inputAmount();
+        this.initialTrackerDetails();
+        this.animateCardOnClearInput("investment")
+        this.totalAmount();
       }
     },
-    inputAmount() {
-      this.amount =
-        Number(this.inputTransport) +
-        Number(this.inputTransfer) +
-        Number(this.inputEating) +
-        Number(this.inputBills) +
-        Number(this.inputFamily) +
-        Number(this.inputGroceries) +
-        Number(this.inputShopping) +
-        Number(this.inputCare) +
-        Number(this.inputVacation) +
-        Number(this.inputPayroll) +
-        Number(this.inputEntertainment) +
-        Number(this.inputInvestment);
+    totalAmount() {
+      this.amount = this.maxExpense.reduce(function (accumulator, obj) {
+        return accumulator + Number(obj.amount);
+      }, 0);
     }
   }
 };
@@ -3251,171 +1558,4 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/styles/main";
 @import "@/assets/styles/trackerPage";
-
-.slider {
-  display: flex;
-  width: 300%;
-}
-.slider.is-animating {
-  transition: -webkit-transform 400ms cubic-bezier(0.5, 0, 0.5, 1);
-  transition: transform 400ms cubic-bezier(0.5, 0, 0.5, 1);
-  transition: transform 400ms cubic-bezier(0.5, 0, 0.5, 1),
-    -webkit-transform 400ms cubic-bezier(0.5, 0, 0.5, 1);
-}
-
-.slider-pagination {
-  pointer-events: none;
-  text-align: center;
-  width: 100%;
-}
-.slider-pagination > * {
-  border-radius: 40%;
-  background-color: rgba(244, 112, 121, 0.2);
-  display: inline-block;
-  padding: 0.3rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  transition: background-color 250ms;
-  width: 2rem;
-}
-.slider-pagination > *.is-active {
-  background-color: $color-btn-bkg;
-}
-
-.slider-panel {
-  width: 100%;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 0 5rem;
-
-  @media screen and (max-width: 475px) {
-    padding: 0 3rem;
-  }
-
-  @media screen and (max-width: 375px) {
-    padding: 0 1rem;
-  }
-
-  .card-transport,
-  .card-transfer,
-  .card-eating,
-  .card-bills,
-  .card-family,
-  .card-groceries,
-  .card-shopping,
-  .card-care,
-  .card-vacation,
-  .card-payroll,
-  .card-entertainment,
-  .card-investment {
-    width: 18rem;
-    // padding: 0rem 0;
-    padding-bottom: 0.5rem;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-    margin: 2rem 0;
-    margin-top: 0;
-    background-color: #ffffff;
-
-    @media screen and (max-width: 600px) {
-      width: 15rem;
-    }
-
-    @media screen and (max-width: 425px) {
-      width: 12rem;
-    }
-
-    @media screen and (max-width: 320px) {
-      width: 10rem;
-    }
-
-    .radio {
-      align-self: flex-end;
-      margin-right: 1.5rem;
-      font-size: 2rem;
-      font-weight: 900;
-    }
-
-    ::placeholder {
-      opacity: 0.48;
-      font-family: Graphik;
-      font-weight: 500;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: -0.58px;
-      color: #252525;
-    }
-
-    :focus {
-      outline: none;
-    }
-
-    .card-img {
-      width: 30%;
-      margin-bottom: 0.5rem;
-    }
-
-    .error {
-      display: none;
-      color: red;
-    }
-
-    .card-text {
-      width: 100%;
-      margin-top: 0.5rem;
-      font-family: Graphik;
-      font-size: 1.2rem;
-      font-weight: 600;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: -0.41px;
-      text-align: center;
-      color: #3a3737;
-
-      @media screen and (max-width: 320px) {
-        font-size: 1rem;
-      }
-    }
-
-    .input {
-      width: 80%;
-      font-size: 1.8rem;
-      text-align: center;
-      margin-top: 1.6rem;
-      margin-bottom: 0.8rem;
-      padding: 0.5rem 0;
-      border: none;
-      border-radius: 3px;
-      background-color: #f1f1f1;
-    }
-  }
-
-  .card-transport,
-  .card-eating,
-  .card-family,
-  .card-shopping,
-  .card-vacation,
-  .card-entertainment {
-    margin-right: 3rem;
-  }
-}
-
-.has-slider {
-  display: none;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-
-  @media screen and (max-width: 700px) {
-    display: block;
-  }
-}
 </style>

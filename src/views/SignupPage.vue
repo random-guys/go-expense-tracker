@@ -222,7 +222,7 @@ export default {
       first_name: "",
       last_name: "",
       email: "",
-      userDetails: [],
+      userDetails: JSON.parse(localStorage.getItem("user_details")),
       slide1: false,
       slide2: false,
       slide3: false,
@@ -231,9 +231,8 @@ export default {
     };
   },
   mounted() {
+    this.checkUserDetails();
     const tl = new TimelineMax();
-    this.initialUserDetails();
-
     tl.to(".button1", 0, { display: "none" })
       .to(".cardTwo", 0, { opacity: "0.3", pointerEvents: "none" })
       .to(".cardThree", 0, { opacity: "0.3", pointerEvents: "none" })
@@ -357,19 +356,9 @@ export default {
     });
   },
   methods: {
-    initialUserDetails() {
+    checkUserDetails() {
       if (!localStorage.getItem("user_details")) {
-        this.userDetails = [];
-        let userObject = {
-          first_name: this.first_name,
-          last_name: this.last_name,
-          email: this.email,
-          amount: "",
-          key: "",
-          highest_expense: ""
-        };
-        this.userDetails.push(userObject);
-        localStorage.setItem("user_details", JSON.stringify(this.userDetails));
+        this.$router.push("/");
       }
     },
     proceed() {
@@ -381,25 +370,29 @@ export default {
         this.emailInput();
       }
     },
+    notification(msg) {
+      this.$swal.fire({
+        position: "top-end",
+        padding: "1rem 1.5rem",
+        background: "#fef2f1",
+        title: `<h2 style='color:lightcoral; font-size: 2.6rem'>${msg}</h2>`,
+        customClass: {
+          popup: "swal-popup"
+        },
+        showConfirmButton: false,
+        timer: 2000,
+        toast: true
+      });
+    },
     firstNameInput() {
-      this.userDetails = JSON.parse(localStorage.getItem("user_details"));
-      if (this.first_name.length > 0) {
+      if (this.first_name.replace(/\s/g, "").length) {
         this.userDetails.map(details => {
           details.first_name = this.first_name;
         });
         localStorage.setItem("user_details", JSON.stringify(this.userDetails));
         this.$refs.lastName.focus();
       } else {
-        this.$swal.fire({
-          position: "top-end",
-          padding: "1.5rem",
-          background: "#fef2f1",
-          width: 250,
-          title: "Please enter first name",
-          showConfirmButton: false,
-          timer: 2000,
-          toast: true
-        });
+        this.notification("Please enter first name");
         return;
       }
       if (this.slide1 === false) {
@@ -492,24 +485,14 @@ export default {
       }
     },
     lastNameInput() {
-      this.userDetails = JSON.parse(localStorage.getItem("user_details"));
-      if (this.last_name.length > 0) {
+      if (this.last_name.replace(/\s/g, "").length) {
         this.userDetails.map(details => {
           details.last_name = this.last_name;
         });
         localStorage.setItem("user_details", JSON.stringify(this.userDetails));
         this.$refs.emailAddress.focus();
       } else {
-        this.$swal.fire({
-          position: "top-end",
-          padding: "1.5rem",
-          background: "#fef2f1",
-          width: 250,
-          title: "Please enter last name",
-          showConfirmButton: false,
-          timer: 2000,
-          toast: true
-        });
+        this.notification("Please enter last name");
         return;
       }
       if (this.slide2 === false) {
@@ -600,27 +583,9 @@ export default {
       let emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(\.[cn]([o]{0,61}[mgo]))*$/gim;
       let test = emailRegex.test(this.email);
       if (this.email.length === 0) {
-        this.$swal.fire({
-          position: "top-end",
-          padding: "1.5rem",
-          background: "#fef2f1",
-          width: 220,
-          title: "Please enter email",
-          showConfirmButton: false,
-          timer: 2000,
-          toast: true
-        });
+        this.notification("Please enter email");
       } else if (test === false) {
-        this.$swal.fire({
-          position: "top-end",
-          padding: "1.5rem",
-          background: "#fef2f1",
-          width: 220,
-          title: "Incorrect email",
-          showConfirmButton: false,
-          timer: 2000,
-          toast: true
-        });
+        this.notification("Incorrect email");
       } else {
         this.userDetails.map(details => {
           details.email = this.email;
