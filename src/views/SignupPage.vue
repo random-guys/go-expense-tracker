@@ -231,9 +231,8 @@ export default {
     };
   },
   mounted() {
-    const tl = new TimelineMax();
     this.checkUserDetails();
-
+    const tl = new TimelineMax();
     tl.to(".button1", 0, { display: "none" })
       .to(".cardTwo", 0, { opacity: "0.3", pointerEvents: "none" })
       .to(".cardThree", 0, { opacity: "0.3", pointerEvents: "none" })
