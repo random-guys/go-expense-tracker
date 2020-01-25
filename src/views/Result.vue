@@ -223,9 +223,9 @@
           <b>{{ this.key }}</b
           >, you're not afraid to spend on the things that matter to you. But
           how do you enjoy your money with all the limitations and security
-          concerns flying around? Try GoMoney. Think of GoMoney as your sidekick,
-          deigned to tailor itself to your security and transaction needs.
-          You're always in control, so if your goals change, no qualms,
+          concerns flying around? Try GoMoney. Think of GoMoney as your
+          sidekick, deigned to tailor itself to your security and transaction
+          needs. You're always in control, so if your goals change, no qualms,
           GoMoney's got you.
         </p>
       </div>
@@ -242,19 +242,13 @@
           <option>Yearly</option>
         </select>
       </div>
-      <a onclick="location.href='https://tinyurl.com/u4jowlk';" class="btn" target="_blank"
+      <a
+        onclick="location.href='https://tinyurl.com/u4jowlk';"
+        class="btn"
+        target="_blank"
         >DOWNLOAD APP</a
       >
       <div class="share-icon">
-        <!-- <div class="icon1">
-          <a href="https://www.instagram.com" class="link" target="_blank">
-            <img
-              src="../assets/images/instagram.svg"
-              alt="Instagram Icon"
-              class="icon"
-            />
-          </a>
-        </div> -->
         <div class="icon3">
           <a href="" class="link" target="_blank">
             <img
@@ -278,7 +272,6 @@
             />
           </a>
         </div>
-        <!-- <div class="icon4"></div> -->
       </div>
       <div class="share">SHARE</div>
     </div>
@@ -304,6 +297,7 @@ export default {
     };
   },
   mounted() {
+    this.checkUserDetails();
     this.userDetails = JSON.parse(localStorage.getItem("user_details"));
     this.amountSum = [
       {
@@ -691,6 +685,17 @@ export default {
     }
   },
   methods: {
+    checkUserDetails() {
+      if (!localStorage.getItem("user_details")) {
+        this.$router.push("/");
+        return;
+      }
+      let user = JSON.parse(localStorage.getItem("user_details")).map(user => {
+        if (user.amount === "") {
+          this.$router.push("/tracker-page");
+        }
+      });
+    },
     calcAmount() {
       let amount = "";
       this.userDetails.map(detail => {
@@ -726,15 +731,6 @@ export default {
         "&text=" +
         encodeURIComponent(text);
     }
-    // shareToFacebook() {
-    //   FB.ui(
-    //     {
-    //       method: "share",
-    //       href: "https://developers.facebook.com/docs/"
-    //     },
-    //     function(response) {}
-    //   );
-    // }
   }
 };
 </script>
