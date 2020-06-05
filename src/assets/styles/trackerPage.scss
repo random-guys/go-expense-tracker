@@ -474,7 +474,11 @@
     .card-vacation,
     .card-payroll,
     .card-entertainment,
-    .card-investment {
+    .card-charity,
+    .card-refund,
+    .card-cardPurchases,
+    .card-investment,
+    .card-household {
       width: 16rem;
       // padding: 1rem 0;
       padding-bottom: 0.5rem;
@@ -485,6 +489,10 @@
       border-radius: 8px;
       margin: 2.2rem 0;
       background-color: #ffffff;
+
+      @media screen and (min-width: 1600px) {
+        margin-right: 4.4rem;
+      }
 
       @media screen and (max-width: 1440px) {
         width: 16rem;
@@ -607,7 +615,10 @@
     .card-shopping,
     .card-vacation,
     .card-payroll,
-    .card-entertainment {
+    .card-entertainment,
+    .card-refund,
+    .card-cardPurchases,
+    .card-charity {
       margin-right: 4.4rem;
 
       // @media screen and (max-width: 1800px) {
