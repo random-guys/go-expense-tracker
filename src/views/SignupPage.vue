@@ -38,24 +38,14 @@
         alt="Expense tracker Morph Icon For GoMoney Nigeria"
         class="morph-icon-right-desktop morphIconRightDesktop"
       />
-      <img
-        src="../assets/images/logo.svg"
-        alt="Expense Tracker Gomoney Logo"
-        class="logo"
-      />
+      <img src="../assets/images/logo.svg" alt="Expense Tracker Gomoney Logo" class="logo" />
 
-      <div
-        class="header2-div"
-        v-for="(detail, index) in userDetails"
-        :key="index"
-      >
+      <div class="header2-div" v-for="(detail, index) in userDetails" :key="index">
         <h2 class="header2-text margin-bottom display-none header2">
           <b>
             One more thing
             <br />
-            <span class="name-color capitalize"
-              >{{ detail.first_name }} {{ detail.last_name }}</span
-            >
+            <span class="name-color capitalize">{{ detail.first_name }} {{ detail.last_name }}</span>
           </b>
         </h2>
       </div>
@@ -63,7 +53,7 @@
       <h2 class="hero-text__primary header1">
         <b>
           Hi there!
-          <br />Let’s make this personal
+          <br />Let's get a bit personal
         </b>
       </h2>
 
@@ -76,7 +66,7 @@
             </div>
           </div>
           <div class="card1 cardOne">
-            <p class="header">So, what's your First Name?</p>
+            <p class="header">What's your first name?</p>
             <p class="required">(Required)</p>
             <form class="input" v-on:submit.prevent="firstNameInput()">
               <input
@@ -92,7 +82,7 @@
             </form>
           </div>
           <div class="card2 cardTwo">
-            <p class="header">And, what's your Last Name?</p>
+            <p class="header">And your last name?</p>
             <p class="required">(Required)</p>
             <form class="input" v-on:submit.prevent="lastNameInput()">
               <input
@@ -107,7 +97,7 @@
             </form>
           </div>
           <div class="card3 cardThree">
-            <p class="header">What's your Email Address?</p>
+            <p class="header">WWhat's your email address? (No spam. We promise)</p>
             <p class="required">(Required)</p>
             <form class="input" v-on:submit.prevent="emailInput()">
               <input
