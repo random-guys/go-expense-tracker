@@ -198,10 +198,10 @@
       </div>
       <a :href="downloadLink" class="btn" target="_blank">DOWNLOAD NOW</a>
       <div class="share-icon">
-        <div class="icon1" @click="showInstagramModal = true">
+        <!-- <div class="icon1" @click="showInstagramModal = true">
           <img src="../assets/images/instagram.svg" alt="Instagram Icon" class="icon" />
-        </div>
-        <instagram-modal v-if="showInstagramModal" @close="showInstagramModal = false"></instagram-modal>
+        </div>-->
+        <!-- <instagram-modal v-if="showInstagramModal" @close="showInstagramModal = false"></instagram-modal> -->
         <div class="icon3">
           <a href class="link" target="_blank">
             <img
@@ -234,7 +234,7 @@
 
 <script>
 import ConfettiGenerator from "confetti-js";
-import InstagramModal from "../components/InstagramModal.vue";
+// import InstagramModal from "../components/InstagramModal.vue";
 
 export default {
   name: "app",
@@ -253,7 +253,7 @@ export default {
     };
   },
   components: {
-    InstagramModal
+    // InstagramModal
   },
   computed: {
     downloadLink() {
