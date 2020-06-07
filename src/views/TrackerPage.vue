@@ -164,7 +164,7 @@
         <div class="card-groceries groceries">
           <span class="radio opacity-zero groceriesRadio" @click="resetGroceriesCard()">&#215;</span>
           <img
-            src="../assets/images/groceries.svg"
+            src="../assets/images/Groceries.svg"
             alt="Expense tracker Groceries Icon For GoMoney Nigeria"
             class="card-img"
           />
@@ -495,7 +495,7 @@
             <div class="card-groceries groceries">
               <span class="radio opacity-zero groceriesRadio" @click="resetGroceriesCard()">&#215;</span>
               <img
-                src="../assets/images/groceries.svg"
+                src="../assets/images/Groceries.svg"
                 alt="Expense tracker Groceries Icon For GoMoney Nigeria"
                 class="card-img"
               />
