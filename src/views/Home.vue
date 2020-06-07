@@ -106,8 +106,8 @@
       <img src="../assets/images/logo.svg" alt="Logo For GoMoney Nigeria" class="logo" />
       <div>
         <h1 class="hero-text__primary">
-          Discover your
-          <br />spending habits in 1 min.
+          Let your money speak
+          <br />for you!
         </h1>
         <img
           src="../assets/images/purple-dot.svg"
@@ -117,12 +117,12 @@
       </div>
       <div>
         <p class="hero-text__secondary">
-          Try our expense tracker to see where your money
-          <br />goes every month
+          Try our expense tracker and we'll tell you what your
+          <br />spending habits say about you.
         </p>
-        <p class="hero-text__secondary-mobile">
-          Try our expense tracker to see where your money goes every month
-        </p>
+        <p
+          class="hero-text__secondary-mobile"
+        >Try our expense tracker and we'll tell you what your spending habits say about you.</p>
         <img
           src="../assets/images/pink-dot.svg"
           alt="Expense tracker Pink Dot Image For GoMoney Nigeria"

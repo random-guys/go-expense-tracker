@@ -50,18 +50,14 @@
       />
       <div v-for="(detail, index) in userDetails" :key="index">
         <h2 class="hero-text__primary">
-          Hi <b class="capitalize">{{ detail.first_name }}</b
-          >, time to find out where all of that money goes to every month.
+          Hey
+          <b class="capitalize">{{ detail.first_name }}</b>, let's find out what your money is saying.
         </h2>
       </div>
       <!-- <div class="break"></div> -->
       <div class="card-container">
         <div class="card-transport transport">
-          <span
-            class="radio opacity-zero transportRadio"
-            @click="resetTransportCard()"
-            >&#215;</span
-          >
+          <span class="radio opacity-zero transportRadio" @click="resetTransportCard()">&#215;</span>
           <img
             src="../assets/images/transportation-icon.svg"
             alt="Expense tracker Transportation Icon For GoMoney Nigeria"
@@ -82,11 +78,7 @@
           <p class="error errorMsgTransport">!!!</p>
         </div>
         <div class="card-transfer transfer">
-          <span
-            class="radio opacity-zero transferRadio"
-            @click="resetTransferCard()"
-            >&#215;</span
-          >
+          <span class="radio opacity-zero transferRadio" @click="resetTransferCard()">&#215;</span>
           <img
             src="../assets/images/transfer.svg"
             alt="Expense tracker Transfer Icon For GoMoney Nigeria"
@@ -107,17 +99,13 @@
           <p class="error errorMsgTransfer">!!!</p>
         </div>
         <div class="card-eating eating">
-          <span
-            class="radio opacity-zero eatingRadio"
-            @click="resetEatingCard()"
-            >&#215;</span
-          >
+          <span class="radio opacity-zero eatingRadio" @click="resetEatingCard()">&#215;</span>
           <img
             src="../assets/images/eating.svg"
             alt="Expense tracker Eating Icon For GoMoney Nigeria"
             class="card-img"
           />
-          <p class="card-text eatingText">Eating Out</p>
+          <p class="card-text eatingText">Food</p>
           <input
             ref="refEating"
             type="text"
@@ -132,9 +120,7 @@
           <p class="error errorMsgEating">!!!</p>
         </div>
         <div class="card-bills bills">
-          <span class="radio opacity-zero billsRadio" @click="resetBillsCard()"
-            >&#215;</span
-          >
+          <span class="radio opacity-zero billsRadio" @click="resetBillsCard()">&#215;</span>
           <img
             src="../assets/images/bills.svg"
             alt="Expense tracker Bills Icon For GoMoney Nigeria"
@@ -155,11 +141,7 @@
           <p class="error errorMsgBills">!!!</p>
         </div>
         <div class="card-family family">
-          <span
-            class="radio opacity-zero familyRadio"
-            @click="resetFamilyCard()"
-            >&#215;</span
-          >
+          <span class="radio opacity-zero familyRadio" @click="resetFamilyCard()">&#215;</span>
           <img
             src="../assets/images/family.svg"
             alt="Expense tracker Family Icon For GoMoney Nigeria"
@@ -180,11 +162,7 @@
           <p class="error errorMsgFamily">!!!</p>
         </div>
         <div class="card-groceries groceries">
-          <span
-            class="radio opacity-zero groceriesRadio"
-            @click="resetGroceriesCard()"
-            >&#215;</span
-          >
+          <span class="radio opacity-zero groceriesRadio" @click="resetGroceriesCard()">&#215;</span>
           <img
             src="../assets/images/Groceries.svg"
             alt="Expense tracker Groceries Icon For GoMoney Nigeria"
@@ -205,11 +183,7 @@
           <p class="error errorMsgGroceries">!!!</p>
         </div>
         <div class="card-shopping shopping">
-          <span
-            class="radio opacity-zero shoppingRadio"
-            @click="resetShoppingCard()"
-            >&#215;</span
-          >
+          <span class="radio opacity-zero shoppingRadio" @click="resetShoppingCard()">&#215;</span>
           <img
             src="../assets/images/shopping.svg"
             alt="Expense tracker Shopping Icon For GoMoney Nigeria"
@@ -230,15 +204,13 @@
           <p class="error errorMsgShopping">!!!</p>
         </div>
         <div class="card-care care">
-          <span class="radio opacity-zero careRadio" @click="resetCareCard()"
-            >&#215;</span
-          >
+          <span class="radio opacity-zero careRadio" @click="resetCareCard()">&#215;</span>
           <img
             src="../assets/images/personal-care.svg"
             alt="Expense tracker Parsonal Care Icon For GoMoney Nigeria"
             class="card-img"
           />
-          <p class="card-text careText">Personal Care</p>
+          <p class="card-text careText">Self Care</p>
           <input
             ref="refCare"
             type="text"
@@ -253,17 +225,13 @@
           <p class="error errorMsgCare">!!!</p>
         </div>
         <div class="card-vacation vacation">
-          <span
-            class="radio opacity-zero vacationRadio"
-            @click="resetVacationCard()"
-            >&#215;</span
-          >
+          <span class="radio opacity-zero vacationRadio" @click="resetVacationCard()">&#215;</span>
           <img
-            src="../assets/images/vercation.svg"
+            src="../assets/images/vacation.svg"
             alt="Expense tracker Vercation Icon For GoMoney Nigeria"
             class="card-img"
           />
-          <p class="card-text vacationText">Vacation</p>
+          <p class="card-text vacationText">Holiday</p>
           <input
             ref="refVacation"
             type="text"
@@ -278,11 +246,7 @@
           <p class="error errorMsgVacation">!!!</p>
         </div>
         <div class="card-payroll payroll">
-          <span
-            class="radio opacity-zero payrollRadio"
-            @click="resetPayrollCard()"
-            >&#215;</span
-          >
+          <span class="radio opacity-zero payrollRadio" @click="resetPayrollCard()">&#215;</span>
           <img
             src="../assets/images/payroll.svg"
             alt="Expense tracker Payroll Icon For GoMoney Nigeria"
@@ -306,8 +270,7 @@
           <span
             class="radio opacity-zero entertainmentRadio"
             @click="resetEntertainmentCard()"
-            >&#215;</span
-          >
+          >&#215;</span>
           <img
             src="../assets/images/entertainment.svg"
             alt="Expense tracker Entertainment Icon For GoMoney Nigeria"
@@ -328,11 +291,7 @@
           <p class="error errorMsgEntertainment">!!!</p>
         </div>
         <div class="card-investment investment">
-          <span
-            class="radio opacity-zero investmentRadio"
-            @click="resetInvestmentCard()"
-            >&#215;</span
-          >
+          <span class="radio opacity-zero investmentRadio" @click="resetInvestmentCard()">&#215;</span>
           <img
             src="../assets/images/investment.svg"
             alt="Expense tracker Investment Icon For GoMoney Nigeria"
@@ -352,17 +311,80 @@
           />
           <p class="error errorMsgInvestment">!!!</p>
         </div>
+        <div class="card-charity charity">
+          <span class="radio opacity-zero charityRadio" @click="resetCharityCard()">&#215;</span>
+          <img
+            src="../assets/images/charity.svg"
+            alt="Expense tracker Charity Icon For GoMoney Nigeria"
+            class="card-img"
+          />
+          <p class="card-text charityText">Charity</p>
+          <input
+            ref="refCharity"
+            type="text"
+            placeholder="N.00"
+            onfocus="this.placeholder=''"
+            onblur="this.placeholder='N.00'"
+            class="input charityInput"
+            v-model="charity"
+            @keypress="isNumberKey()"
+            @change="inputCharityAmount()"
+          />
+          <p class="error errorMsgCharity">!!!</p>
+        </div>
+        <div class="card-cardPurchases cardPurchases">
+          <span
+            class="radio opacity-zero cardPurchasesRadio"
+            @click="resetCardPurchasesCard()"
+          >&#215;</span>
+          <img
+            src="../assets/images/card-purchase.svg"
+            alt="Expense tracker CardPurchases Icon For GoMoney Nigeria"
+            class="card-img"
+          />
+          <p class="card-text cardPurchasesText">Card Purchase</p>
+          <input
+            ref="refCardPurchases"
+            type="text"
+            placeholder="N.00"
+            onfocus="this.placeholder=''"
+            onblur="this.placeholder='N.00'"
+            class="input cardPurchasesInput"
+            v-model="cardPurchases"
+            @keypress="isNumberKey()"
+            @change="inputCardPurchasesAmount()"
+          />
+          <p class="error errorMsgCardPurchases">!!!</p>
+        </div>
+        <div class="card-household household">
+          <span class="radio opacity-zero householdRadio" @click="resetHouseholdCard()">&#215;</span>
+          <img
+            src="../assets/images/household.svg"
+            alt="Expense tracker Household Icon For GoMoney Nigeria"
+            class="card-img"
+          />
+          <p class="card-text householdText">Household</p>
+          <input
+            ref="refHousehold"
+            type="text"
+            placeholder="N.00"
+            onfocus="this.placeholder=''"
+            onblur="this.placeholder='N.00'"
+            class="input householdInput"
+            v-model="household"
+            @keypress="isNumberKey()"
+            @change="inputHouseholdAmount()"
+          />
+          <p class="error errorMsgHousehold">!!!</p>
+        </div>
       </div>
 
       <div class="has-slider">
         <div class="slider" id="slider">
+          <!-- slide one -mobile -->
           <div class="slider-panel">
             <div class="card-transport transport">
-              <span
-                class="radio opacity-zero transportRadio"
-                @click="resetTransportCard()"
-                >&#215;</span
-              >
+              <span class="radio opacity-zero transportRadio" @click="resetTransportCard()">&#215;</span>
               <img
                 src="../assets/images/transportation-icon.svg"
                 alt="Expense tracker Transportation Icon For GoMoney Nigeria"
@@ -383,11 +405,7 @@
               <p class="error errorMsgTransport">!!!</p>
             </div>
             <div class="card-transfer transfer">
-              <span
-                class="radio opacity-zero transferRadio"
-                @click="resetTransferCard()"
-                >&#215;</span
-              >
+              <span class="radio opacity-zero transferRadio" @click="resetTransferCard()">&#215;</span>
               <img
                 src="../assets/images/transfer.svg"
                 alt="Expense tracker Transfer Icon For GoMoney Nigeria"
@@ -408,17 +426,13 @@
               <p class="error errorMsgTransfer">!!!</p>
             </div>
             <div class="card-eating eating">
-              <span
-                class="radio opacity-zero eatingRadio"
-                @click="resetEatingCard()"
-                >&#215;</span
-              >
+              <span class="radio opacity-zero eatingRadio" @click="resetEatingCard()">&#215;</span>
               <img
                 src="../assets/images/eating.svg"
                 alt="Expense tracker Eating Icon For GoMoney Nigeria"
                 class="card-img"
               />
-              <p class="card-text eatingText">Eating Out</p>
+              <p class="card-text eatingText">Food</p>
               <input
                 ref="refEating"
                 type="text"
@@ -433,11 +447,7 @@
               <p class="error errorMsgEating">!!!</p>
             </div>
             <div class="card-bills bills">
-              <span
-                class="radio opacity-zero billsRadio"
-                @click="resetBillsCard()"
-                >&#215;</span
-              >
+              <span class="radio opacity-zero billsRadio" @click="resetBillsCard()">&#215;</span>
               <img
                 src="../assets/images/bills.svg"
                 alt="Expense tracker Bills Icon For GoMoney Nigeria"
@@ -458,13 +468,11 @@
               <p class="error errorMsgBills">!!!</p>
             </div>
           </div>
+
+          <!-- slide two - mobile  -->
           <div class="slider-panel">
             <div class="card-family family">
-              <span
-                class="radio opacity-zero familyRadio"
-                @click="resetFamilyCard()"
-                >&#215;</span
-              >
+              <span class="radio opacity-zero familyRadio" @click="resetFamilyCard()">&#215;</span>
               <img
                 src="../assets/images/family.svg"
                 alt="Expense tracker Family Icon For GoMoney Nigeria"
@@ -485,11 +493,7 @@
               <p class="error errorMsgFamily">!!!</p>
             </div>
             <div class="card-groceries groceries">
-              <span
-                class="radio opacity-zero groceriesRadio"
-                @click="resetGroceriesCard()"
-                >&#215;</span
-              >
+              <span class="radio opacity-zero groceriesRadio" @click="resetGroceriesCard()">&#215;</span>
               <img
                 src="../assets/images/Groceries.svg"
                 alt="Expense tracker Groceries Icon For GoMoney Nigeria"
@@ -510,11 +514,7 @@
               <p class="error errorMsgGroceries">!!!</p>
             </div>
             <div class="card-shopping shopping">
-              <span
-                class="radio opacity-zero shoppingRadio"
-                @click="resetShoppingCard()"
-                >&#215;</span
-              >
+              <span class="radio opacity-zero shoppingRadio" @click="resetShoppingCard()">&#215;</span>
               <img
                 src="../assets/images/shopping.svg"
                 alt="Expense tracker Shopping Icon For GoMoney Nigeria"
@@ -535,17 +535,13 @@
               <p class="error errorMsgShopping">!!!</p>
             </div>
             <div class="card-care care">
-              <span
-                class="radio opacity-zero careRadio"
-                @click="resetCareCard()"
-                >&#215;</span
-              >
+              <span class="radio opacity-zero careRadio" @click="resetCareCard()">&#215;</span>
               <img
                 src="../assets/images/personal-care.svg"
                 alt="Expense tracker Personal Care Icon For GoMoney Nigeria"
                 class="card-img"
               />
-              <p class="card-text careText">Personal Care</p>
+              <p class="card-text careText">Self Care</p>
               <input
                 ref="refCare"
                 type="text"
@@ -560,19 +556,17 @@
               <p class="error errorMsgCare">!!!</p>
             </div>
           </div>
+
+          <!-- slide three -mobile  -->
           <div class="slider-panel">
             <div class="card-vacation vacation">
-              <span
-                class="radio opacity-zero vacationRadio"
-                @click="resetVacationCard()"
-                >&#215;</span
-              >
+              <span class="radio opacity-zero vacationRadio" @click="resetVacationCard()">&#215;</span>
               <img
-                src="../assets/images/vercation.svg"
+                src="../assets/images/vacation.svg"
                 alt="Expense tracker Vercation Icon For GoMoney Nigeria"
                 class="card-img"
               />
-              <p class="card-text vacationText">Vacation</p>
+              <p class="card-text vacationText">Holiday</p>
               <input
                 ref="refVacation"
                 type="text"
@@ -587,11 +581,7 @@
               <p class="error errorMsgVacation">!!!</p>
             </div>
             <div class="card-payroll payroll">
-              <span
-                class="radio opacity-zero payrollRadio"
-                @click="resetPayrollCard()"
-                >&#215;</span
-              >
+              <span class="radio opacity-zero payrollRadio" @click="resetPayrollCard()">&#215;</span>
               <img
                 src="../assets/images/payroll.svg"
                 alt="Expense tracker Payroll Icon For GoMoney Nigeria"
@@ -615,8 +605,7 @@
               <span
                 class="radio opacity-zero entertainmentRadio"
                 @click="resetEntertainmentCard()"
-                >&#215;</span
-              >
+              >&#215;</span>
               <img
                 src="../assets/images/entertainment.svg"
                 alt="Expense tracker Entertainment Icon For GoMoney Nigeria"
@@ -637,11 +626,7 @@
               <p class="error errorMsgEntertainment">!!!</p>
             </div>
             <div class="card-investment investment">
-              <span
-                class="radio opacity-zero investmentRadio"
-                @click="resetInvestmentCard()"
-                >&#215;</span
-              >
+              <span class="radio opacity-zero investmentRadio" @click="resetInvestmentCard()">&#215;</span>
               <img
                 src="../assets/images/investment.svg"
                 alt="Expense tracker Investment Icon For GoMoney Nigeria"
@@ -662,17 +647,89 @@
               <p class="error errorMsgInvestment">!!!</p>
             </div>
           </div>
+
+          <!-- slide four -mobile -->
+          <div class="slider-panel">
+            <!-- Charity card  -->
+            <div class="card-charity charity">
+              <span class="radio opacity-zero charityRadio" @click="resetCharityCard()">&#215;</span>
+              <img
+                src="../assets/images/charity.svg"
+                alt="Expense tracker Payroll Icon For GoMoney Nigeria"
+                class="card-img"
+              />
+              <p class="card-text charityText">Charity</p>
+              <input
+                ref="refCharity"
+                type="text"
+                placeholder="N.00"
+                onfocus="this.placeholder=''"
+                onblur="this.placeholder='N.00'"
+                class="input charityInput"
+                v-model="charity"
+                @keypress="isNumberKey()"
+                @change="inputCharityAmount()"
+              />
+              <p class="error errorMsgCharity">!!!</p>
+            </div>
+
+            <div class="card-cardPurchases cardPurchases">
+              <span
+                class="radio opacity-zero cardPurchasesRadio"
+                @click="resetCardPurchasesCard()"
+              >&#215;</span>
+              <img
+                src="../assets/images/card-purchase.svg"
+                alt="Expense tracker CardPurchases Icon For GoMoney Nigeria"
+                class="card-img"
+              />
+              <p class="card-text cardPurchasesText">Card Purchase</p>
+              <input
+                ref="refCardPurchases"
+                type="text"
+                placeholder="N.00"
+                onfocus="this.placeholder=''"
+                onblur="this.placeholder='N.00'"
+                class="input cardPurchasesInput"
+                v-model="cardPurchases"
+                @keypress="isNumberKey()"
+                @change="inputCardPurchasesAmount()"
+              />
+              <p class="error errorMsgCardPurchases">!!!</p>
+            </div>
+
+            <div class="card-household household">
+              <span class="radio opacity-zero householdRadio" @click="resetHouseholdCard()">&#215;</span>
+              <img
+                src="../assets/images/household.svg"
+                alt="Expense tracker Household Icon For GoMoney Nigeria"
+                class="card-img"
+              />
+              <p class="card-text householdText">Household</p>
+              <input
+                ref="refHousehold"
+                type="text"
+                placeholder="N.00"
+                onfocus="this.placeholder=''"
+                onblur="this.placeholder='N.00'"
+                class="input householdInput"
+                v-model="household"
+                @keypress="isNumberKey()"
+                @change="inputHouseholdAmount()"
+              />
+              <p class="error errorMsgHousehold">!!!</p>
+            </div>
+          </div>
         </div>
         <div class="slider-pagination">
+          <div></div>
           <div></div>
           <div></div>
           <div></div>
         </div>
       </div>
 
-      <div ref="refButton" class="button btn" @click="checkHabit()">
-        Check Your Habit!
-      </div>
+      <div ref="refButton" class="button btn" @click="checkHabit()">Check Your Habit!</div>
     </div>
   </div>
 </template>
@@ -711,7 +768,13 @@ export default {
       entertainment: "",
       inputEntertainment: "",
       investment: "",
-      inputInvestment: ""
+      inputInvestment: "",
+      charity: "",
+      inputCharity: "",
+      cardPurchases: "",
+      inputCardPurchases: "",
+      household: "",
+      inputHousehold: ""
     };
   },
   mounted() {
@@ -956,7 +1019,11 @@ export default {
         vacation: this.inputVacation,
         payroll: this.inputPayroll,
         entertainment: this.inputEntertainment,
-        investment: this.inputInvestment
+        investment: this.inputInvestment,
+        charity: this.inputCharity,
+        refund: this.inputRefund,
+        cardPurchases: this.inputCardPurchases,
+        household: this.inputHousehold
       };
       this.amountTracker.push(trackerObject);
       localStorage.setItem(
@@ -1100,6 +1167,43 @@ export default {
         if (this.inputInvestment == this.max) {
           this.userDetails.map(details => {
             (details.key = "investment"), (details.highest_expense = this.max);
+          });
+          localStorage.setItem(
+            "user_details",
+            JSON.stringify(this.userDetails)
+          );
+        }
+        if (this.inputCharity == this.max) {
+          this.userDetails.map(details => {
+            (details.key = "charity"), (details.highest_expense = this.max);
+          });
+          localStorage.setItem(
+            "user_details",
+            JSON.stringify(this.userDetails)
+          );
+        }
+        if (this.inputRefund == this.max) {
+          this.userDetails.map(details => {
+            (details.key = "refund"), (details.highest_expense = this.max);
+          });
+          localStorage.setItem(
+            "user_details",
+            JSON.stringify(this.userDetails)
+          );
+        }
+        if (this.inputCardPurchases == this.max) {
+          this.userDetails.map(details => {
+            (details.key = "card purchases"),
+              (details.highest_expense = this.max);
+          });
+          localStorage.setItem(
+            "user_details",
+            JSON.stringify(this.userDetails)
+          );
+        }
+        if (this.inputHousehold == this.max) {
+          this.userDetails.map(details => {
+            (details.key = "household"), (details.highest_expense = this.max);
           });
           localStorage.setItem(
             "user_details",
@@ -1395,6 +1499,73 @@ export default {
         .to(".errorMsgInvestment", 0.5, { display: "none" }, 0.1);
       this.inputAmount();
     },
+    resetCharityCard() {
+      this.charity = "";
+      this.inputCharity = 0;
+      const tl = new TimelineMax();
+
+      tl.to(
+        ".charity",
+        0.5,
+        { backgroundColor: "#ffffff", color: "#3a3737" },
+        0.1
+      )
+        .to(".charityText", 0.5, { color: "#3a3737" }, 0.1)
+        .to(
+          ".charityInput",
+          0.5,
+          { backgroundColor: "#f1f1f1", color: "#252525" },
+          0.1
+        )
+        .to(".charityRadio", 0.5, { opacity: "0", pointerEvents: "none" }, 0.1)
+        .to(".errorMsgCharity", 0.5, { display: "none" }, 0.1);
+      this.inputAmount();
+    },
+    resetCardPurchasesCard() {
+      this.cardPurchases = "";
+      this.inputCardPurchases = 0;
+      const tl = new TimelineMax();
+
+      tl.to(
+        ".cardPurchases",
+        0.5,
+        { backgroundColor: "#ffffff", color: "#3a3737" },
+        0.1
+      )
+        .to(".cardPurchasesText", 0.5, { color: "#3a3737" }, 0.1)
+        .to(
+          ".cardPurchasesInput",
+          0.5,
+          { backgroundColor: "#f1f1f1", color: "#252525" },
+          0.1
+        )
+        .to(".refundRadio", 0.5, { opacity: "0", pointerEvents: "none" }, 0.1)
+        .to(".errorMsgCardPurchases", 0.5, { display: "none" }, 0.1);
+      this.inputAmount();
+    },
+    resetHouseholdCard() {
+      this.household = "";
+      this.inputHousehold = 0;
+      const tl = new TimelineMax();
+
+      tl.to(
+        ".household",
+        0.5,
+        { backgroundColor: "#ffffff", color: "#3a3737" },
+        0.1
+      )
+        .to(".householdText", 0.5, { color: "#3a3737" }, 0.1)
+        .to(
+          ".householdInput",
+          0.5,
+          { backgroundColor: "#f1f1f1", color: "#252525" },
+          0.1
+        )
+        .to(".refundRadio", 0.5, { opacity: "0", pointerEvents: "none" }, 0.1)
+        .to(".errorMsgHousehold", 0.5, { display: "none" }, 0.1);
+      this.inputAmount();
+    },
+
     inputTransportationAmount() {
       let regEx = /^[0-9]*$/gm;
       this.initialTrackerDetails();
@@ -1903,14 +2074,14 @@ export default {
         tl.to(
           ".bills",
           0.5,
-          { backgroundColor: "#D0001B", color: "#ffffff" },
+          { backgroundColor: "#F4626C", color: "#ffffff" },
           0.1
         )
           .to(".billsText", 0.5, { color: "#ffffff" }, 0.1)
           .to(
             ".billsInput",
             0.5,
-            { backgroundColor: "#D0001B", color: "#ffffff" },
+            { backgroundColor: "#F4626C", color: "#ffffff" },
             0.1
           )
           .to(".errorMsgBills", 0.5, { display: "none" }, 0.1)
@@ -2050,14 +2221,14 @@ export default {
         tl.to(
           ".family",
           0.5,
-          { backgroundColor: "#5D29DE", color: "#ffffff" },
+          { backgroundColor: "#bc7df0", color: "#ffffff" },
           0.1
         )
           .to(".familyText", 0.5, { color: "#ffffff" }, 0.1)
           .to(
             ".familyInput",
             0.5,
-            { backgroundColor: "#5D29DE", color: "#ffffff" },
+            { backgroundColor: "#bc7df0", color: "#ffffff" },
             0.1
           )
           .to(".errorMsgFamily", 0.5, { display: "none" }, 0.1)
@@ -2197,14 +2368,14 @@ export default {
         tl.to(
           ".groceries",
           0.5,
-          { backgroundColor: "#14777C", color: "#ffffff" },
+          { backgroundColor: "#ffc033", color: "#ffffff" },
           0.1
         )
           .to(".groceriesText", 0.5, { color: "#ffffff" }, 0.1)
           .to(
             ".groceriesInput",
             0.5,
-            { backgroundColor: "#14777C", color: "#ffffff" },
+            { backgroundColor: "#ffc033", color: "#ffffff" },
             0.1
           )
           .to(".errorMsgGroceries", 0.5, { display: "none" }, 0.1)
@@ -2508,14 +2679,14 @@ export default {
         tl.to(
           ".care",
           0.5,
-          { backgroundColor: "#1b5ece", color: "#ffffff" },
+          { backgroundColor: "#5dcdfc", color: "#ffffff" },
           0.1
         )
           .to(".careText", 0.5, { color: "#ffffff" }, 0.1)
           .to(
             ".careInput",
             0.5,
-            { backgroundColor: "#1b5ece", color: "#ffffff" },
+            { backgroundColor: "#5dcdfc", color: "#ffffff" },
             0.1
           )
           .to(".errorMsgCare", 0.5, { display: "none" }, 0.1)
@@ -2654,14 +2825,14 @@ export default {
         tl.to(
           ".vacation",
           0.5,
-          { backgroundColor: "#F1663D", color: "#ffffff" },
+          { backgroundColor: "#14777C", color: "#ffffff" },
           0.1
         )
           .to(".vacationText", 0.5, { color: "#ffffff" }, 0.1)
           .to(
             ".vacationInput",
             0.5,
-            { backgroundColor: "#F1663D", color: "#ffffff" },
+            { backgroundColor: "#14777C", color: "#ffffff" },
             0.1
           )
           .to(".errorMsgVacation", 0.5, { display: "none" }, 0.1)
@@ -2808,14 +2979,14 @@ export default {
         tl.to(
           ".payroll",
           0.5,
-          { backgroundColor: "#1b5ece", color: "#ffffff" },
+          { backgroundColor: "#26bac2", color: "#ffffff" },
           0.1
         )
           .to(".payrollText", 0.5, { color: "#ffffff" }, 0.1)
           .to(
             ".payrollInput",
             0.5,
-            { backgroundColor: "#1b5ece", color: "#ffffff" },
+            { backgroundColor: "#26bac2", color: "#ffffff" },
             0.1
           )
           .to(".errorMsgPayroll", 0.5, { display: "none" }, 0.1)
@@ -3120,14 +3291,14 @@ export default {
         tl.to(
           ".investment",
           0.5,
-          { backgroundColor: "#14777C", color: "#ffffff" },
+          { backgroundColor: "#90e831", color: "#ffffff" },
           0.1
         )
           .to(".investmentText", 0.5, { color: "#ffffff" }, 0.1)
           .to(
             ".investmentInput",
             0.5,
-            { backgroundColor: "#14777C", color: "#ffffff" },
+            { backgroundColor: "#90e831", color: "#ffffff" },
             0.1
           )
           .to(".errorMsgInvestment", 0.5, { display: "none" }, 0.1)
@@ -3229,6 +3400,471 @@ export default {
         this.inputAmount();
       }
     },
+    inputCharityAmount() {
+      let regEx = /^[0-9]*$/gm;
+      this.initialTrackerDetails();
+      if (this.charity.charAt(0) === "N") {
+        this.charity = this.charity.substr(1);
+      }
+      if (this.charity.length > 0 && regEx.test(this.charity) === true) {
+        this.inputCharity = event.target.value;
+        if (this.inputCharity.charAt(0) === "N") {
+          this.inputCharity = this.inputCharity.substr(1);
+        }
+        this.charity = `N${this.inputCharity}`;
+        this.amountTracker.map(amount => {
+          amount.charity = this.inputCharity;
+        });
+        if (this.maxExpense.length === 0) {
+          let eachExpense = {
+            key: "charity",
+            amount: this.inputCharity
+          };
+          this.maxExpense.push(eachExpense);
+        } else {
+          this.maxExpense.map(obj => {
+            if (obj.key === "charity") {
+              obj.amount = this.inputCharity;
+            } else {
+              let eachExpense = {
+                key: "charity",
+                amount: this.inputCharity
+              };
+              this.maxExpense.push(eachExpense);
+            }
+          });
+        }
+        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
+        localStorage.setItem(
+          "amount_tracker",
+          JSON.stringify(this.amountTracker)
+        );
+        // this.$refs.refButton.focus()
+        const tl = new TimelineMax();
+
+        tl.to(
+          ".charity",
+          0.5,
+          { backgroundColor: "#FF0000", color: "#ffffff" },
+          0.1
+        )
+          .to(".charityText", 0.5, { color: "#ffffff" }, 0.1)
+          .to(
+            ".charityInput",
+            0.5,
+            { backgroundColor: "#FF0000", color: "#ffffff" },
+            0.1
+          )
+          .to(".errorMsgCharity", 0.5, { display: "none" }, 0.1)
+          .to(
+            ".charityRadio",
+            0.5,
+            { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
+            0.1
+          );
+        // this.btnEnabled()
+        this.inputAmount();
+      } else if (
+        this.charity.length > 0 &&
+        regEx.test(this.charity) === false
+      ) {
+        this.inputCharity = event.target.value;
+        const tl = new TimelineMax();
+
+        tl.to(
+          ".charity",
+          0.5,
+          { backgroundColor: "#ffffff", color: "#3a3737" },
+          0.1
+        )
+          .to(".charityText", 0.5, { color: "#3a3737" }, 0.1)
+          .to(
+            ".charityInput",
+            0.5,
+            { backgroundColor: "#f1f1f1", color: "#252525" },
+            0.1
+          )
+          .to(
+            ".charityRadio",
+            0.5,
+            { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
+            0.1
+          );
+        TweenMax.fromTo(
+          ".errorMsgCharity",
+          0.5,
+          { color: "red" },
+          {
+            color: "white",
+            repeat: -1,
+            yoyo: false,
+            repeatDelay: 0.4,
+            display: "flex"
+          }
+        );
+        // this.btnDisable()
+        this.inputAmount();
+      } else {
+        this.inputCharity = 0;
+        this.amountTracker.map(amount => {
+          amount.charity = 0;
+        });
+        if (this.maxExpense.length === 0) {
+          let eachExpense = {
+            key: "charity",
+            amount: 0
+          };
+          this.maxExpense.push(eachExpense);
+        } else {
+          this.maxExpense.map(obj => {
+            if (obj.key === "charity") {
+              obj.amount = 0;
+            }
+          });
+        }
+        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
+        // this.$refs.refButton.focus()
+        localStorage.setItem(
+          "amount_tracker",
+          JSON.stringify(this.amountTracker)
+        );
+        const tl = new TimelineMax();
+
+        tl.to(
+          ".charity",
+          0.5,
+          { backgroundColor: "#ffffff", color: "#3a3737" },
+          0.1
+        )
+          .to(".charityText", 0.5, { color: "#3a3737" }, 0.1)
+          .to(
+            ".charityInput",
+            0.5,
+            { backgroundColor: "#f1f1f1", color: "#252525" },
+            0.1
+          )
+          .to(
+            ".charityRadio",
+            0.5,
+            { opacity: "0", pointerEvents: "none" },
+            0.1
+          )
+          .to(".errorMsgCharity", 0.5, { display: "none" }, 0.1);
+        // this.btnDisable()
+        this.inputAmount();
+      }
+    },
+    inputCardPurchasesAmount() {
+      let regEx = /^[0-9]*$/gm;
+      this.initialTrackerDetails();
+      if (this.cardPurchases.charAt(0) === "N") {
+        this.cardPurchases = this.cardPurchases.substr(1);
+      }
+      if (
+        this.cardPurchases.length > 0 &&
+        regEx.test(this.cardPurchases) === true
+      ) {
+        this.inputCardPurchases = event.target.value;
+        if (this.inputCardPurchases.charAt(0) === "N") {
+          this.inputCardPurchases = this.inputCardPurchases.substr(1);
+        }
+        this.cardPurchases = `N${this.inputCardPurchases}`;
+        this.amountTracker.map(amount => {
+          amount.cardPurchases = this.inputCardPurchases;
+        });
+        if (this.maxExpense.length === 0) {
+          let eachExpense = {
+            key: "cardPurchases",
+            amount: this.inputCardPurchases
+          };
+          this.maxExpense.push(eachExpense);
+        } else {
+          this.maxExpense.map(obj => {
+            if (obj.key === "cardPurchases") {
+              obj.amount = this.inputCardPurchases;
+            } else {
+              let eachExpense = {
+                key: "cardPurchases",
+                amount: this.inputCardPurchases
+              };
+              this.maxExpense.push(eachExpense);
+            }
+          });
+        }
+        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
+        localStorage.setItem(
+          "amount_tracker",
+          JSON.stringify(this.amountTracker)
+        );
+        // this.$refs.refButton.focus()
+        const tl = new TimelineMax();
+
+        tl.to(
+          ".cardPurchases",
+          0.5,
+          { backgroundColor: "#1B5ECE", color: "#ffffff" },
+          0.1
+        )
+          .to(".cardPurchasesText", 0.5, { color: "#ffffff" }, 0.1)
+          .to(
+            ".cardPurchasesInput",
+            0.5,
+            { backgroundColor: "#1B5ECE", color: "#ffffff" },
+            0.1
+          )
+          .to(".errorMsgCardPurchases", 0.5, { display: "none" }, 0.1)
+          .to(
+            ".cardPurchasesRadio",
+            0.5,
+            { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
+            0.1
+          );
+        // this.btnEnabled()
+        this.inputAmount();
+      } else if (
+        this.cardPurchases.length > 0 &&
+        regEx.test(this.cardPurchases) === false
+      ) {
+        this.inputCardPurchases = event.target.value;
+        const tl = new TimelineMax();
+
+        tl.to(
+          ".cardPurchases",
+          0.5,
+          { backgroundColor: "#ffffff", color: "#3a3737" },
+          0.1
+        )
+          .to(".cardPurchasesText", 0.5, { color: "#3a3737" }, 0.1)
+          .to(
+            ".cardPurchasesInput",
+            0.5,
+            { backgroundColor: "#f1f1f1", color: "#252525" },
+            0.1
+          )
+          .to(
+            ".cardPurchasesRadio",
+            0.5,
+            { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
+            0.1
+          );
+        TweenMax.fromTo(
+          ".errorMsgCardPurchases",
+          0.5,
+          { color: "red" },
+          {
+            color: "white",
+            repeat: -1,
+            yoyo: false,
+            repeatDelay: 0.4,
+            display: "flex"
+          }
+        );
+        // this.btnDisable()
+        this.inputAmount();
+      } else {
+        this.inputCardPurchases = 0;
+        this.amountTracker.map(amount => {
+          amount.cardPurchases = 0;
+        });
+        if (this.maxExpense.length === 0) {
+          let eachExpense = {
+            key: "cardPurchases",
+            amount: 0
+          };
+          this.maxExpense.push(eachExpense);
+        } else {
+          this.maxExpense.map(obj => {
+            if (obj.key === "cardPurchases") {
+              obj.amount = 0;
+            }
+          });
+        }
+        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
+        // this.$refs.refButton.focus()
+        localStorage.setItem(
+          "amount_tracker",
+          JSON.stringify(this.amountTracker)
+        );
+        const tl = new TimelineMax();
+
+        tl.to(
+          ".cardPurchases",
+          0.5,
+          { backgroundColor: "#ffffff", color: "#3a3737" },
+          0.1
+        )
+          .to(".cardPurchasesText", 0.5, { color: "#3a3737" }, 0.1)
+          .to(
+            ".cardPurchasesInput",
+            0.5,
+            { backgroundColor: "#f1f1f1", color: "#252525" },
+            0.1
+          )
+          .to(
+            ".cardPurchasesRadio",
+            0.5,
+            { opacity: "0", pointerEvents: "none" },
+            0.1
+          )
+          .to(".errorMsgCardPurchases", 0.5, { display: "none" }, 0.1);
+        // this.btnDisable()
+        this.inputAmount();
+      }
+    },
+    inputHouseholdAmount() {
+      let regEx = /^[0-9]*$/gm;
+      this.initialTrackerDetails();
+      if (this.household.charAt(0) === "N") {
+        this.household = this.household.substr(1);
+      }
+      if (this.household.length > 0 && regEx.test(this.household) === true) {
+        this.inputHousehold = event.target.value;
+        if (this.inputHousehold.charAt(0) === "N") {
+          this.inputHousehold = this.inputHousehold.substr(1);
+        }
+        this.household = `N${this.inputHousehold}`;
+        this.amountTracker.map(amount => {
+          amount.household = this.inputHousehold;
+        });
+        if (this.maxExpense.length === 0) {
+          let eachExpense = {
+            key: "household",
+            amount: this.inputHousehold
+          };
+          this.maxExpense.push(eachExpense);
+        } else {
+          this.maxExpense.map(obj => {
+            if (obj.key === "household") {
+              obj.amount = this.inputHousehold;
+            } else {
+              let eachExpense = {
+                key: "household",
+                amount: this.inputHousehold
+              };
+              this.maxExpense.push(eachExpense);
+            }
+          });
+        }
+        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
+        localStorage.setItem(
+          "amount_tracker",
+          JSON.stringify(this.amountTracker)
+        );
+        // this.$refs.refButton.focus()
+        const tl = new TimelineMax();
+
+        tl.to(
+          ".household",
+          0.5,
+          { backgroundColor: "#1B5ECE", color: "#ffffff" },
+          0.1
+        )
+          .to(".householdText", 0.5, { color: "#ffffff" }, 0.1)
+          .to(
+            ".householdInput",
+            0.5,
+            { backgroundColor: "#1B5ECE", color: "#ffffff" },
+            0.1
+          )
+          .to(".errorMsgHousehold", 0.5, { display: "none" }, 0.1)
+          .to(
+            ".householdRadio",
+            0.5,
+            { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
+            0.1
+          );
+        // this.btnEnabled()
+        this.inputAmount();
+      } else if (
+        this.household.length > 0 &&
+        regEx.test(this.household) === false
+      ) {
+        this.inputHousehold = event.target.value;
+        const tl = new TimelineMax();
+
+        tl.to(
+          ".household",
+          0.5,
+          { backgroundColor: "#ffffff", color: "#3a3737" },
+          0.1
+        )
+          .to(".householdText", 0.5, { color: "#3a3737" }, 0.1)
+          .to(
+            ".householdInput",
+            0.5,
+            { backgroundColor: "#f1f1f1", color: "#252525" },
+            0.1
+          )
+          .to(
+            ".householdRadio",
+            0.5,
+            { opacity: "1", pointerEvents: "visible", cursor: "pointer" },
+            0.1
+          );
+        TweenMax.fromTo(
+          ".errorMsgHousehold",
+          0.5,
+          { color: "red" },
+          {
+            color: "white",
+            repeat: -1,
+            yoyo: false,
+            repeatDelay: 0.4,
+            display: "flex"
+          }
+        );
+        // this.btnDisable()
+        this.inputAmount();
+      } else {
+        this.inputHousehold = 0;
+        this.amountTracker.map(amount => {
+          amount.household = 0;
+        });
+        if (this.maxExpense.length === 0) {
+          let eachExpense = {
+            key: "household",
+            amount: 0
+          };
+          this.maxExpense.push(eachExpense);
+        } else {
+          this.maxExpense.map(obj => {
+            if (obj.key === "household") {
+              obj.amount = 0;
+            }
+          });
+        }
+        localStorage.setItem("max_expense", JSON.stringify(this.maxExpense));
+        // this.$refs.refButton.focus()
+        localStorage.setItem(
+          "amount_tracker",
+          JSON.stringify(this.amountTracker)
+        );
+        const tl = new TimelineMax();
+
+        tl.to(
+          ".household",
+          0.5,
+          { backgroundColor: "#ffffff", color: "#3a3737" },
+          0.1
+        )
+          .to(".householdText", 0.5, { color: "#3a3737" }, 0.1)
+          .to(
+            ".householdInput",
+            0.5,
+            { backgroundColor: "#f1f1f1", color: "#252525" },
+            0.1
+          )
+          .to(
+            ".householdRadio",
+            0.5,
+            { opacity: "0", pointerEvents: "none" },
+            0.1
+          )
+          .to(".errorMsgHousehold", 0.5, { display: "none" }, 0.1);
+        // this.btnDisable()
+        this.inputAmount();
+      }
+    },
     inputAmount() {
       this.amount =
         Number(this.inputTransport) +
@@ -3242,7 +3878,10 @@ export default {
         Number(this.inputVacation) +
         Number(this.inputPayroll) +
         Number(this.inputEntertainment) +
-        Number(this.inputInvestment);
+        Number(this.inputInvestment) +
+        Number(this.inputCardPurchases) +
+        Number(this.inputCharity) +
+        Number(this.inputHousehold);
     }
   }
 };
@@ -3254,7 +3893,7 @@ export default {
 
 .slider {
   display: flex;
-  width: 300%;
+  width: 400%;
 }
 .slider.is-animating {
   transition: -webkit-transform 400ms cubic-bezier(0.5, 0, 0.5, 1);
@@ -3309,7 +3948,11 @@ export default {
   .card-care,
   .card-vacation,
   .card-payroll,
+  .card-charity,
+  .card-refund,
+  .card-cardPurchases,
   .card-entertainment,
+  .card-household,
   .card-investment {
     width: 18rem;
     // padding: 0rem 0;
@@ -3322,6 +3965,7 @@ export default {
     margin: 2rem 0;
     margin-top: 0;
     background-color: #ffffff;
+    // flex: 1 0 25%;
 
     @media screen and (max-width: 600px) {
       width: 15rem;
@@ -3403,7 +4047,9 @@ export default {
   .card-family,
   .card-shopping,
   .card-vacation,
-  .card-entertainment {
+  .card-entertainment,
+  .card-charity,
+  .card-cardPurchases {
     margin-right: 3rem;
   }
 }

@@ -34,57 +34,26 @@
         </defs>
         <g fill="none" fill-rule="evenodd">
           <g transform="rotate(-15 91 14.83)">
-            <circle
-              cx="150.4"
-              cy="65.6"
-              r="16"
-              fill="#FFC94F"
-              fill-rule="nonzero"
-            />
+            <circle cx="150.4" cy="65.6" r="16" fill="#FFC94F" fill-rule="nonzero" />
             <path
               fill="#000"
               fill-rule="nonzero"
               d="M157.269 59.669l-16 16a1.6 1.6 0 1 0 2.262 2.262l16-16a1.6 1.6 0 1 0-2.262-2.262z"
             />
-            <circle
-              cx="16"
-              cy="65.6"
-              r="16"
-              fill="#FFC94F"
-              fill-rule="nonzero"
-            />
+            <circle cx="16" cy="65.6" r="16" fill="#FFC94F" fill-rule="nonzero" />
             <path
               fill="#000"
               fill-rule="nonzero"
               d="M10.731 59.669l16 16a1.6 1.6 0 1 1-2.262 2.262l-16-16a1.6 1.6 0 1 1 2.262-2.262z"
             />
-            <circle
-              cx="83.2"
-              cy="67.2"
-              r="67.2"
-              fill="#FFC94F"
-              fill-rule="nonzero"
-            />
+            <circle cx="83.2" cy="67.2" r="67.2" fill="#FFC94F" fill-rule="nonzero" />
             <path
               fill="#000"
               fill-rule="nonzero"
               d="M140.962 32.838C129.238 13.173 107.757 0 83.2 0 58.03 0 36.092 13.838 24.58 34.32c10.756-.33 32.096-.51 53.905-.68 1.408-.01 3.306-8.029 4.715-8.04 1.97-.015 3.452 7.976 5.411 7.96 22.203-.174 43.258-.364 52.351-.722z"
             />
-            <circle
-              cx="54.4"
-              cy="62.4"
-              r="6.4"
-              fill="#000"
-              fill-rule="nonzero"
-            />
-            <circle
-              id="rightEye"
-              cx="112"
-              cy="62.4"
-              r="6.4"
-              fill="#000"
-              fill-rule="nonzero"
-            />
+            <circle cx="54.4" cy="62.4" r="6.4" fill="#000" fill-rule="nonzero" />
+            <circle id="rightEye" cx="112" cy="62.4" r="6.4" fill="#000" fill-rule="nonzero" />
             <g transform="translate(54.4 86.4)">
               <mask id="b" fill="#fff">
                 <use xlink:href="#a" />
@@ -118,9 +87,7 @@
         <p class="display-none the-essentialist">The Essentialist</p>
         <p class="display-none the-sensible-sage">The Sensible Sage</p>
         <p class="display-none the-baby-baller">The Baby Baller</p>
-        <p class="display-none the-spontanious-spender">
-          The Spontaneous Spender
-        </p>
+        <p class="display-none the-spontanious-spender">The Spontaneous Spender</p>
         <p class="display-none the-big-spender">The Big Spender</p>
         <p class="display-none the-generous-sage">The Generous Sage</p>
         <p class="display-none the-money-maestro">The Money Maestro</p>
@@ -129,76 +96,69 @@
       <div class="the-money-monk-comment">
         <p class="display-none the-money-monk-p">
           You'd watch your money like a hawk if you could! It's no surprise to
-          you that <b>₦{{ this.highestExpense.toLocaleString() }}</b> of your
-          money goes towards <b>{{ this.key }}</b
-          >. In your bank, every kobo has it's place and every Naira has it's
-          time. Do it easier with GoMoney. With push notifications, concise
-          categorised spending overviews, a bill splitting tool and many
-          channels to receive (and send) money, you have everything you need for
-          watch your money closely.
+          you that
+          <b>₦{{ this.highestExpense.toLocaleString() }}</b> of your
+          money goes towards
+          <b>{{ this.key }}</b>. In your bank, every kobo has it's place and every Naira has it's time.
+          Let's make it easier. gomoney provides you with many ways to receive (and send) money,
+          and tools to track expenses and split bills, all to help you keep a third eye on your money.👁️
         </p>
       </div>
 
       <div class="the-essentialist-comment">
         <p class="display-none the-essentialist-comment-p">
-          You probably spend a lot of time on budgets and monitoring your
-          spending habits. <b>₦{{ this.highestExpense.toLocaleString() }}</b> of
-          your expenses goes towards <b>{{ this.key }}</b
-          >; you're careful, not boring. GoMoney is designed to help you
-          organise your money and declutter your finances, freeing you up to do
-          more of the things you enjoy. So sit back, take a sip out of your
-          (reasonably priced) drink and let GoMoney handle the hassle.
+          Bet you spend a lot of time budgeting and monitoring your spending habits.
+          <b>₦{{ this.highestExpense.toLocaleString() }}</b> of
+          your expenses goes towards
+          <b>{{ this.key }}</b>; you're careful.
+          You're smart. gomoney is designed to help you organise and declutter your finances,
+          freeing you up to focus on other things.
+          Just sit back with a (reasonably priced) drink. Let gomoney handle the hassle 💆🏽‍♂️
         </p>
       </div>
 
       <div class="the-sensible-sage-comment">
         <p class="display-none the-sensible-sage-comment-p">
-          You have a budget, but you probably often go beyond it for
-          <b>{{ this.key }}</b> and other expenses because you cannot come and
-          die. It's not that you're bad at planning, you just haven't taken your
-          needs and personality into account when creating your budget. GoMoney
-          can help. Monitor your expenses without spending time mapping out a
-          budget. With GoMoney, you get to see exactly how you are spending in
-          real-time, and effortlessly adjust to suit your goals.
+          You have a budget, but sometimes, you go beyond it for
+          <b>{{ this.key }}</b>
+          and other expenses because you can't come and die.
+          Maybe you're not planner or your budgets don't realistically reflect your personality. gomoney can help 🤗
+          gomoney provides tools to see exactly how you are spending in real-time,
+          and effortlessly adjust to suit your goals, so you can free the budgeting battle and enjoy your life 💸
         </p>
       </div>
 
       <div class="the-baby-baller-comment">
         <p class="display-none the-baby-baller-comment-p">
-          You like to plot your enjoyment; You most allocate funds to
-          <b>{{ this.key }}</b> and other things that matter to you. Budgeting
-          is hard and you've lived it. GoMoney can help. With GoMoney, you'll
-          always be up-to-date with how much you're spending. Schedule future
-          payments, Split bills and request and send money; GoMoney allows you
-          to plan before, during and after you spend without breaking a sweat!
+          You like to plot your enjoyment and most of your funds go to
+          <b>{{ this.key }}</b> and other things that matter to you. Budgeting is hard, but gomoney can help!
+          With gomoney, you'll always know exactly how much is leaving your account.
+          Schedule and split bills, request payments and send money,
+          so you can plan before, after and while you spend without stress!
         </p>
       </div>
 
       <div class="the-spontanious-spender-comment">
         <p class="display-none the-spontanious-spender-comment-p">
-          Money goes through your account like water goes through a sponge—
-          quickly, but languid enough that there's some left for later.
-          <b class="capitalize">{{ this.key }}</b> claims
+          Money passes your account like water passes a sponge— quickly,
+          but languid so there's some left for later.
+          <b
+            class="capitalize"
+          >{{ this.key }}</b> claims
           <b>₦{{ this.highestExpense.toLocaleString() }}</b> of your money now,
           but with you, that might change soon. Baller, meet GoMoney;
-          flexibility is our MO. Think of GoMoney as your financial assistant,
-          designed to tailor itself to your specific needs. Whether you're a
-          saver, a big spender or somewhere in-between, we've got the tools to
-          for you.
+          gomoney is your financial assistant, designed to tailor itself to your specific needs.
+          Whether you're a saver, spender or somewhere in-between, there's a gomoney tool for you.
         </p>
       </div>
 
       <div class="the-big-spender-comment">
         <p class="display-none the-big-spender-comment-p">
-          You most likely have savings, but you're also not afraid to spend your
-          money on the things you enjoy— like
+          You most likely have savings, but you're also not afraid to spend your money on the things you enjoy— like
           <b>₦{{ this.highestExpense.toLocaleString() }}</b> on
-          <b>{{ this.key }}</b
-          >. You're goals. Let's make that easier. With GoMoney's payments
-          features (plural), you can send and receive money from anyone,
-          anytime, with as little as a unique payment link and their phone
-          number. And with our solid security, you have rest knowing that you're
-          protected, even when you're not looking.
+          <b>{{ this.key }}</b>. Goals 🙌🏽. With gomoney's payments features (plural),
+          you can send and receive money from anyone, anytime, with as little as a payment link or a phone number.
+          We've also built our security to keep you protected and informed, even when you're not looking 🔐
         </p>
       </div>
 
@@ -206,27 +166,21 @@
         <p class="display-none the-generous-sage-comment-p">
           You're into using your money for your enjoyment. For you, the thrill
           is sometimes in the spending, or in the benefits of
-          <b>{{ this.key }}</b
-          >. Whatever it is, GoMoney can fire up the fun. GoMoney has
-          democratised payments, and in this regime, you choose what payment
-          method works for you. Add bill splitting, scheduling payments, push
-          notifications and a detailed expense tracker to the mix, you have all
-          the tools you need to splurge till you drop.
+          <b>{{ this.key }}</b>. Whatever it is, gomoney can fire up the fun.
+          gomoney has democratised payments and in this regime,
+          you choose what payment method works for you. Add bill splitting,
+          scheduling payments and a detailed expense tracker and you have all the tools you need to splurge till you drop 💸
         </p>
       </div>
 
       <div class="the-money-maestro-comment">
         <p class="display-none the-money-maestro-comment-p">
-          You're "baller" personified. Be it maintaining a specific lifestyle,
-          sending surprise gifts to friends or spending
+          You're "baller" personified. Be it maintaining a specific lifestyle, buying surprise gifts or spending
           <b>₦{{ this.highestExpense.toLocaleString() }}</b> on
-          <b>{{ this.key }}</b
-          >, you're not afraid to spend on the things that matter to you. But
-          how do you enjoy your money with all the limitations and security
-          concerns flying around? Try GoMoney. Think of GoMoney as your sidekick,
-          deigned to tailor itself to your security and transaction needs.
-          You're always in control, so if your goals change, no qualms,
-          GoMoney's got you.
+          <b>{{ this.key }}</b>, you like to spend on things that matter to you.
+          But, how do you enjoy your money with all the limitations and security concerns flying around? Try gomoney.
+          Think of gomoney is your sidekick, deigned to tailor itself to your security and transaction needs.
+          You're always in control, so if your goals change, no qualms, gomoney's got you. 🍨
         </p>
       </div>
 
@@ -242,21 +196,14 @@
           <option>Yearly</option>
         </select>
       </div>
-      <a onclick="location.href='https://tinyurl.com/u4jowlk';" class="btn" target="_blank"
-        >DOWNLOAD APP</a
-      >
+      <a :href="downloadLink" class="btn" target="_blank">DOWNLOAD NOW</a>
       <div class="share-icon">
-        <!-- <div class="icon1">
-          <a href="https://www.instagram.com" class="link" target="_blank">
-            <img
-              src="../assets/images/instagram.svg"
-              alt="Instagram Icon"
-              class="icon"
-            />
-          </a>
-        </div> -->
+        <!-- <div class="icon1" @click="showInstagramModal = true">
+          <img src="../assets/images/instagram.svg" alt="Instagram Icon" class="icon" />
+        </div>-->
+        <!-- <instagram-modal v-if="showInstagramModal" @close="showInstagramModal = false"></instagram-modal> -->
         <div class="icon3">
-          <a href="" class="link" target="_blank">
+          <a href class="link" target="_blank">
             <img
               @click="shareToTwitter()"
               src="../assets/images/twitter.svg"
@@ -287,6 +234,7 @@
 
 <script>
 import ConfettiGenerator from "confetti-js";
+// import InstagramModal from "../components/InstagramModal.vue";
 
 export default {
   name: "app",
@@ -300,8 +248,27 @@ export default {
       yearly: "",
       key: "",
       highestExpense: "",
-      twitterComment: ""
+      twitterComment: "",
+      showInstagramModal: false
     };
+  },
+  components: {
+    // InstagramModal
+  },
+  computed: {
+    downloadLink() {
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      if (/android/i.test(userAgent)) {
+        return "https://tinyurl.com/u4jowlk";
+      }
+
+      if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return "https://tinyurl.com/rsll3fb";
+      }
+
+      return "https://tinyurl.com/u4jowlk";
+    }
   },
   mounted() {
     this.userDetails = JSON.parse(localStorage.getItem("user_details"));
