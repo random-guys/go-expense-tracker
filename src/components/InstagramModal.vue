@@ -14,7 +14,7 @@
               <ol class="steps">
                 <li class="step-item">Download your customized banner</li>
                 <li class="step-item">Upload to Instagram</li>
-                <li class="step-item">Tag @gomoney_ng and your friends</li>
+                <li class="step-item">Tag @gomoneyng and your friends</li>
               </ol>
             </div>
 
