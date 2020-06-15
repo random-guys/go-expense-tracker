@@ -38,14 +38,24 @@
         alt="Expense tracker Morph Icon For GoMoney Nigeria"
         class="morph-icon-right-desktop morphIconRightDesktop"
       />
-      <img src="../assets/images/logo.svg" alt="Expense Tracker Gomoney Logo" class="logo" />
+      <img
+        src="../assets/images/logo.svg"
+        alt="Expense Tracker Gomoney Logo"
+        class="logo"
+      />
 
-      <div class="header2-div" v-for="(detail, index) in userDetails" :key="index">
+      <div
+        class="header2-div"
+        v-for="(detail, index) in userDetails"
+        :key="index"
+      >
         <h2 class="header2-text margin-bottom display-none header2">
           <b>
             One more thing
             <br />
-            <span class="name-color capitalize">{{ detail.first_name }} {{ detail.last_name }}</span>
+            <span class="name-color capitalize"
+              >{{ detail.first_name }} {{ detail.last_name }}</span
+            >
           </b>
         </h2>
       </div>
@@ -97,7 +107,9 @@
             </form>
           </div>
           <div class="card3 cardThree">
-            <p class="header">WWhat's your email address? (No spam. We promise)</p>
+            <p class="header">
+              WWhat's your email address? (No spam. We promise)
+            </p>
             <p class="required">(Required)</p>
             <form class="input" v-on:submit.prevent="emailInput()">
               <input
@@ -204,6 +216,7 @@
 
 <script>
 import { TimelineMax } from "gsap";
+import axios from "axios";
 
 export default {
   name: "app",
@@ -217,7 +230,7 @@ export default {
       slide2: false,
       slide3: false,
       toggleFoward: false,
-      toggleBackward: false
+      toggleBackward: false,
     };
   },
   mounted() {
@@ -250,7 +263,7 @@ export default {
         repeatDelay: 0.4,
         ease: Linear.easeNone,
         scale: "1.1",
-        rotation: "-720"
+        rotation: "-720",
       },
       -3
     );
@@ -264,7 +277,7 @@ export default {
         repeatDelay: 0.4,
         ease: Linear.easeNone,
         scale: "1.1",
-        rotation: "70"
+        rotation: "70",
       },
       -3
     );
@@ -279,7 +292,7 @@ export default {
         repeatDelay: 0.4,
         ease: Linear.easeNone,
         scale: "1.1",
-        rotation: "-60"
+        rotation: "-60",
       },
       -3
     );
@@ -293,7 +306,7 @@ export default {
         repeatDelay: 0.4,
         ease: Linear.easeNone,
         scale: "1.2",
-        rotation: "30"
+        rotation: "30",
       },
       -3
     );
@@ -307,7 +320,7 @@ export default {
         repeatDelay: 0.4,
         ease: Linear.easeNone,
         x: 10,
-        y: -30
+        y: -30,
       },
       -3
     );
@@ -321,7 +334,7 @@ export default {
         repeatDelay: 0.4,
         ease: Linear.easeNone,
         x: -10,
-        y: -10
+        y: -10,
       },
       -3
     );
@@ -336,15 +349,24 @@ export default {
         ease: Linear.easeNone,
         x: -3,
         y: -10,
-        rotation: "5"
+        rotation: "5",
       },
       -3
     );
     TweenMax.to(".pieChart", 50, {
       rotation: "360",
       ease: Linear.easeNone,
-      repeat: -1
+      repeat: -1,
     });
+  },
+  beforeDestroy() {
+    const baseUrl = process.env.VUE_APP_SEND_USER;
+    const user = {
+      first_name: this.first_name,
+      last_name: this.last_name,
+      email: this.email,
+    };
+    axios.post(`${baseUrl}/user`, user);
   },
   methods: {
     initialUserDetails() {
@@ -356,7 +378,7 @@ export default {
           email: this.email,
           amount: "",
           key: "",
-          highest_expense: ""
+          highest_expense: "",
         };
         this.userDetails.push(userObject);
         localStorage.setItem("user_details", JSON.stringify(this.userDetails));
@@ -374,7 +396,7 @@ export default {
     firstNameInput() {
       this.userDetails = JSON.parse(localStorage.getItem("user_details"));
       if (this.first_name.length > 0) {
-        this.userDetails.map(details => {
+        this.userDetails.map((details) => {
           details.first_name = this.first_name;
         });
         localStorage.setItem("user_details", JSON.stringify(this.userDetails));
@@ -388,7 +410,7 @@ export default {
           title: "Please enter first name",
           showConfirmButton: false,
           timer: 2000,
-          toast: true
+          toast: true,
         });
         return;
       }
@@ -403,7 +425,7 @@ export default {
             display: "flex",
             opacity: "1",
             ease: Power3.easeInOut,
-            pointerEvents: "visible"
+            pointerEvents: "visible",
           },
           0.1
         )
@@ -437,7 +459,7 @@ export default {
             display: "flex",
             opacity: "1",
             ease: Power3.easeInOut,
-            pointerEvents: "visible"
+            pointerEvents: "visible",
           },
           0.1
         )
@@ -453,7 +475,7 @@ export default {
             {
               left: "-100vw",
               ease: Power3.easeInOut,
-              pointerEvents: "visible"
+              pointerEvents: "visible",
             },
             0.1
           )
@@ -484,7 +506,7 @@ export default {
     lastNameInput() {
       this.userDetails = JSON.parse(localStorage.getItem("user_details"));
       if (this.last_name.length > 0) {
-        this.userDetails.map(details => {
+        this.userDetails.map((details) => {
           details.last_name = this.last_name;
         });
         localStorage.setItem("user_details", JSON.stringify(this.userDetails));
@@ -498,7 +520,7 @@ export default {
           title: "Please enter last name",
           showConfirmButton: false,
           timer: 2000,
-          toast: true
+          toast: true,
         });
         return;
       }
@@ -530,7 +552,7 @@ export default {
             {
               left: "-48vw",
               ease: Power3.easeInOut,
-              pointerEvents: "visible"
+              pointerEvents: "visible",
             },
             0.1
           )
@@ -564,7 +586,7 @@ export default {
             {
               left: "-200vw",
               ease: Power3.easeInOut,
-              pointerEvents: "visible"
+              pointerEvents: "visible",
             },
             0.1
           )
@@ -598,7 +620,7 @@ export default {
           title: "Please enter email",
           showConfirmButton: false,
           timer: 2000,
-          toast: true
+          toast: true,
         });
       } else if (test === false) {
         this.$swal.fire({
@@ -609,10 +631,10 @@ export default {
           title: "Incorrect email",
           showConfirmButton: false,
           timer: 2000,
-          toast: true
+          toast: true,
         });
       } else {
-        this.userDetails.map(details => {
+        this.userDetails.map((details) => {
           details.email = this.email;
         });
         localStorage.setItem("user_details", JSON.stringify(this.userDetails));
@@ -631,7 +653,7 @@ export default {
             opacity: "0",
             ease: Power3.easeInOut,
             display: "none",
-            pointerEvents: "none"
+            pointerEvents: "none",
           },
           0.1
         )
@@ -666,7 +688,7 @@ export default {
             opacity: "0",
             ease: Power3.easeInOut,
             display: "none",
-            pointerEvents: "none"
+            pointerEvents: "none",
           },
           0.1
         )
@@ -716,7 +738,7 @@ export default {
             opacity: "1",
             ease: Power3.easeInOut,
             display: "flex",
-            pointerEvents: "visible"
+            pointerEvents: "visible",
           },
           0.1
         )
@@ -756,7 +778,7 @@ export default {
             opacity: "1",
             ease: Power3.easeInOut,
             display: "flex",
-            pointerEvents: "visible"
+            pointerEvents: "visible",
           },
           0.1
         )
@@ -772,7 +794,7 @@ export default {
             {
               left: "-100vw",
               ease: Power3.easeInOut,
-              pointerEvents: "visible"
+              pointerEvents: "visible",
             },
             0.1
           )
@@ -806,8 +828,8 @@ export default {
       } else {
         this.lastNameInput();
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
