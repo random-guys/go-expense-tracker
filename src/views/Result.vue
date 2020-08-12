@@ -83,14 +83,14 @@
       </svg>
 
       <div class="baller">
-        <p class="display-none the-money-monk">The Money Monk</p>
-        <p class="display-none the-essentialist">The Essentialist</p>
-        <p class="display-none the-sensible-sage">The Sensible Sage</p>
-        <p class="display-none the-baby-baller">The Baby Baller</p>
-        <p class="display-none the-spontanious-spender">The Spontaneous Spender</p>
-        <p class="display-none the-big-spender">The Big Spender</p>
-        <p class="display-none the-generous-sage">The Generous Sage</p>
-        <p class="display-none the-money-maestro">The Money Maestro</p>
+        <p class="display-none the-money-monk">Surviving on vibes 🙅🏽</p>
+        <p class="display-none the-essentialist">Na broke I broke, I no kill pesin 🙄</p>
+        <p class="display-none the-sensible-sage">Small money, big God 🙏🏽</p>
+        <p class="display-none the-baby-baller">I just wanna relax and be taken care of 😭</p>
+        <p class="display-none the-spontanious-spender">Broke but balling ⛹🏽‍♀️⛹🏽‍♂️</p>
+        <p class="display-none the-big-spender">My money grows like grass ☘️</p>
+        <p class="display-none the-generous-sage">Aspiring glucose guardian 🧓🏽</p>
+        <p class="display-none the-money-maestro">Sugar parent level 1 💸</p>
       </div>
 
       <div class="the-money-monk-comment">
