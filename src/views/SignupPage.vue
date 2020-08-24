@@ -185,6 +185,9 @@
       </div>
       <!-- end of mobile slider -->
 
+      <div class="skip-button" @click="proceed" v-if="slide1 && slide2">
+        <a class="btnSkip btn">Skip</a>
+      </div>
       <div class="hero-text__secondary">
         <p class="hero-text__secondary">Press the Enter key when done.</p>
       </div>
