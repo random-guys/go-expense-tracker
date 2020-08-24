@@ -97,7 +97,7 @@
             </form>
           </div>
           <div class="card3 cardThree">
-            <p class="header">WWhat's your email address?</p>
+            <p class="header">What's your email address?</p>
             <p class="required">(Optional)</p>
             <form class="input" v-on:submit.prevent="emailInput()">
               <input
