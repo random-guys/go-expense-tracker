@@ -393,6 +393,18 @@
     }
   }
 
+  .skip-button {
+    .btnSkip {
+      cursor: pointer;
+      width: auto;
+      margin-top: 2rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+
   .btn1 {
     border-bottom-right-radius: 12px;
     border-top-right-radius: 12px;

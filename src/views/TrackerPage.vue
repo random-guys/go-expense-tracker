@@ -77,7 +77,7 @@
           />
           <p class="error errorMsgTransport">!!!</p>
         </div>
-        <div class="card-transfer transfer">
+        <!-- <div class="card-transfer transfer">
           <span class="radio opacity-zero transferRadio" @click="resetTransferCard()">&#215;</span>
           <img
             src="../assets/images/transfer.svg"
@@ -97,7 +97,7 @@
             @change="inputTransferAmount()"
           />
           <p class="error errorMsgTransfer">!!!</p>
-        </div>
+        </div>-->
         <div class="card-eating eating">
           <span class="radio opacity-zero eatingRadio" @click="resetEatingCard()">&#215;</span>
           <img
@@ -182,7 +182,7 @@
           />
           <p class="error errorMsgGroceries">!!!</p>
         </div>
-        <div class="card-shopping shopping">
+        <!-- <div class="card-shopping shopping">
           <span class="radio opacity-zero shoppingRadio" @click="resetShoppingCard()">&#215;</span>
           <img
             src="../assets/images/shopping.svg"
@@ -202,7 +202,7 @@
             @change="inputShoppingAmount()"
           />
           <p class="error errorMsgShopping">!!!</p>
-        </div>
+        </div>-->
         <div class="card-care care">
           <span class="radio opacity-zero careRadio" @click="resetCareCard()">&#215;</span>
           <img
@@ -224,7 +224,7 @@
           />
           <p class="error errorMsgCare">!!!</p>
         </div>
-        <div class="card-vacation vacation">
+        <!-- <div class="card-vacation vacation">
           <span class="radio opacity-zero vacationRadio" @click="resetVacationCard()">&#215;</span>
           <img
             src="../assets/images/vacation.svg"
@@ -244,7 +244,7 @@
             @change="inputVacationAmount()"
           />
           <p class="error errorMsgVacation">!!!</p>
-        </div>
+        </div>-->
         <div class="card-payroll payroll">
           <span class="radio opacity-zero payrollRadio" @click="resetPayrollCard()">&#215;</span>
           <img
@@ -290,7 +290,7 @@
           />
           <p class="error errorMsgEntertainment">!!!</p>
         </div>
-        <div class="card-investment investment">
+        <!-- <div class="card-investment investment">
           <span class="radio opacity-zero investmentRadio" @click="resetInvestmentCard()">&#215;</span>
           <img
             src="../assets/images/investment.svg"
@@ -310,8 +310,8 @@
             @change="inputInvestmentAmount()"
           />
           <p class="error errorMsgInvestment">!!!</p>
-        </div>
-        <div class="card-charity charity">
+        </div>-->
+        <!-- <div class="card-charity charity">
           <span class="radio opacity-zero charityRadio" @click="resetCharityCard()">&#215;</span>
           <img
             src="../assets/images/charity.svg"
@@ -331,8 +331,8 @@
             @change="inputCharityAmount()"
           />
           <p class="error errorMsgCharity">!!!</p>
-        </div>
-        <div class="card-cardPurchases cardPurchases">
+        </div>-->
+        <!-- <div class="card-cardPurchases cardPurchases">
           <span
             class="radio opacity-zero cardPurchasesRadio"
             @click="resetCardPurchasesCard()"
@@ -355,8 +355,8 @@
             @change="inputCardPurchasesAmount()"
           />
           <p class="error errorMsgCardPurchases">!!!</p>
-        </div>
-        <div class="card-household household">
+        </div>-->
+        <!-- <div class="card-household household">
           <span class="radio opacity-zero householdRadio" @click="resetHouseholdCard()">&#215;</span>
           <img
             src="../assets/images/household.svg"
@@ -376,7 +376,7 @@
             @change="inputHouseholdAmount()"
           />
           <p class="error errorMsgHousehold">!!!</p>
-        </div>
+        </div>-->
       </div>
 
       <div class="has-slider">
@@ -404,27 +404,7 @@
               />
               <p class="error errorMsgTransport">!!!</p>
             </div>
-            <div class="card-transfer transfer">
-              <span class="radio opacity-zero transferRadio" @click="resetTransferCard()">&#215;</span>
-              <img
-                src="../assets/images/transfer.svg"
-                alt="Expense tracker Transfer Icon For GoMoney Nigeria"
-                class="card-img"
-              />
-              <p class="card-text transferText">Transfer</p>
-              <input
-                ref="refTransfer"
-                type="text"
-                placeholder="N.00"
-                onfocus="this.placeholder=''"
-                onblur="this.placeholder='N.00'"
-                class="input transferInput"
-                v-model="transfer"
-                @keypress="isNumberKey()"
-                @change="inputTransferAmount()"
-              />
-              <p class="error errorMsgTransfer">!!!</p>
-            </div>
+
             <div class="card-eating eating">
               <span class="radio opacity-zero eatingRadio" @click="resetEatingCard()">&#215;</span>
               <img
@@ -446,6 +426,7 @@
               />
               <p class="error errorMsgEating">!!!</p>
             </div>
+
             <div class="card-bills bills">
               <span class="radio opacity-zero billsRadio" @click="resetBillsCard()">&#215;</span>
               <img
@@ -467,10 +448,7 @@
               />
               <p class="error errorMsgBills">!!!</p>
             </div>
-          </div>
 
-          <!-- slide two - mobile  -->
-          <div class="slider-panel">
             <div class="card-family family">
               <span class="radio opacity-zero familyRadio" @click="resetFamilyCard()">&#215;</span>
               <img
@@ -492,6 +470,10 @@
               />
               <p class="error errorMsgFamily">!!!</p>
             </div>
+          </div>
+
+          <!-- slide two - mobile  -->
+          <div class="slider-panel">
             <div class="card-groceries groceries">
               <span class="radio opacity-zero groceriesRadio" @click="resetGroceriesCard()">&#215;</span>
               <img
@@ -513,27 +495,7 @@
               />
               <p class="error errorMsgGroceries">!!!</p>
             </div>
-            <div class="card-shopping shopping">
-              <span class="radio opacity-zero shoppingRadio" @click="resetShoppingCard()">&#215;</span>
-              <img
-                src="../assets/images/shopping.svg"
-                alt="Expense tracker Shopping Icon For GoMoney Nigeria"
-                class="card-img"
-              />
-              <p class="card-text shoppingText">Shopping</p>
-              <input
-                ref="refShopping"
-                type="text"
-                placeholder="N.00"
-                onfocus="this.placeholder=''"
-                onblur="this.placeholder='N.00'"
-                class="input shoppingInput"
-                v-model="shopping"
-                @keypress="isNumberKey()"
-                @change="inputShoppingAmount()"
-              />
-              <p class="error errorMsgShopping">!!!</p>
-            </div>
+
             <div class="card-care care">
               <span class="radio opacity-zero careRadio" @click="resetCareCard()">&#215;</span>
               <img
@@ -555,31 +517,7 @@
               />
               <p class="error errorMsgCare">!!!</p>
             </div>
-          </div>
 
-          <!-- slide three -mobile  -->
-          <div class="slider-panel">
-            <div class="card-vacation vacation">
-              <span class="radio opacity-zero vacationRadio" @click="resetVacationCard()">&#215;</span>
-              <img
-                src="../assets/images/vacation.svg"
-                alt="Expense tracker Vercation Icon For GoMoney Nigeria"
-                class="card-img"
-              />
-              <p class="card-text vacationText">Holiday</p>
-              <input
-                ref="refVacation"
-                type="text"
-                placeholder="N.00"
-                onfocus="this.placeholder=''"
-                onblur="this.placeholder='N.00'"
-                class="input vacationInput"
-                v-model="vacation"
-                @keypress="isNumberKey()"
-                @change="inputVacationAmount()"
-              />
-              <p class="error errorMsgVacation">!!!</p>
-            </div>
             <div class="card-payroll payroll">
               <span class="radio opacity-zero payrollRadio" @click="resetPayrollCard()">&#215;</span>
               <img
@@ -601,6 +539,7 @@
               />
               <p class="error errorMsgPayroll">!!!</p>
             </div>
+
             <div class="card-entertainment entertainment">
               <span
                 class="radio opacity-zero entertainmentRadio"
@@ -625,33 +564,80 @@
               />
               <p class="error errorMsgEntertainment">!!!</p>
             </div>
-            <div class="card-investment investment">
-              <span class="radio opacity-zero investmentRadio" @click="resetInvestmentCard()">&#215;</span>
+          </div>
+
+          <!-- slide three -mobile  -->
+          <!-- <div class="slider-panel"> -->
+          <!-- <div class="card-vacation vacation">
+              <span class="radio opacity-zero vacationRadio" @click="resetVacationCard()">&#215;</span>
               <img
-                src="../assets/images/investment.svg"
-                alt="Expense tracker Investment Icon For GoMoney Nigeria"
+                src="../assets/images/vacation.svg"
+                alt="Expense tracker Vercation Icon For GoMoney Nigeria"
                 class="card-img"
               />
-              <p class="card-text investmentText">Investment</p>
+              <p class="card-text vacationText">Holiday</p>
               <input
-                ref="refInvestment"
+                ref="refVacation"
                 type="text"
                 placeholder="N.00"
                 onfocus="this.placeholder=''"
                 onblur="this.placeholder='N.00'"
-                class="input investmentInput"
-                v-model="investment"
+                class="input vacationInput"
+                v-model="vacation"
                 @keypress="isNumberKey()"
-                @change="inputInvestmentAmount()"
+                @change="inputVacationAmount()"
               />
-              <p class="error errorMsgInvestment">!!!</p>
-            </div>
-          </div>
+              <p class="error errorMsgVacation">!!!</p>
+          </div>-->
+
+          <!-- <div class="card-shopping shopping">
+              <span class="radio opacity-zero shoppingRadio" @click="resetShoppingCard()">&#215;</span>
+              <img
+                src="../assets/images/shopping.svg"
+                alt="Expense tracker Shopping Icon For GoMoney Nigeria"
+                class="card-img"
+              />
+              <p class="card-text shoppingText">Shopping</p>
+              <input
+                ref="refShopping"
+                type="text"
+                placeholder="N.00"
+                onfocus="this.placeholder=''"
+                onblur="this.placeholder='N.00'"
+                class="input shoppingInput"
+                v-model="shopping"
+                @keypress="isNumberKey()"
+                @change="inputShoppingAmount()"
+              />
+              <p class="error errorMsgShopping">!!!</p>
+          </div>-->
+
+          <!-- <div class="card-transfer transfer">
+              <span class="radio opacity-zero transferRadio" @click="resetTransferCard()">&#215;</span>
+              <img
+                src="../assets/images/transfer.svg"
+                alt="Expense tracker Transfer Icon For GoMoney Nigeria"
+                class="card-img"
+              />
+              <p class="card-text transferText">Transfer</p>
+              <input
+                ref="refTransfer"
+                type="text"
+                placeholder="N.00"
+                onfocus="this.placeholder=''"
+                onblur="this.placeholder='N.00'"
+                class="input transferInput"
+                v-model="transfer"
+                @keypress="isNumberKey()"
+                @change="inputTransferAmount()"
+              />
+              <p class="error errorMsgTransfer">!!!</p>
+          </div>-->
+          <!-- </div> -->
 
           <!-- slide four -mobile -->
-          <div class="slider-panel">
-            <!-- Charity card  -->
-            <div class="card-charity charity">
+          <!-- <div class="slider-panel"> -->
+          <!-- <div class="card-charity charity">
               <span class="radio opacity-zero charityRadio" @click="resetCharityCard()">&#215;</span>
               <img
                 src="../assets/images/charity.svg"
@@ -671,9 +657,9 @@
                 @change="inputCharityAmount()"
               />
               <p class="error errorMsgCharity">!!!</p>
-            </div>
+          </div>-->
 
-            <div class="card-cardPurchases cardPurchases">
+          <!-- <div class="card-cardPurchases cardPurchases">
               <span
                 class="radio opacity-zero cardPurchasesRadio"
                 @click="resetCardPurchasesCard()"
@@ -696,9 +682,9 @@
                 @change="inputCardPurchasesAmount()"
               />
               <p class="error errorMsgCardPurchases">!!!</p>
-            </div>
+          </div>-->
 
-            <div class="card-household household">
+          <!-- <div class="card-household household">
               <span class="radio opacity-zero householdRadio" @click="resetHouseholdCard()">&#215;</span>
               <img
                 src="../assets/images/household.svg"
@@ -718,14 +704,36 @@
                 @change="inputHouseholdAmount()"
               />
               <p class="error errorMsgHousehold">!!!</p>
-            </div>
-          </div>
+          </div>-->
+
+          <!-- <div class="card-investment investment">
+              <span class="radio opacity-zero investmentRadio" @click="resetInvestmentCard()">&#215;</span>
+              <img
+                src="../assets/images/investment.svg"
+                alt="Expense tracker Investment Icon For GoMoney Nigeria"
+                class="card-img"
+              />
+              <p class="card-text investmentText">Investment</p>
+              <input
+                ref="refInvestment"
+                type="text"
+                placeholder="N.00"
+                onfocus="this.placeholder=''"
+                onblur="this.placeholder='N.00'"
+                class="input investmentInput"
+                v-model="investment"
+                @keypress="isNumberKey()"
+                @change="inputInvestmentAmount()"
+              />
+              <p class="error errorMsgInvestment">!!!</p>
+          </div>-->
+          <!-- </div> -->
         </div>
         <div class="slider-pagination">
           <div></div>
           <div></div>
-          <div></div>
-          <div></div>
+          <!-- <div></div> -->
+          <!-- <div></div> -->
         </div>
       </div>
 
@@ -848,9 +856,9 @@ export default {
     slider.goTo = function(number) {
       // 5a. Stop it from doing weird things like moving to slides that don’t exist
       if (number < 0) slider.activeSlide = 0;
-      else if (number > slider.slideCount - 1)
+      else if (number > slider.slideCount - 1) {
         slider.activeSlide = slider.slideCount - 1;
-      else slider.activeSlide = number;
+      } else slider.activeSlide = number;
 
       // 5b. Apply transformation & smoothly animate via .is-animating CSS
       slider.sliderEl.classList.add("is-animating");
@@ -3893,7 +3901,7 @@ export default {
 
 .slider {
   display: flex;
-  width: 400%;
+  width: 200%;
 }
 .slider.is-animating {
   transition: -webkit-transform 400ms cubic-bezier(0.5, 0, 0.5, 1);
@@ -4043,12 +4051,12 @@ export default {
   }
 
   .card-transport,
-  .card-eating,
-  .card-family,
   .card-shopping,
   .card-vacation,
-  .card-entertainment,
   .card-charity,
+  .card-bills,
+  .card-groceries,
+  .card-payroll,
   .card-cardPurchases {
     margin-right: 3rem;
   }
