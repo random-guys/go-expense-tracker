@@ -385,7 +385,7 @@ export default {
       }
     );
     if (this.monthly <= 20000) {
-      this.twitterComment = "a Money Monk";
+      this.twitterComment = "Surviving on vibes 🙅🏽";
       TweenMax.fromTo(
         ".the-money-monk",
         1,
@@ -419,7 +419,7 @@ export default {
       );
     }
     if (this.monthly > 20000 && this.monthly <= 30000) {
-      this.twitterComment = "an Essentialist";
+      this.twitterComment = "Na broke I broke, I no kill pesin 🙄";
       TweenMax.fromTo(
         ".the-essentialist",
         1,
@@ -453,7 +453,7 @@ export default {
       );
     }
     if (this.monthly > 30000 && this.monthly <= 50000) {
-      this.twitterComment = "a Sensible Sage";
+      this.twitterComment = "Small money, big God 🙏🏽";
       TweenMax.fromTo(
         ".the-sensible-sage",
         1,
@@ -487,7 +487,7 @@ export default {
       );
     }
     if (this.monthly > 50000 && this.monthly <= 60000) {
-      this.twitterComment = "a Baby Baller";
+      this.twitterComment = "I just wanna relax and be taken care of 😭";
       TweenMax.fromTo(
         ".the-baby-baller",
         1,
@@ -521,7 +521,7 @@ export default {
       );
     }
     if (this.monthly > 60000 && this.monthly <= 70000) {
-      this.twitterComment = "a Spontanious Spender";
+      this.twitterComment = "Broke but balling ⛹🏽‍♀️⛹🏽‍♂️";
       TweenMax.fromTo(
         ".the-spontanious-spender",
         1,
@@ -555,7 +555,7 @@ export default {
       );
     }
     if (this.monthly > 70000 && this.monthly <= 85000) {
-      this.twitterComment = "a Big Spender";
+      this.twitterComment = "My money grows like grass ☘️";
       TweenMax.fromTo(
         ".the-big-spender",
         1,
@@ -589,7 +589,7 @@ export default {
       );
     }
     if (this.monthly > 85000 && this.monthly <= 100000) {
-      this.twitterComment = "a Generous Sage";
+      this.twitterComment = "Aspiring glucose guardian 🧓🏽";
       TweenMax.fromTo(
         ".the-generous-sage",
         1,
@@ -623,7 +623,7 @@ export default {
       );
     }
     if (this.monthly > 100000) {
-      this.twitterComment = "Money Maestro";
+      this.twitterComment = "Sugar parent level 1 💸";
       TweenMax.fromTo(
         ".the-money-maestro",
         1,
@@ -683,9 +683,7 @@ export default {
       }
     },
     shareToTwitter() {
-      const text = `I just used @gomoneyng Expense Tracker! I am ${
-        this.twitterComment
-      } I spend ₦${this.highestExpense.toLocaleString()} on ${this.key}.`;
+      const text = `${this.twitterComment}. I just used the @gomoneyng expense tracker to discover my spending category. What kind of spender are you? Let me know who I’m vibing with`;
       const url = `https://expense-tracker.gomoney.global`;
       window.location.href =
         "http://twitter.com/intent/tweet?url=" +
@@ -693,6 +691,7 @@ export default {
         "&text=" +
         encodeURIComponent(text);
     }
+
     // shareToFacebook() {
     //   FB.ui(
     //     {
